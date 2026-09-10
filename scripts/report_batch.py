@@ -189,7 +189,8 @@ def main():
             f"任务状态：{summary['call_statuses']}；规则硬错误与 Judge 判正确发生冲突 {len(conflicts)} 条，混合组保留规则硬错误。",'',
             *['- '+x for x in summary['limitations']], '',
             '原始请求与响应：runs/live/batch-v1/（本地 Git 忽略）。可分享的统计、显式解答、逐例预测、争议与稳定性文件：runs/experiments/batch-v1/。']
-    (target/'REPORT.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    from report_style import format_report
+    (target/'REPORT.md').write_text(format_report('\n'.join(lines)+'\n'),encoding='utf-8')
     print(json.dumps({'generation':summary['generation'],'ai_reviewed':len(reviews),'reference_disputes':len(excluded),'responses':len(response_files)},ensure_ascii=True))
 
 if __name__=='__main__':

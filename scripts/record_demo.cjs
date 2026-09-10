@@ -45,7 +45,7 @@ const scenes = JSON.parse(fs.readFileSync(path.join(work,'scenes.json'),'utf8').
       await page.evaluate(()=>window.scrollTo(0,0));
     }else if(s.action==='disputes'){
       await page.getByText('查看逐题争议依据',{exact:true}).click();
-      const box=page.locator('#experiment-results article').filter({has:page.getByRole('heading',{name:'AI 复核与参考争议',exact:true})});
+      const box=page.locator('#experiment-results article').filter({has:page.getByRole('heading',{name:'参考争议分析',exact:true})});
       await box.evaluate(e=>window.scrollTo(0,e.offsetTop-65));
     }else if(s.action==='live'){
       await page.locator('#batch-case-select').selectOption({label:'RCL/2016/page_37.pdf-2'});
