@@ -1,0 +1,14 @@
+{
+  "reviewer_type": "ai",
+  "human_review": "pending",
+  "count": 90,
+  "sha256": "87fa9f62085110026fb3863871dce910d7f4ca04e2249917a65a5428dcecb49e",
+  "omitted": [
+    "labels",
+    "reference",
+    "standard_answer",
+    "mutation",
+    "evaluator_results"
+  ],
+  "limitation": "Label-hidden packet, not an independently secured human blind study."
+}

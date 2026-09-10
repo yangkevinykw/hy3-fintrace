@@ -1,0 +1,726 @@
+[
+  {
+    "review_id": "live-00f0400845ed",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "subtract",
+        "computed_fraction": "-23/10",
+        "claimed_result": "-2.3",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "divide",
+        "computed_fraction": "-23/68",
+        "claimed_result": "-0.33823529411764705882",
+        "absolute_error": 3.529411764705882e-21,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s3",
+        "op": "multiply",
+        "computed_fraction": "-16911764705882352941/500000000000000000",
+        "claimed_result": "-33.823529411764705882",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-037c5c35a3a5",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "multiply",
+        "computed_fraction": "2921/25",
+        "claimed_result": "116.84",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-0f8cdc11f48d",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "add",
+        "computed_fraction": "22",
+        "claimed_result": "22",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-13c19ca260f0",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "subtract",
+        "computed_fraction": "-327/10",
+        "claimed_result": "-32.7",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "divide",
+        "computed_fraction": "-327/12262",
+        "claimed_result": "-0.0266677540368618",
+        "absolute_error": 4.961670200619801e-17,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s3",
+        "op": "multiply",
+        "computed_fraction": "-133338770184309/50000000000000",
+        "claimed_result": "-2.66677540368618",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-1a444d958a20",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "subtract",
+        "computed_fraction": "3/5",
+        "claimed_result": "0.6",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "divide",
+        "computed_fraction": "3/16",
+        "claimed_result": "0.1875",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s3",
+        "op": "multiply",
+        "computed_fraction": "75/4",
+        "claimed_result": "18.75",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-37a9fb5cdc78",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "divide",
+        "computed_fraction": "169/58",
+        "claimed_result": "2.913793103448275862",
+        "absolute_error": 6.896551724137932e-20,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-3eb689f42043",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "add",
+        "computed_fraction": "118",
+        "claimed_result": "118",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-468f24fb457a",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "subtract",
+        "computed_fraction": "11061/100",
+        "claimed_result": "110.61",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-574f0ac808dc",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "multiply",
+        "computed_fraction": "1093/10",
+        "claimed_result": "109.3",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-5a32232563e2",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "multiply",
+        "computed_fraction": "178573/5",
+        "claimed_result": "35714.6",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "divide",
+        "computed_fraction": "178573/5000",
+        "claimed_result": "35.7146",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-5d721fbae35f",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "add",
+        "computed_fraction": "595000",
+        "claimed_result": "595000",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "add",
+        "computed_fraction": "665000",
+        "claimed_result": "665000",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s3",
+        "op": "add",
+        "computed_fraction": "734000",
+        "claimed_result": "734000",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s4",
+        "op": "add",
+        "computed_fraction": "988000",
+        "claimed_result": "988000",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-62ed04899d92",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "subtract",
+        "computed_fraction": "0",
+        "claimed_result": "0",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "divide",
+        "computed_fraction": "0",
+        "claimed_result": "0",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s3",
+        "op": "multiply",
+        "computed_fraction": "0",
+        "claimed_result": "0",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-707a50e46abb",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "subtract",
+        "computed_fraction": "14",
+        "claimed_result": "14",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-78e57653f674",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "subtract",
+        "computed_fraction": "56",
+        "claimed_result": "56",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-7dfa82b526be",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "add",
+        "computed_fraction": "397",
+        "claimed_result": "397",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "add",
+        "computed_fraction": "517",
+        "claimed_result": "517",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-880d2783c668",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "subtract",
+        "computed_fraction": "13499",
+        "claimed_result": "13499",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "divide",
+        "computed_fraction": "13499/16117",
+        "claimed_result": "0.8375628218651113",
+        "absolute_error": 7.308432090339393e-17,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s3",
+        "op": "multiply",
+        "computed_fraction": "8375628218651113/100000000000000",
+        "claimed_result": "83.75628218651113",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-a8c0e11cd438",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "subtract",
+        "computed_fraction": "-94",
+        "claimed_result": "-94",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "divide",
+        "computed_fraction": "-47/2332",
+        "claimed_result": "-0.0201543739278563",
+        "absolute_error": 1.025336192109777e-13,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-af8acca131b7",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "subtract",
+        "computed_fraction": "4909/50",
+        "claimed_result": "98.18",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "divide",
+        "computed_fraction": "4909/5000",
+        "claimed_result": "0.9818",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s3",
+        "op": "multiply",
+        "computed_fraction": "4909/50",
+        "claimed_result": "98.18",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-b57fe9df6e96",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "subtract",
+        "computed_fraction": "119",
+        "claimed_result": "119",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "divide",
+        "computed_fraction": "17/233",
+        "claimed_result": "0.072961373390557",
+        "absolute_error": 9.399141630901287e-16,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s3",
+        "op": "multiply",
+        "computed_fraction": "72961373390557/10000000000000",
+        "claimed_result": "7.2961373390557",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-b6aaef73d21f",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "add",
+        "computed_fraction": "5684",
+        "claimed_result": "5684",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "add",
+        "computed_fraction": "8858",
+        "claimed_result": "8858",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s3",
+        "op": "divide",
+        "computed_fraction": "8858/3",
+        "claimed_result": "2952.66666666666666666667",
+        "absolute_error": 3.3333333333333333e-21,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-b82dd1c70f78",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "subtract",
+        "computed_fraction": "-46",
+        "claimed_result": "-46",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-c33bcaa415eb",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "multiply",
+        "computed_fraction": "111408",
+        "claimed_result": "111408",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "multiply",
+        "computed_fraction": "341214",
+        "claimed_result": "341214",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s3",
+        "op": "divide",
+        "computed_fraction": "18568/56869",
+        "claimed_result": "0.3265047741",
+        "absolute_error": 3.001811180080536e-11,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-c45b88788165",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "subtract",
+        "computed_fraction": "-12",
+        "claimed_result": "-12",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "divide",
+        "computed_fraction": "-4/67",
+        "claimed_result": "-0.05970149253731343",
+        "absolute_error": 2.8358208955223882e-18,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s3",
+        "op": "add",
+        "computed_fraction": "94029850746268657/100000000000000000",
+        "claimed_result": "0.9402985074626866",
+        "absolute_error": 3e-17,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s4",
+        "op": "multiply",
+        "computed_fraction": "888582089552238837/5000000000000000",
+        "claimed_result": "177.71641791044776",
+        "absolute_error": 7.4e-15,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-c55cc34746e7",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "add",
+        "computed_fraction": "845",
+        "claimed_result": "845",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "add",
+        "computed_fraction": "7807",
+        "claimed_result": "7807",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s3",
+        "op": "divide",
+        "computed_fraction": "845/7807",
+        "claimed_result": "0.10823619828359165",
+        "absolute_error": 1.4794415268348917e-18,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s4",
+        "op": "multiply",
+        "computed_fraction": "2164723965671833/200000000000000",
+        "claimed_result": "10.823619828359165",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-dd5e05dcec42",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "add",
+        "computed_fraction": "2460",
+        "claimed_result": "2460",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "add",
+        "computed_fraction": "2650",
+        "claimed_result": "2650",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s3",
+        "op": "add",
+        "computed_fraction": "8450",
+        "claimed_result": "8450",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-dfaf89e1b9a7",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "add",
+        "computed_fraction": "6",
+        "claimed_result": "6",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "divide",
+        "computed_fraction": "3",
+        "claimed_result": "3",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s3",
+        "op": "divide",
+        "computed_fraction": "587/30",
+        "claimed_result": "19.5666666666666667",
+        "absolute_error": 3.3333333333333335e-17,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-e6c3b6d8ad8f",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "divide",
+        "computed_fraction": "115/1063",
+        "claimed_result": "0.10818438381937912",
+        "absolute_error": 4.2897460018814674e-18,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "multiply",
+        "computed_fraction": "1352304797742239/125000000000000",
+        "claimed_result": "10.818438381937912",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-e997ed443364",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "divide",
+        "computed_fraction": "64/75",
+        "claimed_result": "0.8533333333333333",
+        "absolute_error": 3.3333333333333335e-17,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "multiply",
+        "computed_fraction": "8533333333333333/100000000000000",
+        "claimed_result": "85.33333333333333",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-f8faf34bcaf9",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "subtract",
+        "computed_fraction": "61523",
+        "claimed_result": "61523",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "live-fcaef8eed2ca",
+    "steps": [
+      {
+        "step": "s1",
+        "op": "divide",
+        "computed_fraction": "5507/5000",
+        "claimed_result": "1.1014",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s2",
+        "op": "subtract",
+        "computed_fraction": "507/5000",
+        "claimed_result": "0.1014",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      },
+      {
+        "step": "s3",
+        "op": "multiply",
+        "computed_fraction": "507/50",
+        "claimed_result": "10.14",
+        "absolute_error": 0.0,
+        "within_review_tolerance": true
+      }
+    ],
+    "final_matches_last_step": true
+  }
+]

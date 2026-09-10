@@ -1,0 +1,343 @@
+{
+  "review_type": "AI independent evaluator audit, not human audit",
+  "source_hashes": {
+    "fintrace\\__init__.py": "49931dfddf4f5dea165eb3a48962c0f28fd048b4b5ad86b75f52d2b67f78a0fe",
+    "fintrace\\__main__.py": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
+    "fintrace\\benchmark.py": "c09ecb65ef9c4ee71721bc3307a2e9ff439d6168c90f8ba4101a219cf2718ff9",
+    "fintrace\\cli.py": "4dd188aff0201545a121999a9ec03622146d218e1beb4f9241b852e5e3ff1b6b",
+    "fintrace\\core.py": "42b84219f643dd73e095958a240b9a167ecc01d5016104e5b3352f45903f0ff7",
+    "fintrace\\dataset.py": "ebfa4f26ec4ad0983d1f81f6e56b6be6ba889dd4ff4fb28c17203790239b2b51",
+    "fintrace\\evaluator.py": "616e75453494b0bd64ef651dc2e53b01712b668ed08003179b7a092ff72dd549",
+    "fintrace\\model.py": "cce88d9cb5c33ab77c9a21d19bcbd23356aa72d1daa474bcaa10bad0d24d8faa",
+    "fintrace\\schema.py": "c2200b27b6a6d12184bc98ac4002cc7af6b77525cd4494339e53ba9a59123e29",
+    "fintrace\\server.py": "cefdaf14e55f713d9a720ed11b76851d012f50e74ec213793082bee26edfae03",
+    "fintrace\\storage.py": "d4ebf388b105724286efa2d5f5d51e17f896afb1e783a77d832b52fb6c4173c8"
+  },
+  "amplification": {
+    "problem": {
+      "id": "audit_amplification",
+      "evidence": {
+        "a": {
+          "value": "1",
+          "text": "amount"
+        },
+        "b": {
+          "value": "1000000",
+          "text": "scale"
+        }
+      },
+      "answer": {
+        "value": "1",
+        "unit": "number"
+      },
+      "reference": {
+        "steps": [
+          {
+            "id": "s1",
+            "op": "divide",
+            "args": [
+              {
+                "kind": "evidence",
+                "ref": "a",
+                "value": "1"
+              },
+              {
+                "kind": "evidence",
+                "ref": "b",
+                "value": "1000000"
+              }
+            ],
+            "result": "0.000001"
+          },
+          {
+            "id": "s2",
+            "op": "multiply",
+            "args": [
+              {
+                "kind": "step",
+                "ref": "s1"
+              },
+              {
+                "kind": "evidence",
+                "ref": "b",
+                "value": "1000000"
+              }
+            ],
+            "result": "1"
+          }
+        ],
+        "final": {
+          "value": "1",
+          "unit": "number"
+        }
+      }
+    },
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "a",
+              "value": "1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "b",
+              "value": "1000000"
+            }
+          ],
+          "result": "0.000002"
+        },
+        {
+          "id": "s2",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "b",
+              "value": "1000000"
+            }
+          ],
+          "result": "2"
+        }
+      ],
+      "final": {
+        "value": "2",
+        "unit": "number"
+      }
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "audit_amplification",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "2",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "0.000001",
+          "actual": "0.000002"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "0.000001",
+          "claimed": "0.000002",
+          "evidence_refs": [
+            "a",
+            "b"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": ""
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "affected",
+          "computed": "2",
+          "claimed": "2",
+          "evidence_refs": [
+            "b"
+          ],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "multiply",
+          "explanation": ""
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "0.000001",
+            "actual": "0.000002"
+          }
+        }
+      ]
+    }
+  },
+  "percentage_scale": {
+    "problem_id": "RCL/2016/page_37.pdf-2",
+    "answer": {
+      "value": "98.18",
+      "unit": "percent"
+    },
+    "candidate_final": {
+      "value": "98.1801",
+      "unit": "percent"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "RCL/2016/page_37.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "0.981801",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "final",
+        "type": "answer_consistency",
+        "status": "incorrect",
+        "message": "最终答案数值与最后一步不一致；单位换算须显式列为步骤",
+        "evidence": {
+          "last_result": "98.18",
+          "final": "98.1801"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "98.18",
+          "claimed": "98.18",
+          "evidence_refs": [
+            "t:2:6:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.9818",
+          "claimed": "0.9818",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "98.18",
+          "claimed": "98.18",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "final",
+          "type": "answer_consistency",
+          "status": "incorrect",
+          "message": "最终答案数值与最后一步不一致；单位换算须显式列为步骤",
+          "evidence": {
+            "last_result": "98.18",
+            "final": "98.1801"
+          }
+        }
+      ]
+    },
+    "expected_source_scale_equal": false
+  },
+  "contradictory_judge": {
+    "judge": {
+      "status": "parse_failed",
+      "message": "语义评审结论格式或证据引用无效。"
+    },
+    "metric": {
+      "count": 1,
+      "detection": {
+        "numerator": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "false_positive": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "localization": {
+        "numerator": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "error_type": {
+        "numerator": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "cair_recall": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "uncertain": {
+        "numerator": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "statuses": {
+        "correct": 1
+      }
+    }
+  },
+  "abstention_denominator": {
+    "count": 1,
+    "detection": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0
+    },
+    "false_positive": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "localization": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0
+    },
+    "error_type": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0
+    },
+    "cair_recall": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "uncertain": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0
+    },
+    "statuses": {
+      "uncertain": 1
+    }
+  }
+}

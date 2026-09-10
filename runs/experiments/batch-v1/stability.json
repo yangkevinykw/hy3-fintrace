@@ -1,0 +1,248 @@
+[
+  {
+    "sample_id": "AES/2003/page_93.pdf-3::clean",
+    "draws": 3,
+    "complete": false,
+    "process_stable": false,
+    "location_stable": false,
+    "type_stable": false,
+    "votes": [
+      {
+        "process": "correct",
+        "first_error_step": null,
+        "error_type": null,
+        "reason": "Candidate replicates valid reference: ARO balance 2003 ($29M from x:10:3) minus 2002 ($15M from x:10:4) = 14M, multiplied by 1e6 gives 14,000,000. Evidence meanings, years, and metric match the question.",
+        "evidence_refs": [
+          "x:10:3",
+          "x:10:4"
+        ]
+      },
+      {},
+      {}
+    ]
+  },
+  {
+    "sample_id": "AON/2015/page_62.pdf-4::challenge",
+    "draws": 3,
+    "complete": false,
+    "process_stable": false,
+    "location_stable": false,
+    "type_stable": false,
+    "votes": [
+      {},
+      {},
+      {}
+    ]
+  },
+  {
+    "sample_id": "AOS/2007/page_17.pdf-2::local",
+    "draws": 3,
+    "complete": false,
+    "process_stable": false,
+    "location_stable": false,
+    "type_stable": false,
+    "votes": [
+      {
+        "process": "incorrect",
+        "first_error_step": "s1",
+        "error_type": "dependency",
+        "reason": "Candidate step s1 args reference itself (kind:step, ref:s1) instead of evidence t:1:6:0 (142.72), creating an invalid circular dependency; correct input should be A O Smith Corp 12/31/07 value 142.72.",
+        "evidence_refs": [
+          "t:1:6:0",
+          "t:3:6:0"
+        ]
+      },
+      {},
+      {}
+    ]
+  },
+  {
+    "sample_id": "C/2015/page_314.pdf-1::challenge",
+    "draws": 3,
+    "complete": false,
+    "process_stable": false,
+    "location_stable": false,
+    "type_stable": false,
+    "votes": [
+      {
+        "process": "incorrect",
+        "first_error_step": "s1",
+        "error_type": "formula",
+        "reason": "Step s1 uses addition (110.14+100) instead of subtraction (110.14-100) to compute cumulative return difference; explanation falsely states difference.",
+        "evidence_refs": [
+          "t:6:1:0",
+          "t:1:1:0"
+        ]
+      },
+      {},
+      {}
+    ]
+  },
+  {
+    "sample_id": "C/2015/page_314.pdf-1::clean",
+    "draws": 3,
+    "complete": false,
+    "process_stable": false,
+    "location_stable": false,
+    "type_stable": false,
+    "votes": [
+      {
+        "process": "correct",
+        "first_error_step": null,
+        "error_type": null,
+        "reason": "Candidate replicates reference: correctly computes (110.14-100)/100=0.1014 using ending value t:6:1:0 and base 100 from t:1:1:0/text, matching five-year cumulative return through 31-dec-2015.",
+        "evidence_refs": [
+          "t:6:1:0",
+          "t:1:1:0"
+        ]
+      },
+      {},
+      {
+        "process": "correct",
+        "first_error_step": null,
+        "error_type": null,
+        "reason": "Candidate replicates valid reference: uses citi 31-dec-2015 value 110.14 (t:6:1:0) and base 100 (t:1:1:0) to compute (110.14-100)/100=0.1014, matching five-year cumulative total return definition.",
+        "evidence_refs": [
+          "t:6:1:0",
+          "t:1:1:0"
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": "CB/2008/page_218.pdf-2::local",
+    "draws": 3,
+    "complete": false,
+    "process_stable": false,
+    "location_stable": false,
+    "type_stable": false,
+    "votes": [
+      {
+        "process": "incorrect",
+        "first_error_step": "s1",
+        "error_type": "arithmetic",
+        "reason": "Candidate subtracts 3883230 (t:13:1:0) - 3821707 (t:9:1:0) but reports 61524; correct difference is 61523.",
+        "evidence_refs": [
+          "t:13:1:0",
+          "t:9:1:0"
+        ]
+      },
+      {},
+      {}
+    ]
+  },
+  {
+    "sample_id": "DRE/2016/page_64.pdf-3::local",
+    "draws": 3,
+    "complete": false,
+    "process_stable": false,
+    "location_stable": false,
+    "type_stable": false,
+    "votes": [
+      {},
+      {},
+      {}
+    ]
+  },
+  {
+    "sample_id": "INTC/2018/page_105.pdf-2::clean",
+    "draws": 3,
+    "complete": false,
+    "process_stable": false,
+    "location_stable": false,
+    "type_stable": false,
+    "votes": [
+      {
+        "process": "correct",
+        "first_error_step": null,
+        "error_type": null,
+        "reason": "Candidate steps and final answer exactly match the provided reference valid solution: subtracts Dec 30 2017 total (t:6:5:0 = 862) from Dec 29 2018 total (t:13:5:0 = -974) to yield -1836, with same operation and explanation.",
+        "evidence_refs": [
+          "t:13:5:0",
+          "t:6:5:0"
+        ]
+      },
+      {},
+      {}
+    ]
+  },
+  {
+    "sample_id": "PPG/2006/page_22.pdf-1::challenge",
+    "draws": 3,
+    "complete": false,
+    "process_stable": false,
+    "location_stable": false,
+    "type_stable": false,
+    "votes": [
+      {
+        "process": "incorrect",
+        "first_error_step": "s1",
+        "error_type": "formula",
+        "reason": "Candidate step s1 uses addition op on 2921 and 0.04, but volume impact requires multiplication (base sales * volume %); explanation falsely claims product.",
+        "evidence_refs": [
+          "t:1:2:0",
+          "x:4:0"
+        ]
+      },
+      {},
+      {}
+    ]
+  },
+  {
+    "sample_id": "RCL/2016/page_37.pdf-2::clean",
+    "draws": 3,
+    "complete": false,
+    "process_stable": false,
+    "location_stable": false,
+    "type_stable": false,
+    "votes": [
+      {
+        "process": "correct",
+        "first_error_step": null,
+        "error_type": null,
+        "reason": "Candidate replicates valid reference: subtracts S&P 500 2016 value (t:2:6:0=198.18) from base 100 (t:2:1:0) then divides by 100 and multiplies by 100, yielding 98.18% increase from 2011 to 2016, matching table and text scope.",
+        "evidence_refs": [
+          "t:2:6:0",
+          "t:2:1:0",
+          "x:1:0"
+        ]
+      },
+      {},
+      {}
+    ]
+  },
+  {
+    "sample_id": "UNP/2010/page_55.pdf-1::local",
+    "draws": 3,
+    "complete": false,
+    "process_stable": false,
+    "location_stable": false,
+    "type_stable": false,
+    "votes": [
+      {},
+      {},
+      {}
+    ]
+  },
+  {
+    "sample_id": "UNP/2013/page_25.pdf-2::challenge",
+    "draws": 3,
+    "complete": false,
+    "process_stable": false,
+    "location_stable": false,
+    "type_stable": false,
+    "votes": [
+      {
+        "process": "incorrect",
+        "first_error_step": "s1",
+        "error_type": "formula",
+        "reason": "Candidate step s1 uses op 'add' with explanation 'calculate difference', but percentage change requires subtraction (2013 revenue minus 2012 revenue) before division. The used evidence x:21:0 ($2.6B, 2013) is same as reference, but operation is wrong.",
+        "evidence_refs": [
+          "x:21:0"
+        ]
+      },
+      {},
+      {}
+    ]
+  }
+]

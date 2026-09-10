@@ -1,0 +1,2495 @@
+[
+  {
+    "id": "RCL/2016/page_37.pdf-2",
+    "pre_text": [
+      "performance graph the following graph compares the total return , assuming reinvestment of dividends , on an investment in the company , based on performance of the company's common stock , with the total return of the standard & poor's 500 composite stock index and the dow jones united states travel and leisure index for a five year period by measuring the changes in common stock prices from december 31 , 2011 to december 31 , 2016. ."
+    ],
+    "post_text": [
+      "the stock performance graph assumes for comparison that the value of the company's common stock and of each index was $ 100 on december 31 , 2011 and that all dividends were reinvested .",
+      "past performance is not necessarily an indicator of future results. ."
+    ],
+    "table": [
+      [
+        "",
+        "12/11",
+        "12/12",
+        "12/13",
+        "12/14",
+        "12/15",
+        "12/16"
+      ],
+      [
+        "royal caribbean cruises ltd .",
+        "100.00",
+        "139.36",
+        "198.03",
+        "350.40",
+        "437.09",
+        "362.38"
+      ],
+      [
+        "s&p 500",
+        "100.00",
+        "116.00",
+        "153.58",
+        "174.60",
+        "177.01",
+        "198.18"
+      ],
+      [
+        "dow jones us travel & leisure",
+        "100.00",
+        "113.33",
+        "164.87",
+        "191.85",
+        "203.17",
+        "218.56"
+      ]
+    ],
+    "qa": {
+      "question": "what is the percentage increase of the s&p 500 from 2011 to 2016?",
+      "program": "subtract(198.18, const_100), divide(#0, const_100), multiply(#1, const_100)",
+      "exe_ans": 98.18,
+      "gold_inds": {
+        "table_2": "the s&p 500 of 12/11 is 100.00 ; the s&p 500 of 12/12 is 116.00 ; the s&p 500 of 12/13 is 153.58 ; the s&p 500 of 12/14 is 174.60 ; the s&p 500 of 12/15 is 177.01 ; the s&p 500 of 12/16 is 198.18 ;",
+        "text_0": "performance graph the following graph compares the total return , assuming reinvestment of dividends , on an investment in the company , based on performance of the company's common stock , with the total return of the standard & poor's 500 composite stock index and the dow jones united states travel and leisure index for a five year period by measuring the changes in common stock prices from december 31 , 2011 to december 31 , 2016. ."
+      },
+      "answer": "98.18%"
+    }
+  },
+  {
+    "id": "IQV/2018/page_106.pdf-1",
+    "pre_text": [
+      "the company believes that it is reasonably possible that a decrease of up to $ 8 million in gross unrecognized income tax benefits for federal , state and foreign exposure items may be necessary within the next 12 months due to lapse of statutes of limitations or uncertain tax positions being effectively settled .",
+      "the company believes that it is reasonably possible that a decrease of up to $ 14 million in gross unrecognized income tax benefits for foreign items may be necessary within the next 12 months due to payments .",
+      "for the remaining uncertain income tax positions , it is difficult at this time to estimate the timing of the resolution .",
+      "the company conducts business globally and , as a result , files income tax returns in the united states federal jurisdiction and various state and foreign jurisdictions .",
+      "in the normal course of business , the company is subject to examination by taxing authorities throughout the world .",
+      "the following table summarizes the tax years that remain open for examination by tax authorities in the most significant jurisdictions in which the company operates: ."
+    ],
+    "post_text": [
+      "in certain of the jurisdictions noted above , the company operates through more than one legal entity , each of which has different open years subject to examination .",
+      "the table above presents the open years subject to examination for the most material of the legal entities in each jurisdiction .",
+      "additionally , it is important to note that tax years are technically not closed until the statute of limitations in each jurisdiction expires .",
+      "in the jurisdictions noted above , the statute of limitations can extend beyond the open years subject to examination .",
+      "due to the geographic breadth of the company 2019s operations , numerous tax audits may be ongoing throughout the world at any point in time .",
+      "income tax liabilities are recorded based on estimates of additional income taxes that may be due upon the conclusion of these audits .",
+      "estimates of these income tax liabilities are made based upon prior experience and are updated in light of changes in facts and circumstances .",
+      "however , due to the uncertain and complex application of income tax regulations , it is possible that the ultimate resolution of audits may result in liabilities that could be materially different from these estimates .",
+      "in such an event , the company will record additional income tax expense or income tax benefit in the period in which such resolution occurs. ."
+    ],
+    "table": [
+      [
+        "united states",
+        "2015-2017"
+      ],
+      [
+        "india",
+        "2006-2018"
+      ],
+      [
+        "japan",
+        "2013-2017"
+      ],
+      [
+        "united kingdom",
+        "2017"
+      ],
+      [
+        "switzerland",
+        "2014-2017"
+      ]
+    ],
+    "qa": {
+      "question": "what is the total value of expected decrease in gross unrecognized income tax benefits in the next 12 months , ( in millions ) ?",
+      "program": "add(8, 14)",
+      "exe_ans": 22.0,
+      "gold_inds": {
+        "text_0": "the company believes that it is reasonably possible that a decrease of up to $ 8 million in gross unrecognized income tax benefits for federal , state and foreign exposure items may be necessary within the next 12 months due to lapse of statutes of limitations or uncertain tax positions being effectively settled .",
+        "text_1": "the company believes that it is reasonably possible that a decrease of up to $ 14 million in gross unrecognized income tax benefits for foreign items may be necessary within the next 12 months due to payments ."
+      },
+      "answer": "22"
+    }
+  },
+  {
+    "id": "PPG/2006/page_22.pdf-1",
+    "pre_text": [
+      "management 2019s discussion and analysis value of the company 2019s obligation relating to asbestos claims under the ppg settlement arrangement .",
+      "the legal settlements net of insurance included aftertax charges of $ 80 million for the marvin legal settlement , net of insurance recoveries of $ 11 million , and $ 37 million for the impact of the federal glass class action antitrust legal settlement .",
+      "results of reportable business segments net sales segment income ( millions ) 2006 2005 2006 2005 ."
+    ],
+    "post_text": [
+      "industrial coatings sales increased $ 315 million or 11% ( 11 % ) in 2006 .",
+      "sales increased 4% ( 4 % ) due to acquisitions , 4% ( 4 % ) due to increased volumes in the automotive , industrial and packaging coatings operating segments , 2% ( 2 % ) due to higher selling prices , particularly in the industrial and packaging coatings businesses and 1% ( 1 % ) due to the positive effects of foreign currency translation .",
+      "segment income increased $ 65 million in 2006 .",
+      "the increase in segment income was primarily due to the impact of increased sales volume , lower overhead and manufacturing costs , and the impact of acquisitions .",
+      "segment income was reduced by the adverse impact of inflation , which was substantially offset by higher selling prices .",
+      "performance and applied coatings sales increased $ 420 million or 16% ( 16 % ) in 2006 .",
+      "sales increased 8% ( 8 % ) due to acquisitions , 4% ( 4 % ) due to higher selling prices in the refinish , aerospace and architectural coatings operating segments , 3% ( 3 % ) due to increased volumes in our aerospace and architectural coatings businesses and 1% ( 1 % ) due to the positive effects of foreign currency translation .",
+      "segment income increased $ 50 million in 2006 .",
+      "the increase in segment income was primarily due to the impact of increased sales volume and higher selling prices , which more than offset the impact of inflation .",
+      "segment income was reduced by increased overhead costs to support growth in our architectural coatings business .",
+      "optical and specialty materials sales increased $ 134 million or 15% ( 15 % ) in 2006 .",
+      "sales increased 10% ( 10 % ) due to higher volumes , particularly in optical products and fine chemicals and 5% ( 5 % ) due to acquisitions in our optical products business .",
+      "segment income increased $ 65 million in 2006 .",
+      "the absence of the 2005 charge for an asset impairment in our fine chemicals business increased segment income by $ 27 million .",
+      "the remaining $ 38 million increase in segment income was primarily due to increased volumes , lower manufacturing costs , and the absence of the 2005 hurricane costs of $ 3 million , net of 2006 insurance recoveries , which were only partially offset by increased overhead costs in our optical products business to support growth and the negative impact of inflation .",
+      "commodity chemicals sales decreased $ 48 million or 3% ( 3 % ) in 2006 .",
+      "sales decreased 4% ( 4 % ) due to lower chlor-alkali volumes and increased 1% ( 1 % ) due to higher selling prices .",
+      "segment income decreased $ 28 million in 2006 .",
+      "the year- over-year decline in segment income was due primarily to lower sales volumes and higher manufacturing costs associated with reduced production levels .",
+      "the absence of the 2005 charges for direct costs related to hurricanes increased segment income by $ 29 million .",
+      "the impact of higher selling prices ; lower inflation , primarily natural gas costs , and an insurance recovery of $ 10 million related to the 2005 hurricane losses also increased segment income in 2006 .",
+      "our fourth-quarter chlor-alkali sales volumes and earnings were negatively impacted by production outages at several customers over the last two months of 2006 .",
+      "it is uncertain when some of these customers will return to a normal level of production which may impact the sales and earnings of our chlor-alkali business in early 2007 .",
+      "glass sales increased $ 15 million or 1% ( 1 % ) in 2006 .",
+      "sales increased 1% ( 1 % ) due to improved volumes resulting from a combination of organic growth and an acquisition .",
+      "a slight positive impact on sales due to foreign currency translation offset a slight decline in pricing .",
+      "volumes increased in the performance glazings , automotive replacement glass and services and fiber glass businesses .",
+      "automotive oem glass volume declined during 2006 .",
+      "pricing was also up in performance glazings , but declined in the other glass businesses .",
+      "segment income increased $ 25 million in 2006 .",
+      "this increase in segment income was primarily the result of higher equity earnings from our asian fiber glass joint ventures , higher royalty income and lower manufacturing and natural gas costs , which more than offset the negative impacts of higher inflation , lower margin mix of sales and reduced selling prices .",
+      "our fiber glass operating segment made progress during 2006 in achieving our multi-year plan to improve profitability and cash flow .",
+      "a transformation of our supply chain , which includes production of a more focused product mix at each manufacturing plant , manufacturing cost reduction initiatives and improved equity earnings from our asian joint ventures are the primary focus and represent the critical success factors in this plan .",
+      "during 2006 , our new joint venture in china started producing high labor content fiber glass reinforcement products , which will allow us to refocus our u.s .",
+      "production capacity on higher margin , direct process products .",
+      "the 2006 earnings improvement by our fiber glass operating segment accounted for the bulk of the 2006 improvement in the glass reportable business segment income .",
+      "20 2006 ppg annual report and form 10-k 4282_txt ."
+    ],
+    "table": [
+      [
+        "( millions )",
+        "net sales 2006",
+        "net sales 2005",
+        "net sales 2006",
+        "2005"
+      ],
+      [
+        "industrial coatings",
+        "$ 3236",
+        "$ 2921",
+        "$ 349",
+        "$ 284"
+      ],
+      [
+        "performance and applied coatings",
+        "3088",
+        "2668",
+        "514",
+        "464"
+      ],
+      [
+        "optical and specialty materials",
+        "1001",
+        "867",
+        "223",
+        "158"
+      ],
+      [
+        "commodity chemicals",
+        "1483",
+        "1531",
+        "285",
+        "313"
+      ],
+      [
+        "glass",
+        "2229",
+        "2214",
+        "148",
+        "123"
+      ]
+    ],
+    "qa": {
+      "question": "what was the volume impact on sales in the industrial coatings segment ( millions ) ?",
+      "program": "multiply(2921, 4%)",
+      "exe_ans": 116.84,
+      "gold_inds": {
+        "table_1": "( millions ) the industrial coatings of net sales 2006 is $ 3236 ; the industrial coatings of net sales 2005 is $ 2921 ; the industrial coatings of net sales 2006 is $ 349 ; the industrial coatings of 2005 is $ 284 ;",
+        "text_4": "sales increased 4% ( 4 % ) due to acquisitions , 4% ( 4 % ) due to increased volumes in the automotive , industrial and packaging coatings operating segments , 2% ( 2 % ) due to higher selling prices , particularly in the industrial and packaging coatings businesses and 1% ( 1 % ) due to the positive effects of foreign currency translation ."
+      },
+      "answer": "116.8"
+    }
+  },
+  {
+    "id": "WRK/2018/page_39.pdf-5",
+    "pre_text": [
+      "holders of grupo gondi manage the joint venture and we provide technical and commercial resources .",
+      "we believe the joint venture is helping us to grow our presence in the attractive mexican market .",
+      "we have included the financial results of the joint venture in our corrugated packaging segment since the date of formation .",
+      "we are accounting for the investment on the equity method .",
+      "on january 19 , 2016 , we completed the packaging acquisition .",
+      "the entities acquired provide value-added folding carton and litho-laminated display packaging solutions .",
+      "we believe the transaction has provided us with attractive and complementary customers , markets and facilities .",
+      "we have included the financial results of the acquired entities in our consumer packaging segment since the date of the acquisition .",
+      "on october 1 , 2015 , we completed the sp fiber acquisition .",
+      "the transaction included the acquisition of mills located in dublin , ga and newberg , or , which produce lightweight recycled containerboard and kraft and bag paper .",
+      "the newberg mill also produced newsprint .",
+      "as part of the transaction , we also acquired sp fiber's 48% ( 48 % ) interest in green power solutions of georgia , llc ( fffdgps fffd ) , which we consolidate .",
+      "gps is a joint venture providing steam to the dublin mill and electricity to georgia power .",
+      "subsequent to the transaction , we announced the permanent closure of the newberg mill due to the decline in market conditions of the newsprint business and our need to balance supply and demand in our containerboard system .",
+      "we have included the financial results of the acquired entities in our corrugated packaging segment since the date of the acquisition .",
+      "see fffdnote 2 .",
+      "mergers , acquisitions and investment fffdtt of the notes to consolidated financial statements for additional information .",
+      "see also item 1a .",
+      "fffdrisk factors fffd fffdwe may be unsuccessful in making and integrating mergers , acquisitions and investments and completing divestitures fffd .",
+      "business ."
+    ],
+    "post_text": [
+      "in fiscal 2018 , we continued to pursue our strategy of offering differentiated paper and packaging solutions that help our customers win .",
+      "we successfully executed this strategy in fiscal 2018 in a rapidly changing cost and price environment .",
+      "net sales of $ 16285.1 million for fiscal 2018 increased $ 1425.4 million , or 9.6% ( 9.6 % ) , compared to fiscal 2017 .",
+      "the increase was primarily a result of an increase in corrugated packaging segment sales , driven by higher selling price/mix and the contributions from acquisitions , and increased consumer packaging segment sales , primarily due to the contribution from acquisitions ( primarily the mps acquisition ) .",
+      "these increases were partially offset by the absence of net sales from hh&b in fiscal 2018 due to the sale of hh&b in april 2017 and lower land and development segment sales compared to the prior year period due to the timing of real estate sales as we monetize the portfolio and lower merchandising display sales in the consumer packaging segment .",
+      "segment income increased $ 491.5 million in fiscal 2018 compared to fiscal 2017 , primarily due to increased corrugated packaging segment income .",
+      "with respect to segment income , we experienced higher levels of cost inflation during fiscal 2018 as compared to fiscal 2017 , which was partially offset by recycled fiber deflation .",
+      "the primary inflationary items were freight costs , chemical costs , virgin fiber costs and wage and other costs .",
+      "productivity improvements in fiscal 2018 more than offset the net impact of cost inflation .",
+      "while it is difficult to predict specific inflationary items , we expect higher cost inflation to continue through fiscal 2019 .",
+      "our corrugated packaging segment increased its net sales by $ 695.1 million in fiscal 2018 to $ 9103.4 million from $ 8408.3 million in fiscal 2017 .",
+      "the increase in net sales was primarily due to higher corrugated selling price/mix and higher corrugated volumes ( including acquisitions ) , which were partially offset by lower net sales from recycling operations due to lower recycled fiber costs , lower sales related to the deconsolidation of a foreign joint venture in fiscal 2017 and the impact of foreign currency .",
+      "north american box shipments increased 4.1% ( 4.1 % ) on a per day basis in fiscal 2018 compared to fiscal 2017 .",
+      "segment income attributable to the corrugated packaging segment in fiscal 2018 increased $ 454.0 million to $ 1207.9 million compared to $ 753.9 million in fiscal 2017 .",
+      "the increase was primarily due to higher selling price/mix , lower recycled fiber costs and productivity improvements which were partially offset by higher levels of cost inflation and other items , including increased depreciation and amortization .",
+      "our consumer packaging segment increased its net sales by $ 838.9 million in fiscal 2018 to $ 7291.4 million from $ 6452.5 million in fiscal 2017 .",
+      "the increase in net sales was primarily due to an increase in net sales from acquisitions ( primarily the mps acquisition ) and higher selling price/mix partially offset by the absence of net sales from hh&b in fiscal 2018 due to the hh&b sale in april 2017 and lower volumes .",
+      "segment income attributable to ."
+    ],
+    "table": [
+      [
+        "( in millions )",
+        "year ended september 30 , 2018",
+        "year ended september 30 , 2017",
+        "year ended september 30 , 2016"
+      ],
+      [
+        "net sales",
+        "$ 16285.1",
+        "$ 14859.7",
+        "$ 14171.8"
+      ],
+      [
+        "segment income",
+        "$ 1685.0",
+        "$ 1193.5",
+        "$ 1226.2"
+      ]
+    ],
+    "qa": {
+      "question": "what was the percentage increase in the segment income from 2016 to 2017",
+      "program": "subtract(1685.0, 1193.5), divide(#0, 1193.5)",
+      "exe_ans": 0.41181,
+      "gold_inds": {
+        "table_2": "( in millions ) the segment income of year ended september 30 , 2018 is $ 1685.0 ; the segment income of year ended september 30 , 2017 is $ 1193.5 ; the segment income of year ended september 30 , 2016 is $ 1226.2 ;"
+      },
+      "answer": "41.2%"
+    }
+  },
+  {
+    "id": "C/2015/page_314.pdf-1",
+    "pre_text": [
+      "performance graph comparison of five-year cumulative total return the following graph and table compare the cumulative total return on citi 2019s common stock , which is listed on the nyse under the ticker symbol 201cc 201d and held by 81805 common stockholders of record as of january 31 , 2016 , with the cumulative total return of the s&p 500 index and the s&p financial index over the five-year period through december 31 , 2015 .",
+      "the graph and table assume that $ 100 was invested on december 31 , 2010 in citi 2019s common stock , the s&p 500 index and the s&p financial index , and that all dividends were reinvested .",
+      "comparison of five-year cumulative total return for the years ended date citi s&p 500 financials ."
+    ],
+    "post_text": [
+      "."
+    ],
+    "table": [
+      [
+        "date",
+        "citi",
+        "s&p 500",
+        "s&p financials"
+      ],
+      [
+        "31-dec-2010",
+        "100.00",
+        "100.00",
+        "100.00"
+      ],
+      [
+        "30-dec-2011",
+        "55.67",
+        "102.11",
+        "82.94"
+      ],
+      [
+        "31-dec-2012",
+        "83.81",
+        "118.45",
+        "106.84"
+      ],
+      [
+        "31-dec-2013",
+        "110.49",
+        "156.82",
+        "144.90"
+      ],
+      [
+        "31-dec-2014",
+        "114.83",
+        "178.28",
+        "166.93"
+      ],
+      [
+        "31-dec-2015",
+        "110.14",
+        "180.75",
+        "164.39"
+      ]
+    ],
+    "qa": {
+      "question": "what was the percentage cumulative total return of citi common stock for the five years ended 31-dec-2015?",
+      "program": "subtract(110.14, const_100), divide(#0, const_100)",
+      "exe_ans": 0.1014,
+      "gold_inds": {
+        "table_1": "date the 31-dec-2010 of citi is 100.00 ; the 31-dec-2010 of s&p 500 is 100.00 ; the 31-dec-2010 of s&p financials is 100.00 ;",
+        "table_6": "date the 31-dec-2015 of citi is 110.14 ; the 31-dec-2015 of s&p 500 is 180.75 ; the 31-dec-2015 of s&p financials is 164.39 ;"
+      },
+      "answer": "10.14%"
+    }
+  },
+  {
+    "id": "ALXN/2015/page_59.pdf-2",
+    "pre_text": [
+      "item 2 .",
+      "properties .",
+      "we conduct our primary operations at the owned and leased facilities described below .",
+      "location operations conducted approximate square feet expiration new haven , connecticut corporate headquarters and executive , sales , research and development offices 514000 ."
+    ],
+    "post_text": [
+      "we believe that our administrative office space is adequate to meet our needs for the foreseeable future .",
+      "we also believe that our research and development facilities and our manufacturing facility , together with third party manufacturing facilities , will be adequate for our on-going activities .",
+      "in addition to the locations above , we also lease space in other u.s .",
+      "locations and in foreign countries to support our operations as a global organization .",
+      "as of december 31 , 2015 , we also leased approximately 254000 square feet in cheshire , connecticut , which was the previous location of our corporate headquarters and executive , sales , research and development offices .",
+      "in december 2015 , we entered into an early termination of this lease and will occupy this space through may 2016 .",
+      "in april 2014 , we purchased a fill/finish facility in athlone , ireland .",
+      "following refurbishment of the facility , and after successful completion of the appropriate validation processes and regulatory approvals , the facility will become our first company-owned fill/finish and packaging facility for our commercial and clinical products .",
+      "in may 2015 , we announced plans to construct a new biologics manufacturing facility on our existing property in dublin ireland , which is expected to be completed by 2020 .",
+      "item 3 .",
+      "legal proceedings .",
+      "in may 2015 , we received a subpoena in connection with an investigation by the enforcement division of the sec requesting information related to our grant-making activities and compliance with the fcpa in various countries .",
+      "the sec also seeks information related to alexion 2019s recalls of specific lots of soliris and related securities disclosures .",
+      "in addition , in october 2015 , alexion received a request from the doj for the voluntary production of documents and other information pertaining to alexion's compliance with the fcpa .",
+      "alexion is cooperating with these investigations .",
+      "at this time , alexion is unable to predict the duration , scope or outcome of these investigations .",
+      "given the ongoing nature of these investigations , management does not currently believe a loss related to these matters is probable or that the potential magnitude of such loss or range of loss , if any , can be reasonably estimated .",
+      "item 4 .",
+      "mine safety disclosures .",
+      "not applicable. ."
+    ],
+    "table": [
+      [
+        "location",
+        "operations conducted",
+        "approximatesquare feet",
+        "leaseexpirationdates"
+      ],
+      [
+        "new haven connecticut",
+        "corporate headquarters and executive sales research and development offices",
+        "514000",
+        "2030"
+      ],
+      [
+        "dublin ireland",
+        "global supply chain distribution and administration offices",
+        "215000",
+        "owned"
+      ],
+      [
+        "lexington massachusetts",
+        "research and development offices",
+        "81000",
+        "2019"
+      ],
+      [
+        "bogart georgia",
+        "commercial research and development manufacturing",
+        "70000",
+        "2024"
+      ],
+      [
+        "smithfield rhode island",
+        "commercial research and development manufacturing",
+        "67000",
+        "owned"
+      ],
+      [
+        "zurich switzerland",
+        "regional executive and sales offices",
+        "69000",
+        "2025"
+      ]
+    ],
+    "qa": {
+      "question": "how many square feet are leased by alexion pharmaceuticals , inc?",
+      "program": "add(514000, 81000), add(#0, 70000), add(#1, 69000)",
+      "exe_ans": 734000.0,
+      "gold_inds": {
+        "table_1": "location the new haven connecticut of operations conducted is corporate headquarters and executive sales research and development offices ; the new haven connecticut of approximatesquare feet is 514000 ; the new haven connecticut of leaseexpirationdates is 2030 ;",
+        "table_3": "location the lexington massachusetts of operations conducted is research and development offices ; the lexington massachusetts of approximatesquare feet is 81000 ; the lexington massachusetts of leaseexpirationdates is 2019 ;",
+        "table_4": "location the bogart georgia of operations conducted is commercial research and development manufacturing ; the bogart georgia of approximatesquare feet is 70000 ; the bogart georgia of leaseexpirationdates is 2024 ;",
+        "table_6": "location the zurich switzerland of operations conducted is regional executive and sales offices ; the zurich switzerland of approximatesquare feet is 69000 ; the zurich switzerland of leaseexpirationdates is 2025 ;"
+      },
+      "answer": "734000"
+    }
+  },
+  {
+    "id": "BLK/2014/page_33.pdf-4",
+    "pre_text": [
+      "long-term product offerings include active and index strategies .",
+      "our active strategies seek to earn attractive returns in excess of a market benchmark or performance hurdle while maintaining an appropriate risk profile .",
+      "we offer two types of active strategies : those that rely primarily on fundamental research and those that utilize primarily quantitative models to drive portfolio construction .",
+      "in contrast , index strategies seek to closely track the returns of a corresponding index , generally by investing in substantially the same underlying securities within the index or in a subset of those securities selected to approximate a similar risk and return profile of the index .",
+      "index strategies include both our non-etf index products and ishares etfs .",
+      "althoughmany clients use both active and index strategies , the application of these strategies may differ .",
+      "for example , clients may use index products to gain exposure to a market or asset class .",
+      "in addition , institutional non-etf index assignments tend to be very large ( multi-billion dollars ) and typically reflect low fee rates .",
+      "this has the potential to exaggerate the significance of net flows in institutional index products on blackrock 2019s revenues and earnings .",
+      "equity year-end 2014 equity aum of $ 2.451 trillion increased by $ 133.4 billion , or 6% ( 6 % ) , from the end of 2013 due to net new business of $ 52.4 billion and net market appreciation and foreign exchange movements of $ 81.0 billion .",
+      "net inflows were driven by $ 59.6 billion and $ 17.7 billion into ishares and non-etf index accounts , respectively .",
+      "index inflows were offset by active net outflows of $ 24.9 billion , with outflows of $ 18.0 billion and $ 6.9 billion from fundamental and scientific active equity products , respectively .",
+      "blackrock 2019s effective fee rates fluctuate due to changes in aummix .",
+      "approximately half of blackrock 2019s equity aum is tied to international markets , including emerging markets , which tend to have higher fee rates than similar u.s .",
+      "equity strategies .",
+      "accordingly , fluctuations in international equity markets , which do not consistently move in tandemwith u.s .",
+      "markets , may have a greater impact on blackrock 2019s effective equity fee rates and revenues .",
+      "fixed income fixed income aum ended 2014 at $ 1.394 trillion , increasing $ 151.5 billion , or 12% ( 12 % ) , from december 31 , 2013 .",
+      "the increase in aum reflected $ 96.4 billion in net new business and $ 55.1 billion in net market appreciation and foreign exchange movements .",
+      "in 2014 , net new business was diversified across fixed income offerings , with strong flows into our unconstrained , total return and high yield products .",
+      "flagship funds in these product areas include our unconstrained strategic income opportunities and fixed income global opportunities funds , with net inflows of $ 13.3 billion and $ 4.2 billion , respectively ; our total return fund with net inflows of $ 2.1 billion ; and our high yield bond fund with net inflows of $ 2.1 billion .",
+      "fixed income net inflows were positive across investment styles , with ishares , non- etf index , and active net inflows of $ 40.0 billion , $ 28.7 billion and $ 27.7 billion , respectively .",
+      "multi-asset class blackrock 2019s multi-asset class teammanages a variety of balanced funds and bespoke mandates for a diversified client base that leverages our broad investment expertise in global equities , currencies , bonds and commodities , and our extensive risk management capabilities .",
+      "investment solutions might include a combination of long-only portfolios and alternative investments as well as tactical asset allocation overlays .",
+      "component changes in multi-asset class aum for 2014 are presented below .",
+      "( in millions ) december 31 , 2013 net inflows ( outflows ) market change fx impact december 31 , 2014 ."
+    ],
+    "post_text": [
+      "flows reflected ongoing institutional demand for our solutions-based advice with $ 15.1 billion , or 52% ( 52 % ) , of net inflows coming from institutional clients .",
+      "defined contribution plans of institutional clients remained a significant driver of flows , and contributed $ 12.8 billion to institutional multi- asset class net new business in 2014 , primarily into target date and target risk product offerings .",
+      "retail net inflows of $ 13.4 billion were driven by particular demand for our multi- asset income fund , which raised $ 6.3 billion in 2014 .",
+      "the company 2019s multi-asset strategies include the following : 2022 asset allocation and balanced products represented 48% ( 48 % ) of multi-asset class aum at year-end , with growth in aum driven by net new business of $ 18.4 billion .",
+      "these strategies combine equity , fixed income and alternative components for investors seeking a tailored solution relative to a specific benchmark and within a risk budget .",
+      "in certain cases , these strategies seek to minimize downside risk through diversification , derivatives strategies and tactical asset allocation decisions .",
+      "flagship products in this category include our global allocation andmulti-asset income suites .",
+      "2022 target date and target risk products grew 10% ( 10 % ) organically in 2014 .",
+      "institutional investors represented 90% ( 90 % ) of target date and target risk aum , with defined contribution plans accounting for over 80% ( 80 % ) of aum .",
+      "the remaining 10% ( 10 % ) of target date and target risk aum consisted of retail client investments .",
+      "flows were driven by defined contribution investments in our lifepath and lifepath retirement income ae offerings .",
+      "lifepath products utilize a proprietary asset allocation model that seeks to balance risk and return over an investment horizon based on the investor 2019s expected retirement timing .",
+      "2022 fiduciary management services are complex mandates in which pension plan sponsors or endowments and foundations retain blackrock to assume responsibility for some or all aspects of planmanagement .",
+      "these customized services require strong partnership with the clients 2019 investment staff and trustees in order to tailor investment strategies to meet client-specific risk budgets and return objectives. ."
+    ],
+    "table": [
+      [
+        "( in millions )",
+        "december 31 2013",
+        "net inflows ( outflows )",
+        "market change",
+        "fx impact",
+        "december 31 2014"
+      ],
+      [
+        "asset allocation and balanced",
+        "$ 169604",
+        "$ 18387",
+        "$ -827 ( 827 )",
+        "$ -4132 ( 4132 )",
+        "$ 183032"
+      ],
+      [
+        "target date/risk",
+        "111408",
+        "10992",
+        "7083",
+        "-872 ( 872 )",
+        "128611"
+      ],
+      [
+        "fiduciary",
+        "60202",
+        "-474 ( 474 )",
+        "14788",
+        "-8322 ( 8322 )",
+        "66194"
+      ],
+      [
+        "multi-asset",
+        "$ 341214",
+        "$ 28905",
+        "$ 21044",
+        "$ -13326 ( 13326 )",
+        "$ 377837"
+      ]
+    ],
+    "qa": {
+      "question": "what portion of total multi-asset is related to target date/risk as of december 31 , 2013?",
+      "program": "divide(111408, 341214)",
+      "exe_ans": 0.3265,
+      "gold_inds": {
+        "table_2": "( in millions ) the target date/risk of december 31 2013 is 111408 ; the target date/risk of net inflows ( outflows ) is 10992 ; the target date/risk of market change is 7083 ; the target date/risk of fx impact is -872 ( 872 ) ; the target date/risk of december 31 2014 is 128611 ;",
+        "table_4": "( in millions ) the multi-asset of december 31 2013 is $ 341214 ; the multi-asset of net inflows ( outflows ) is $ 28905 ; the multi-asset of market change is $ 21044 ; the multi-asset of fx impact is $ -13326 ( 13326 ) ; the multi-asset of december 31 2014 is $ 377837 ;"
+      },
+      "answer": "32.7%"
+    }
+  },
+  {
+    "id": "CB/2008/page_218.pdf-2",
+    "pre_text": [
+      "n o t e s t o c o n s o l i d a t e d f i n a n c i a l s t a t e m e n t s ( continued ) ace limited and subsidiaries the following table shows changes in the company 2019s restricted stock for the years ended december 31 , 2008 , 2007 , and 2006 : number of restricted stock weighted average grant- date fair value ."
+    ],
+    "post_text": [
+      "under the provisions of fas 123r , the recognition of deferred compensation , a contra-equity account representing the amount of unrecognized restricted stock expense that is reduced as expense is recognized , at the date restricted stock is granted is no longer permitted .",
+      "therefore , upon adoption of fas 123r , the amount of deferred compensation that had been reflected in unearned stock grant compensation was reclassified to additional paid-in capital in the company 2019s consolidated balance sheet .",
+      "restricted stock units the company 2019s 2004 ltip also provides for grants of other awards , including restricted stock units .",
+      "the company generally grants restricted stock units with a 4-year vesting period , based on a graded vesting schedule .",
+      "each restricted stock unit repre- sents the company 2019s obligation to deliver to the holder one share of common shares upon vesting .",
+      "during 2008 , the company awarded 223588 restricted stock units to officers of the company and its subsidiaries with a weighted-average grant date fair value of $ 59.93 .",
+      "during 2007 , 108870 restricted stock units , with a weighted-average grant date fair value of $ 56.29 were awarded to officers of the company and its subsidiaries .",
+      "during 2006 , 83370 restricted stock units , with a weighted-average grant date fair value of $ 56.36 were awarded to officers of the company and its subsidiaries .",
+      "the company also grants restricted stock units with a 1-year vesting period to non-management directors .",
+      "delivery of common shares on account of these restricted stock units to non-management directors is deferred until six months after the date of the non-management directors 2019 termination from the board .",
+      "during 2008 , 2007 , and 2006 , 40362 restricted stock units , 29676 restricted stock units , and 23092 restricted stock units , respectively , were awarded to non-management direc- the espp gives participating employees the right to purchase common shares through payroll deductions during consecutive 201csubscription periods . 201d annual purchases by participants are limited to the number of whole shares that can be purchased by an amount equal to ten percent of the participant 2019s compensation or $ 25000 , whichever is less .",
+      "the espp has two six-month subscription periods , the first of which runs between january 1 and june 30 and the second of which runs between july 1 and december 31 of each year .",
+      "the amounts that have been collected from participants during a subscription period are used on the 201cexercise date 201d to purchase full shares of common shares .",
+      "an exercise date is generally the last trading day of a sub- scription period .",
+      "the number of shares purchased is equal to the total amount , as of the exercise date , that has been collected from the participants through payroll deductions for that subscription period , divided by the 201cpurchase price 201d , rounded down to the next full share .",
+      "effective for and from the second subscription period of 2007 , the purchase price is 85 percent of the fair value of a common share on the exercise date .",
+      "prior to the second subscription period of 2007 , the purchase price was calculated as the lower of ( i ) 85 percent of the fair value of a common share on the first day of the subscription period , or ."
+    ],
+    "table": [
+      [
+        "",
+        "number of restricted stock",
+        "weighted average grant- date fair value"
+      ],
+      [
+        "unvested restricted stock december 31 2005",
+        "3488668",
+        "$ 41.26"
+      ],
+      [
+        "granted",
+        "1632504",
+        "$ 56.05"
+      ],
+      [
+        "vested and issued",
+        "-1181249 ( 1181249 )",
+        "$ 40.20"
+      ],
+      [
+        "forfeited",
+        "-360734 ( 360734 )",
+        "$ 44.04"
+      ],
+      [
+        "unvested restricted stock december 31 2006",
+        "3579189",
+        "$ 48.07"
+      ],
+      [
+        "granted",
+        "1818716",
+        "$ 56.45"
+      ],
+      [
+        "vested and issued",
+        "-1345412 ( 1345412 )",
+        "$ 44.48"
+      ],
+      [
+        "forfeited",
+        "-230786 ( 230786 )",
+        "$ 51.57"
+      ],
+      [
+        "unvested restricted stock december 31 2007",
+        "3821707",
+        "$ 53.12"
+      ],
+      [
+        "granted",
+        "1836532",
+        "$ 59.84"
+      ],
+      [
+        "vested and issued",
+        "-1403826 ( 1403826 )",
+        "$ 50.96"
+      ],
+      [
+        "forfeited",
+        "-371183 ( 371183 )",
+        "$ 53.75"
+      ],
+      [
+        "unvested restricted stock december 31 2008",
+        "3883230",
+        "$ 57.01"
+      ]
+    ],
+    "qa": {
+      "question": "what is the net change in the number of unvested restricted stocks in 2008?",
+      "program": "subtract(3883230, 3821707)",
+      "exe_ans": 61523.0,
+      "gold_inds": {
+        "table_9": "the unvested restricted stock december 31 2007 of number of restricted stock is 3821707 ; the unvested restricted stock december 31 2007 of weighted average grant- date fair value is $ 53.12 ;",
+        "table_13": "the unvested restricted stock december 31 2008 of number of restricted stock is 3883230 ; the unvested restricted stock december 31 2008 of weighted average grant- date fair value is $ 57.01 ;"
+      },
+      "answer": "61523"
+    }
+  },
+  {
+    "id": "GS/2012/page_177.pdf-3",
+    "pre_text": [
+      "notes to consolidated financial statements sumitomo mitsui financial group , inc .",
+      "( smfg ) provides the firm with credit loss protection on certain approved loan commitments ( primarily investment-grade commercial lending commitments ) .",
+      "the notional amount of such loan commitments was $ 32.41 billion and $ 31.94 billion as of december 2012 and december 2011 , respectively .",
+      "the credit loss protection on loan commitments provided by smfg is generally limited to 95% ( 95 % ) of the first loss the firm realizes on such commitments , up to a maximum of approximately $ 950 million .",
+      "in addition , subject to the satisfaction of certain conditions , upon the firm 2019s request , smfg will provide protection for 70% ( 70 % ) of additional losses on such commitments , up to a maximum of $ 1.13 billion , of which $ 300 million of protection had been provided as of both december 2012 and december 2011 .",
+      "the firm also uses other financial instruments to mitigate credit risks related to certain commitments not covered by smfg .",
+      "these instruments primarily include credit default swaps that reference the same or similar underlying instrument or entity or credit default swaps that reference a market index .",
+      "warehouse financing .",
+      "the firm provides financing to clients who warehouse financial assets .",
+      "these arrangements are secured by the warehoused assets , primarily consisting of commercial mortgage loans .",
+      "contingent and forward starting resale and securities borrowing agreements/forward starting repurchase and secured lending agreements the firm enters into resale and securities borrowing agreements and repurchase and secured lending agreements that settle at a future date .",
+      "the firm also enters into commitments to provide contingent financing to its clients and counterparties through resale agreements .",
+      "the firm 2019s funding of these commitments depends on the satisfaction of all contractual conditions to the resale agreement and these commitments can expire unused .",
+      "investment commitments the firm 2019s investment commitments consist of commitments to invest in private equity , real estate and other assets directly and through funds that the firm raises and manages .",
+      "these commitments include $ 872 million and $ 1.62 billion as of december 2012 and december 2011 , respectively , related to real estate private investments and $ 6.47 billion and $ 7.50 billion as of december 2012 and december 2011 , respectively , related to corporate and other private investments .",
+      "of these amounts , $ 6.21 billion and $ 8.38 billion as of december 2012 and december 2011 , respectively , relate to commitments to invest in funds managed by the firm , which will be funded at market value on the date of investment .",
+      "leases the firm has contractual obligations under long-term noncancelable lease agreements , principally for office space , expiring on various dates through 2069 .",
+      "certain agreements are subject to periodic escalation provisions for increases in real estate taxes and other charges .",
+      "the table below presents future minimum rental payments , net of minimum sublease rentals .",
+      "in millions december 2012 ."
+    ],
+    "post_text": [
+      "rent charged to operating expense for the years ended december 2012 , december 2011 and december 2010 was $ 374 million , $ 475 million and $ 508 million , respectively .",
+      "operating leases include office space held in excess of current requirements .",
+      "rent expense relating to space held for growth is included in 201coccupancy . 201d the firm records a liability , based on the fair value of the remaining lease rentals reduced by any potential or existing sublease rentals , for leases where the firm has ceased using the space and management has concluded that the firm will not derive any future economic benefits .",
+      "costs to terminate a lease before the end of its term are recognized and measured at fair value on termination .",
+      "goldman sachs 2012 annual report 175 ."
+    ],
+    "table": [
+      [
+        "in millions",
+        "as of december 2012"
+      ],
+      [
+        "2013",
+        "$ 439"
+      ],
+      [
+        "2014",
+        "407"
+      ],
+      [
+        "2015",
+        "345"
+      ],
+      [
+        "2016",
+        "317"
+      ],
+      [
+        "2017",
+        "306"
+      ],
+      [
+        "2018 - thereafter",
+        "1375"
+      ],
+      [
+        "total",
+        "$ 3189"
+      ]
+    ],
+    "qa": {
+      "question": "what percentage of future minimum rental payments is due in 2015?",
+      "program": "divide(345, 3189)",
+      "exe_ans": 0.10818,
+      "gold_inds": {
+        "table_3": "in millions the 2015 of as of december 2012 is 345 ;",
+        "table_7": "in millions the total of as of december 2012 is $ 3189 ;"
+      },
+      "answer": "11%"
+    }
+  },
+  {
+    "id": "PNC/2013/page_205.pdf-1",
+    "pre_text": [
+      "to determine stock-based compensation expense , the grant date fair value is applied to the options granted with a reduction for estimated forfeitures .",
+      "we recognize compensation expense for stock options on a straight-line basis over the specified vesting period .",
+      "at december 31 , 2012 and 2011 , options for 12759000 and 12337000 shares of common stock were exercisable at a weighted-average price of $ 90.86 and $ 106.08 , respectively .",
+      "the total intrinsic value of options exercised during 2013 , 2012 and 2011 was $ 86 million , $ 37 million and $ 4 million , respectively .",
+      "the total tax benefit recognized related to compensation expense on all share-based payment arrangements during 2013 , 2012 and 2011 was approximately $ 56 million , $ 37 million and $ 38 million , respectively .",
+      "cash received from option exercises under all incentive plans for 2013 , 2012 and 2011 was approximately $ 208 million , $ 118 million and $ 41 million , respectively .",
+      "the tax benefit realized from option exercises under all incentive plans for 2013 , 2012 and 2011 was approximately $ 31 million , $ 14 million and $ 1 million , respectively .",
+      "shares of common stock available during the next year for the granting of options and other awards under the incentive plans were 24535159 at december 31 , 2013 .",
+      "total shares of pnc common stock authorized for future issuance under equity compensation plans totaled 25712719 shares at december 31 , 2013 , which includes shares available for issuance under the incentive plans and the employee stock purchase plan ( espp ) as described below .",
+      "during 2013 , we issued approximately 2.6 million shares from treasury stock in connection with stock option exercise activity .",
+      "as with past exercise activity , we currently intend to utilize primarily treasury stock for any future stock option exercises .",
+      "awards granted to non-employee directors in 2013 , 2012 and 2011 include 27076 , 25620 and 27090 deferred stock units , respectively , awarded under the outside directors deferred stock unit plan .",
+      "a deferred stock unit is a phantom share of our common stock , which is accounted for as a liability until such awards are paid to the participants in cash .",
+      "as there are no vesting or service requirements on these awards , total compensation expense is recognized in full for these awards on the date of grant .",
+      "incentive/performance unit share awards and restricted stock/share unit awards the fair value of nonvested incentive/performance unit share awards and restricted stock/share unit awards is initially determined based on prices not less than the market value of our common stock on the date of grant .",
+      "the value of certain incentive/performance unit share awards is subsequently remeasured based on the achievement of one or more financial and other performance goals , generally over a three-year period .",
+      "the personnel and compensation committee ( 201cp&cc 201d ) of the board of directors approves the final award payout with respect to certain incentive/performance unit share awards .",
+      "restricted stock/share unit awards have various vesting periods generally ranging from 3 years to 5 years .",
+      "beginning in 2013 , we incorporated several enhanced risk- related performance changes to certain long-term incentive compensation programs .",
+      "in addition to achieving certain financial performance metrics on both an absolute basis and relative to our peers , final payout amounts will be subject to reduction if pnc fails to meet certain risk-related performance metrics as specified in the award agreement .",
+      "however , the p&cc has the discretion to waive any or all of this reduction under certain circumstances .",
+      "these awards have either a three- year or a four-year performance period and are payable in either stock or a combination of stock and cash .",
+      "additionally , performance-based restricted share units were granted in 2013 to certain executives as part of annual bonus deferral criteria .",
+      "these units , payable solely in stock , vest ratably over a four-year period and contain the same risk- related discretionary criteria noted in the preceding paragraph .",
+      "the weighted-average grant date fair value of incentive/ performance unit share awards and restricted stock/unit awards granted in 2013 , 2012 and 2011 was $ 64.77 , $ 60.68 and $ 63.25 per share , respectively .",
+      "the total fair value of incentive/performance unit share and restricted stock/unit awards vested during 2013 , 2012 and 2011 was approximately $ 63 million , $ 55 million and $ 52 million , respectively .",
+      "we recognize compensation expense for such awards ratably over the corresponding vesting and/or performance periods for each type of program .",
+      "table 124 : nonvested incentive/performance unit share awards and restricted stock/share unit awards 2013 rollforward shares in thousands nonvested incentive/ performance unit shares weighted- average grant date fair value nonvested restricted stock/ weighted- average grant date fair value ."
+    ],
+    "post_text": [
+      "the pnc financial services group , inc .",
+      "2013 form 10-k 187 ."
+    ],
+    "table": [
+      [
+        "shares in thousands december 31 2012",
+        "nonvested incentive/ performance unit shares 1119",
+        "weighted- average grant date fair value $ 61.14",
+        "nonvested restricted stock/ share units 3061",
+        "weighted- average grant date fair value $ 60.04"
+      ],
+      [
+        "granted",
+        "926",
+        "64.36",
+        "1288",
+        "65.06"
+      ],
+      [
+        "vested/released",
+        "-326 ( 326 )",
+        "58.26",
+        "-674 ( 674 )",
+        "55.22"
+      ],
+      [
+        "forfeited",
+        "-72 ( 72 )",
+        "62.02",
+        "-192 ( 192 )",
+        "62.37"
+      ],
+      [
+        "december 31 2013",
+        "1647",
+        "$ 63.49",
+        "3483",
+        "$ 62.70"
+      ]
+    ],
+    "qa": {
+      "question": "what was the total fair value of incentive/performance unit share and restricted stock/unit awards vested during 2013 and 2012 in millions?",
+      "program": "add(63, 55)",
+      "exe_ans": 118.0,
+      "gold_inds": {
+        "text_9": "during 2013 , we issued approximately 2.6 million shares from treasury stock in connection with stock option exercise activity .",
+        "text_25": "the total fair value of incentive/performance unit share and restricted stock/unit awards vested during 2013 , 2012 and 2011 was approximately $ 63 million , $ 55 million and $ 52 million , respectively ."
+      },
+      "answer": "118"
+    }
+  },
+  {
+    "id": "BLK/2017/page_77.pdf-2",
+    "pre_text": [
+      "income tax expense ."
+    ],
+    "post_text": [
+      "operating income ( 1 ) $ 5272 $ 4570 $ 4664 $ 5287 $ 4674 $ 4695 total nonoperating income ( expense ) ( 1 ) ( 2 ) ( 32 ) ( 108 ) ( 69 ) ( 32 ) ( 108 ) ( 70 ) income before income taxes ( 2 ) $ 5240 $ 4462 $ 4595 $ 5255 $ 4566 $ 4625 income tax expense ( 3 ) $ 270 $ 1290 $ 1250 $ 1539 $ 1352 $ 1312 effective tax rate ( 3 ) 5.2% ( 5.2 % ) 28.9% ( 28.9 % ) 27.2% ( 27.2 % ) 29.3% ( 29.3 % ) 29.6% ( 29.6 % ) 28.4% ( 28.4 % ) ( 1 ) see non-gaap financial measures for further information on and reconciliation of as adjusted items .",
+      "( 2 ) net of net income ( loss ) attributable to nci .",
+      "( 3 ) gaap income tax expense and effective tax rate for 2017 reflects $ 1.2 billion of a net tax benefit related to the 2017 tax act .",
+      "the company 2019s tax rate is affected by tax rates in foreign jurisdictions and the relative amount of income earned in those jurisdictions , which the company expects to be fairly consistent in the near term .",
+      "the significant foreign jurisdictions that have lower statutory tax rates than the u.s .",
+      "federal statutory rate of 35% ( 35 % ) include the united kingdom , channel islands , ireland and netherlands .",
+      "2017 .",
+      "income tax expense ( gaap ) reflected : 2022 the following amounts related to the 2017 tax act : 2022 $ 106 million tax expense related to the revaluation of certain deferred income tax assets ; 2022 $ 1758 million noncash tax benefit related to the revaluation of certain deferred income tax liabilities ; 2022 $ 477 million tax expense related to the mandatory deemed repatriation of undistributed foreign earnings and profits .",
+      "2022 a noncash expense of $ 16 million , primarily associated with the revaluation of certain deferred income tax liabilities as a result of domestic state and local tax changes ; and 2022 $ 173 million discrete tax benefits , primarily related to stock-based compensation awards , including $ 151 million related to the adoption of new accounting guidance related to stock-based compensation awards .",
+      "see note 2 , significant accounting policies , for further information .",
+      "the as adjusted effective tax rate of 29.3% ( 29.3 % ) for 2017 excluded the noncash deferred tax revaluation benefit of $ 1758 million and noncash expense of $ 16 million mentioned above as it will not have a cash flow impact and to ensure comparability among periods presented .",
+      "in addition , the deemed repatriation tax expense of $ 477 million has been excluded from the as adjusted results due to the one-time nature and to ensure comparability among periods presented .",
+      "2016 .",
+      "income tax expense ( gaap ) reflected : 2022 a net noncash benefit of $ 30 million , primarily associated with the revaluation of certain deferred income tax liabilities ; and 2022 a benefit from $ 65 million of nonrecurring items , including the resolution of certain outstanding tax matters .",
+      "the as adjusted effective tax rate of 29.6% ( 29.6 % ) for 2016 excluded the net noncash benefit of $ 30 million mentioned above as it will not have a cash flow impact and to ensure comparability among periods presented .",
+      "2015 .",
+      "income tax expense ( gaap ) reflected : 2022 a net noncash benefit of $ 54 million , primarily associated with the revaluation of certain deferred income tax liabilities ; and 2022 a benefit from $ 75 million of nonrecurring items , primarily due to the realization of losses from changes in the company 2019s organizational tax structure and the resolution of certain outstanding tax matters .",
+      "the as adjusted effective tax rate of 28.4% ( 28.4 % ) for 2015 excluded the net noncash benefit of $ 54 million mentioned above , as it will not have a cash flow impact and to ensure comparability among periods presented .",
+      "balance sheet overview as adjusted balance sheet the following table presents a reconciliation of the consolidated statement of financial condition presented on a gaap basis to the consolidated statement of financial condition , excluding the impact of separate account assets and separate account collateral held under securities lending agreements ( directly related to lending separate account securities ) and separate account liabilities and separate account collateral liabilities under securities lending agreements and consolidated sponsored investment funds , including consolidated vies .",
+      "the company presents the as adjusted balance sheet as additional information to enable investors to exclude certain assets that have equal and offsetting liabilities or noncontrolling interests that ultimately do not have an impact on stockholders 2019 equity or cash flows .",
+      "management views the as adjusted balance sheet , which contains non-gaap financial measures , as an economic presentation of the company 2019s total assets and liabilities ; however , it does not advocate that investors consider such non-gaap financial measures in isolation from , or as a substitute for , financial information prepared in accordance with gaap .",
+      "separate account assets and liabilities and separate account collateral held under securities lending agreements separate account assets are maintained by blackrock life limited , a wholly owned subsidiary of the company that is a registered life insurance company in the united kingdom , and represent segregated assets held for purposes of funding individual and group pension contracts .",
+      "the ."
+    ],
+    "table": [
+      [
+        "( in millions )",
+        "gaap 2017",
+        "gaap 2016",
+        "gaap 2015",
+        "gaap 2017",
+        "gaap 2016",
+        "2015"
+      ],
+      [
+        "operating income ( 1 )",
+        "$ 5272",
+        "$ 4570",
+        "$ 4664",
+        "$ 5287",
+        "$ 4674",
+        "$ 4695"
+      ],
+      [
+        "total nonoperating income ( expense ) ( 1 ) ( 2 )",
+        "-32 ( 32 )",
+        "-108 ( 108 )",
+        "-69 ( 69 )",
+        "-32 ( 32 )",
+        "-108 ( 108 )",
+        "-70 ( 70 )"
+      ],
+      [
+        "income before income taxes ( 2 )",
+        "$ 5240",
+        "$ 4462",
+        "$ 4595",
+        "$ 5255",
+        "$ 4566",
+        "$ 4625"
+      ],
+      [
+        "income tax expense ( 3 )",
+        "$ 270",
+        "$ 1290",
+        "$ 1250",
+        "$ 1539",
+        "$ 1352",
+        "$ 1312"
+      ],
+      [
+        "effective tax rate ( 3 )",
+        "5.2% ( 5.2 % )",
+        "28.9% ( 28.9 % )",
+        "27.2% ( 27.2 % )",
+        "29.3% ( 29.3 % )",
+        "29.6% ( 29.6 % )",
+        "28.4% ( 28.4 % )"
+      ]
+    ],
+    "qa": {
+      "question": "what is the growth rate in operating income from 2015 to 2016?",
+      "program": "subtract(4570, 4664), divide(#0, 4664)",
+      "exe_ans": -0.02015,
+      "gold_inds": {
+        "table_1": "( in millions ) the operating income ( 1 ) of gaap 2017 is $ 5272 ; the operating income ( 1 ) of gaap 2016 is $ 4570 ; the operating income ( 1 ) of gaap 2015 is $ 4664 ; the operating income ( 1 ) of gaap 2017 is $ 5287 ; the operating income ( 1 ) of gaap 2016 is $ 4674 ; the operating income ( 1 ) of 2015 is $ 4695 ;"
+      },
+      "answer": "-2.0%"
+    }
+  },
+  {
+    "id": "C/2008/page_105.pdf-1",
+    "pre_text": [
+      "sources of liquidity primary sources of liquidity for citigroup and its principal subsidiaries include : 2022 deposits ; 2022 collateralized financing transactions ; 2022 senior and subordinated debt ; 2022 commercial paper ; 2022 trust preferred and preferred securities ; and 2022 purchased/wholesale funds .",
+      "citigroup 2019s funding sources are diversified across funding types and geography , a benefit of its global franchise .",
+      "funding for citigroup and its major operating subsidiaries includes a geographically diverse retail and corporate deposit base of $ 774.2 billion .",
+      "these deposits are diversified across products and regions , with approximately two-thirds of them outside of the u.s .",
+      "this diversification provides the company with an important , stable and low-cost source of funding .",
+      "a significant portion of these deposits has been , and is expected to be , long-term and stable , and are considered to be core .",
+      "there are qualitative as well as quantitative assessments that determine the company 2019s calculation of core deposits .",
+      "the first step in this process is a qualitative assessment of the deposits .",
+      "for example , as a result of the company 2019s qualitative analysis certain deposits with wholesale funding characteristics are excluded from consideration as core .",
+      "deposits that qualify under the company 2019s qualitative assessments are then subjected to quantitative analysis .",
+      "excluding the impact of changes in foreign exchange rates and the sale of our retail banking operations in germany during the year ending december 31 , 2008 , the company 2019s deposit base remained stable .",
+      "on a volume basis , deposit increases were noted in transaction services , u.s .",
+      "retail banking and smith barney .",
+      "this was partially offset by the company 2019s decision to reduce deposits considered wholesale funding , consistent with the company 2019s de-leveraging efforts , and declines in international consumer banking and the private bank .",
+      "citigroup and its subsidiaries have historically had a significant presence in the global capital markets .",
+      "the company 2019s capital markets funding activities have been primarily undertaken by two legal entities : ( i ) citigroup inc. , which issues long-term debt , medium-term notes , trust preferred securities , and preferred and common stock ; and ( ii ) citigroup funding inc .",
+      "( cfi ) , a first-tier subsidiary of citigroup , which issues commercial paper , medium-term notes and structured equity-linked and credit-linked notes , all of which are guaranteed by citigroup .",
+      "other significant elements of long- term debt on the consolidated balance sheet include collateralized advances from the federal home loan bank system , long-term debt related to the consolidation of icg 2019s structured investment vehicles , asset-backed outstandings , and certain borrowings of foreign subsidiaries .",
+      "each of citigroup 2019s major operating subsidiaries finances its operations on a basis consistent with its capitalization , regulatory structure and the environment in which it operates .",
+      "particular attention is paid to those businesses that for tax , sovereign risk , or regulatory reasons cannot be freely and readily funded in the international markets .",
+      "citigroup 2019s borrowings have historically been diversified by geography , investor , instrument and currency .",
+      "decisions regarding the ultimate currency and interest rate profile of liquidity generated through these borrowings can be separated from the actual issuance through the use of derivative instruments .",
+      "citigroup is a provider of liquidity facilities to the commercial paper programs of the two primary credit card securitization trusts with which it transacts .",
+      "citigroup may also provide other types of support to the trusts .",
+      "as a result of the recent economic downturn , its impact on the cashflows of the trusts , and in response to credit rating agency reviews of the trusts , the company increased the credit enhancement in the omni trust , and plans to provide additional enhancement to the master trust ( see note 23 to consolidated financial statements on page 175 for a further discussion ) .",
+      "this support preserves investor sponsorship of our card securitization franchise , an important source of liquidity .",
+      "banking subsidiaries there are various legal limitations on the ability of citigroup 2019s subsidiary depository institutions to extend credit , pay dividends or otherwise supply funds to citigroup and its non-bank subsidiaries .",
+      "the approval of the office of the comptroller of the currency , in the case of national banks , or the office of thrift supervision , in the case of federal savings banks , is required if total dividends declared in any calendar year exceed amounts specified by the applicable agency 2019s regulations .",
+      "state-chartered depository institutions are subject to dividend limitations imposed by applicable state law .",
+      "in determining the declaration of dividends , each depository institution must also consider its effect on applicable risk-based capital and leverage ratio requirements , as well as policy statements of the federal regulatory agencies that indicate that banking organizations should generally pay dividends out of current operating earnings .",
+      "non-banking subsidiaries citigroup also receives dividends from its non-bank subsidiaries .",
+      "these non-bank subsidiaries are generally not subject to regulatory restrictions on dividends .",
+      "however , as discussed in 201ccapital resources and liquidity 201d on page 94 , the ability of cgmhi to declare dividends can be restricted by capital considerations of its broker-dealer subsidiaries .",
+      "cgmhi 2019s consolidated balance sheet is liquid , with the vast majority of its assets consisting of marketable securities and collateralized short-term financing agreements arising from securities transactions .",
+      "cgmhi monitors and evaluates the adequacy of its capital and borrowing base on a daily basis to maintain liquidity and to ensure that its capital base supports the regulatory capital requirements of its subsidiaries .",
+      "some of citigroup 2019s non-bank subsidiaries , including cgmhi , have credit facilities with citigroup 2019s subsidiary depository institutions , including citibank , n.a .",
+      "borrowings under these facilities must be secured in accordance with section 23a of the federal reserve act .",
+      "there are various legal restrictions on the extent to which a bank holding company and certain of its non-bank subsidiaries can borrow or obtain credit from citigroup 2019s subsidiary depository institutions or engage in certain other transactions with them .",
+      "in general , these restrictions require that transactions be on arm 2019s length terms and be secured by designated amounts of specified collateral .",
+      "see note 20 to the consolidated financial statements on page 169 .",
+      "at december 31 , 2008 , long-term debt and commercial paper outstanding for citigroup , cgmhi , cfi and citigroup 2019s subsidiaries were as follows : in billions of dollars citigroup parent company cgmhi ( 2 ) citigroup funding inc .",
+      "( 2 ) citigroup subsidiaries long-term debt $ 192.3 $ 20.6 $ 37.4 $ 109.3 ( 1 ) ."
+    ],
+    "post_text": [
+      "( 1 ) at december 31 , 2008 , approximately $ 67.4 billion relates to collateralized advances from the federal home loan bank .",
+      "( 2 ) citigroup inc .",
+      "guarantees all of cfi 2019s debt and cgmhi 2019s publicly issued securities. ."
+    ],
+    "table": [
+      [
+        "in billions of dollars",
+        "citigroup parent company",
+        "cgmhi ( 2 )",
+        "citigroup funding inc. ( 2 )",
+        "other citigroup subsidiaries",
+        ""
+      ],
+      [
+        "long-term debt",
+        "$ 192.3",
+        "$ 20.6",
+        "$ 37.4",
+        "$ 109.3",
+        "-1 ( 1 )"
+      ],
+      [
+        "commercial paper",
+        "$ 2014",
+        "$ 2014",
+        "$ 28.6",
+        "$ 0.5",
+        ""
+      ]
+    ],
+    "qa": {
+      "question": "what was the total long-term debt for citigroup subsidiaries long-term debt at december 312008",
+      "program": "add(192.3, 20.6), add(#0, 37.4), add(109.3, #1)",
+      "exe_ans": 359.6,
+      "gold_inds": {
+        "table_1": "in billions of dollars the long-term debt of citigroup parent company is $ 192.3 ; the long-term debt of cgmhi ( 2 ) is $ 20.6 ; the long-term debt of citigroup funding inc . ( 2 ) is $ 37.4 ; the long-term debt of other citigroup subsidiaries is $ 109.3 ; the long-term debt of is -1 ( 1 ) ;"
+      },
+      "answer": "359.6"
+    }
+  },
+  {
+    "id": "AMT/2015/page_58.pdf-2",
+    "pre_text": [
+      "the long term .",
+      "in addition , we have focused on building relationships with large multinational carriers such as airtel , telef f3nica s.a .",
+      "and vodafone group plc .",
+      "we believe that consistent carrier investments in their networks across our international markets position us to generate meaningful organic revenue growth going forward .",
+      "in emerging markets , such as ghana , india , nigeria and uganda , wireless networks tend to be significantly less advanced than those in the united states , and initial voice networks continue to be deployed in underdeveloped areas .",
+      "a majority of consumers in these markets still utilize basic wireless services , predominantly on feature phones , while advanced device penetration remains low .",
+      "in more developed urban locations within these markets , early-stage data network deployments are underway .",
+      "carriers are focused on completing voice network build-outs while also investing in initial data networks as wireless data usage and smartphone penetration within their customer bases begin to accelerate .",
+      "in markets with rapidly evolving network technology , such as south africa and most of the countries in latin america where we do business , initial voice networks , for the most part , have already been built out , and carriers are focused on 3g network build outs , with select investments in 4g technology .",
+      "consumers in these regions are increasingly adopting smartphones and other advanced devices , and as a result , the usage of bandwidth-intensive mobile applications is growing materially .",
+      "recent spectrum auctions in these rapidly evolving markets have allowed incumbent carriers to accelerate their data network deployments and have also enabled new entrants to begin initial investments in data networks .",
+      "smartphone penetration and wireless data usage in these markets are growing rapidly , which typically requires that carriers continue to invest in their networks in order to maintain and augment their quality of service .",
+      "finally , in markets with more mature network technology , such as germany , carriers are focused on deploying 4g data networks to account for rapidly increasing wireless data usage amongst their customer base .",
+      "with higher smartphone and advanced device penetration and significantly higher per capita data usage , carrier investment in networks is focused on 4g coverage and capacity .",
+      "we believe that the network technology migration we have seen in the united states , which has led to significantly denser networks and meaningful new business commencements for us over a number of years , will ultimately be replicated in our less advanced international markets .",
+      "as a result , we expect to be able to leverage our extensive international portfolio of approximately 60190 communications sites and the relationships we have built with our carrier customers to drive sustainable , long-term growth .",
+      "we have holistic master lease agreements with certain of our tenants that provide for consistent , long-term revenue and a reduction in the likelihood of churn .",
+      "our holistic master lease agreements build and augment strong strategic partnerships with our tenants and have significantly reduced collocation cycle times , thereby providing our tenants with the ability to rapidly and efficiently deploy equipment on our sites .",
+      "property operations new site revenue growth .",
+      "during the year ended december 31 , 2015 , we grew our portfolio of communications real estate through the acquisition and construction of approximately 25370 sites .",
+      "in a majority of our asia , emea and latin america markets , the acquisition or construction of new sites resulted in increases in both tenant and pass- through revenues ( such as ground rent or power and fuel costs ) and expenses .",
+      "we continue to evaluate opportunities to acquire communications real estate portfolios , both domestically and internationally , to determine whether they meet our risk-adjusted hurdle rates and whether we believe we can effectively integrate them into our existing portfolio. ."
+    ],
+    "post_text": [
+      "property operations expenses .",
+      "direct operating expenses incurred by our property segments include direct site level expenses and consist primarily of ground rent and power and fuel costs , some or all of which may be passed through to our tenants , as well as property taxes , repairs and maintenance .",
+      "these segment direct operating expenses exclude all segment and corporate selling , general , administrative and development expenses , which are aggregated into one line item entitled selling , general , administrative and development expense in our consolidated statements of operations .",
+      "in general , our property segments 2019 selling , general , administrative and development expenses do not significantly increase as a result of adding incremental tenants to our legacy sites and typically increase only modestly year-over-year .",
+      "as a result , leasing additional space to new tenants on our legacy sites provides significant incremental cash flow .",
+      "we may , however , incur additional segment ."
+    ],
+    "table": [
+      [
+        "new sites ( acquired or constructed )",
+        "2015",
+        "2014",
+        "2013"
+      ],
+      [
+        "u.s .",
+        "11595",
+        "900",
+        "5260"
+      ],
+      [
+        "asia",
+        "2330",
+        "1560",
+        "1260"
+      ],
+      [
+        "emea",
+        "4910",
+        "190",
+        "485"
+      ],
+      [
+        "latin america",
+        "6535",
+        "5800",
+        "6065"
+      ]
+    ],
+    "qa": {
+      "question": "what is the total number of sites acquired and constructed during 2014?",
+      "program": "add(900, 1560), add(#0, 190), add(#1, 5800)",
+      "exe_ans": 8450.0,
+      "gold_inds": {
+        "table_1": "new sites ( acquired or constructed ) the u.s . of 2015 is 11595 ; the u.s . of 2014 is 900 ; the u.s . of 2013 is 5260 ;",
+        "table_2": "new sites ( acquired or constructed ) the asia of 2015 is 2330 ; the asia of 2014 is 1560 ; the asia of 2013 is 1260 ;",
+        "table_3": "new sites ( acquired or constructed ) the emea of 2015 is 4910 ; the emea of 2014 is 190 ; the emea of 2013 is 485 ;",
+        "table_4": "new sites ( acquired or constructed ) the latin america of 2015 is 6535 ; the latin america of 2014 is 5800 ; the latin america of 2013 is 6065 ;"
+      },
+      "answer": "8450"
+    }
+  },
+  {
+    "id": "ETR/2017/page_422.pdf-2",
+    "pre_text": [
+      "all debt and common and preferred stock issuances by entergy texas require prior regulatory approval .",
+      "debt issuances are also subject to issuance tests set forth in its bond indenture and other agreements .",
+      "entergy texas has sufficient capacity under these tests to meet its foreseeable capital needs .",
+      "entergy texas 2019s receivables from or ( payables to ) the money pool were as follows as of december 31 for each of the following years. ."
+    ],
+    "post_text": [
+      "see note 4 to the financial statements for a description of the money pool .",
+      "entergy texas has a credit facility in the amount of $ 150 million scheduled to expire in august 2022 .",
+      "the credit facility allows entergy texas to issue letters of credit against $ 30 million of the borrowing capacity of the facility .",
+      "as of december 31 , 2017 , there were no cash borrowings and $ 25.6 million of letters of credit outstanding under the credit facility .",
+      "in addition , entergy texas is a party to an uncommitted letter of credit facility as a means to post collateral to support its obligations to miso .",
+      "as of december 31 , 2017 , a $ 22.8 million letter of credit was outstanding under entergy texas 2019s letter of credit facility .",
+      "see note 4 to the financial statements for additional discussion of the credit facilities .",
+      "entergy texas obtained authorizations from the ferc through october 2019 for short-term borrowings , not to exceed an aggregate amount of $ 200 million at any time outstanding , and long-term borrowings and security issuances .",
+      "see note 4 to the financial statements for further discussion of entergy texas 2019s short-term borrowing limits .",
+      "entergy texas , inc .",
+      "and subsidiaries management 2019s financial discussion and analysis state and local rate regulation and fuel-cost recovery the rates that entergy texas charges for its services significantly influence its financial position , results of operations , and liquidity .",
+      "entergy texas is regulated and the rates charged to its customers are determined in regulatory proceedings .",
+      "the puct , a governmental agency , is primarily responsible for approval of the rates charged to customers .",
+      "filings with the puct 2011 rate case in november 2011 , entergy texas filed a rate case requesting a $ 112 million base rate increase reflecting a 10.6% ( 10.6 % ) return on common equity based on an adjusted june 2011 test year . a0 a0the rate case also proposed a purchased power recovery rider . a0 a0on january 12 , 2012 , the puct voted not to address the purchased power recovery rider in the rate case , but the puct voted to set a baseline in the rate case proceeding that would be applicable if a purchased power capacity rider is approved in a separate proceeding . a0 a0in april 2012 the puct staff filed direct testimony recommending a base rate increase of $ 66 million and a 9.6% ( 9.6 % ) return on common equity . a0 a0the puct staff , however , subsequently filed a statement of position in the proceeding indicating that it was still evaluating the position it would ultimately take in the case regarding entergy texas 2019s recovery of purchased power capacity costs and entergy texas 2019s proposal to defer its miso transition expenses . a0 a0in april 2012 , entergy texas filed rebuttal testimony indicating a revised request for a $ 105 million base rate increase . a0 a0a hearing was held in late-april through early-may 2012 .",
+      "in september 2012 the puct issued an order approving a $ 28 million rate increase , effective july 2012 . a0 a0the order included a finding that 201ca return on common equity ( roe ) of 9.80 percent will allow [entergy texas] a reasonable opportunity to earn a reasonable return on invested capital . 201d a0 a0the order also provided for increases in depreciation rates and the annual storm reserve accrual . a0 a0the order also reduced entergy texas 2019s proposed purchased power capacity costs , stating that they are not known and measurable ; reduced entergy texas 2019s regulatory assets associated with hurricane rita ; excluded from rate recovery capitalized financially-based incentive compensation ; included $ 1.6 million of miso transition expense in base rates ; and reduced entergy 2019s texas 2019s fuel reconciliation recovery by $ 4 ."
+    ],
+    "table": [
+      [
+        "2017",
+        "2016",
+        "2015",
+        "2014"
+      ],
+      [
+        "( in thousands )",
+        "( in thousands )",
+        "( in thousands )",
+        "( in thousands )"
+      ],
+      [
+        "$ 44903",
+        "$ 681",
+        "( $ 22068 )",
+        "$ 306"
+      ]
+    ],
+    "qa": {
+      "question": "as of december 31 , 2017 what was the percent of the utilization of the allowed letter of credit limit on the entergy texas",
+      "program": "divide(25.6, 30)",
+      "exe_ans": 0.85333,
+      "gold_inds": {
+        "text_6": "the credit facility allows entergy texas to issue letters of credit against $ 30 million of the borrowing capacity of the facility .",
+        "text_7": "as of december 31 , 2017 , there were no cash borrowings and $ 25.6 million of letters of credit outstanding under the credit facility .",
+        "text_8": "in addition , entergy texas is a party to an uncommitted letter of credit facility as a means to post collateral to support its obligations to miso ."
+      },
+      "answer": "85.3%"
+    }
+  },
+  {
+    "id": "JPM/2009/page_183.pdf-3",
+    "pre_text": [
+      "jpmorgan chase & co./2009 annual report 181 the following table shows the current credit risk of derivative receivables after netting adjustments , and the current liquidity risk of derivative payables after netting adjustments , as of december 31 , 2009. ."
+    ],
+    "post_text": [
+      "in addition to the collateral amounts reflected in the table above , at december 31 , 2009 , the firm had received and posted liquid secu- rities collateral in the amount of $ 15.5 billion and $ 11.7 billion , respectively .",
+      "the firm also receives and delivers collateral at the initiation of derivative transactions , which is available as security against potential exposure that could arise should the fair value of the transactions move in the firm 2019s or client 2019s favor , respectively .",
+      "furthermore , the firm and its counterparties hold collateral related to contracts that have a non-daily call frequency for collateral to be posted , and collateral that the firm or a counterparty has agreed to return but has not yet settled as of the reporting date .",
+      "at december 31 , 2009 , the firm had received $ 16.9 billion and delivered $ 5.8 billion of such additional collateral .",
+      "these amounts were not netted against the derivative receivables and payables in the table above , because , at an individual counterparty level , the collateral exceeded the fair value exposure at december 31 , 2009 .",
+      "credit derivatives credit derivatives are financial instruments whose value is derived from the credit risk associated with the debt of a third-party issuer ( the reference entity ) and which allow one party ( the protection purchaser ) to transfer that risk to another party ( the protection seller ) .",
+      "credit derivatives expose the protection purchaser to the creditworthiness of the protection seller , as the protection seller is required to make payments under the contract when the reference entity experiences a credit event , such as a bankruptcy , a failure to pay its obligation or a restructuring .",
+      "the seller of credit protection receives a premium for providing protection but has the risk that the underlying instrument referenced in the contract will be subject to a credit event .",
+      "the firm is both a purchaser and seller of protection in the credit derivatives market and uses these derivatives for two primary purposes .",
+      "first , in its capacity as a market-maker in the dealer/client business , the firm actively risk manages a portfolio of credit derivatives by purchasing and selling credit protection , pre- dominantly on corporate debt obligations , to meet the needs of customers .",
+      "as a seller of protection , the firm 2019s exposure to a given reference entity may be offset partially , or entirely , with a contract to purchase protection from another counterparty on the same or similar reference entity .",
+      "second , the firm uses credit derivatives to mitigate credit risk associated with its overall derivative receivables and traditional commercial credit lending exposures ( loans and unfunded commitments ) as well as to manage its exposure to residential and commercial mortgages .",
+      "see note 3 on pages 156--- 173 of this annual report for further information on the firm 2019s mortgage-related exposures .",
+      "in accomplishing the above , the firm uses different types of credit derivatives .",
+      "following is a summary of various types of credit derivatives .",
+      "credit default swaps credit derivatives may reference the credit of either a single refer- ence entity ( 201csingle-name 201d ) or a broad-based index , as described further below .",
+      "the firm purchases and sells protection on both single- name and index-reference obligations .",
+      "single-name cds and index cds contracts are both otc derivative contracts .",
+      "single- name cds are used to manage the default risk of a single reference entity , while cds index are used to manage credit risk associated with the broader credit markets or credit market segments .",
+      "like the s&p 500 and other market indices , a cds index is comprised of a portfolio of cds across many reference entities .",
+      "new series of cds indices are established approximately every six months with a new underlying portfolio of reference entities to reflect changes in the credit markets .",
+      "if one of the reference entities in the index experi- ences a credit event , then the reference entity that defaulted is removed from the index .",
+      "cds can also be referenced against spe- cific portfolios of reference names or against customized exposure levels based on specific client demands : for example , to provide protection against the first $ 1 million of realized credit losses in a $ 10 million portfolio of exposure .",
+      "such structures are commonly known as tranche cds .",
+      "for both single-name cds contracts and index cds , upon the occurrence of a credit event , under the terms of a cds contract neither party to the cds contract has recourse to the reference entity .",
+      "the protection purchaser has recourse to the protection seller for the difference between the face value of the cds contract and the fair value of the reference obligation at the time of settling the credit derivative contract , also known as the recovery value .",
+      "the protection purchaser does not need to hold the debt instrument of the underlying reference entity in order to receive amounts due under the cds contract when a credit event occurs .",
+      "credit-linked notes a credit linked note ( 201ccln 201d ) is a funded credit derivative where the issuer of the cln purchases credit protection on a referenced entity from the note investor .",
+      "under the contract , the investor pays the issuer par value of the note at the inception of the transaction , and in return , the issuer pays periodic payments to the investor , based on the credit risk of the referenced entity .",
+      "the issuer also repays the investor the par value of the note at maturity unless the reference entity experiences a specified credit event .",
+      "in that event , the issuer is not obligated to repay the par value of the note , but rather , the issuer pays the investor the difference between the par value of the note ."
+    ],
+    "table": [
+      [
+        "december 31 2009 ( in millions )",
+        "derivative receivables",
+        "derivative payables"
+      ],
+      [
+        "gross derivative fair value",
+        "$ 1565518",
+        "$ 1519183"
+      ],
+      [
+        "nettingadjustment 2013 offsetting receivables/payables",
+        "-1419840 ( 1419840 )",
+        "-1419840 ( 1419840 )"
+      ],
+      [
+        "nettingadjustment 2013 cash collateral received/paid",
+        "-65468 ( 65468 )",
+        "-39218 ( 39218 )"
+      ],
+      [
+        "carrying value on consolidated balance sheets",
+        "$ 80210",
+        "$ 60125"
+      ]
+    ],
+    "qa": {
+      "question": "at december 31 , 2009 , what was the ratio of the firm had received to the additional collateral .",
+      "program": "divide(16.9, 5.8)",
+      "exe_ans": 2.91379,
+      "gold_inds": {
+        "text_4": "at december 31 , 2009 , the firm had received $ 16.9 billion and delivered $ 5.8 billion of such additional collateral ."
+      },
+      "answer": "2.9"
+    }
+  },
+  {
+    "id": "MRO/2013/page_23.pdf-4",
+    "pre_text": [
+      "changes in proved undeveloped reserves as of december 31 , 2013 , 627 mmboe of proved undeveloped reserves were reported , an increase of 56 mmboe from december 31 , 2012 .",
+      "the following table shows changes in total proved undeveloped reserves for 2013 : ( mmboe ) ."
+    ],
+    "post_text": [
+      "significant additions to proved undeveloped reserves during 2013 included 72 mmboe in the eagle ford and 49 mmboe in the bakken shale plays due to development drilling .",
+      "transfers from proved undeveloped to proved developed reserves included 57 mmboe in the eagle ford , 18 mmboe in the bakken and 7 mmboe in the oklahoma resource basins due to producing wells .",
+      "costs incurred in 2013 , 2012 and 2011 relating to the development of proved undeveloped reserves , were $ 2536 million , $ 1995 million and $ 1107 million .",
+      "a total of 59 mmboe was booked as a result of reliable technology .",
+      "technologies included statistical analysis of production performance , decline curve analysis , rate transient analysis , reservoir simulation and volumetric analysis .",
+      "the statistical nature of production performance coupled with highly certain reservoir continuity or quality within the reliable technology areas and sufficient proved undeveloped locations establish the reasonable certainty criteria required for booking reserves .",
+      "projects can remain in proved undeveloped reserves for extended periods in certain situations such as large development projects which take more than five years to complete , or the timing of when additional gas compression is needed .",
+      "of the 627 mmboe of proved undeveloped reserves at december 31 , 2013 , 24 percent of the volume is associated with projects that have been included in proved reserves for more than five years .",
+      "the majority of this volume is related to a compression project in e.g .",
+      "that was sanctioned by our board of directors in 2004 .",
+      "the timing of the installation of compression is being driven by the reservoir performance with this project intended to maintain maximum production levels .",
+      "performance of this field since the board sanctioned the project has far exceeded expectations .",
+      "estimates of initial dry gas in place increased by roughly 10 percent between 2004 and 2010 .",
+      "during 2012 , the compression project received the approval of the e.g .",
+      "government , allowing design and planning work to progress towards implementation , with completion expected by mid-2016 .",
+      "the other component of alba proved undeveloped reserves is an infill well approved in 2013 and to be drilled late 2014 .",
+      "proved undeveloped reserves for the north gialo development , located in the libyan sahara desert , were booked for the first time as proved undeveloped reserves in 2010 .",
+      "this development , which is anticipated to take more than five years to be developed , is being executed by the operator and encompasses a continuous drilling program including the design , fabrication and installation of extensive liquid handling and gas recycling facilities .",
+      "anecdotal evidence from similar development projects in the region led to an expected project execution of more than five years from the time the reserves were initially booked .",
+      "interruptions associated with the civil unrest in 2011 and third-party labor strikes in 2013 have extended the project duration .",
+      "there are no other significant undeveloped reserves expected to be developed more than five years after their original booking .",
+      "as of december 31 , 2013 , future development costs estimated to be required for the development of proved undeveloped liquid hydrocarbon , natural gas and synthetic crude oil reserves related to continuing operations for the years 2014 through 2018 are projected to be $ 2894 million , $ 2567 million , $ 2020 million , $ 1452 million and $ 575 million .",
+      "the timing of future projects and estimated future development costs relating to the development of proved undeveloped liquid hydrocarbon , natural gas and synthetic crude oil reserves are forward-looking statements and are based on a number of assumptions , including ( among others ) commodity prices , presently known physical data concerning size and character of the reservoirs , economic recoverability , technology developments , future drilling success , industry economic conditions , levels of cash flow from operations , production experience and other operating considerations .",
+      "to the extent these assumptions prove inaccurate , actual recoveries , timing and development costs could be different than current estimates. ."
+    ],
+    "table": [
+      [
+        "beginning of year",
+        "571"
+      ],
+      [
+        "revisions of previous estimates",
+        "4"
+      ],
+      [
+        "improved recovery",
+        "7"
+      ],
+      [
+        "purchases of reserves in place",
+        "16"
+      ],
+      [
+        "extensions discoveries and other additions",
+        "142"
+      ],
+      [
+        "dispositions",
+        "-4 ( 4 )"
+      ],
+      [
+        "transfer to proved developed",
+        "-109 ( 109 )"
+      ],
+      [
+        "end of year",
+        "627"
+      ]
+    ],
+    "qa": {
+      "question": "by how much did total proved undeveloped reserves increase during 2013?",
+      "program": "divide(56, 571)",
+      "exe_ans": 0.09807,
+      "gold_inds": {
+        "text_0": "changes in proved undeveloped reserves as of december 31 , 2013 , 627 mmboe of proved undeveloped reserves were reported , an increase of 56 mmboe from december 31 , 2012 .",
+        "table_0": "beginning of year the beginning of year of 571 is 571 ;"
+      },
+      "answer": "9.8%"
+    }
+  },
+  {
+    "id": "PPG/2010/page_45.pdf-2",
+    "pre_text": [
+      "notes to the consolidated financial statements the credit agreement provides that loans will bear interest at rates based , at the company 2019s option , on one of two specified base rates plus a margin based on certain formulas defined in the credit agreement .",
+      "additionally , the credit agreement contains a commitment fee on the amount of unused commitment under the credit agreement ranging from 0.125% ( 0.125 % ) to 0.625% ( 0.625 % ) per annum .",
+      "the applicable interest rate and the commitment fee will vary depending on the ratings established by standard & poor 2019s financial services llc and moody 2019s investor service inc .",
+      "for the company 2019s non-credit enhanced , long- term , senior , unsecured debt .",
+      "the credit agreement contains usual and customary restrictive covenants for facilities of its type , which include , with specified exceptions , limitations on the company 2019s ability to create liens or other encumbrances , to enter into sale and leaseback transactions and to enter into consolidations , mergers or transfers of all or substantially all of its assets .",
+      "the credit agreement also requires the company to maintain a ratio of total indebtedness to total capitalization , as defined in the credit agreement , of sixty percent or less .",
+      "the credit agreement contains customary events of default that would permit the lenders to accelerate the repayment of any loans , including the failure to make timely payments when due under the credit agreement or other material indebtedness , the failure to satisfy covenants contained in the credit agreement , a change in control of the company and specified events of bankruptcy and insolvency .",
+      "there were no amounts outstanding under the credit agreement at december 31 , on november 12 , 2010 , ppg completed a public offering of $ 250 million in aggregate principal amount of its 1.900% ( 1.900 % ) notes due 2016 ( the 201c2016 notes 201d ) , $ 500 million in aggregate principal amount of its 3.600% ( 3.600 % ) notes due 2020 ( the 201c2020 notes 201d ) and $ 250 million in aggregate principal amount of its 5.500% ( 5.500 % ) notes due 2040 ( the 201c2040 notes 201d ) .",
+      "these notes were issued pursuant to an indenture dated as of march 18 , 2008 ( the 201coriginal indenture 201d ) between the company and the bank of new york mellon trust company , n.a. , as trustee ( the 201ctrustee 201d ) , as supplemented by a first supplemental indenture dated as of march 18 , 2008 between the company and the trustee ( the 201cfirst supplemental indenture 201d ) and a second supplemental indenture dated as of november 12 , 2010 between the company and the trustee ( the 201csecond supplemental indenture 201d and , together with the original indenture and the first supplemental indenture , the 201cindenture 201d ) .",
+      "the company may issue additional debt from time to time pursuant to the original indenture .",
+      "the indenture governing these notes contains covenants that limit the company 2019s ability to , among other things , incur certain liens securing indebtedness , engage in certain sale-leaseback transactions , and enter into certain consolidations , mergers , conveyances , transfers or leases of all or substantially all the company 2019s assets .",
+      "the terms of these notes also require the company to make an offer to repurchase notes upon a change of control triggering event ( as defined in the second supplemental indenture ) at a price equal to 101% ( 101 % ) of their principal amount plus accrued and unpaid interest .",
+      "cash proceeds from this notes offering was $ 983 million ( net of discount and issuance costs ) .",
+      "the discount and issuance costs related to these notes , which totaled $ 17 million , will be amortized to interest expense over the respective terms of the notes .",
+      "ppg 2019s non-u.s .",
+      "operations have uncommitted lines of credit totaling $ 791 million of which $ 31 million was used as of december 31 , 2010 .",
+      "these uncommitted lines of credit are subject to cancellation at any time and are generally not subject to any commitment fees .",
+      "short-term debt outstanding as of december 31 , 2010 and 2009 , was as follows : ( millions ) 2010 2009 20ac650 million revolving credit facility , 0.8% ( 0.8 % ) as of dec .",
+      "31 , 2009 $ 2014 $ 110 other , weighted average 3.39% ( 3.39 % ) as of dec .",
+      "31 , 2010 and 2.2% ( 2.2 % ) as of december 31 , 2009 24 158 total $ 24 $ 268 ppg is in compliance with the restrictive covenants under its various credit agreements , loan agreements and indentures .",
+      "the company 2019s revolving credit agreements include a financial ratio covenant .",
+      "the covenant requires that the amount of total indebtedness not exceed 60% ( 60 % ) of the company 2019s total capitalization excluding the portion of accumulated other comprehensive income ( loss ) related to pensions and other postretirement benefit adjustments .",
+      "as of december 31 , 2010 , total indebtedness was 45% ( 45 % ) of the company 2019s total capitalization excluding the portion of accumulated other comprehensive income ( loss ) related to pensions and other postretirement benefit adjustments .",
+      "additionally , substantially all of the company 2019s debt agreements contain customary cross- default provisions .",
+      "those provisions generally provide that a default on a debt service payment of $ 10 million or more for longer than the grace period provided ( usually 10 days ) under one agreement may result in an event of default under other agreements .",
+      "none of the company 2019s primary debt obligations are secured or guaranteed by the company 2019s affiliates .",
+      "interest payments in 2010 , 2009 and 2008 totaled $ 189 million , $ 201 million and $ 228 million , respectively .",
+      "2010 ppg annual report and form 10-k 43 ."
+    ],
+    "post_text": [
+      "notes to the consolidated financial statements the credit agreement provides that loans will bear interest at rates based , at the company 2019s option , on one of two specified base rates plus a margin based on certain formulas defined in the credit agreement .",
+      "additionally , the credit agreement contains a commitment fee on the amount of unused commitment under the credit agreement ranging from 0.125% ( 0.125 % ) to 0.625% ( 0.625 % ) per annum .",
+      "the applicable interest rate and the commitment fee will vary depending on the ratings established by standard & poor 2019s financial services llc and moody 2019s investor service inc .",
+      "for the company 2019s non-credit enhanced , long- term , senior , unsecured debt .",
+      "the credit agreement contains usual and customary restrictive covenants for facilities of its type , which include , with specified exceptions , limitations on the company 2019s ability to create liens or other encumbrances , to enter into sale and leaseback transactions and to enter into consolidations , mergers or transfers of all or substantially all of its assets .",
+      "the credit agreement also requires the company to maintain a ratio of total indebtedness to total capitalization , as defined in the credit agreement , of sixty percent or less .",
+      "the credit agreement contains customary events of default that would permit the lenders to accelerate the repayment of any loans , including the failure to make timely payments when due under the credit agreement or other material indebtedness , the failure to satisfy covenants contained in the credit agreement , a change in control of the company and specified events of bankruptcy and insolvency .",
+      "there were no amounts outstanding under the credit agreement at december 31 , on november 12 , 2010 , ppg completed a public offering of $ 250 million in aggregate principal amount of its 1.900% ( 1.900 % ) notes due 2016 ( the 201c2016 notes 201d ) , $ 500 million in aggregate principal amount of its 3.600% ( 3.600 % ) notes due 2020 ( the 201c2020 notes 201d ) and $ 250 million in aggregate principal amount of its 5.500% ( 5.500 % ) notes due 2040 ( the 201c2040 notes 201d ) .",
+      "these notes were issued pursuant to an indenture dated as of march 18 , 2008 ( the 201coriginal indenture 201d ) between the company and the bank of new york mellon trust company , n.a. , as trustee ( the 201ctrustee 201d ) , as supplemented by a first supplemental indenture dated as of march 18 , 2008 between the company and the trustee ( the 201cfirst supplemental indenture 201d ) and a second supplemental indenture dated as of november 12 , 2010 between the company and the trustee ( the 201csecond supplemental indenture 201d and , together with the original indenture and the first supplemental indenture , the 201cindenture 201d ) .",
+      "the company may issue additional debt from time to time pursuant to the original indenture .",
+      "the indenture governing these notes contains covenants that limit the company 2019s ability to , among other things , incur certain liens securing indebtedness , engage in certain sale-leaseback transactions , and enter into certain consolidations , mergers , conveyances , transfers or leases of all or substantially all the company 2019s assets .",
+      "the terms of these notes also require the company to make an offer to repurchase notes upon a change of control triggering event ( as defined in the second supplemental indenture ) at a price equal to 101% ( 101 % ) of their principal amount plus accrued and unpaid interest .",
+      "cash proceeds from this notes offering was $ 983 million ( net of discount and issuance costs ) .",
+      "the discount and issuance costs related to these notes , which totaled $ 17 million , will be amortized to interest expense over the respective terms of the notes .",
+      "ppg 2019s non-u.s .",
+      "operations have uncommitted lines of credit totaling $ 791 million of which $ 31 million was used as of december 31 , 2010 .",
+      "these uncommitted lines of credit are subject to cancellation at any time and are generally not subject to any commitment fees .",
+      "short-term debt outstanding as of december 31 , 2010 and 2009 , was as follows : ( millions ) 2010 2009 20ac650 million revolving credit facility , 0.8% ( 0.8 % ) as of dec .",
+      "31 , 2009 $ 2014 $ 110 other , weighted average 3.39% ( 3.39 % ) as of dec .",
+      "31 , 2010 and 2.2% ( 2.2 % ) as of december 31 , 2009 24 158 total $ 24 $ 268 ppg is in compliance with the restrictive covenants under its various credit agreements , loan agreements and indentures .",
+      "the company 2019s revolving credit agreements include a financial ratio covenant .",
+      "the covenant requires that the amount of total indebtedness not exceed 60% ( 60 % ) of the company 2019s total capitalization excluding the portion of accumulated other comprehensive income ( loss ) related to pensions and other postretirement benefit adjustments .",
+      "as of december 31 , 2010 , total indebtedness was 45% ( 45 % ) of the company 2019s total capitalization excluding the portion of accumulated other comprehensive income ( loss ) related to pensions and other postretirement benefit adjustments .",
+      "additionally , substantially all of the company 2019s debt agreements contain customary cross- default provisions .",
+      "those provisions generally provide that a default on a debt service payment of $ 10 million or more for longer than the grace period provided ( usually 10 days ) under one agreement may result in an event of default under other agreements .",
+      "none of the company 2019s primary debt obligations are secured or guaranteed by the company 2019s affiliates .",
+      "interest payments in 2010 , 2009 and 2008 totaled $ 189 million , $ 201 million and $ 228 million , respectively .",
+      "2010 ppg annual report and form 10-k 43 ."
+    ],
+    "table": [
+      [
+        "( millions )",
+        "2010",
+        "2009"
+      ],
+      [
+        "20ac650 million revolving credit facility 0.8% ( 0.8 % ) as of dec . 31 2009",
+        "$ 2014",
+        "$ 110"
+      ],
+      [
+        "other weighted average 3.39% ( 3.39 % ) as of dec . 31 2010 and 2.2% ( 2.2 % ) as of december 31 2009",
+        "24",
+        "158"
+      ],
+      [
+        "total",
+        "$ 24",
+        "$ 268"
+      ]
+    ],
+    "qa": {
+      "question": "what would 2011 interest payments be based on the rate of change in 2009 to 2010?",
+      "program": "divide(189, 201), multiply(189, #0)",
+      "exe_ans": 177.71642,
+      "gold_inds": {
+        "text_54": "interest payments in 2010 , 2009 and 2008 totaled $ 189 million , $ 201 million and $ 228 million , respectively ."
+      },
+      "answer": "177.7"
+    }
+  },
+  {
+    "id": "INTC/2018/page_105.pdf-2",
+    "pre_text": [
+      "assets measured and recorded at fair value on a non-recurring basis our non-marketable equity securities , equity method investments , and certain non-financial assets , such as intangible assets and property , plant and equipment , are recorded at fair value only if an impairment or observable price adjustment is recognized in the current period .",
+      "if an impairment or observable price adjustment is recognized on our non-marketable equity securities during the period , we classify these assets as level 3 within the fair value hierarchy based on the nature of the fair value inputs .",
+      "we classified non-marketable equity securities and non-marketable equity method investments as level 3 .",
+      "impairments recognized on these investments held as of december 29 , 2018 were $ 416 million ( $ 537 million held as of december 30 , 2017 and $ 153 million held as of december 31 , 2016 ) .",
+      "financial instruments not recorded at fair value on a recurring basis financial instruments not recorded at fair value on a recurring basis include non-marketable equity securities and equity method investments that have not been remeasured or impaired in the current period , grants receivable , loans receivable , reverse repurchase agreements , and our short-term and long-term debt .",
+      "prior to the adoption of the new financial instrument standard , our non-marketable cost method investments were disclosed at fair value on a recurring basis .",
+      "the carrying amount and fair value of our non-marketable cost method investments as of december 30 , 2017 were $ 2.6 billion and $ 3.6 billion , respectively .",
+      "these measures are classified as level 3 within the fair value hierarchy based on the nature of the fair value inputs .",
+      "as of december 29 , 2018 , the aggregate carrying value of grants receivable , loans receivable , and reverse repurchase agreements was $ 833 million ( the aggregate carrying amount as of december 30 , 2017 was $ 935 million ) .",
+      "the estimated fair value of these financial instruments approximates their carrying value and is categorized as level 2 within the fair value hierarchy based on the nature of the fair value inputs .",
+      "for information related to the fair value of our short-term and long-term debt , see 201cnote 15 : borrowings . 201d note 17 : other comprehensive income ( loss ) the changes in accumulated other comprehensive income ( loss ) by component and related tax effects for each period were as follows : ( in millions ) unrealized holding ( losses ) on available-for -sale equity investments unrealized holding ( losses ) on derivatives actuarial valuation and other pension expenses translation adjustments and other total ."
+    ],
+    "post_text": [
+      "financial statements notes to financial statements 97 ."
+    ],
+    "table": [
+      [
+        "( in millions )",
+        "unrealized holding gains ( losses ) on available-for-sale equity investments",
+        "unrealized holding gains ( losses ) on derivatives",
+        "actuarial valuation and other pension expenses",
+        "translation adjustments and other",
+        "total"
+      ],
+      [
+        "december 31 2016",
+        "$ 2179",
+        "$ -259 ( 259 )",
+        "$ -1280 ( 1280 )",
+        "$ -534 ( 534 )",
+        "$ 106"
+      ],
+      [
+        "other comprehensive income ( loss ) before reclassifications",
+        "2765",
+        "605",
+        "275",
+        "-2 ( 2 )",
+        "3643"
+      ],
+      [
+        "amounts reclassified out of accumulated other comprehensive income ( loss )",
+        "-3433 ( 3433 )",
+        "-69 ( 69 )",
+        "103",
+        "509",
+        "-2890 ( 2890 )"
+      ],
+      [
+        "tax effects",
+        "234",
+        "-171 ( 171 )",
+        "-61 ( 61 )",
+        "1",
+        "3"
+      ],
+      [
+        "other comprehensive income ( loss )",
+        "-434 ( 434 )",
+        "365",
+        "317",
+        "508",
+        "756"
+      ],
+      [
+        "december 30 2017",
+        "1745",
+        "106",
+        "-963 ( 963 )",
+        "-26 ( 26 )",
+        "862"
+      ],
+      [
+        "impact of change in accounting standards",
+        "-1745 ( 1745 )",
+        "24",
+        "-65 ( 65 )",
+        "-4 ( 4 )",
+        "-1790 ( 1790 )"
+      ],
+      [
+        "opening balance as of december 31 2017",
+        "2014",
+        "130",
+        "-1028 ( 1028 )",
+        "-30 ( 30 )",
+        "-928 ( 928 )"
+      ],
+      [
+        "other comprehensive income ( loss ) before reclassifications",
+        "2014",
+        "-310 ( 310 )",
+        "157",
+        "-16 ( 16 )",
+        "-169 ( 169 )"
+      ],
+      [
+        "amounts reclassified out of accumulated other comprehensive income ( loss )",
+        "2014",
+        "9",
+        "109",
+        "8",
+        "126"
+      ],
+      [
+        "tax effects",
+        "2014",
+        "48",
+        "-56 ( 56 )",
+        "5",
+        "-3 ( 3 )"
+      ],
+      [
+        "other comprehensive income ( loss )",
+        "2014",
+        "-253 ( 253 )",
+        "210",
+        "-3 ( 3 )",
+        "-46 ( 46 )"
+      ],
+      [
+        "december 29 2018",
+        "$ 2014",
+        "$ -123 ( 123 )",
+        "$ -818 ( 818 )",
+        "$ -33 ( 33 )",
+        "$ -974 ( 974 )"
+      ]
+    ],
+    "qa": {
+      "question": "what is the net change in the accumulated other comprehensive income during 2018?",
+      "program": "subtract(-974, 862)",
+      "exe_ans": -1836.0,
+      "gold_inds": {
+        "table_6": "( in millions ) the december 30 2017 of unrealized holding gains ( losses ) on available-for-sale equity investments is 1745 ; the december 30 2017 of unrealized holding gains ( losses ) on derivatives is 106 ; the december 30 2017 of actuarial valuation and other pension expenses is -963 ( 963 ) ; the december 30 2017 of translation adjustments and other is -26 ( 26 ) ; the december 30 2017 of total is 862 ;",
+        "table_13": "( in millions ) the december 29 2018 of unrealized holding gains ( losses ) on available-for-sale equity investments is $ 2014 ; the december 29 2018 of unrealized holding gains ( losses ) on derivatives is $ -123 ( 123 ) ; the december 29 2018 of actuarial valuation and other pension expenses is $ -818 ( 818 ) ; the december 29 2018 of translation adjustments and other is $ -33 ( 33 ) ; the december 29 2018 of total is $ -974 ( 974 ) ;"
+      },
+      "answer": "-1836"
+    }
+  },
+  {
+    "id": "UNP/2013/page_25.pdf-2",
+    "pre_text": [
+      "f0b7 financial expectations 2013 we are cautious about the economic environment , but , assuming that industrial production grows approximately 3% ( 3 % ) as projected , volume should exceed 2013 levels .",
+      "even with no volume growth , we expect earnings to exceed 2013 earnings , generated by core pricing gains , on-going network improvements and productivity initiatives .",
+      "we expect that free cash flow for 2014 will be lower than 2013 as higher cash from operations will be more than offset by additional cash of approximately $ 400 million that will be used to pay income taxes that were previously deferred through bonus depreciation , increased capital spend and higher dividend payments .",
+      "results of operations operating revenues millions 2013 2012 2011 % (  % ) change 2013 v 2012 % (  % ) change 2012 v 2011 ."
+    ],
+    "post_text": [
+      "we generate freight revenues by transporting freight or other materials from our six commodity groups .",
+      "freight revenues vary with volume ( carloads ) and arc .",
+      "changes in price , traffic mix and fuel surcharges drive arc .",
+      "we provide some of our customers with contractual incentives for meeting or exceeding specified cumulative volumes or shipping to and from specific locations , which we record as reductions to freight revenues based on the actual or projected future shipments .",
+      "we recognize freight revenues as shipments move from origin to destination .",
+      "we allocate freight revenues between reporting periods based on the relative transit time in each reporting period and recognize expenses as we incur them .",
+      "other revenues include revenues earned by our subsidiaries , revenues from our commuter rail operations , and accessorial revenues , which we earn when customers retain equipment owned or controlled by us or when we perform additional services such as switching or storage .",
+      "we recognize other revenues as we perform services or meet contractual obligations .",
+      "freight revenues from five of our six commodity groups increased during 2013 compared to 2012 .",
+      "revenue from agricultural products was down slightly compared to 2012 .",
+      "arc increased 5% ( 5 % ) , driven by core pricing gains , shifts in business mix and an automotive logistics management arrangement .",
+      "volume was essentially flat year over year as growth in automotives , frac sand , crude oil and domestic intermodal offset declines in coal , international intermodal and grain shipments .",
+      "freight revenues from four of our six commodity groups increased during 2012 compared to 2011 .",
+      "revenues from coal and agricultural products declined during the year .",
+      "our franchise diversity allowed us to take advantage of growth from shale-related markets ( crude oil , frac sand and pipe ) and strong automotive manufacturing , which offset volume declines from coal and agricultural products .",
+      "arc increased 7% ( 7 % ) , driven by core pricing gains and higher fuel cost recoveries .",
+      "improved fuel recovery provisions and higher fuel prices , including the lag effect of our programs ( surcharges trail fluctuations in fuel price by approximately two months ) , combined to increase revenues from fuel surcharges .",
+      "our fuel surcharge programs generated freight revenues of $ 2.6 billion , $ 2.6 billion , and $ 2.2 billion in 2013 , 2012 , and 2011 , respectively .",
+      "fuel surcharge in 2013 was essentially flat versus 2012 as lower fuel price offset improved fuel recovery provisions and the lag effect of our programs ( surcharges trail fluctuations in fuel price by approximately two months ) .",
+      "rising fuel prices and more shipments subject to fuel surcharges drove the increase from 2011 to 2012 .",
+      "in 2013 , other revenue increased from 2012 due primarily to miscellaneous contract revenue and higher revenues at our subsidiaries that broker intermodal and automotive services .",
+      "in 2012 , other revenues increased from 2011 due primarily to higher revenues at our subsidiaries that broker intermodal and automotive services .",
+      "assessorial revenues also increased in 2012 due to container revenue related to an increase in intermodal shipments. ."
+    ],
+    "table": [
+      [
+        "millions",
+        "2013",
+        "2012",
+        "2011",
+        "% (  % ) change 2013 v 2012",
+        "% (  % ) change 2012 v 2011"
+      ],
+      [
+        "freight revenues",
+        "$ 20684",
+        "$ 19686",
+        "$ 18508",
+        "5% ( 5 % )",
+        "6% ( 6 % )"
+      ],
+      [
+        "other revenues",
+        "1279",
+        "1240",
+        "1049",
+        "3",
+        "18"
+      ],
+      [
+        "total",
+        "$ 21963",
+        "$ 20926",
+        "$ 19557",
+        "5% ( 5 % )",
+        "7% ( 7 % )"
+      ]
+    ],
+    "qa": {
+      "question": "what was the percentage change in fuel surcharge revenues from 2012 to 2013?",
+      "program": "subtract(2.6, 2.6), divide(#0, 2.6)",
+      "exe_ans": 0.0,
+      "gold_inds": {
+        "text_21": "our fuel surcharge programs generated freight revenues of $ 2.6 billion , $ 2.6 billion , and $ 2.2 billion in 2013 , 2012 , and 2011 , respectively ."
+      },
+      "answer": "0%"
+    }
+  },
+  {
+    "id": "UNP/2010/page_55.pdf-1",
+    "pre_text": [
+      "notes to the consolidated financial statements union pacific corporation and subsidiary companies for purposes of this report , unless the context otherwise requires , all references herein to the 201ccorporation 201d , 201cupc 201d , 201cwe 201d , 201cus 201d , and 201cour 201d mean union pacific corporation and its subsidiaries , including union pacific railroad company , which will be separately referred to herein as 201cuprr 201d or the 201crailroad 201d .",
+      "1 .",
+      "nature of operations operations and segmentation 2013 we are a class i railroad that operates in the u.s .",
+      "we have 31953 route miles , linking pacific coast and gulf coast ports with the midwest and eastern u.s .",
+      "gateways and providing several corridors to key mexican gateways .",
+      "we serve the western two-thirds of the country and maintain coordinated schedules with other rail carriers for the handling of freight to and from the atlantic coast , the pacific coast , the southeast , the southwest , canada , and mexico .",
+      "export and import traffic is moved through gulf coast and pacific coast ports and across the mexican and canadian borders .",
+      "the railroad , along with its subsidiaries and rail affiliates , is our one reportable operating segment .",
+      "although revenues are analyzed by commodity group , we analyze the net financial results of the railroad as one segment due to the integrated nature of our rail network .",
+      "the following table provides revenue by commodity group : millions 2010 2009 2008 ."
+    ],
+    "post_text": [
+      "although our revenues are principally derived from customers domiciled in the u.s. , the ultimate points of origination or destination for some products transported are outside the u.s .",
+      "basis of presentation 2013 the consolidated financial statements are presented in accordance with accounting principles generally accepted in the u.s .",
+      "( gaap ) as codified in the financial accounting standards board ( fasb ) accounting standards codification ( asc ) .",
+      "2 .",
+      "significant accounting policies principles of consolidation 2013 the consolidated financial statements include the accounts of union pacific corporation and all of its subsidiaries .",
+      "investments in affiliated companies ( 20% ( 20 % ) to 50% ( 50 % ) owned ) are accounted for using the equity method of accounting .",
+      "all intercompany transactions are eliminated .",
+      "we currently have no less than majority-owned investments that require consolidation under variable interest entity requirements .",
+      "cash and cash equivalents 2013 cash equivalents consist of investments with original maturities of three months or less .",
+      "accounts receivable 2013 accounts receivable includes receivables reduced by an allowance for doubtful accounts .",
+      "the allowance is based upon historical losses , credit worthiness of customers , and current economic conditions .",
+      "receivables not expected to be collected in one year and the associated allowances are classified as other assets in our consolidated statements of financial position .",
+      "investments 2013 investments represent our investments in affiliated companies ( 20% ( 20 % ) to 50% ( 50 % ) owned ) that are accounted for under the equity method of accounting and investments in companies ( less than 20% ( 20 % ) owned ) accounted for under the cost method of accounting. ."
+    ],
+    "table": [
+      [
+        "millions",
+        "2010",
+        "2009",
+        "2008"
+      ],
+      [
+        "agricultural",
+        "$ 3018",
+        "$ 2666",
+        "$ 3174"
+      ],
+      [
+        "automotive",
+        "1271",
+        "854",
+        "1344"
+      ],
+      [
+        "chemicals",
+        "2425",
+        "2102",
+        "2494"
+      ],
+      [
+        "energy",
+        "3489",
+        "3118",
+        "3810"
+      ],
+      [
+        "industrial products",
+        "2639",
+        "2147",
+        "3273"
+      ],
+      [
+        "intermodal",
+        "3227",
+        "2486",
+        "3023"
+      ],
+      [
+        "total freight revenues",
+        "$ 16069",
+        "$ 13373",
+        "$ 17118"
+      ],
+      [
+        "other revenues",
+        "896",
+        "770",
+        "852"
+      ],
+      [
+        "total operating revenues",
+        "$ 16965",
+        "$ 14143",
+        "$ 17970"
+      ]
+    ],
+    "qa": {
+      "question": "from 2008 to 2010 what was the average revenues by commodity group from agriculture",
+      "program": "add(3018, 2666), add(#0, 3174), divide(#1, const_3)",
+      "exe_ans": 2952.66667,
+      "gold_inds": {
+        "table_1": "millions the agricultural of 2010 is $ 3018 ; the agricultural of 2009 is $ 2666 ; the agricultural of 2008 is $ 3174 ;"
+      },
+      "answer": "2952.7"
+    }
+  },
+  {
+    "id": "AOS/2007/page_17.pdf-2",
+    "pre_text": [
+      "the graph below shows a five-year comparison of the cumulative shareholder return on the company's common stock with the cumulative total return of the s&p smallcap 600 index and the s&p 600 electrical equipment index , all of which are published indices .",
+      "comparison of five-year cumulative total return from december 31 , 2002 to december 31 , 2007 assumes $ 100 invested with reinvestment of dividends period indexed returns ."
+    ],
+    "post_text": [
+      "12/31/02 12/31/03 12/31/04 12/31/05 12/31/06 12/31/07 smith ( a o ) corp s&p smallcap 600 index s&p 600 electrical equipment ."
+    ],
+    "table": [
+      [
+        "company/index",
+        "baseperiod 12/31/02",
+        "baseperiod 12/31/03",
+        "baseperiod 12/31/04",
+        "baseperiod 12/31/05",
+        "baseperiod 12/31/06",
+        "12/31/07"
+      ],
+      [
+        "a o smith corp",
+        "100.00",
+        "132.23",
+        "115.36",
+        "138.20",
+        "150.26",
+        "142.72"
+      ],
+      [
+        "s&p smallcap 600 index",
+        "100.00",
+        "138.79",
+        "170.22",
+        "183.30",
+        "211.01",
+        "210.39"
+      ],
+      [
+        "s&p 600 electrical equipment",
+        "100.00",
+        "126.12",
+        "152.18",
+        "169.07",
+        "228.83",
+        "253.33"
+      ]
+    ],
+    "qa": {
+      "question": "what was the difference in cumulative total return for the five year period ending 12/31/07 between a o smith corp and the s&p 600 electrical equipment?",
+      "program": "subtract(142.72, const_100), divide(#0, const_100), subtract(253.33, const_100), divide(#2, const_100), subtract(#1, #3)",
+      "exe_ans": -1.1061,
+      "gold_inds": {
+        "table_1": "company/index the a o smith corp of baseperiod 12/31/02 is 100.00 ; the a o smith corp of baseperiod 12/31/03 is 132.23 ; the a o smith corp of baseperiod 12/31/04 is 115.36 ; the a o smith corp of baseperiod 12/31/05 is 138.20 ; the a o smith corp of baseperiod 12/31/06 is 150.26 ; the a o smith corp of 12/31/07 is 142.72 ;",
+        "table_3": "company/index the s&p 600 electrical equipment of baseperiod 12/31/02 is 100.00 ; the s&p 600 electrical equipment of baseperiod 12/31/03 is 126.12 ; the s&p 600 electrical equipment of baseperiod 12/31/04 is 152.18 ; the s&p 600 electrical equipment of baseperiod 12/31/05 is 169.07 ; the s&p 600 electrical equipment of baseperiod 12/31/06 is 228.83 ; the s&p 600 electrical equipment of 12/31/07 is 253.33 ;"
+      },
+      "answer": "-110.61%"
+    }
+  },
+  {
+    "id": "C/2009/page_195.pdf-2",
+    "pre_text": [
+      "18 .",
+      "allowance for credit losses ."
+    ],
+    "post_text": [
+      "( 1 ) reclassified to conform to the current period 2019s presentation .",
+      "( 2 ) 2009 primarily includes reductions to the loan loss reserve of approximately $ 543 million related to securitizations , approximately $ 402 million related to the sale or transfers to held-for-sale of u.s .",
+      "real estate lending loans , and $ 562 million related to the transfer of the u.k .",
+      "cards portfolio to held-for-sale .",
+      "2008 primarily includes reductions to the loan loss reserve of approximately $ 800 million related to fx translation , $ 102 million related to securitizations , $ 244 million for the sale of the german retail banking operation , $ 156 million for the sale of citicapital , partially offset by additions of $ 106 million related to the cuscatl e1n and bank of overseas chinese acquisitions .",
+      "2007 primarily includes reductions to the loan loss reserve of $ 475 million related to securitizations and transfers to loans held-for-sale , and reductions of $ 83 million related to the transfer of the u.k .",
+      "citifinancial portfolio to held-for-sale , offset by additions of $ 610 million related to the acquisitions of egg , nikko cordial , grupo cuscatl e1n and grupo financiero uno .",
+      "( 3 ) represents additional credit loss reserves for unfunded corporate lending commitments and letters of credit recorded in other liabilities on the consolidated balance sheet. ."
+    ],
+    "table": [
+      [
+        "in millions of dollars",
+        "2009",
+        "2008 ( 1 )",
+        "2007 ( 1 )"
+      ],
+      [
+        "allowance for loan losses at beginning of year",
+        "$ 29616",
+        "$ 16117",
+        "$ 8940"
+      ],
+      [
+        "gross credit losses",
+        "-32784 ( 32784 )",
+        "-20760 ( 20760 )",
+        "-11864 ( 11864 )"
+      ],
+      [
+        "gross recoveries",
+        "2043",
+        "1749",
+        "1938"
+      ],
+      [
+        "net credit ( losses ) recoveries ( ncls )",
+        "$ -30741 ( 30741 )",
+        "$ -19011 ( 19011 )",
+        "$ -9926 ( 9926 )"
+      ],
+      [
+        "ncls",
+        "$ 30741",
+        "$ 19011",
+        "$ 9926"
+      ],
+      [
+        "net reserve builds ( releases )",
+        "5741",
+        "11297",
+        "6550"
+      ],
+      [
+        "net specific reserve builds ( releases )",
+        "2278",
+        "3366",
+        "356"
+      ],
+      [
+        "total provision for credit losses",
+        "$ 38760",
+        "$ 33674",
+        "$ 16832"
+      ],
+      [
+        "other net ( 2 )",
+        "-1602 ( 1602 )",
+        "-1164 ( 1164 )",
+        "271"
+      ],
+      [
+        "allowance for loan losses at end of year",
+        "$ 36033",
+        "$ 29616",
+        "$ 16117"
+      ],
+      [
+        "allowance for credit losses on unfunded lending commitments at beginning of year ( 3 )",
+        "$ 887",
+        "$ 1250",
+        "$ 1100"
+      ],
+      [
+        "provision for unfunded lending commitments",
+        "244",
+        "-363 ( 363 )",
+        "150"
+      ],
+      [
+        "allowance for credit losses on unfunded lending commitments at end of year ( 3 )",
+        "$ 1157",
+        "$ 887",
+        "$ 1250"
+      ],
+      [
+        "total allowance for loans leases and unfunded lending commitments",
+        "$ 37190",
+        "$ 30503",
+        "$ 17367"
+      ]
+    ],
+    "qa": {
+      "question": "what was the percentage change in the allowance for loan losses from 2007 to 2008?",
+      "program": "subtract(16117, 8940), divide(#0, 8940)",
+      "exe_ans": 0.8028,
+      "gold_inds": {
+        "table_1": "in millions of dollars the allowance for loan losses at beginning of year of 2009 is $ 29616 ; the allowance for loan losses at beginning of year of 2008 ( 1 ) is $ 16117 ; the allowance for loan losses at beginning of year of 2007 ( 1 ) is $ 8940 ;"
+      },
+      "answer": "80%"
+    }
+  },
+  {
+    "id": "AON/2015/page_62.pdf-4",
+    "pre_text": [
+      "notes to consolidated financial statements 1 .",
+      "basis of presentation the accompanying consolidated financial statements and notes thereto have been prepared in accordance with u.s .",
+      "generally accepted accounting principles ( \"u.s .",
+      "gaap\" ) .",
+      "the consolidated financial statements include the accounts of aon plc and all of its controlled subsidiaries ( \"aon\" or the \"company\" ) .",
+      "all intercompany accounts and transactions have been eliminated .",
+      "the consolidated financial statements include , in the opinion of management , all adjustments necessary to present fairly the company's consolidated financial position , results of operations and cash flows for all periods presented .",
+      "reclassification certain amounts in prior years' consolidated financial statements and related notes have been reclassified to conform to the 2015 presentation .",
+      "in prior periods , long-term investments were included in investments in the consolidated statement of financial position .",
+      "these amounts are now included in other non-current assets in the consolidated statement of financial position , as shown in note 3 to these consolidated financial statements .",
+      "long-term investments were $ 135 million at december 31 , 2015 and $ 143 million at december 31 , 2014 .",
+      "in prior periods , prepaid pensions were included in other non-current assets in the consolidated statement of financial position .",
+      "these amounts are now separately disclosed in the consolidated statement of financial position .",
+      "prepaid pensions were $ 1033 million at december 31 , 2015 and $ 933 million at december 31 , 2014 .",
+      "upon vesting of certain share-based payment arrangements , employees may elect to use a portion of the shares to satisfy tax withholding requirements , in which case aon makes a payment to the taxing authority on the employee 2019s behalf and remits the remaining shares to the employee .",
+      "the company has historically presented amounts due to taxing authorities within cash flows from operating activities in the consolidated statements of cash flows .",
+      "the amounts are now included in 201cissuance of shares for employee benefit plans 201d within cash flows from financing activities .",
+      "the company believes this presentation provides greater clarity into the operating and financing activities of the company as the substance and accounting for these transactions is that of a share repurchase .",
+      "it also aligns the company 2019s presentation to be consistent with industry practice .",
+      "amounts reported in issuance of shares for employee benefit plans were $ 227 million , $ 170 million , and $ 120 million , respectively , for the years ended december 31 , 2015 , 2014 and 2013 .",
+      "these amounts , which were reclassified from accounts payable and accrued liabilities and other assets and liabilities , were $ 85 million and $ 85 million in 2014 , and $ 62 million and $ 58 million in 2013 , respectively .",
+      "changes to the presentation in the consolidated statements of cash flows for 2014 and 2013 were made related to certain line items within financing activities .",
+      "the following line items and respective amounts have been aggregated in a new line item titled 201cnoncontrolling interests and other financing activities 201d within financing activities. ."
+    ],
+    "post_text": [
+      "use of estimates the preparation of the accompanying consolidated financial statements in conformity with u.s .",
+      "gaap requires management to make estimates and assumptions that affect the reported amounts of assets and liabilities , disclosures of contingent assets and liabilities at the date of the financial statements , and the reported amounts of reserves and expenses .",
+      "these estimates and assumptions are based on management's best estimates and judgments .",
+      "management evaluates its estimates and assumptions on an ongoing basis using historical experience and other factors , including the current economic environment .",
+      "management believes its estimates to be reasonable given the current facts available .",
+      "aon adjusts such estimates and assumptions when facts and circumstances dictate .",
+      "illiquid credit markets , volatile equity markets , and foreign currency exchange rate movements increase the uncertainty inherent in such estimates and assumptions .",
+      "as future events and their effects cannot be determined , among other factors , with precision , actual results could differ significantly from these estimates .",
+      "changes in estimates resulting from continuing changes in the economic environment would , if applicable , be reflected in the financial statements in future periods. ."
+    ],
+    "table": [
+      [
+        "years ended december 31,",
+        "2014",
+        "2013"
+      ],
+      [
+        "purchases of shares from noncontrolling interests",
+        "3",
+        "-8 ( 8 )"
+      ],
+      [
+        "dividends paid to noncontrolling interests",
+        "-24 ( 24 )",
+        "-19 ( 19 )"
+      ],
+      [
+        "proceeds from sale-leaseback",
+        "25",
+        "2014"
+      ]
+    ],
+    "qa": {
+      "question": "what is the total amount reported in issuance of shares for employee benefit plans in the last three years , ( in millions ) ?",
+      "program": "add(227, 170), add(#0, 120)",
+      "exe_ans": 517.0,
+      "gold_inds": {
+        "text_2": "generally accepted accounting principles ( \"u.s .",
+        "text_19": "amounts reported in issuance of shares for employee benefit plans were $ 227 million , $ 170 million , and $ 120 million , respectively , for the years ended december 31 , 2015 , 2014 and 2013 ."
+      },
+      "answer": "517"
+    }
+  },
+  {
+    "id": "AES/2003/page_93.pdf-3",
+    "pre_text": [
+      "impairment of long-lived assets based on the projection of undiscounted cash flows whenever events or changes in circumstances indicate that the carrying amounts of such assets may not be recoverable .",
+      "in the event such cash flows are not expected to be sufficient to recover the recorded value of the assets , the assets are written down to their estimated fair values ( see note 5 ) .",
+      "asset retirement obligations 2014effective january 1 , 2003 , the company adopted statement of financial accounting standards ( 2018 2018sfas 2019 2019 ) no .",
+      "143 , 2018 2018accounting for asset retirement obligations . 2019 2019 sfas no .",
+      "143 requires the company to record the fair value of a legal liability for an asset retirement obligation in the period in which it is incurred .",
+      "when a new liability is recorded the company will capitalize the costs of the liability by increasing the carrying amount of the related long-lived asset .",
+      "the liability is accreted to its present value each period and the capitalized cost is depreciated over the useful life of the related asset .",
+      "upon settlement of the liability , the company settles the obligation for its recorded amount or incurs a gain or loss upon settlement .",
+      "the company 2019s retirement obligations covered by sfas no .",
+      "143 include primarily active ash landfills , water treatment basins and the removal or dismantlement of certain plant and equipment .",
+      "as of december 31 , 2003 and 2002 , the company had recorded liabilities of approximately $ 29 million and $ 15 million , respectively , related to asset retirement obligations .",
+      "there are no assets that are legally restricted for purposes of settling asset retirement obligations .",
+      "upon adoption of sfas no .",
+      "143 , the company recorded an additional liability of approximately $ 13 million , a net asset of approximately $ 9 million , and a cumulative effect of a change in accounting principle of approximately $ 2 million , after income taxes .",
+      "amounts recorded related to asset retirement obligations during the years ended december 31 , 2003 were as follows ( in millions ) : ."
+    ],
+    "post_text": [
+      "proforma net ( loss ) income and ( loss ) earnings per share have not been presented for the years ended december 31 , 2002 and 2001 because the proforma application of sfas no .",
+      "143 to prior periods would result in proforma net ( loss ) income and ( loss ) earnings per share not materially different from the actual amounts reported for those periods in the accompanying consolidated statements of operations .",
+      "had sfas 143 been applied during all periods presented the asset retirement obligation at january 1 , 2001 , december 31 , 2001 and december 31 , 2002 would have been approximately $ 21 million , $ 23 million and $ 28 million , respectively .",
+      "included in other long-term liabilities is the accrual for the non-legal obligations for removal of assets in service at ipalco amounting to $ 361 million and $ 339 million at december 31 , 2003 and 2002 , respectively .",
+      "deferred financing costs 2014financing costs are deferred and amortized over the related financing period using the effective interest method or the straight-line method when it does not differ materially from the effective interest method .",
+      "deferred financing costs are shown net of accumulated amortization of $ 202 million and $ 173 million as of december 31 , 2003 and 2002 , respectively .",
+      "project development costs 2014the company capitalizes the costs of developing new construction projects after achieving certain project-related milestones that indicate the project 2019s completion is probable .",
+      "these costs represent amounts incurred for professional services , permits , options , capitalized interest , and other costs directly related to construction .",
+      "these costs are transferred to construction in progress when significant construction activity commences , or expensed at the time the company determines that development of a particular project is no longer probable ( see note 5 ) . ."
+    ],
+    "table": [
+      [
+        "balance at december 31 2002",
+        "$ 15"
+      ],
+      [
+        "additional liability recorded from cumulative effect of accounting change",
+        "13"
+      ],
+      [
+        "accretion expense",
+        "2"
+      ],
+      [
+        "change in the timing of estimated cash flows",
+        "-1 ( 1 )"
+      ],
+      [
+        "balance at december 31 2003",
+        "$ 29"
+      ]
+    ],
+    "qa": {
+      "question": "what was the change in asset retirement obligations between 2002 and 2003?\\\\n",
+      "program": "subtract(29, 15), multiply(#0, const_1000000)",
+      "exe_ans": 14000000.0,
+      "gold_inds": {
+        "text_10": "as of december 31 , 2003 and 2002 , the company had recorded liabilities of approximately $ 29 million and $ 15 million , respectively , related to asset retirement obligations ."
+      },
+      "answer": "14000000"
+    }
+  },
+  {
+    "id": "UNP/2008/page_83.pdf-1",
+    "pre_text": [
+      "14 .",
+      "leases we lease certain locomotives , freight cars , and other property .",
+      "the consolidated statement of financial position as of december 31 , 2008 and 2007 included $ 2024 million , net of $ 869 million of amortization , and $ 2062 million , net of $ 887 million of amortization , respectively , for properties held under capital leases .",
+      "a charge to income resulting from the amortization for assets held under capital leases is included within depreciation expense in our consolidated statements of income .",
+      "future minimum lease payments for operating and capital leases with initial or remaining non-cancelable lease terms in excess of one year as of december 31 , 2008 were as follows : millions of dollars operating leases capital leases ."
+    ],
+    "post_text": [
+      "the majority of capital lease payments relate to locomotives .",
+      "rent expense for operating leases with terms exceeding one month was $ 747 million in 2008 , $ 810 million in 2007 , and $ 798 million in 2006 .",
+      "when cash rental payments are not made on a straight-line basis , we recognize variable rental expense on a straight-line basis over the lease term .",
+      "contingent rentals and sub-rentals are not significant .",
+      "15 .",
+      "commitments and contingencies asserted and unasserted claims 2013 various claims and lawsuits are pending against us and certain of our subsidiaries .",
+      "we cannot fully determine the effect of all asserted and unasserted claims on our consolidated results of operations , financial condition , or liquidity ; however , to the extent possible , where asserted and unasserted claims are considered probable and where such claims can be reasonably estimated , we have recorded a liability .",
+      "we do not expect that any known lawsuits , claims , environmental costs , commitments , contingent liabilities , or guarantees will have a material adverse effect on our consolidated results of operations , financial condition , or liquidity after taking into account liabilities and insurance recoveries previously recorded for these matters .",
+      "personal injury 2013 the cost of personal injuries to employees and others related to our activities is charged to expense based on estimates of the ultimate cost and number of incidents each year .",
+      "we use third-party actuaries to assist us in measuring the expense and liability , including unasserted claims .",
+      "the federal employers 2019 liability act ( fela ) governs compensation for work-related accidents .",
+      "under fela , damages are assessed based on a finding of fault through litigation or out-of-court settlements .",
+      "we offer a comprehensive variety of services and rehabilitation programs for employees who are injured at our personal injury liability is discounted to present value using applicable u.s .",
+      "treasury rates .",
+      "approximately 88% ( 88 % ) of the recorded liability related to asserted claims , and approximately 12% ( 12 % ) related to unasserted claims at december 31 , 2008 .",
+      "because of the uncertainty surrounding the ultimate outcome of personal injury claims , it is reasonably possible that future costs to settle these claims may range from ."
+    ],
+    "table": [
+      [
+        "millions of dollars",
+        "operatingleases",
+        "capitalleases"
+      ],
+      [
+        "2009",
+        "$ 657",
+        "$ 188"
+      ],
+      [
+        "2010",
+        "614",
+        "168"
+      ],
+      [
+        "2011",
+        "580",
+        "178"
+      ],
+      [
+        "2012",
+        "465",
+        "122"
+      ],
+      [
+        "2013",
+        "389",
+        "152"
+      ],
+      [
+        "later years",
+        "3204",
+        "1090"
+      ],
+      [
+        "total minimum lease payments",
+        "$ 5909",
+        "$ 1898"
+      ],
+      [
+        "amount representing interest",
+        "n/a",
+        "628"
+      ],
+      [
+        "present value of minimum lease payments",
+        "n/a",
+        "$ 1270"
+      ]
+    ],
+    "qa": {
+      "question": "as of december 312008 what was the percent of the future minimum lease payments for operating and capital leases that was due in 2009",
+      "program": "add(657, 188), add(5909, 1898), divide(#0, #1)",
+      "exe_ans": 0.10824,
+      "gold_inds": {
+        "table_1": "millions of dollars the 2009 of operatingleases is $ 657 ; the 2009 of capitalleases is $ 188 ;",
+        "table_7": "millions of dollars the total minimum lease payments of operatingleases is $ 5909 ; the total minimum lease payments of capitalleases is $ 1898 ;"
+      },
+      "answer": "10.8%"
+    }
+  },
+  {
+    "id": "MSI/2008/page_73.pdf-2",
+    "pre_text": [
+      "the segment had operating earnings of $ 709 million in 2007 , compared to operating earnings of $ 787 million in 2006 .",
+      "the decrease in operating earnings was primarily due to a decrease in gross margin , driven by : ( i ) lower net sales of iden infrastructure equipment , and ( ii ) continued competitive pricing pressure in the market for gsm infrastructure equipment , partially offset by : ( i ) increased net sales of digital entertainment devices , and ( ii ) the reversal of reorganization of business accruals recorded in 2006 relating to employee severance which were no longer needed .",
+      "sg&a expenses increased primarily due to the expenses from recently acquired businesses , partially offset by savings from cost-reduction initiatives .",
+      "r&d expenditures decreased primarily due to savings from cost- reduction initiatives , partially offset by expenditures by recently acquired businesses and continued investment in digital entertainment devices and wimax .",
+      "as a percentage of net sales in 2007 as compared to 2006 , gross margin , sg&a expenses , r&d expenditures and operating margin all decreased .",
+      "in 2007 , sales to the segment 2019s top five customers represented approximately 43% ( 43 % ) of the segment 2019s net sales .",
+      "the segment 2019s backlog was $ 2.6 billion at december 31 , 2007 , compared to $ 3.2 billion at december 31 , 2006 .",
+      "in the home business , demand for the segment 2019s products depends primarily on the level of capital spending by broadband operators for constructing , rebuilding or upgrading their communications systems , and for offering advanced services .",
+      "during the second quarter of 2007 , the segment began shipping digital set-tops that support the federal communications commission ( 201cfcc 201d ) 2014 mandated separable security requirement .",
+      "fcc regulations mandating the separation of security functionality from set-tops went into effect on july 1 , 2007 .",
+      "as a result of these regulations , many cable service providers accelerated their purchases of set-tops in the first half of 2007 .",
+      "additionally , in 2007 , our digital video customers significantly increased their purchases of the segment 2019s products and services , primarily due to increased demand for digital entertainment devices , particularly hd/dvr devices .",
+      "during 2007 , the segment completed the acquisitions of : ( i ) netopia , inc. , a broadband equipment provider for dsl customers , which allows for phone , tv and fast internet connections , ( ii ) tut systems , inc. , a leading developer of edge routing and video encoders , ( iii ) modulus video , inc. , a provider of mpeg-4 advanced coding compression systems designed for delivery of high-value video content in ip set-top devices for the digital video , broadcast and satellite marketplaces , ( iv ) terayon communication systems , inc. , a provider of real-time digital video networking applications to cable , satellite and telecommunication service providers worldwide , and ( v ) leapstone systems , inc. , a provider of intelligent multimedia service delivery and content management applications to networks operators .",
+      "these acquisitions enhance our ability to provide complete end-to-end systems for the delivery of advanced video , voice and data services .",
+      "in december 2007 , motorola completed the sale of ecc to emerson for $ 346 million in cash .",
+      "enterprise mobility solutions segment the enterprise mobility solutions segment designs , manufactures , sells , installs and services analog and digital two-way radio , voice and data communications products and systems for private networks , wireless broadband systems and end-to-end enterprise mobility solutions to a wide range of enterprise markets , including government and public safety agencies ( which , together with all sales to distributors of two-way communication products , are referred to as the 201cgovernment and public safety market 201d ) , as well as retail , energy and utilities , transportation , manufacturing , healthcare and other commercial customers ( which , collectively , are referred to as the 201ccommercial enterprise market 201d ) .",
+      "in 2008 , the segment 2019s net sales represented 27% ( 27 % ) of the company 2019s consolidated net sales , compared to 21% ( 21 % ) in 2007 and 13% ( 13 % ) in 2006 .",
+      "( dollars in millions ) 2008 2007 2006 2008 20142007 2007 20142006 years ended december 31 percent change ."
+    ],
+    "post_text": [
+      "segment results 20142008 compared to 2007 in 2008 , the segment 2019s net sales increased 5% ( 5 % ) to $ 8.1 billion , compared to $ 7.7 billion in 2007 .",
+      "the 5% ( 5 % ) increase in net sales reflects an 8% ( 8 % ) increase in net sales to the government and public safety market , partially offset by a 2% ( 2 % ) decrease in net sales to the commercial enterprise market .",
+      "the increase in net sales to the government and public safety market was primarily driven by : ( i ) increased net sales outside of north america , and ( ii ) the net sales generated by vertex standard co. , ltd. , a business the company acquired a controlling interest of in january 2008 , partially offset by lower net sales in north america .",
+      "on a geographic basis , the segment 2019s net sales were higher in emea , asia and latin america and lower in north america .",
+      "65management 2019s discussion and analysis of financial condition and results of operations %%transmsg*** transmitting job : c49054 pcn : 068000000 ***%%pcmsg|65 |00024|yes|no|02/24/2009 12:31|0|0|page is valid , no graphics -- color : n| ."
+    ],
+    "table": [
+      [
+        "( dollars in millions )",
+        "years ended december 31 2008",
+        "years ended december 31 2007",
+        "years ended december 31 2006",
+        "years ended december 31 2008 20142007",
+        "2007 20142006"
+      ],
+      [
+        "segment net sales",
+        "$ 8093",
+        "$ 7729",
+        "$ 5400",
+        "5% ( 5 % )",
+        "43% ( 43 % )"
+      ],
+      [
+        "operating earnings",
+        "1496",
+        "1213",
+        "958",
+        "23% ( 23 % )",
+        "27% ( 27 % )"
+      ]
+    ],
+    "qa": {
+      "question": "what was the percentage reduction in the segment 2019s backlog from 2006 to 2007",
+      "program": "subtract(2.6, 3.2), divide(#0, 3.2)",
+      "exe_ans": -0.1875,
+      "gold_inds": {
+        "text_6": "the segment 2019s backlog was $ 2.6 billion at december 31 , 2007 , compared to $ 3.2 billion at december 31 , 2006 ."
+      },
+      "answer": "-18.8%"
+    }
+  },
+  {
+    "id": "BLK/2012/page_82.pdf-3",
+    "pre_text": [
+      "the company further presents total net 201ceconomic 201d investment exposure , net of deferred compensation investments and hedged investments , to reflect another gauge for investors as the economic impact of investments held pursuant to deferred compensation arrangements is substantially offset by a change in compensation expense and the impact of hedged investments is substantially mitigated by total return swap hedges .",
+      "carried interest capital allocations are excluded as there is no impact to blackrock 2019s stockholders 2019 equity until such amounts are realized as performance fees .",
+      "finally , the company 2019s regulatory investment in federal reserve bank stock , which is not subject to market or interest rate risk , is excluded from the company 2019s net economic investment exposure .",
+      "( dollar amounts in millions ) december 31 , december 31 ."
+    ],
+    "post_text": [
+      "total 201ceconomic 201d investment exposure .",
+      ".",
+      ".",
+      "$ 1211 $ 1062 ( 1 ) at december 31 , 2012 and december 31 , 2011 , approximately $ 524 million and $ 587 million , respectively , of blackrock 2019s total gaap investments were maintained in sponsored investment funds that were deemed to be controlled by blackrock in accordance with gaap , and , therefore , are consolidated even though blackrock may not economically own a majority of such funds .",
+      "( 2 ) the decrease of $ 239 million related to a lower holding requirement of federal reserve bank stock held by blackrock institutional trust company , n.a .",
+      "( 201cbtc 201d ) .",
+      "total investments , as adjusted , at december 31 , 2012 increased $ 137 million from december 31 , 2011 , resulting from $ 765 million of purchases/capital contributions , $ 185 million from positive market valuations and earnings from equity method investments , and $ 64 million from net additional carried interest capital allocations , partially offset by $ 742 million of sales/maturities and $ 135 million of distributions representing return of capital and return on investments. ."
+    ],
+    "table": [
+      [
+        "( dollar amounts in millions )",
+        "december 31 2012",
+        "december 31 2011"
+      ],
+      [
+        "total investments gaap",
+        "$ 1750",
+        "$ 1631"
+      ],
+      [
+        "investments held by consolidated sponsored investmentfunds ( 1 )",
+        "-524 ( 524 )",
+        "-587 ( 587 )"
+      ],
+      [
+        "net exposure to consolidated investment funds",
+        "430",
+        "475"
+      ],
+      [
+        "total investments as adjusted",
+        "1656",
+        "1519"
+      ],
+      [
+        "federal reserve bank stock ( 2 )",
+        "-89 ( 89 )",
+        "-328 ( 328 )"
+      ],
+      [
+        "carried interest",
+        "-85 ( 85 )",
+        "-21 ( 21 )"
+      ],
+      [
+        "deferred compensation investments",
+        "-62 ( 62 )",
+        "-65 ( 65 )"
+      ],
+      [
+        "hedged investments",
+        "-209 ( 209 )",
+        "-43 ( 43 )"
+      ],
+      [
+        "total 201ceconomic 201d investment exposure",
+        "$ 1211",
+        "$ 1062"
+      ]
+    ],
+    "qa": {
+      "question": "what is the percentage change in the balance of total investments gaap from 2011 to 2012?",
+      "program": "subtract(1750, 1631), divide(#0, 1631)",
+      "exe_ans": 0.07296,
+      "gold_inds": {
+        "table_1": "( dollar amounts in millions ) the total investments gaap of december 31 2012 is $ 1750 ; the total investments gaap of december 31 2011 is $ 1631 ;"
+      },
+      "answer": "7.3%"
+    }
+  },
+  {
+    "id": "DRE/2016/page_64.pdf-3",
+    "pre_text": [
+      "."
+    ],
+    "post_text": [
+      "( 1 ) our long-term debt consists of both secured and unsecured debt and includes both principal and interest .",
+      "interest payments for variable rate debt were calculated using the interest rates as of december 31 , 2016 .",
+      "repayment of our $ 250.0 million variable rate term note , which has a contractual maturity date in january 2019 , is reflected as a 2020 obligation in the table above based on the ability to exercise a one-year extension , which we may exercise at our discretion .",
+      "( 2 ) our unsecured line of credit has a contractual maturity date in january 2019 , but is reflected as a 2020 obligation in the table above based on the ability to exercise a one-year extension , which we may exercise at our discretion .",
+      "interest payments for our unsecured line of credit were calculated using the most recent stated interest rate that was in effect.ff ( 3 ) our share of unconsolidated joint venture debt includes both principal and interest .",
+      "interest expense for variable rate debt was calculated using the interest rate at december 31 , 2016 .",
+      "( 4 ) represents estimated remaining costs on the completion of owned development projects and third-party construction projects .",
+      "related party y transactionstt we provide property and asset management , leasing , construction and other tenant-related services to ww unconsolidated companies in which we have equity interests .",
+      "for the years ended december 31 , 2016 , 2015 and 2014 we earned management fees of $ 4.5 million , $ 6.8 million and $ 8.5 million , leasing fees of $ 2.4 million , $ 3.0 million and $ 3.4 million and construction and development fees of $ 8.0 million , $ 6.1 million and $ 5.8 million , respectively , from these companies , prior to elimination of our ownership percentage .",
+      "yy we recorded these fees based ww on contractual terms that approximate market rates for these types of services and have eliminated our ownership percentages of these fees in the consolidated financial statements .",
+      "commitments and contingenciesg the partnership has guaranteed the repayment of $ 32.9 million of economic development bonds issued by various municipalities in connection with certain commercial developments .",
+      "we will be required to make payments under ww our guarantees to the extent that incremental taxes from specified developments are not sufficient to pay the bond ff debt service .",
+      "management does not believe that it is probable that we will be required to make any significant payments in satisfaction of these guarantees .",
+      "the partnership also has guaranteed the repayment of an unsecured loan of one of our unconsolidated subsidiaries .",
+      "at december 31 , 2016 , the maximum guarantee exposure for this loan was approximately $ 52.1 million .",
+      "we lease certain land positions with terms extending toww march 2114 , with a total future payment obligation of $ 311.1 million .",
+      "the payments on these ground leases , which are classified as operating leases , are not material in any individual year .",
+      "in addition to ground leases , we are party to other operating leases as part of conducting our business , including leases of office space from third parties , with a total future payment obligation of ff $ 43.4 million at december 31 , 2016 .",
+      "no future payments on these leases are material in any individual year .",
+      "we are subject to various legal proceedings and claims that arise in the ordinary course of business .",
+      "in the opinion ww of management , the amount of any ultimate liability with respect to these actions is not expected to materially affect ff our consolidated financial statements or results of operations .",
+      "we own certain parcels of land that are subject to special property tax assessments levied by quasi municipalww entities .",
+      "to the extent that such special assessments are fixed and determinable , the discounted value of the fulltt ."
+    ],
+    "table": [
+      [
+        "contractual obligations",
+        "payments due by period ( in thousands ) total",
+        "payments due by period ( in thousands ) 2017",
+        "payments due by period ( in thousands ) 2018",
+        "payments due by period ( in thousands ) 2019",
+        "payments due by period ( in thousands ) 2020",
+        "payments due by period ( in thousands ) 2021",
+        "payments due by period ( in thousands ) thereafter"
+      ],
+      [
+        "long-term debt ( 1 )",
+        "$ 3508789",
+        "$ 203244",
+        "$ 409257",
+        "$ 366456",
+        "$ 461309",
+        "$ 329339",
+        "$ 1739184"
+      ],
+      [
+        "line of credit ( 2 )",
+        "56127",
+        "2650",
+        "2650",
+        "2650",
+        "48177",
+        "2014",
+        "2014"
+      ],
+      [
+        "share of unconsolidated joint ventures' debt ( 3 )",
+        "91235",
+        "2444",
+        "28466",
+        "5737",
+        "11598",
+        "1236",
+        "41754"
+      ],
+      [
+        "ground leases",
+        "311120",
+        "10745",
+        "5721",
+        "5758",
+        "5793",
+        "5822",
+        "277281"
+      ],
+      [
+        "development and construction backlog costs ( 4 )",
+        "344700",
+        "331553",
+        "13147",
+        "2014",
+        "2014",
+        "2014",
+        "2014"
+      ],
+      [
+        "other",
+        "43357",
+        "7502",
+        "7342",
+        "5801",
+        "4326",
+        "3906",
+        "14480"
+      ],
+      [
+        "total contractual obligations",
+        "$ 4355328",
+        "$ 558138",
+        "$ 466583",
+        "$ 386402",
+        "$ 531203",
+        "$ 340303",
+        "$ 2072699"
+      ]
+    ],
+    "qa": {
+      "question": "what is the percent change in management fees earned from 2015 to 2016?",
+      "program": "subtract(6.8, 4.5), divide(#0, 4.5), multiply(#1, const_100)",
+      "exe_ans": 51.11111,
+      "gold_inds": {
+        "text_9": "for the years ended december 31 , 2016 , 2015 and 2014 we earned management fees of $ 4.5 million , $ 6.8 million and $ 8.5 million , leasing fees of $ 2.4 million , $ 3.0 million and $ 3.4 million and construction and development fees of $ 8.0 million , $ 6.1 million and $ 5.8 million , respectively , from these companies , prior to elimination of our ownership percentage ."
+      },
+      "answer": "51.1%"
+    }
+  },
+  {
+    "id": "CME/2017/page_99.pdf-4",
+    "pre_text": [
+      "in 2017 , the company granted 440076 shares of restricted class a common stock and 7568 shares of restricted stock units .",
+      "restricted common stock and restricted stock units generally have a vesting period of two to four years .",
+      "the fair value related to these grants was $ 58.7 million , which is recognized as compensation expense on an accelerated basis over the vesting period .",
+      "dividends are accrued on restricted class a common stock and restricted stock units and are paid once the restricted stock vests .",
+      "in 2017 , the company also granted 203298 performance shares .",
+      "the fair value related to these grants was $ 25.3 million , which is recognized as compensation expense on an accelerated and straight-lined basis over the vesting period .",
+      "the vesting of these shares is contingent on meeting stated performance or market conditions .",
+      "the following table summarizes restricted stock , restricted stock units , and performance shares activity for 2017 : number of shares weighted average grant date fair value ."
+    ],
+    "post_text": [
+      "the total fair value of restricted stock , restricted stock units , and performance shares that vested during 2017 , 2016 and 2015 was $ 66.0 million , $ 59.8 million and $ 43.3 million , respectively .",
+      "under the espp , eligible employees may acquire shares of class a common stock using after-tax payroll deductions made during consecutive offering periods of approximately six months in duration .",
+      "shares are purchased at the end of each offering period at a price of 90% ( 90 % ) of the closing price of the class a common stock as reported on the nasdaq global select market .",
+      "compensation expense is recognized on the dates of purchase for the discount from the closing price .",
+      "in 2017 , 2016 and 2015 , a total of 19936 , 19858 and 19756 shares , respectively , of class a common stock were issued to participating employees .",
+      "these shares are subject to a six-month holding period .",
+      "annual expense of $ 0.3 million for the purchase discount was recognized in 2017 , and $ 0.2 million was recognized in both 2016 and 2015 .",
+      "non-executive directors receive an annual award of class a common stock with a value equal to $ 100000 .",
+      "non-executive directors may also elect to receive some or all of the cash portion of their annual stipend , up to $ 60000 , in shares of stock based on the closing price at the date of distribution .",
+      "as a result , 19736 shares , 26439 shares and 25853 shares of class a common stock were issued to non-executive directors during 2017 , 2016 and 2015 , respectively .",
+      "these shares are not subject to any vesting restrictions .",
+      "expense of $ 2.5 million , $ 2.4 million and $ 2.5 million related to these stock-based payments was recognized for the years ended december 31 , 2017 , 2016 and 2015 , respectively. ."
+    ],
+    "table": [
+      [
+        "",
+        "number of shares",
+        "weightedaveragegrant datefair value"
+      ],
+      [
+        "outstanding at december 31 2016",
+        "1820578",
+        "$ 98"
+      ],
+      [
+        "granted",
+        "650942",
+        "129"
+      ],
+      [
+        "vested",
+        "-510590 ( 510590 )",
+        "87"
+      ],
+      [
+        "cancelled",
+        "-401699 ( 401699 )",
+        "95"
+      ],
+      [
+        "outstanding at december 31 2017",
+        "1559231",
+        "116"
+      ]
+    ],
+    "qa": {
+      "question": "for the 2017 restricted common stock and restricted stock unit grants , assuming the average vesting period , what would annual compensation expense be in millions over the vesting period?",
+      "program": "add(const_2, const_4), divide(#0, const_2), divide(58.7, #1)",
+      "exe_ans": 19.56667,
+      "gold_inds": {
+        "text_1": "restricted common stock and restricted stock units generally have a vesting period of two to four years .",
+        "text_2": "the fair value related to these grants was $ 58.7 million , which is recognized as compensation expense on an accelerated basis over the vesting period ."
+      },
+      "answer": "19.6"
+    }
+  },
+  {
+    "id": "CE/2009/page_121.pdf-2",
+    "pre_text": [
+      "during 2009 , the company extended the contractual life of 4 million fully vested share options held by 6 employees .",
+      "as a result of that modification , the company recognized additional compensation expense of $ 1 million for the year ended december 31 , 2009 .",
+      "restricted stock units ( 201crsus 201d ) performance-based rsus .",
+      "the company grants performance-based rsus to the company 2019s executive officers and certain employees once per year .",
+      "the company may also grant performance-based rsus to certain new employees or to employees who assume positions of increasing responsibility at the time those events occur .",
+      "the number of performance-based rsus that ultimately vest is dependent on one or both of the following as per the terms of the specific award agreement : the achievement of 1 ) internal profitability targets ( performance condition ) and 2 ) market performance targets measured by the comparison of the company 2019s stock performance versus a defined peer group ( market condition ) .",
+      "the performance-based rsus generally cliff-vest during the company 2019s quarter-end september 30 black-out period three years from the date of grant .",
+      "the ultimate number of shares of the company 2019s series a common stock issued will range from zero to stretch , with stretch defined individually under each award , net of personal income taxes withheld .",
+      "the market condition is factored into the estimated fair value per unit and compensation expense for each award will be based on the probability of achieving internal profitability targets , as applicable , and recognized on a straight-line basis over the term of the respective grant , less estimated forfeitures .",
+      "for performance-based rsus granted without a performance condition , compensation expense is based on the fair value per unit recognized on a straight-line basis over the term of the grant , less estimated forfeitures .",
+      "in april 2007 , the company granted performance-based rsus to certain employees that vest annually in equal tranches beginning october 1 , 2008 through october 1 , 2011 and include a market condition .",
+      "the performance- based rsus awarded include a catch-up provision that provides for an additional year of vesting of previously unvested amounts , subject to certain maximums .",
+      "compensation expense is based on the fair value per unit recognized on a straight-line basis over the term of the grant , less estimated forfeitures .",
+      "a summary of changes in performance-based rsus outstanding is as follows : number of weighted average fair value ( in thousands ) ( in $ ) ."
+    ],
+    "post_text": [
+      "the fair value of shares vested for performance-based rsus during the years ended december 31 , 2009 and 2008 was $ 2 million and $ 3 million , respectively .",
+      "there were no vestings that occurred during the year ended december 31 , 2007 .",
+      "fair value for the company 2019s performance-based rsus was estimated at the grant date using a monte carlo simulation approach .",
+      "monte carlo simulation was utilized to randomly generate future stock returns for the company and each company in the defined peer group for each grant based on company-specific dividend yields , volatilities and stock return correlations .",
+      "these returns were used to calculate future performance-based rsu vesting percentages and the simulated values of the vested performance-based rsus were then discounted to present value using a risk-free rate , yielding the expected value of these performance-based rsus .",
+      "%%transmsg*** transmitting job : d70731 pcn : 119000000 ***%%pcmsg|119 |00016|yes|no|02/10/2010 16:17|0|0|page is valid , no graphics -- color : n| ."
+    ],
+    "table": [
+      [
+        "",
+        "number of units ( in thousands )",
+        "weighted average fair value ( in $ )"
+      ],
+      [
+        "nonvested at december 31 2008",
+        "1188",
+        "19.65"
+      ],
+      [
+        "granted",
+        "420",
+        "38.16"
+      ],
+      [
+        "vested",
+        "-79 ( 79 )",
+        "21.30"
+      ],
+      [
+        "forfeited",
+        "-114 ( 114 )",
+        "17.28"
+      ],
+      [
+        "nonvested at december 31 2009",
+        "1415",
+        "25.24"
+      ]
+    ],
+    "qa": {
+      "question": "what is the total fair value of the non vested units as of december 31 , 2009 , ( in millions ) ?",
+      "program": "multiply(1415, const_1000), multiply(#0, 25.24), divide(#1, const_1000000)",
+      "exe_ans": 35.7146,
+      "gold_inds": {
+        "table_5": "the nonvested at december 31 2009 of number of units ( in thousands ) is 1415 ; the nonvested at december 31 2009 of weighted average fair value ( in $ ) is 25.24 ;"
+      },
+      "answer": "35.7"
+    }
+  }
+]

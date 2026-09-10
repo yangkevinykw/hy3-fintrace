@@ -1,0 +1,52 @@
+{
+  "source": {
+    "revision": "0f16e2867befa6840783e58be38c9efb9229d742",
+    "files": [
+      {
+        "path": "dataset/train.json",
+        "url": "https://raw.githubusercontent.com/czyssrs/FinQA/0f16e2867befa6840783e58be38c9efb9229d742/dataset/train.json",
+        "sha256": "49f237eb9779b569473b26b08048867d04635a7cc39ad6a7a5664c55bb428db6",
+        "bytes": 78216616
+      },
+      {
+        "path": "code/evaluate/evaluate.py",
+        "url": "https://raw.githubusercontent.com/czyssrs/FinQA/0f16e2867befa6840783e58be38c9efb9229d742/code/evaluate/evaluate.py",
+        "sha256": "845cd131cab843eceff256cf6d392978cc470a7da4a80107beb56027fdca5c13",
+        "bytes": 14305
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/czyssrs/FinQA/0f16e2867befa6840783e58be38c9efb9229d742/LICENSE",
+        "sha256": "92c0e67bd762c15c07ba60de09558338315a8ebf99aac4f51f487179809ac087",
+        "bytes": 1067
+      }
+    ]
+  },
+  "seed": "fintrace-v1",
+  "problem_count": 30,
+  "sample_count": 90,
+  "bands": {
+    "hard": 10,
+    "easy": 10,
+    "medium": 10
+  },
+  "splits": {
+    "dev": 10,
+    "test": 20
+  },
+  "evidence_kinds": {
+    "table": 17,
+    "text": 11,
+    "mixed": 2
+  },
+  "eligible": 4800,
+  "excluded": {
+    "当前题集仅支持四则运算": 325,
+    "answer_text_program_mismatch": 333,
+    "ambiguous_or_missing_gold_evidence": 753,
+    "无法解析数值": 23,
+    "standard_execution_mismatch": 17
+  },
+  "human_review": "pending",
+  "selection_rule": "four arithmetic operations, unique evidence match in gold groups, executable gold, distinct report, hash order"
+}

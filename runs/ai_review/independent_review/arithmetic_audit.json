@@ -1,0 +1,1748 @@
+[
+  {
+    "review_id": "case-02c97c7b605a",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "595000",
+        "claimed_result": "595000"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "665000",
+        "claimed_result": "665000"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "734000",
+        "claimed_result": "734000"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-8226a6ac436a",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "595000",
+        "claimed_result": "595000"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "665000",
+        "claimed_result": "665000"
+      },
+      {
+        "step": "s3",
+        "issues": [
+          "add(665000, 69000) 应为 734000，候选结果 734001"
+        ],
+        "computed_from_claimed_inputs": "734000",
+        "claimed_result": "734001"
+      }
+    ],
+    "final_matches_last_step": false
+  },
+  {
+    "review_id": "case-c0da9bc85f01",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "依赖 s1 在此步开始时尚未产生"
+        ],
+        "computed_from_claimed_inputs": null,
+        "claimed_result": "595000"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "665000",
+        "claimed_result": "665000"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "734000",
+        "claimed_result": "734000"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-03b8aff91a23",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "-660",
+        "claimed_result": "-660"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "-470",
+        "claimed_result": "-470"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "5330",
+        "claimed_result": "5330"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-c4310d61730f",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "2460",
+        "claimed_result": "2460"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "2650",
+        "claimed_result": "2650"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "8450",
+        "claimed_result": "8450"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-f9b6fe13dcbb",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "t:1:2:0 原值 900，候选写为 901"
+        ],
+        "computed_from_claimed_inputs": "2461",
+        "claimed_result": "2461"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "2651",
+        "claimed_result": "2651"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "8451",
+        "claimed_result": "8451"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-065e7266f283",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "7177",
+        "claimed_result": "7177"
+      },
+      {
+        "step": "s2",
+        "issues": [
+          "divide(7177, 8940) 应为 7177/8940 (约 0.802796420582)，候选结果 1.80279642058165548098434004474272931"
+        ],
+        "computed_from_claimed_inputs": "7177/8940 (约 0.802796420582)",
+        "claimed_result": "1.80279642058165548098434004474272931"
+      }
+    ],
+    "final_matches_last_step": false
+  },
+  {
+    "review_id": "case-810490b2ea5e",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "7177",
+        "claimed_result": "7177"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "7177/8940 (约 0.802796420582)",
+        "claimed_result": "0.802796420581655480984340044742729306"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-eac51db4799a",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "t:1:2:0 原值 16117，候选写为 16118"
+        ],
+        "computed_from_claimed_inputs": "7178",
+        "claimed_result": "7178"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "3589/4470 (约 0.802908277405)",
+        "claimed_result": "0.802908277404921700223713646532438479"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-0a1e9ebc1842",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "2129/10 (约 212.9)",
+        "claimed_result": "212.9"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "2503/10 (约 250.3)",
+        "claimed_result": "250.3"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "1798/5 (约 359.6)",
+        "claimed_result": "359.6"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-1834173eaa40",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "2129/10 (约 212.9)",
+        "claimed_result": "212.9"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "2503/10 (约 250.3)",
+        "claimed_result": "250.3"
+      },
+      {
+        "step": "s3",
+        "issues": [
+          "add(1093/10 (约 109.3), 2503/10 (约 250.3)) 应为 1798/5 (约 359.6)，候选结果 360.6"
+        ],
+        "computed_from_claimed_inputs": "1798/5 (约 359.6)",
+        "claimed_result": "360.6"
+      }
+    ],
+    "final_matches_last_step": false
+  },
+  {
+    "review_id": "case-fb5a083bfd00",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "依赖 s1 在此步开始时尚未产生"
+        ],
+        "computed_from_claimed_inputs": null,
+        "claimed_result": "212.9"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "2503/10 (约 250.3)",
+        "claimed_result": "250.3"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "1798/5 (约 359.6)",
+        "claimed_result": "359.6"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-0a59808bb449",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "390",
+        "claimed_result": "390"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "73710",
+        "claimed_result": "73710"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-5256717d6a71",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "63/67 (约 0.940298507463)",
+        "claimed_result": "0.94029850746268656716417910447761194"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "8885820895522388059701492537313432833/50000000000000000000000000000000000 (约 177.71641791)",
+        "claimed_result": "177.716417910447761194029850746268657"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-79bb242a45ea",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "divide(189, 201) 应为 63/67 (约 0.940298507463)，候选结果 1.94029850746268656716417910447761194"
+        ],
+        "computed_from_claimed_inputs": "63/67 (约 0.940298507463)",
+        "claimed_result": "1.94029850746268656716417910447761194"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "18335820895522388059701492537313432833/50000000000000000000000000000000000 (约 366.71641791)",
+        "claimed_result": "366.716417910447761194029850746268657"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-0b7200c545f9",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "add(227, 170) 应为 397，候选结果 398"
+        ],
+        "computed_from_claimed_inputs": "397",
+        "claimed_result": "398"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "518",
+        "claimed_result": "518"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-35fd7bb2b320",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "397",
+        "claimed_result": "397"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "517",
+        "claimed_result": "517"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-5332e132db6f",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "57",
+        "claimed_result": "57"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "177",
+        "claimed_result": "177"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-0d3ffd386e26",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "1415000",
+        "claimed_result": "1415000"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "35714600",
+        "claimed_result": "35714600"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "178573/5000 (约 35.7146)",
+        "claimed_result": "35.7146"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-5fde60e19b3a",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "1415000",
+        "claimed_result": "1415000"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "35714600",
+        "claimed_result": "35714600"
+      },
+      {
+        "step": "s3",
+        "issues": [
+          "divide(35714600, 1000000) 应为 178573/5000 (约 35.7146)，候选结果 36.7146"
+        ],
+        "computed_from_claimed_inputs": "178573/5000 (约 35.7146)",
+        "claimed_result": "36.7146"
+      }
+    ],
+    "final_matches_last_step": false
+  },
+  {
+    "review_id": "case-d844581625d1",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "依赖 s1 在此步开始时尚未产生"
+        ],
+        "computed_from_claimed_inputs": null,
+        "claimed_result": "1415000"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "35714600",
+        "claimed_result": "35714600"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "178573/5000 (约 35.7146)",
+        "claimed_result": "35.7146"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-0d4d1b864c5c",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "subtract(-974, 862) 应为 -1836，候选结果 -1835"
+        ],
+        "computed_from_claimed_inputs": "-1836",
+        "claimed_result": "-1835"
+      }
+    ],
+    "final_matches_last_step": false
+  },
+  {
+    "review_id": "case-18388964d9c3",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "-1836",
+        "claimed_result": "-1836"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-acad79d0808c",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "依赖 s1 在此步开始时尚未产生"
+        ],
+        "computed_from_claimed_inputs": null,
+        "claimed_result": "-1836"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-0f18dbdc5cc8",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "x:21:0 原值 2.6，候选写为 3.6"
+        ],
+        "computed_from_claimed_inputs": "1",
+        "claimed_result": "1"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "5/13 (约 0.384615384615)",
+        "claimed_result": "0.384615384615384615384615384615384615"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-71380f5f5969",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "0",
+        "claimed_result": "0"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "0",
+        "claimed_result": "0"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-85db3863bb9f",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "26/5 (约 5.2)",
+        "claimed_result": "5.2"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "2",
+        "claimed_result": "2"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-1084109ce9db",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "5684",
+        "claimed_result": "5684"
+      },
+      {
+        "step": "s2",
+        "issues": [
+          "add(5684, 3174) 应为 8858，候选结果 8859"
+        ],
+        "computed_from_claimed_inputs": "8858",
+        "claimed_result": "8859"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "2953",
+        "claimed_result": "2953"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-175e1a829461",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "5684",
+        "claimed_result": "5684"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "8858",
+        "claimed_result": "8858"
+      },
+      {
+        "step": "s3",
+        "issues": [
+          "divide(8858, 3) 应为 8858/3 (约 2952.66666667)，候选结果 2953.66666666666666666666666666666667"
+        ],
+        "computed_from_claimed_inputs": "8858/3 (约 2952.66666667)",
+        "claimed_result": "2953.66666666666666666666666666666667"
+      }
+    ],
+    "final_matches_last_step": false
+  },
+  {
+    "review_id": "case-65c3b89c95a7",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "5684",
+        "claimed_result": "5684"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "8858",
+        "claimed_result": "8858"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "8858/3 (约 2952.66666667)",
+        "claimed_result": "2952.66666666666666666666666666666667"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-170179dc70f3",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "-94",
+        "claimed_result": "-94"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "-47/2332 (约 -0.020154373928)",
+        "claimed_result": "-0.0201543739279588336192109777015437393"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-79ccd3313287",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "subtract(4570, 4664) 应为 -94，候选结果 -93"
+        ],
+        "computed_from_claimed_inputs": "-94",
+        "claimed_result": "-93"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "-93/4664 (约 -0.0199399656947)",
+        "claimed_result": "-0.0199399656946826758147512864493996569"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-c7d7806d24c3",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "9234",
+        "claimed_result": "9234"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "4617/2332 (约 1.97984562607)",
+        "claimed_result": "1.97984562607204116638078902229845626"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-1a4091ea4a4a",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "-2",
+        "claimed_result": "-2"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "-1",
+        "claimed_result": "-1"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "-587/10 (约 -58.7)",
+        "claimed_result": "-58.7"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-6e00a04d9225",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "6",
+        "claimed_result": "6"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "3",
+        "claimed_result": "3"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "587/30 (约 19.5666666667)",
+        "claimed_result": "19.5666666666666666666666666666666667"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-f6892326a3d0",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "6",
+        "claimed_result": "6"
+      },
+      {
+        "step": "s2",
+        "issues": [
+          "divide(6, 2) 应为 3，候选结果 4"
+        ],
+        "computed_from_claimed_inputs": "3",
+        "claimed_result": "4"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "587/40 (约 14.675)",
+        "claimed_result": "14.675"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-1e1012bf1cdf",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "983/2 (约 491.5)",
+        "claimed_result": "491.5"
+      },
+      {
+        "step": "s2",
+        "issues": [
+          "divide(983/2 (约 491.5), 2387/2 (约 1193.5)) 应为 983/2387 (约 0.411813992459)，候选结果 1.41181399245915374947633012149141181"
+        ],
+        "computed_from_claimed_inputs": "983/2387 (约 0.411813992459)",
+        "claimed_result": "1.41181399245915374947633012149141181"
+      }
+    ],
+    "final_matches_last_step": false
+  },
+  {
+    "review_id": "case-702b452a1388",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "983/2 (约 491.5)",
+        "claimed_result": "491.5"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "983/2387 (约 0.411813992459)",
+        "claimed_result": "0.411813992459153749476330121491411814"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-845b96c5ba75",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "t:2:1:0 原值 1685，候选写为 1686"
+        ],
+        "computed_from_claimed_inputs": "985/2 (约 492.5)",
+        "claimed_result": "492.5"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "985/2387 (约 0.412651864265)",
+        "claimed_result": "0.412651864264767490573942186845412652"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-25ac81047e8d",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "115/1063 (约 0.108184383819)",
+        "claimed_result": "0.108184383819379115710253998118532455"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-531ebe3695f3",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "3534",
+        "claimed_result": "3534"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-b8dc783c37ce",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "依赖 s1 在此步开始时尚未产生"
+        ],
+        "computed_from_claimed_inputs": null,
+        "claimed_result": "0.108184383819379115710253998118532455"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-25b638b7693f",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "22",
+        "claimed_result": "22"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-70b599d2b239",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "add(8, 14) 应为 22，候选结果 23"
+        ],
+        "computed_from_claimed_inputs": "22",
+        "claimed_result": "23"
+      }
+    ],
+    "final_matches_last_step": false
+  },
+  {
+    "review_id": "case-7e21899d0053",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "add(8, 14) 应为 22，候选结果 23"
+        ],
+        "computed_from_claimed_inputs": "22",
+        "claimed_result": "23"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-27790ec4ff28",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "divide(128/5 (约 25.6), 30) 应为 64/75 (约 0.853333333333)，候选结果 1.85333333333333333333333333333333333"
+        ],
+        "computed_from_claimed_inputs": "64/75 (约 0.853333333333)",
+        "claimed_result": "1.85333333333333333333333333333333333"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-8412bf14ad5c",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "divide(128/5 (约 25.6), 30) 应为 64/75 (约 0.853333333333)，候选结果 1.85333333333333333333333333333333333"
+        ],
+        "computed_from_claimed_inputs": "64/75 (约 0.853333333333)",
+        "claimed_result": "1.85333333333333333333333333333333333"
+      }
+    ],
+    "final_matches_last_step": false
+  },
+  {
+    "review_id": "case-9d4ba2d1ba18",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "64/75 (约 0.853333333333)",
+        "claimed_result": "0.853333333333333333333333333333333333"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-28823a2687e9",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "23/10 (约 2.3)",
+        "claimed_result": "2.3"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "23/45 (约 0.511111111111)",
+        "claimed_result": "0.511111111111111111111111111111111111"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "511111111111111111111111111111111111/10000000000000000000000000000000000 (约 51.1111111111)",
+        "claimed_result": "51.1111111111111111111111111111111111"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-502557a89038",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "23/10 (约 2.3)",
+        "claimed_result": "2.3"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "23/45 (约 0.511111111111)",
+        "claimed_result": "0.511111111111111111111111111111111111"
+      },
+      {
+        "step": "s3",
+        "issues": [
+          "multiply(511111111111111111111111111111111111/1000000000000000000000000000000000000 (约 0.511111111111), 100) 应为 511111111111111111111111111111111111/10000000000000000000000000000000000 (约 51.1111111111)，候选结果 52.1111111111111111111111111111111111"
+        ],
+        "computed_from_claimed_inputs": "511111111111111111111111111111111111/10000000000000000000000000000000000 (约 51.1111111111)",
+        "claimed_result": "52.1111111111111111111111111111111111"
+      }
+    ],
+    "final_matches_last_step": false
+  },
+  {
+    "review_id": "case-6317ee347402",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "x:9:5 原值 6.8，候选写为 7.8"
+        ],
+        "computed_from_claimed_inputs": "33/10 (约 3.3)",
+        "claimed_result": "3.3"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "11/15 (约 0.733333333333)",
+        "claimed_result": "0.733333333333333333333333333333333333"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "733333333333333333333333333333333333/10000000000000000000000000000000000 (约 73.3333333333)",
+        "claimed_result": "73.3333333333333333333333333333333333"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-2ca99c6dc147",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "14",
+        "claimed_result": "14"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "14000000",
+        "claimed_result": "14000000"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-5560d97d5df6",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "14",
+        "claimed_result": "14"
+      },
+      {
+        "step": "s2",
+        "issues": [
+          "multiply(14, 1000000) 应为 14000000，候选结果 14000001"
+        ],
+        "computed_from_claimed_inputs": "14000000",
+        "claimed_result": "14000001"
+      }
+    ],
+    "final_matches_last_step": false
+  },
+  {
+    "review_id": "case-faed315b29fb",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "依赖 s1 在此步开始时尚未产生"
+        ],
+        "computed_from_claimed_inputs": null,
+        "claimed_result": "14"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "14000000",
+        "claimed_result": "14000000"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-40a346718ca8",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "t:2:6:0 原值 198.18，候选写为 199.18"
+        ],
+        "computed_from_claimed_inputs": "4959/50 (约 99.18)",
+        "claimed_result": "99.18"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "4959/5000 (约 0.9918)",
+        "claimed_result": "0.9918"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "4959/50 (约 99.18)",
+        "claimed_result": "99.18"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-705fa71ee1ca",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "14909/50 (约 298.18)",
+        "claimed_result": "298.18"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "14909/5000 (约 2.9818)",
+        "claimed_result": "2.9818"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "14909/50 (约 298.18)",
+        "claimed_result": "298.18"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-e4145229476c",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "4909/50 (约 98.18)",
+        "claimed_result": "98.18"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "4909/5000 (约 0.9818)",
+        "claimed_result": "0.9818"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "4909/50 (约 98.18)",
+        "claimed_result": "98.18"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-46447fe32bf8",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "10507/50 (约 210.14)",
+        "claimed_result": "210.14"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "10507/5000 (约 2.1014)",
+        "claimed_result": "2.1014"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-4baa9ded6cf0",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "507/50 (约 10.14)",
+        "claimed_result": "10.14"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "507/5000 (约 0.1014)",
+        "claimed_result": "0.1014"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-7521667cd2e0",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "subtract(5507/50 (约 110.14), 100) 应为 507/50 (约 10.14)，候选结果 11.14"
+        ],
+        "computed_from_claimed_inputs": "507/50 (约 10.14)",
+        "claimed_result": "11.14"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "557/5000 (约 0.1114)",
+        "claimed_result": "0.1114"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-5788cc574844",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "119",
+        "claimed_result": "119"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "17/233 (约 0.0729613733906)",
+        "claimed_result": "0.0729613733905579399141630901287553648"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-e1f76b1e0a46",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "依赖 s1 在此步开始时尚未产生"
+        ],
+        "computed_from_claimed_inputs": null,
+        "claimed_result": "119"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "17/233 (约 0.0729613733906)",
+        "claimed_result": "0.0729613733905579399141630901287553648"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-f8e6495ab97d",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "3381",
+        "claimed_result": "3381"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "483/233 (约 2.07296137339)",
+        "claimed_result": "2.07296137339055793991416309012875536"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-64d9407f9688",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "t:2:1:0 原值 111408，候选写为 111409"
+        ],
+        "computed_from_claimed_inputs": "111409/341214 (约 0.326507704842)",
+        "claimed_result": "0.32650770484212253893451030731447127"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-6dcc8a78a306",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "452622",
+        "claimed_result": "452622"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-7cca44fd40e2",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "18568/56869 (约 0.32650477413)",
+        "claimed_result": "0.326504774130018111800805359686296576"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-65b6318b7cda",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "1068/25 (约 42.72)",
+        "claimed_result": "42.72"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "267/625 (约 0.4272)",
+        "claimed_result": "0.4272"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "15333/100 (约 153.33)",
+        "claimed_result": "153.33"
+      },
+      {
+        "step": "s4",
+        "issues": [],
+        "computed_from_claimed_inputs": "15333/10000 (约 1.5333)",
+        "claimed_result": "1.5333"
+      },
+      {
+        "step": "s5",
+        "issues": [],
+        "computed_from_claimed_inputs": "-11061/10000 (约 -1.1061)",
+        "claimed_result": "-1.1061"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-af0742ae2663",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "6068/25 (约 242.72)",
+        "claimed_result": "242.72"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "1517/625 (约 2.4272)",
+        "claimed_result": "2.4272"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "15333/100 (约 153.33)",
+        "claimed_result": "153.33"
+      },
+      {
+        "step": "s4",
+        "issues": [],
+        "computed_from_claimed_inputs": "15333/10000 (约 1.5333)",
+        "claimed_result": "1.5333"
+      },
+      {
+        "step": "s5",
+        "issues": [],
+        "computed_from_claimed_inputs": "8939/10000 (约 0.8939)",
+        "claimed_result": "0.8939"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-cf9f3c7b2c9d",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "依赖 s1 在此步开始时尚未产生"
+        ],
+        "computed_from_claimed_inputs": null,
+        "claimed_result": "42.72"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "267/625 (约 0.4272)",
+        "claimed_result": "0.4272"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "15333/100 (约 153.33)",
+        "claimed_result": "153.33"
+      },
+      {
+        "step": "s4",
+        "issues": [],
+        "computed_from_claimed_inputs": "15333/10000 (约 1.5333)",
+        "claimed_result": "1.5333"
+      },
+      {
+        "step": "s5",
+        "issues": [],
+        "computed_from_claimed_inputs": "-11061/10000 (约 -1.1061)",
+        "claimed_result": "-1.1061"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-6e8e413bfcc9",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "add(63, 55) 应为 118，候选结果 119"
+        ],
+        "computed_from_claimed_inputs": "118",
+        "claimed_result": "119"
+      }
+    ],
+    "final_matches_last_step": false
+  },
+  {
+    "review_id": "case-72bee7c06efd",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "x:25:3 原值 63，候选写为 64"
+        ],
+        "computed_from_claimed_inputs": "119",
+        "claimed_result": "119"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-c49ef50af6ec",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "118",
+        "claimed_result": "118"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-71abf020675d",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "依赖 s1 在此步开始时尚未产生"
+        ],
+        "computed_from_claimed_inputs": null,
+        "claimed_result": "116.84"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-86caa3c5dd1d",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "2921/25 (约 116.84)",
+        "claimed_result": "116.84"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-8b91431f843b",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "73026/25 (约 2921.04)",
+        "claimed_result": "2921.04"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-7dd3159e5197",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "divide(56, 571) 应为 56/571 (约 0.0980735551664)，候选结果 1.09807355516637478108581436077057793"
+        ],
+        "computed_from_claimed_inputs": "56/571 (约 0.0980735551664)",
+        "claimed_result": "1.09807355516637478108581436077057793"
+      }
+    ],
+    "final_matches_last_step": false
+  },
+  {
+    "review_id": "case-cb43ae6e25fa",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "56/571 (约 0.0980735551664)",
+        "claimed_result": "0.0980735551663747810858143607705779335"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-eabae3d40ed0",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "x:0:3 原值 56，候选写为 57"
+        ],
+        "computed_from_claimed_inputs": "57/571 (约 0.0998248686515)",
+        "claimed_result": "0.0998248686514886164623467600700525394"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-827db68f6b2a",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "-3/5 (约 -0.6)",
+        "claimed_result": "-0.6"
+      },
+      {
+        "step": "s2",
+        "issues": [
+          "divide(-3/5 (约 -0.6), 16/5 (约 3.2)) 应为 -3/16 (约 -0.1875)，候选结果 0.8125"
+        ],
+        "computed_from_claimed_inputs": "-3/16 (约 -0.1875)",
+        "claimed_result": "0.8125"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-8c5a60acb27b",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "-3/5 (约 -0.6)",
+        "claimed_result": "-0.6"
+      },
+      {
+        "step": "s2",
+        "issues": [
+          "divide(-3/5 (约 -0.6), 16/5 (约 3.2)) 应为 -3/16 (约 -0.1875)，候选结果 0.8125"
+        ],
+        "computed_from_claimed_inputs": "-3/16 (约 -0.1875)",
+        "claimed_result": "0.8125"
+      }
+    ],
+    "final_matches_last_step": false
+  },
+  {
+    "review_id": "case-9fbfd1cb87f6",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "-3/5 (约 -0.6)",
+        "claimed_result": "-0.6"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "-3/16 (约 -0.1875)",
+        "claimed_result": "-0.1875"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-89f423cb0ca8",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "依赖 s1 在此步开始时尚未产生"
+        ],
+        "computed_from_claimed_inputs": null,
+        "claimed_result": "2.91379310344827586206896551724137931"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-960b09acd15d",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "227/10 (约 22.7)",
+        "claimed_result": "22.7"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-b6b7b0868142",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "169/58 (约 2.91379310345)",
+        "claimed_result": "2.91379310344827586206896551724137931"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-96762b6a4799",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "subtract(3883230, 3821707) 应为 61523，候选结果 61524"
+        ],
+        "computed_from_claimed_inputs": "61523",
+        "claimed_result": "61524"
+      }
+    ],
+    "final_matches_last_step": false
+  },
+  {
+    "review_id": "case-c1c2591be690",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "subtract(3883230, 3821707) 应为 61523，候选结果 61524"
+        ],
+        "computed_from_claimed_inputs": "61523",
+        "claimed_result": "61524"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-d334635dc01f",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "61523",
+        "claimed_result": "61523"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-b000235fe62b",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "845",
+        "claimed_result": "845"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "7807",
+        "claimed_result": "7807"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "845/7807 (约 0.108236198284)",
+        "claimed_result": "0.108236198283591648520558473165108236"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-bc39307e49bc",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [],
+        "computed_from_claimed_inputs": "469",
+        "claimed_result": "469"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "7807",
+        "claimed_result": "7807"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "469/7807 (约 0.0600742923018)",
+        "claimed_result": "0.0600742923017804534392212117330600743"
+      }
+    ],
+    "final_matches_last_step": true
+  },
+  {
+    "review_id": "case-feceefb04e8c",
+    "steps": [
+      {
+        "step": "s1",
+        "issues": [
+          "t:1:1:0 原值 657，候选写为 658"
+        ],
+        "computed_from_claimed_inputs": "846",
+        "claimed_result": "846"
+      },
+      {
+        "step": "s2",
+        "issues": [],
+        "computed_from_claimed_inputs": "7807",
+        "claimed_result": "7807"
+      },
+      {
+        "step": "s3",
+        "issues": [],
+        "computed_from_claimed_inputs": "846/7807 (约 0.108364288459)",
+        "claimed_result": "0.108364288459075188933008838222108364"
+      }
+    ],
+    "final_matches_last_step": true
+  }
+]

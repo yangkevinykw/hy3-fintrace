@@ -1,0 +1,1363 @@
+[
+  {
+    "review_id": "case-02c97c7b605a",
+    "reviewer_type": "ai",
+    "process": "uncertain",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "表内非 owned 设施为 New Haven 514000、Lexington 81000、Bogart 70000、Zurich 69000，合计 734000 平方英尺；但正文 texts[8] 另列 Cheshire 租赁 254000，texts[6:8] 还提到未量化租赁场地。题面未限定仅表内主要设施，734000 只能作为表内小计；全公司租赁总量无法唯一确定。",
+    "evidence_refs": [
+      "t:1:2:0",
+      "t:3:2:0",
+      "t:4:2:0",
+      "t:6:2:0"
+    ],
+    "confidence": "medium",
+    "answer_correct": null,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-8226a6ac436a",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s3",
+    "error_type": "arithmetic",
+    "reason": "表内非 owned 设施为 New Haven 514000、Lexington 81000、Bogart 70000、Zurich 69000，合计 734000 平方英尺；但正文 texts[8] 另列 Cheshire 租赁 254000，texts[6:8] 还提到未量化租赁场地。题面未限定仅表内主要设施，734000 只能作为表内小计；全公司租赁总量无法唯一确定。 逐步核验：s3：add(665000, 69000) 应为 734000，候选结果 734001。 最终答案 734000 又与最后一步结果 734001 不一致。",
+    "evidence_refs": [
+      "t:1:2:0",
+      "t:3:2:0",
+      "t:4:2:0",
+      "t:6:2:0"
+    ],
+    "confidence": "high",
+    "answer_correct": null,
+    "localization_scope": "earliest_confirmed_error; preceding semantic ambiguity unresolved"
+  },
+  {
+    "review_id": "case-c0da9bc85f01",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "dependency",
+    "reason": "表内非 owned 设施为 New Haven 514000、Lexington 81000、Bogart 70000、Zurich 69000，合计 734000 平方英尺；但正文 texts[8] 另列 Cheshire 租赁 254000，texts[6:8] 还提到未量化租赁场地。题面未限定仅表内主要设施，734000 只能作为表内小计；全公司租赁总量无法唯一确定。 逐步核验：s1：依赖 s1 在此步开始时尚未产生。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:3:2:0",
+      "t:4:2:0",
+      "t:6:2:0"
+    ],
+    "confidence": "high",
+    "answer_correct": null,
+    "localization_scope": "earliest_confirmed_error; preceding semantic ambiguity unresolved"
+  },
+  {
+    "review_id": "case-03b8aff91a23",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "formula",
+    "reason": "2014 列四区域新增站点为 900、1560、190、5800，应逐项相加为 8450，不能抵减亚洲站点。 首个公式错误在 s1，候选使用 subtract，与上述题意所需关系不符；局部算术成立也不能消除此错误。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:1:2:0",
+      "t:2:2:0",
+      "t:3:2:0",
+      "t:4:2:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-c4310d61730f",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "2014 列四区域新增站点为 900、1560、190、5800，应逐项相加为 8450，不能抵减亚洲站点。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "t:1:2:0",
+      "t:2:2:0",
+      "t:3:2:0",
+      "t:4:2:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-f9b6fe13dcbb",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "evidence_value",
+    "reason": "2014 列四区域新增站点为 900、1560、190、5800，应逐项相加为 8450，不能抵减亚洲站点。 逐步核验：s1：t:1:2:0 原值 900，候选写为 901。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:1:2:0",
+      "t:2:2:0",
+      "t:3:2:0",
+      "t:4:2:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-065e7266f283",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s2",
+    "error_type": "arithmetic",
+    "reason": "候选取 2008/2007 的期初准备 16117、8940，期初变化率为 7177/8940≈80.279642%；但题面只问两年 allowance for loan losses，期末同名余额分别为 29616、16117，对应≈83.756282%。题面未指定期初，需确认口径；不能仅凭候选引用的行判为完全正确。 逐步核验：s2：divide(7177, 8940) 应为 7177/8940 (约 0.802796420582)，候选结果 1.80279642058165548098434004474272931。 最终答案 0.802796420581655480984340044742729306 又与最后一步结果 1.80279642058165548098434004474272931 不一致。",
+    "evidence_refs": [
+      "t:1:2:0",
+      "t:1:3:0"
+    ],
+    "confidence": "high",
+    "answer_correct": null,
+    "localization_scope": "earliest_confirmed_error; preceding semantic ambiguity unresolved"
+  },
+  {
+    "review_id": "case-810490b2ea5e",
+    "reviewer_type": "ai",
+    "process": "uncertain",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "候选取 2008/2007 的期初准备 16117、8940，期初变化率为 7177/8940≈80.279642%；但题面只问两年 allowance for loan losses，期末同名余额分别为 29616、16117，对应≈83.756282%。题面未指定期初，需确认口径；不能仅凭候选引用的行判为完全正确。",
+    "evidence_refs": [
+      "t:1:2:0",
+      "t:1:3:0"
+    ],
+    "confidence": "medium",
+    "answer_correct": null,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-eac51db4799a",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "evidence_value",
+    "reason": "候选取 2008/2007 的期初准备 16117、8940，期初变化率为 7177/8940≈80.279642%；但题面只问两年 allowance for loan losses，期末同名余额分别为 29616、16117，对应≈83.756282%。题面未指定期初，需确认口径；不能仅凭候选引用的行判为完全正确。 逐步核验：s1：t:1:2:0 原值 16117，候选写为 16118。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:1:2:0",
+      "t:1:3:0"
+    ],
+    "confidence": "high",
+    "answer_correct": null,
+    "localization_scope": "earliest_confirmed_error; preceding semantic ambiguity unresolved"
+  },
+  {
+    "review_id": "case-0a1e9ebc1842",
+    "reviewer_type": "ai",
+    "process": "uncertain",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "债务行四列为母公司 192.3、CGMHI 20.6、CFI 37.4、其他子公司 109.3 十亿美元，四者合计 359.6；若 subsidiaries 严格排除母公司则是 167.3。题目措辞重复且主语不清，须确认是否包含 parent company。",
+    "evidence_refs": [
+      "t:1:1:0",
+      "t:1:2:0",
+      "t:1:3:0",
+      "t:1:4:0"
+    ],
+    "confidence": "medium",
+    "answer_correct": null,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-1834173eaa40",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s3",
+    "error_type": "arithmetic",
+    "reason": "债务行四列为母公司 192.3、CGMHI 20.6、CFI 37.4、其他子公司 109.3 十亿美元，四者合计 359.6；若 subsidiaries 严格排除母公司则是 167.3。题目措辞重复且主语不清，须确认是否包含 parent company。 逐步核验：s3：add(1093/10 (约 109.3), 2503/10 (约 250.3)) 应为 1798/5 (约 359.6)，候选结果 360.6。 最终答案 359.6 又与最后一步结果 360.6 不一致。",
+    "evidence_refs": [
+      "t:1:1:0",
+      "t:1:2:0",
+      "t:1:3:0",
+      "t:1:4:0"
+    ],
+    "confidence": "high",
+    "answer_correct": null,
+    "localization_scope": "earliest_confirmed_error; preceding semantic ambiguity unresolved"
+  },
+  {
+    "review_id": "case-fb5a083bfd00",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "dependency",
+    "reason": "债务行四列为母公司 192.3、CGMHI 20.6、CFI 37.4、其他子公司 109.3 十亿美元，四者合计 359.6；若 subsidiaries 严格排除母公司则是 167.3。题目措辞重复且主语不清，须确认是否包含 parent company。 逐步核验：s1：依赖 s1 在此步开始时尚未产生。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:1:2:0",
+      "t:1:3:0",
+      "t:1:4:0"
+    ],
+    "confidence": "high",
+    "answer_correct": null,
+    "localization_scope": "earliest_confirmed_error; preceding semantic ambiguity unresolved"
+  },
+  {
+    "review_id": "case-0a59808bb449",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "formula",
+    "reason": "正文 texts[54] 明确 2010/2009 利息支付 189/201 百万美元，延续同比比例应以 189/201 乘 2010 的 189，得到 177.7164179104 百万美元。 首个公式错误在 s1，候选使用 add，与上述题意所需关系不符；局部算术成立也不能消除此错误。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "x:54:3",
+      "x:54:4"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-5256717d6a71",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "正文 texts[54] 明确 2010/2009 利息支付 189/201 百万美元，延续同比比例应以 189/201 乘 2010 的 189，得到 177.7164179104 百万美元。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "x:54:3",
+      "x:54:4"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-79bb242a45ea",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "arithmetic",
+    "reason": "正文 texts[54] 明确 2010/2009 利息支付 189/201 百万美元，延续同比比例应以 189/201 乘 2010 的 189，得到 177.7164179104 百万美元。 逐步核验：s1：divide(189, 201) 应为 63/67 (约 0.940298507463)，候选结果 1.94029850746268656716417910447761194。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "x:54:3",
+      "x:54:4"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-0b7200c545f9",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "arithmetic",
+    "reason": "正文 texts[19] 将 227、170、120 百万美元分别对应 2015、2014、2013，三年合计 517 百万美元。 逐步核验：s1：add(227, 170) 应为 397，候选结果 398。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "x:19:0",
+      "x:19:1",
+      "x:19:2"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-35fd7bb2b320",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "正文 texts[19] 将 227、170、120 百万美元分别对应 2015、2014、2013，三年合计 517 百万美元。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "x:19:0",
+      "x:19:1",
+      "x:19:2"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-5332e132db6f",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "formula",
+    "reason": "正文 texts[19] 将 227、170、120 百万美元分别对应 2015、2014、2013，三年合计 517 百万美元。 首个公式错误在 s1，候选使用 subtract，与上述题意所需关系不符；局部算术成立也不能消除此错误。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "x:19:0",
+      "x:19:1",
+      "x:19:2"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-0d3ffd386e26",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "表中 2009 年末未归属单位 1415 千份、加权每份公允价值 25.24 美元，1415×1000×25.24/1000000=35.7146 百万美元。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "t:5:1:0",
+      "t:5:2:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-5fde60e19b3a",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s3",
+    "error_type": "arithmetic",
+    "reason": "表中 2009 年末未归属单位 1415 千份、加权每份公允价值 25.24 美元，1415×1000×25.24/1000000=35.7146 百万美元。 逐步核验：s3：divide(35714600, 1000000) 应为 178573/5000 (约 35.7146)，候选结果 36.7146。 最终答案 35.7146 又与最后一步结果 36.7146 不一致。",
+    "evidence_refs": [
+      "t:5:1:0",
+      "t:5:2:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-d844581625d1",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "dependency",
+    "reason": "表中 2009 年末未归属单位 1415 千份、加权每份公允价值 25.24 美元，1415×1000×25.24/1000000=35.7146 百万美元。 逐步核验：s1：依赖 s1 在此步开始时尚未产生。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:5:2:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-0d4d1b864c5c",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "arithmetic",
+    "reason": "按两个已报告年末累计余额比较，2018 年末 -974 减 2017 年末 862 等于 -1836 百万美元。此数包括会计准则变更 -1790；以调整后期初 -928 比较时当期 OCI 是 -46，二者需区分。本记录采用题目 net change in accumulated balance 的年末对年末口径。 逐步核验：s1：subtract(-974, 862) 应为 -1836，候选结果 -1835。 最终答案 -1836 又与最后一步结果 -1835 不一致。",
+    "evidence_refs": [
+      "t:13:5:0",
+      "t:6:5:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-18388964d9c3",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "按两个已报告年末累计余额比较，2018 年末 -974 减 2017 年末 862 等于 -1836 百万美元。此数包括会计准则变更 -1790；以调整后期初 -928 比较时当期 OCI 是 -46，二者需区分。本记录采用题目 net change in accumulated balance 的年末对年末口径。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "t:13:5:0",
+      "t:6:5:0"
+    ],
+    "confidence": "medium",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-acad79d0808c",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "dependency",
+    "reason": "按两个已报告年末累计余额比较，2018 年末 -974 减 2017 年末 862 等于 -1836 百万美元。此数包括会计准则变更 -1790；以调整后期初 -928 比较时当期 OCI 是 -46，二者需区分。本记录采用题目 net change in accumulated balance 的年末对年末口径。 逐步核验：s1：依赖 s1 在此步开始时尚未产生。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:6:5:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-0f18dbdc5cc8",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "evidence_value",
+    "reason": "正文 texts[21:23] 明确 2013 与 2012 的燃油附加费收入同为 2.6 十亿美元，变化率为 0。packet 将两次 2.6 合并为 x:21:0，span 只指向第一个即 2013 数字，候选因此无法用不同 ref 明确标出 2012；整句支持答案，但精确证据对齐仍待修复/确认。 逐步核验：s1：x:21:0 原值 2.6，候选写为 3.6。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "x:21:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "earliest_confirmed_error; preceding semantic ambiguity unresolved"
+  },
+  {
+    "review_id": "case-71380f5f5969",
+    "reviewer_type": "ai",
+    "process": "uncertain",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "正文 texts[21:23] 明确 2013 与 2012 的燃油附加费收入同为 2.6 十亿美元，变化率为 0。packet 将两次 2.6 合并为 x:21:0，span 只指向第一个即 2013 数字，候选因此无法用不同 ref 明确标出 2012；整句支持答案，但精确证据对齐仍待修复/确认。",
+    "evidence_refs": [
+      "x:21:0"
+    ],
+    "confidence": "medium",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-85db3863bb9f",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "formula",
+    "reason": "正文 texts[21:23] 明确 2013 与 2012 的燃油附加费收入同为 2.6 十亿美元，变化率为 0。packet 将两次 2.6 合并为 x:21:0，span 只指向第一个即 2013 数字，候选因此无法用不同 ref 明确标出 2012；整句支持答案，但精确证据对齐仍待修复/确认。 首个公式错误在 s1，候选使用 add，与上述题意所需关系不符；局部算术成立也不能消除此错误。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "x:21:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "earliest_confirmed_error; preceding semantic ambiguity unresolved"
+  },
+  {
+    "review_id": "case-1084109ce9db",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s2",
+    "error_type": "arithmetic",
+    "reason": "农业收入行 2010、2009、2008 为 3018、2666、3174 百万美元，总数 8858，三年均值 8858/3=2952.6666667。 逐步核验：s2：add(5684, 3174) 应为 8858，候选结果 8859。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:1:1:0",
+      "t:1:2:0",
+      "t:1:3:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-175e1a829461",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s3",
+    "error_type": "arithmetic",
+    "reason": "农业收入行 2010、2009、2008 为 3018、2666、3174 百万美元，总数 8858，三年均值 8858/3=2952.6666667。 逐步核验：s3：divide(8858, 3) 应为 8858/3 (约 2952.66666667)，候选结果 2953.66666666666666666666666666666667。 最终答案 2952.66666666666666666666666666666667 又与最后一步结果 2953.66666666666666666666666666666667 不一致。",
+    "evidence_refs": [
+      "t:1:1:0",
+      "t:1:2:0",
+      "t:1:3:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-65c3b89c95a7",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "农业收入行 2010、2009、2008 为 3018、2666、3174 百万美元，总数 8858，三年均值 8858/3=2952.6666667。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "t:1:1:0",
+      "t:1:2:0",
+      "t:1:3:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-170179dc70f3",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "采用表格左侧 GAAP 口径：2015 为 4664、2016 为 4570，变化额 -94，增长率 -94/4664≈-2.015437%。右侧调整口径不与左侧混用。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "t:1:2:0",
+      "t:1:3:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-79ccd3313287",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "arithmetic",
+    "reason": "采用表格左侧 GAAP 口径：2015 为 4664、2016 为 4570，变化额 -94，增长率 -94/4664≈-2.015437%。右侧调整口径不与左侧混用。 逐步核验：s1：subtract(4570, 4664) 应为 -94，候选结果 -93。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:1:2:0",
+      "t:1:3:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-c7d7806d24c3",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "formula",
+    "reason": "采用表格左侧 GAAP 口径：2015 为 4664、2016 为 4570，变化额 -94，增长率 -94/4664≈-2.015437%。右侧调整口径不与左侧混用。 首个公式错误在 s1，候选使用 add，与上述题意所需关系不符；局部算术成立也不能消除此错误。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:1:2:0",
+      "t:1:3:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-1a4091ea4a4a",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "formula",
+    "reason": "texts[1] 说明归属期 two to four years，平均 (2+4)/2=3 年；texts[2] 本批授予公允价值 58.7 百万美元，平均年度额 58.7/3≈19.566667。题面明确平均期限，因此可算平均摊额；原文 accelerated basis 不支持声称实际每年费用完全相等。 首个公式错误在 s1，候选使用 subtract，与上述题意所需关系不符；局部算术成立也不能消除此错误。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "x:2:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-6e00a04d9225",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "texts[1] 说明归属期 two to four years，平均 (2+4)/2=3 年；texts[2] 本批授予公允价值 58.7 百万美元，平均年度额 58.7/3≈19.566667。题面明确平均期限，因此可算平均摊额；原文 accelerated basis 不支持声称实际每年费用完全相等。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "x:2:0"
+    ],
+    "confidence": "medium",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-f6892326a3d0",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s2",
+    "error_type": "arithmetic",
+    "reason": "texts[1] 说明归属期 two to four years，平均 (2+4)/2=3 年；texts[2] 本批授予公允价值 58.7 百万美元，平均年度额 58.7/3≈19.566667。题面明确平均期限，因此可算平均摊额；原文 accelerated basis 不支持声称实际每年费用完全相等。 逐步核验：s2：divide(6, 2) 应为 3，候选结果 4。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "x:2:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-1e1012bf1cdf",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "evidence_semantics",
+    "reason": "题目要求 2016→2017，表格 segment income 对应 1226.2→1193.5，增长率应为 (1193.5-1226.2)/1226.2≈-2.666775%。候选的 1685 是 2018 而非 2017，1193.5 是 2017 而非 2016，从 s1 即错配年份；41.181399% 是另一年度区间。 逐步核验：s2：divide(983/2 (约 491.5), 2387/2 (约 1193.5)) 应为 983/2387 (约 0.411813992459)，候选结果 1.41181399245915374947633012149141181。 最终答案 0.411813992459153749476330121491411814 又与最后一步结果 1.41181399245915374947633012149141181 不一致。",
+    "evidence_refs": [
+      "t:2:1:0",
+      "t:2:2:0",
+      "t:2:3:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-702b452a1388",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "evidence_semantics",
+    "reason": "题目要求 2016→2017，表格 segment income 对应 1226.2→1193.5，增长率应为 (1193.5-1226.2)/1226.2≈-2.666775%。候选的 1685 是 2018 而非 2017，1193.5 是 2017 而非 2016，从 s1 即错配年份；41.181399% 是另一年度区间。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:2:1:0",
+      "t:2:2:0",
+      "t:2:3:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-845b96c5ba75",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "evidence_semantics",
+    "reason": "题目要求 2016→2017，表格 segment income 对应 1226.2→1193.5，增长率应为 (1193.5-1226.2)/1226.2≈-2.666775%。候选的 1685 是 2018 而非 2017，1193.5 是 2017 而非 2016，从 s1 即错配年份；41.181399% 是另一年度区间。 逐步核验：s1：t:2:1:0 原值 1685，候选写为 1686。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:2:1:0",
+      "t:2:2:0",
+      "t:2:3:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-25ac81047e8d",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "2015 租金最低付款额 345、全部未来最低租金 3189 百万美元，所占比例 345/3189≈10.818438%；不是求两者之和。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "t:3:1:0",
+      "t:7:1:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-531ebe3695f3",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "formula",
+    "reason": "2015 租金最低付款额 345、全部未来最低租金 3189 百万美元，所占比例 345/3189≈10.818438%；不是求两者之和。 首个公式错误在 s1，候选使用 add，与上述题意所需关系不符；局部算术成立也不能消除此错误。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:3:1:0",
+      "t:7:1:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-b8dc783c37ce",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "dependency",
+    "reason": "2015 租金最低付款额 345、全部未来最低租金 3189 百万美元，所占比例 345/3189≈10.818438%；不是求两者之和。 逐步核验：s1：依赖 s1 在此步开始时尚未产生。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:7:1:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-25b638b7693f",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "texts[0] 因期限届满/和解最多下降 8 百万美元，texts[1] 因支付最多下降 14 百万美元，合计上限 22 百万美元。数字可作为两类可能下降的合计上限，不能解释为确定实现的期望值。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "x:0:0",
+      "x:1:0"
+    ],
+    "confidence": "medium",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-70b599d2b239",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "arithmetic",
+    "reason": "texts[0] 因期限届满/和解最多下降 8 百万美元，texts[1] 因支付最多下降 14 百万美元，合计上限 22 百万美元。数字可作为两类可能下降的合计上限，不能解释为确定实现的期望值。 逐步核验：s1：add(8, 14) 应为 22，候选结果 23。 最终答案 22 又与最后一步结果 23 不一致。",
+    "evidence_refs": [
+      "x:0:0",
+      "x:1:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-7e21899d0053",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "arithmetic",
+    "reason": "texts[0] 因期限届满/和解最多下降 8 百万美元，texts[1] 因支付最多下降 14 百万美元，合计上限 22 百万美元。数字可作为两类可能下降的合计上限，不能解释为确定实现的期望值。 逐步核验：s1：add(8, 14) 应为 22，候选结果 23。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "x:0:0",
+      "x:1:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-27790ec4ff28",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "arithmetic",
+    "reason": "texts[6:8] 同一 Entergy Texas 信贷额度允许信用证 30 百万美元，2017 年末已开出 25.6 百万美元，使用率 25.6/30≈85.333333%。 逐步核验：s1：divide(128/5 (约 25.6), 30) 应为 64/75 (约 0.853333333333)，候选结果 1.85333333333333333333333333333333333。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "x:6:0",
+      "x:7:2"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-8412bf14ad5c",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "arithmetic",
+    "reason": "texts[6:8] 同一 Entergy Texas 信贷额度允许信用证 30 百万美元，2017 年末已开出 25.6 百万美元，使用率 25.6/30≈85.333333%。 逐步核验：s1：divide(128/5 (约 25.6), 30) 应为 64/75 (约 0.853333333333)，候选结果 1.85333333333333333333333333333333333。 最终答案 0.853333333333333333333333333333333333 又与最后一步结果 1.85333333333333333333333333333333333 不一致。",
+    "evidence_refs": [
+      "x:6:0",
+      "x:7:2"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-9d4ba2d1ba18",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "texts[6:8] 同一 Entergy Texas 信贷额度允许信用证 30 百万美元，2017 年末已开出 25.6 百万美元，使用率 25.6/30≈85.333333%。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "x:6:0",
+      "x:7:2"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-28823a2687e9",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "formula",
+    "reason": "texts[9] 用 respectively 将 2016、2015、2014 管理费对应 4.5、6.8、8.5 百万美元。题目 2015→2016 应 (4.5-6.8)/6.8≈-33.823529%，候选反向用 (6.8-4.5)/4.5，从 s1 即把变化方向倒置，并在 s2 使用错误基期。 首个公式错误在 s1，候选使用 subtract，与上述题意所需关系不符；局部算术成立也不能消除此错误。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "x:9:4",
+      "x:9:5"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-502557a89038",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "formula",
+    "reason": "texts[9] 用 respectively 将 2016、2015、2014 管理费对应 4.5、6.8、8.5 百万美元。题目 2015→2016 应 (4.5-6.8)/6.8≈-33.823529%，候选反向用 (6.8-4.5)/4.5，从 s1 即把变化方向倒置，并在 s2 使用错误基期。 逐步核验：s3：multiply(511111111111111111111111111111111111/1000000000000000000000000000000000000 (约 0.511111111111), 100) 应为 511111111111111111111111111111111111/10000000000000000000000000000000000 (约 51.1111111111)，候选结果 52.1111111111111111111111111111111111。 首个公式错误在 s1，候选使用 subtract，与上述题意所需关系不符；局部算术成立也不能消除此错误。 最终答案 51.1111111111111111111111111111111111 又与最后一步结果 52.1111111111111111111111111111111111 不一致。",
+    "evidence_refs": [
+      "x:9:4",
+      "x:9:5"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-6317ee347402",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "evidence_value",
+    "reason": "texts[9] 用 respectively 将 2016、2015、2014 管理费对应 4.5、6.8、8.5 百万美元。题目 2015→2016 应 (4.5-6.8)/6.8≈-33.823529%，候选反向用 (6.8-4.5)/4.5，从 s1 即把变化方向倒置，并在 s2 使用错误基期。 逐步核验：s1：x:9:5 原值 6.8，候选写为 7.8。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "x:9:4",
+      "x:9:5"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-2ca99c6dc147",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "2003/2002 资产报废义务 29/15 百万美元，增加 14 百万美元，乘 1000000 换成美元后为 14000000；没有把百万美元与美元混加。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "x:10:3",
+      "x:10:4"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-5560d97d5df6",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s2",
+    "error_type": "arithmetic",
+    "reason": "2003/2002 资产报废义务 29/15 百万美元，增加 14 百万美元，乘 1000000 换成美元后为 14000000；没有把百万美元与美元混加。 逐步核验：s2：multiply(14, 1000000) 应为 14000000，候选结果 14000001。 最终答案 14000000 又与最后一步结果 14000001 不一致。",
+    "evidence_refs": [
+      "x:10:3",
+      "x:10:4"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-faed315b29fb",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "dependency",
+    "reason": "2003/2002 资产报废义务 29/15 百万美元，增加 14 百万美元，乘 1000000 换成美元后为 14000000；没有把百万美元与美元混加。 逐步核验：s1：依赖 s1 在此步开始时尚未产生。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "x:10:4"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-40a346718ca8",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "evidence_value",
+    "reason": "S&P 500 从 2011 年 100.00 增至 2016 年 198.18，累计增幅 (198.18-100)/100=0.9818，即 98.18%。常量 100 同时有基期表格数据支持。 逐步核验：s1：t:2:6:0 原值 198.18，候选写为 199.18。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:2:6:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-705fa71ee1ca",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "formula",
+    "reason": "S&P 500 从 2011 年 100.00 增至 2016 年 198.18，累计增幅 (198.18-100)/100=0.9818，即 98.18%。常量 100 同时有基期表格数据支持。 首个公式错误在 s1，候选使用 add，与上述题意所需关系不符；局部算术成立也不能消除此错误。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:2:6:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-e4145229476c",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "S&P 500 从 2011 年 100.00 增至 2016 年 198.18，累计增幅 (198.18-100)/100=0.9818，即 98.18%。常量 100 同时有基期表格数据支持。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "t:2:6:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-46447fe32bf8",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "formula",
+    "reason": "Citi 五年累计回报以 2010 年末 100 到 2015 年末 110.14 计算，净收益率为 (110.14-100)/100=0.1014，即 10.14%；110.14 是终值指数，不是净回报率。 首个公式错误在 s1，候选使用 add，与上述题意所需关系不符；局部算术成立也不能消除此错误。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:6:1:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-4baa9ded6cf0",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "Citi 五年累计回报以 2010 年末 100 到 2015 年末 110.14 计算，净收益率为 (110.14-100)/100=0.1014，即 10.14%；110.14 是终值指数，不是净回报率。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "t:6:1:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-7521667cd2e0",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "arithmetic",
+    "reason": "Citi 五年累计回报以 2010 年末 100 到 2015 年末 110.14 计算，净收益率为 (110.14-100)/100=0.1014，即 10.14%；110.14 是终值指数，不是净回报率。 逐步核验：s1：subtract(5507/50 (约 110.14), 100) 应为 507/50 (约 10.14)，候选结果 11.14。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:6:1:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-5788cc574844",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "GAAP 总投资 2011 年 1631、2012 年 1750 百万美元，增加 119，变化率 119/1631≈7.296137%。不使用 adjusted 或 economic exposure 行。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "t:1:1:0",
+      "t:1:2:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-e1f76b1e0a46",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "dependency",
+    "reason": "GAAP 总投资 2011 年 1631、2012 年 1750 百万美元，增加 119，变化率 119/1631≈7.296137%。不使用 adjusted 或 economic exposure 行。 逐步核验：s1：依赖 s1 在此步开始时尚未产生。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:1:2:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-f8e6495ab97d",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "formula",
+    "reason": "GAAP 总投资 2011 年 1631、2012 年 1750 百万美元，增加 119，变化率 119/1631≈7.296137%。不使用 adjusted 或 economic exposure 行。 首个公式错误在 s1，候选使用 add，与上述题意所需关系不符；局部算术成立也不能消除此错误。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:1:1:0",
+      "t:1:2:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-64d9407f9688",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "evidence_value",
+    "reason": "2013 年末 target date/risk 为 111408、multi-asset 总计 341214 百万美元，份额 111408/341214≈32.650477%；不能使用 2014 年列。 逐步核验：s1：t:2:1:0 原值 111408，候选写为 111409。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:2:1:0",
+      "t:4:1:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-6dcc8a78a306",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "formula",
+    "reason": "2013 年末 target date/risk 为 111408、multi-asset 总计 341214 百万美元，份额 111408/341214≈32.650477%；不能使用 2014 年列。 首个公式错误在 s1，候选使用 add，与上述题意所需关系不符；局部算术成立也不能消除此错误。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:2:1:0",
+      "t:4:1:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-7cca44fd40e2",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "2013 年末 target date/risk 为 111408、multi-asset 总计 341214 百万美元，份额 111408/341214≈32.650477%；不能使用 2014 年列。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "t:2:1:0",
+      "t:4:1:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-65b6318b7cda",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "按题目列出顺序做 A O Smith 减行业指数：两者以 100 为基期的回报分别 42.72% 与 153.33%，差为 -110.61 个百分点，即 ratio -1.1061。若报告绝对差应为正 110.61 个百分点，这里采用有方向的差。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "t:1:6:0",
+      "t:3:6:0"
+    ],
+    "confidence": "medium",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-af0742ae2663",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "formula",
+    "reason": "按题目列出顺序做 A O Smith 减行业指数：两者以 100 为基期的回报分别 42.72% 与 153.33%，差为 -110.61 个百分点，即 ratio -1.1061。若报告绝对差应为正 110.61 个百分点，这里采用有方向的差。 首个公式错误在 s1，候选使用 add，与上述题意所需关系不符；局部算术成立也不能消除此错误。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:1:6:0",
+      "t:3:6:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-cf9f3c7b2c9d",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "dependency",
+    "reason": "按题目列出顺序做 A O Smith 减行业指数：两者以 100 为基期的回报分别 42.72% 与 153.33%，差为 -110.61 个百分点，即 ratio -1.1061。若报告绝对差应为正 110.61 个百分点，这里采用有方向的差。 逐步核验：s1：依赖 s1 在此步开始时尚未产生。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:3:6:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-6e8e413bfcc9",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "arithmetic",
+    "reason": "texts[25] 分别列 2013/2012/2011 已归属奖励公允价值 63/55/52 百万美元，题目只加前两年，63+55=118。 逐步核验：s1：add(63, 55) 应为 118，候选结果 119。 最终答案 118 又与最后一步结果 119 不一致。",
+    "evidence_refs": [
+      "x:25:3",
+      "x:25:4"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-72bee7c06efd",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "evidence_value",
+    "reason": "texts[25] 分别列 2013/2012/2011 已归属奖励公允价值 63/55/52 百万美元，题目只加前两年，63+55=118。 逐步核验：s1：x:25:3 原值 63，候选写为 64。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "x:25:3",
+      "x:25:4"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-c49ef50af6ec",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "texts[25] 分别列 2013/2012/2011 已归属奖励公允价值 63/55/52 百万美元，题目只加前两年，63+55=118。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "x:25:3",
+      "x:25:4"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-71abf020675d",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "dependency",
+    "reason": "2005 工业涂料销售为 2921 百万美元；texts[4] 明确 volume 增长贡献为 4%，影响额 2921×0.04=116.84 百万美元。但 x:4:0 的 span 指向同句第一个 acquisition 的 4%，第二个 volume 的 4% 未独立编号；整句可支持数值，精确引用仍有歧义。 逐步核验：s1：依赖 s1 在此步开始时尚未产生。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "x:4:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "earliest_confirmed_error; preceding semantic ambiguity unresolved"
+  },
+  {
+    "review_id": "case-86caa3c5dd1d",
+    "reviewer_type": "ai",
+    "process": "uncertain",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "2005 工业涂料销售为 2921 百万美元；texts[4] 明确 volume 增长贡献为 4%，影响额 2921×0.04=116.84 百万美元。但 x:4:0 的 span 指向同句第一个 acquisition 的 4%，第二个 volume 的 4% 未独立编号；整句可支持数值，精确引用仍有歧义。",
+    "evidence_refs": [
+      "t:1:2:0",
+      "x:4:0"
+    ],
+    "confidence": "medium",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-8b91431f843b",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "formula",
+    "reason": "2005 工业涂料销售为 2921 百万美元；texts[4] 明确 volume 增长贡献为 4%，影响额 2921×0.04=116.84 百万美元。但 x:4:0 的 span 指向同句第一个 acquisition 的 4%，第二个 volume 的 4% 未独立编号；整句可支持数值，精确引用仍有歧义。 首个公式错误在 s1，候选使用 add，与上述题意所需关系不符；局部算术成立也不能消除此错误。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:1:2:0",
+      "x:4:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "earliest_confirmed_error; preceding semantic ambiguity unresolved"
+  },
+  {
+    "review_id": "case-7dd3159e5197",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "arithmetic",
+    "reason": "年初 571、年末 627 MMboe，绝对增加 56 MMboe，texts[0] 已明说；若问相对幅度则是 56/571≈9.807356%。题面 by how much 未要求 percentage，候选仅输出 ratio，因此所答量纲/范围待确认，不能直接判整题正确。 逐步核验：s1：divide(56, 571) 应为 56/571 (约 0.0980735551664)，候选结果 1.09807355516637478108581436077057793。 最终答案 0.0980735551663747810858143607705779335 又与最后一步结果 1.09807355516637478108581436077057793 不一致。",
+    "evidence_refs": [
+      "t:0:1:0",
+      "x:0:3"
+    ],
+    "confidence": "high",
+    "answer_correct": null,
+    "localization_scope": "earliest_confirmed_error; preceding semantic ambiguity unresolved"
+  },
+  {
+    "review_id": "case-cb43ae6e25fa",
+    "reviewer_type": "ai",
+    "process": "uncertain",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "年初 571、年末 627 MMboe，绝对增加 56 MMboe，texts[0] 已明说；若问相对幅度则是 56/571≈9.807356%。题面 by how much 未要求 percentage，候选仅输出 ratio，因此所答量纲/范围待确认，不能直接判整题正确。",
+    "evidence_refs": [
+      "t:0:1:0",
+      "x:0:3"
+    ],
+    "confidence": "medium",
+    "answer_correct": null,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-eabae3d40ed0",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "evidence_value",
+    "reason": "年初 571、年末 627 MMboe，绝对增加 56 MMboe，texts[0] 已明说；若问相对幅度则是 56/571≈9.807356%。题面 by how much 未要求 percentage，候选仅输出 ratio，因此所答量纲/范围待确认，不能直接判整题正确。 逐步核验：s1：x:0:3 原值 56，候选写为 57。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:0:1:0",
+      "x:0:3"
+    ],
+    "confidence": "high",
+    "answer_correct": null,
+    "localization_scope": "earliest_confirmed_error; preceding semantic ambiguity unresolved"
+  },
+  {
+    "review_id": "case-827db68f6b2a",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s2",
+    "error_type": "arithmetic",
+    "reason": "2006/2007 backlog 为 3.2/2.6 十亿美元，带符号变化率 (2.6-3.2)/3.2=-18.75%，等价于下降 18.75%。本记录接受以负增长率表达 reduction，不能把 +81.25% 当成下降率。 逐步核验：s2：divide(-3/5 (约 -0.6), 16/5 (约 3.2)) 应为 -3/16 (约 -0.1875)，候选结果 0.8125。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "x:6:0",
+      "x:6:3"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-8c5a60acb27b",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s2",
+    "error_type": "arithmetic",
+    "reason": "2006/2007 backlog 为 3.2/2.6 十亿美元，带符号变化率 (2.6-3.2)/3.2=-18.75%，等价于下降 18.75%。本记录接受以负增长率表达 reduction，不能把 +81.25% 当成下降率。 逐步核验：s2：divide(-3/5 (约 -0.6), 16/5 (约 3.2)) 应为 -3/16 (约 -0.1875)，候选结果 0.8125。 最终答案 -0.1875 又与最后一步结果 0.8125 不一致。",
+    "evidence_refs": [
+      "x:6:0",
+      "x:6:3"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-9fbfd1cb87f6",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "2006/2007 backlog 为 3.2/2.6 十亿美元，带符号变化率 (2.6-3.2)/3.2=-18.75%，等价于下降 18.75%。本记录接受以负增长率表达 reduction，不能把 +81.25% 当成下降率。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "x:6:0",
+      "x:6:3"
+    ],
+    "confidence": "medium",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-89f423cb0ca8",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "dependency",
+    "reason": "按题目与 texts[4] 的上下文，将收到的额外抵押品与交付的额外抵押品相比：16.9/5.8≈2.913793。题目英文残缺，本记录采用 received-to-delivered 的自然对应解释，并不把 received 与其自身比较。 逐步核验：s1：依赖 s1 在此步开始时尚未产生。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "x:4:3"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-960b09acd15d",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "formula",
+    "reason": "按题目与 texts[4] 的上下文，将收到的额外抵押品与交付的额外抵押品相比：16.9/5.8≈2.913793。题目英文残缺，本记录采用 received-to-delivered 的自然对应解释，并不把 received 与其自身比较。 首个公式错误在 s1，候选使用 add，与上述题意所需关系不符；局部算术成立也不能消除此错误。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "x:4:2",
+      "x:4:3"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-b6b7b0868142",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "按题目与 texts[4] 的上下文，将收到的额外抵押品与交付的额外抵押品相比：16.9/5.8≈2.913793。题目英文残缺，本记录采用 received-to-delivered 的自然对应解释，并不把 received 与其自身比较。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "x:4:2",
+      "x:4:3"
+    ],
+    "confidence": "medium",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-96762b6a4799",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "arithmetic",
+    "reason": "2008/2007 年末未归属限制股数量分别 3883230、3821707，净增加 61523 股。2008 的归属、授予、没收为年内变化，不另重复加进年末余额差。 逐步核验：s1：subtract(3883230, 3821707) 应为 61523，候选结果 61524。 最终答案 61523 又与最后一步结果 61524 不一致。",
+    "evidence_refs": [
+      "t:13:1:0",
+      "t:9:1:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-c1c2591be690",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "arithmetic",
+    "reason": "2008/2007 年末未归属限制股数量分别 3883230、3821707，净增加 61523 股。2008 的归属、授予、没收为年内变化，不另重复加进年末余额差。 逐步核验：s1：subtract(3883230, 3821707) 应为 61523，候选结果 61524。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:13:1:0",
+      "t:9:1:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-d334635dc01f",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "2008/2007 年末未归属限制股数量分别 3883230、3821707，净增加 61523 股。2008 的归属、授予、没收为年内变化，不另重复加进年末余额差。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "t:13:1:0",
+      "t:9:1:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-b000235fe62b",
+    "reviewer_type": "ai",
+    "process": "correct",
+    "first_error_step": null,
+    "error_type": null,
+    "reason": "2009 两类租赁付款 657+188=845 百万美元，所有未来最低付款 5909+1898=7807，2009 份额 845/7807≈10.823620%。分母使用最低付款总额而非资本租赁现值 1270。 已逐步检查证据数值、运算、先后依赖与最终值，均与该题意解释一致。",
+    "evidence_refs": [
+      "t:1:1:0",
+      "t:1:2:0",
+      "t:7:1:0",
+      "t:7:2:0"
+    ],
+    "confidence": "high",
+    "answer_correct": true,
+    "localization_scope": "not_applicable"
+  },
+  {
+    "review_id": "case-bc39307e49bc",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "formula",
+    "reason": "2009 两类租赁付款 657+188=845 百万美元，所有未来最低付款 5909+1898=7807，2009 份额 845/7807≈10.823620%。分母使用最低付款总额而非资本租赁现值 1270。 首个公式错误在 s1，候选使用 subtract，与上述题意所需关系不符；局部算术成立也不能消除此错误。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:1:1:0",
+      "t:1:2:0",
+      "t:7:1:0",
+      "t:7:2:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  },
+  {
+    "review_id": "case-feceefb04e8c",
+    "reviewer_type": "ai",
+    "process": "incorrect",
+    "first_error_step": "s1",
+    "error_type": "evidence_value",
+    "reason": "2009 两类租赁付款 657+188=845 百万美元，所有未来最低付款 5909+1898=7807，2009 份额 845/7807≈10.823620%。分母使用最低付款总额而非资本租赁现值 1270。 逐步核验：s1：t:1:1:0 原值 657，候选写为 658。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+    "evidence_refs": [
+      "t:1:1:0",
+      "t:1:2:0",
+      "t:7:1:0",
+      "t:7:2:0"
+    ],
+    "confidence": "high",
+    "answer_correct": false,
+    "localization_scope": "first_error_under_stated_interpretation"
+  }
+]

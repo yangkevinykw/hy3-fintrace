@@ -1,0 +1,8 @@
+{
+  "review_type": "AI numeric review, not human",
+  "generation_records_scanned": 30,
+  "numeric_findings": 0,
+  "rounding_compatible": 0,
+  "cases": [],
+  "boundary": "Checks arithmetic and final consistency hard findings only. Other semantic/scale issues are not classified as rounding. Original batch records are untouched."
+}

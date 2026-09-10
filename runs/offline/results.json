@@ -1,0 +1,6670 @@
+[
+  {
+    "id": "RCL/2016/page_37.pdf-2::clean",
+    "problem_id": "RCL/2016/page_37.pdf-2",
+    "split": "dev",
+    "difficulty": "hard",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "RCL/2016/page_37.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.9818",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "98.18",
+          "claimed": "98.18",
+          "evidence_refs": [
+            "t:2:6:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.9818",
+          "claimed": "0.9818",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "98.18",
+          "claimed": "98.18",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "RCL/2016/page_37.pdf-2::local",
+    "problem_id": "RCL/2016/page_37.pdf-2",
+    "split": "dev",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "RCL/2016/page_37.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "0.9918",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "evidence_value",
+        "status": "incorrect",
+        "message": "取数与引用证据中的数值不一致",
+        "evidence": {
+          "ref": "t:2:6:0",
+          "expected": "198.18",
+          "actual": "199.18",
+          "text": "198.18"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "99.18",
+          "claimed": "99.18",
+          "evidence_refs": [
+            "t:2:6:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "affected",
+          "computed": "0.9918",
+          "claimed": "0.9918",
+          "evidence_refs": [],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "affected",
+          "computed": "99.18",
+          "claimed": "99.18",
+          "evidence_refs": [],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "evidence_value",
+          "status": "incorrect",
+          "message": "取数与引用证据中的数值不一致",
+          "evidence": {
+            "ref": "t:2:6:0",
+            "expected": "198.18",
+            "actual": "199.18",
+            "text": "198.18"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "RCL/2016/page_37.pdf-2::challenge",
+    "problem_id": "RCL/2016/page_37.pdf-2",
+    "split": "dev",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "RCL/2016/page_37.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "2.9818",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "298.18",
+          "claimed": "298.18",
+          "evidence_refs": [
+            "t:2:6:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "2.9818",
+          "claimed": "2.9818",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "298.18",
+          "claimed": "298.18",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "IQV/2018/page_106.pdf-1::clean",
+    "problem_id": "IQV/2018/page_106.pdf-1",
+    "split": "dev",
+    "difficulty": "easy",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "IQV/2018/page_106.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "22",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "22",
+          "claimed": "22",
+          "evidence_refs": [
+            "x:0:0",
+            "x:1:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "IQV/2018/page_106.pdf-1::local",
+    "problem_id": "IQV/2018/page_106.pdf-1",
+    "split": "dev",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "IQV/2018/page_106.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "23",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "22",
+          "actual": "23"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "22",
+          "claimed": "23",
+          "evidence_refs": [
+            "x:0:0",
+            "x:1:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "22",
+            "actual": "23"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "IQV/2018/page_106.pdf-1::challenge",
+    "problem_id": "IQV/2018/page_106.pdf-1",
+    "split": "dev",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "IQV/2018/page_106.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "22",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "22",
+          "actual": "23"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "22",
+          "claimed": "23",
+          "evidence_refs": [
+            "x:0:0",
+            "x:1:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "22",
+            "actual": "23"
+          }
+        },
+        {
+          "step": "final",
+          "type": "answer_consistency",
+          "status": "incorrect",
+          "message": "最终答案数值与最后一步不一致；单位换算须显式列为步骤",
+          "evidence": {
+            "last_result": "23",
+            "final": "22"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "PPG/2006/page_22.pdf-1::clean",
+    "problem_id": "PPG/2006/page_22.pdf-1",
+    "split": "dev",
+    "difficulty": "easy",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "PPG/2006/page_22.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "116.84",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "116.84",
+          "claimed": "116.84",
+          "evidence_refs": [
+            "t:1:2:0",
+            "x:4:0"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "PPG/2006/page_22.pdf-1::local",
+    "problem_id": "PPG/2006/page_22.pdf-1",
+    "split": "dev",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "PPG/2006/page_22.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "116.84",
+      "reference_equivalent": false,
+      "first_error": {
+        "step": "s1",
+        "type": "dependency",
+        "status": "incorrect",
+        "message": "步骤引用不存在或不是前序步骤",
+        "evidence": {
+          "ref": "s1"
+        }
+      },
+      "localization": "earliest_confirmed",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": null,
+          "claimed": "116.84",
+          "evidence_refs": [
+            "x:4:0"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "dependency",
+          "status": "incorrect",
+          "message": "步骤引用不存在或不是前序步骤",
+          "evidence": {
+            "ref": "s1"
+          }
+        },
+        {
+          "step": "final",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "最后一步缺少有效结果",
+          "evidence": {}
+        },
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "PPG/2006/page_22.pdf-1::challenge",
+    "problem_id": "PPG/2006/page_22.pdf-1",
+    "split": "dev",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "PPG/2006/page_22.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "2921.04",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "2921.04",
+          "claimed": "2921.04",
+          "evidence_refs": [
+            "t:1:2:0",
+            "x:4:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "WRK/2018/page_39.pdf-5::clean",
+    "problem_id": "WRK/2018/page_39.pdf-5",
+    "split": "dev",
+    "difficulty": "medium",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "WRK/2018/page_39.pdf-5",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.411813992459153749476330121491411814",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "491.5",
+          "claimed": "491.5",
+          "evidence_refs": [
+            "t:2:1:0",
+            "t:2:2:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.411813992459153749476330121491411814",
+          "claimed": "0.411813992459153749476330121491411814",
+          "evidence_refs": [
+            "t:2:2:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "WRK/2018/page_39.pdf-5::local",
+    "problem_id": "WRK/2018/page_39.pdf-5",
+    "split": "dev",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "WRK/2018/page_39.pdf-5",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "0.412651864264767490573942186845412652",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "evidence_value",
+        "status": "incorrect",
+        "message": "取数与引用证据中的数值不一致",
+        "evidence": {
+          "ref": "t:2:1:0",
+          "expected": "1685",
+          "actual": "1686",
+          "text": "$ 1685.0"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "492.5",
+          "claimed": "492.5",
+          "evidence_refs": [
+            "t:2:1:0",
+            "t:2:2:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "affected",
+          "computed": "0.412651864264767490573942186845412652",
+          "claimed": "0.412651864264767490573942186845412652",
+          "evidence_refs": [
+            "t:2:2:0"
+          ],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "evidence_value",
+          "status": "incorrect",
+          "message": "取数与引用证据中的数值不一致",
+          "evidence": {
+            "ref": "t:2:1:0",
+            "expected": "1685",
+            "actual": "1686",
+            "text": "$ 1685.0"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "WRK/2018/page_39.pdf-5::challenge",
+    "problem_id": "WRK/2018/page_39.pdf-5",
+    "split": "dev",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s2",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "WRK/2018/page_39.pdf-5",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "0.411813992459153749476330121491411814",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s2",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "0.411813992459153749476330121491411814",
+          "actual": "1.41181399245915374947633012149141181"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "491.5",
+          "claimed": "491.5",
+          "evidence_refs": [
+            "t:2:1:0",
+            "t:2:2:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "incorrect",
+          "computed": "0.411813992459153749476330121491411814",
+          "claimed": "1.41181399245915374947633012149141181",
+          "evidence_refs": [
+            "t:2:2:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s2",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "0.411813992459153749476330121491411814",
+            "actual": "1.41181399245915374947633012149141181"
+          }
+        },
+        {
+          "step": "final",
+          "type": "answer_consistency",
+          "status": "incorrect",
+          "message": "最终答案数值与最后一步不一致；单位换算须显式列为步骤",
+          "evidence": {
+            "last_result": "1.41181399245915374947633012149141181",
+            "final": "0.411813992459153749476330121491411814"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "C/2015/page_314.pdf-1::clean",
+    "problem_id": "C/2015/page_314.pdf-1",
+    "split": "dev",
+    "difficulty": "medium",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "C/2015/page_314.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.1014",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "10.14",
+          "claimed": "10.14",
+          "evidence_refs": [
+            "t:6:1:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.1014",
+          "claimed": "0.1014",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "C/2015/page_314.pdf-1::local",
+    "problem_id": "C/2015/page_314.pdf-1",
+    "split": "dev",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "C/2015/page_314.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "0.1114",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "10.14",
+          "actual": "11.14"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "10.14",
+          "claimed": "11.14",
+          "evidence_refs": [
+            "t:6:1:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "affected",
+          "computed": "0.1114",
+          "claimed": "0.1114",
+          "evidence_refs": [],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "10.14",
+            "actual": "11.14"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "C/2015/page_314.pdf-1::challenge",
+    "problem_id": "C/2015/page_314.pdf-1",
+    "split": "dev",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "C/2015/page_314.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "2.1014",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "210.14",
+          "claimed": "210.14",
+          "evidence_refs": [
+            "t:6:1:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "2.1014",
+          "claimed": "2.1014",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "ALXN/2015/page_59.pdf-2::clean",
+    "problem_id": "ALXN/2015/page_59.pdf-2",
+    "split": "dev",
+    "difficulty": "hard",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "ALXN/2015/page_59.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "734000",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "595000",
+          "claimed": "595000",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:3:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "665000",
+          "claimed": "665000",
+          "evidence_refs": [
+            "t:4:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "734000",
+          "claimed": "734000",
+          "evidence_refs": [
+            "t:6:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "ALXN/2015/page_59.pdf-2::local",
+    "problem_id": "ALXN/2015/page_59.pdf-2",
+    "split": "dev",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "ALXN/2015/page_59.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "734000",
+      "reference_equivalent": false,
+      "first_error": {
+        "step": "s1",
+        "type": "dependency",
+        "status": "incorrect",
+        "message": "步骤引用不存在或不是前序步骤",
+        "evidence": {
+          "ref": "s1"
+        }
+      },
+      "localization": "earliest_confirmed",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": null,
+          "claimed": "595000",
+          "evidence_refs": [
+            "t:3:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "uncertain",
+          "computed": null,
+          "claimed": "665000",
+          "evidence_refs": [
+            "t:4:2:0"
+          ],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "uncertain",
+          "computed": null,
+          "claimed": "734000",
+          "evidence_refs": [
+            "t:6:2:0"
+          ],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "dependency",
+          "status": "incorrect",
+          "message": "步骤引用不存在或不是前序步骤",
+          "evidence": {
+            "ref": "s1"
+          }
+        },
+        {
+          "step": "s2",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "上游步骤没有可用结果",
+          "evidence": {
+            "ref": "s1"
+          }
+        },
+        {
+          "step": "s3",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "上游步骤没有可用结果",
+          "evidence": {
+            "ref": "s2"
+          }
+        },
+        {
+          "step": "final",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "最后一步缺少有效结果",
+          "evidence": {}
+        },
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "ALXN/2015/page_59.pdf-2::challenge",
+    "problem_id": "ALXN/2015/page_59.pdf-2",
+    "split": "dev",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s3",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "ALXN/2015/page_59.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "734000",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s3",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "734000",
+          "actual": "734001"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "595000",
+          "claimed": "595000",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:3:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "665000",
+          "claimed": "665000",
+          "evidence_refs": [
+            "t:4:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "incorrect",
+          "computed": "734000",
+          "claimed": "734001",
+          "evidence_refs": [
+            "t:6:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s3",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "734000",
+            "actual": "734001"
+          }
+        },
+        {
+          "step": "final",
+          "type": "answer_consistency",
+          "status": "incorrect",
+          "message": "最终答案数值与最后一步不一致；单位换算须显式列为步骤",
+          "evidence": {
+            "last_result": "734001",
+            "final": "734000"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "BLK/2014/page_33.pdf-4::clean",
+    "problem_id": "BLK/2014/page_33.pdf-4",
+    "split": "dev",
+    "difficulty": "easy",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "BLK/2014/page_33.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.326504774130018111800805359686296576",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "0.326504774130018111800805359686296576",
+          "claimed": "0.326504774130018111800805359686296576",
+          "evidence_refs": [
+            "t:2:1:0",
+            "t:4:1:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "BLK/2014/page_33.pdf-4::local",
+    "problem_id": "BLK/2014/page_33.pdf-4",
+    "split": "dev",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "BLK/2014/page_33.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "0.32650770484212253893451030731447127",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "evidence_value",
+        "status": "incorrect",
+        "message": "取数与引用证据中的数值不一致",
+        "evidence": {
+          "ref": "t:2:1:0",
+          "expected": "111408",
+          "actual": "111409",
+          "text": "111408"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "0.32650770484212253893451030731447127",
+          "claimed": "0.32650770484212253893451030731447127",
+          "evidence_refs": [
+            "t:2:1:0",
+            "t:4:1:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "evidence_value",
+          "status": "incorrect",
+          "message": "取数与引用证据中的数值不一致",
+          "evidence": {
+            "ref": "t:2:1:0",
+            "expected": "111408",
+            "actual": "111409",
+            "text": "111408"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "BLK/2014/page_33.pdf-4::challenge",
+    "problem_id": "BLK/2014/page_33.pdf-4",
+    "split": "dev",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "BLK/2014/page_33.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "452622",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "452622",
+          "claimed": "452622",
+          "evidence_refs": [
+            "t:2:1:0",
+            "t:4:1:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "CB/2008/page_218.pdf-2::clean",
+    "problem_id": "CB/2008/page_218.pdf-2",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "CB/2008/page_218.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "61523",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "61523",
+          "claimed": "61523",
+          "evidence_refs": [
+            "t:13:1:0",
+            "t:9:1:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "CB/2008/page_218.pdf-2::local",
+    "problem_id": "CB/2008/page_218.pdf-2",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "CB/2008/page_218.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "61524",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "61523",
+          "actual": "61524"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "61523",
+          "claimed": "61524",
+          "evidence_refs": [
+            "t:13:1:0",
+            "t:9:1:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "61523",
+            "actual": "61524"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "CB/2008/page_218.pdf-2::challenge",
+    "problem_id": "CB/2008/page_218.pdf-2",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "CB/2008/page_218.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "61523",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "61523",
+          "actual": "61524"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "61523",
+          "claimed": "61524",
+          "evidence_refs": [
+            "t:13:1:0",
+            "t:9:1:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "61523",
+            "actual": "61524"
+          }
+        },
+        {
+          "step": "final",
+          "type": "answer_consistency",
+          "status": "incorrect",
+          "message": "最终答案数值与最后一步不一致；单位换算须显式列为步骤",
+          "evidence": {
+            "last_result": "61524",
+            "final": "61523"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "GS/2012/page_177.pdf-3::clean",
+    "problem_id": "GS/2012/page_177.pdf-3",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "GS/2012/page_177.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.108184383819379115710253998118532455",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "0.108184383819379115710253998118532455",
+          "claimed": "0.108184383819379115710253998118532455",
+          "evidence_refs": [
+            "t:3:1:0",
+            "t:7:1:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "GS/2012/page_177.pdf-3::local",
+    "problem_id": "GS/2012/page_177.pdf-3",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "GS/2012/page_177.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "0.108184383819379115710253998118532455",
+      "reference_equivalent": false,
+      "first_error": {
+        "step": "s1",
+        "type": "dependency",
+        "status": "incorrect",
+        "message": "步骤引用不存在或不是前序步骤",
+        "evidence": {
+          "ref": "s1"
+        }
+      },
+      "localization": "earliest_confirmed",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": null,
+          "claimed": "0.108184383819379115710253998118532455",
+          "evidence_refs": [
+            "t:7:1:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "dependency",
+          "status": "incorrect",
+          "message": "步骤引用不存在或不是前序步骤",
+          "evidence": {
+            "ref": "s1"
+          }
+        },
+        {
+          "step": "final",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "最后一步缺少有效结果",
+          "evidence": {}
+        },
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "GS/2012/page_177.pdf-3::challenge",
+    "problem_id": "GS/2012/page_177.pdf-3",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "GS/2012/page_177.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "3534",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "3534",
+          "claimed": "3534",
+          "evidence_refs": [
+            "t:3:1:0",
+            "t:7:1:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "PNC/2013/page_205.pdf-1::clean",
+    "problem_id": "PNC/2013/page_205.pdf-1",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "PNC/2013/page_205.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "118",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "118",
+          "claimed": "118",
+          "evidence_refs": [
+            "x:25:3",
+            "x:25:4"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "PNC/2013/page_205.pdf-1::local",
+    "problem_id": "PNC/2013/page_205.pdf-1",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "PNC/2013/page_205.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "119",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "evidence_value",
+        "status": "incorrect",
+        "message": "取数与引用证据中的数值不一致",
+        "evidence": {
+          "ref": "x:25:3",
+          "expected": "63",
+          "actual": "64",
+          "text": "the total fair value of incentive/performance unit share and restricted stock/unit awards vested during 2013 , 2012 and 2011 was approximately $ 63 million , $ 55 million and $ 52 million , respectively ."
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "119",
+          "claimed": "119",
+          "evidence_refs": [
+            "x:25:3",
+            "x:25:4"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "evidence_value",
+          "status": "incorrect",
+          "message": "取数与引用证据中的数值不一致",
+          "evidence": {
+            "ref": "x:25:3",
+            "expected": "63",
+            "actual": "64",
+            "text": "the total fair value of incentive/performance unit share and restricted stock/unit awards vested during 2013 , 2012 and 2011 was approximately $ 63 million , $ 55 million and $ 52 million , respectively ."
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "PNC/2013/page_205.pdf-1::challenge",
+    "problem_id": "PNC/2013/page_205.pdf-1",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "PNC/2013/page_205.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "118",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "118",
+          "actual": "119"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "118",
+          "claimed": "119",
+          "evidence_refs": [
+            "x:25:3",
+            "x:25:4"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "118",
+            "actual": "119"
+          }
+        },
+        {
+          "step": "final",
+          "type": "answer_consistency",
+          "status": "incorrect",
+          "message": "最终答案数值与最后一步不一致；单位换算须显式列为步骤",
+          "evidence": {
+            "last_result": "119",
+            "final": "118"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "BLK/2017/page_77.pdf-2::clean",
+    "problem_id": "BLK/2017/page_77.pdf-2",
+    "split": "dev",
+    "difficulty": "medium",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "BLK/2017/page_77.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "-0.0201543739279588336192109777015437393",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "-94",
+          "claimed": "-94",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "-0.0201543739279588336192109777015437393",
+          "claimed": "-0.0201543739279588336192109777015437393",
+          "evidence_refs": [
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "BLK/2017/page_77.pdf-2::local",
+    "problem_id": "BLK/2017/page_77.pdf-2",
+    "split": "dev",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "BLK/2017/page_77.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "-0.0199399656946826758147512864493996569",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "-94",
+          "actual": "-93"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "-94",
+          "claimed": "-93",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "affected",
+          "computed": "-0.0199399656946826758147512864493996569",
+          "claimed": "-0.0199399656946826758147512864493996569",
+          "evidence_refs": [
+            "t:1:3:0"
+          ],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "-94",
+            "actual": "-93"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "BLK/2017/page_77.pdf-2::challenge",
+    "problem_id": "BLK/2017/page_77.pdf-2",
+    "split": "dev",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "BLK/2017/page_77.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "1.97984562607204116638078902229845626",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "9234",
+          "claimed": "9234",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "1.97984562607204116638078902229845626",
+          "claimed": "1.97984562607204116638078902229845626",
+          "evidence_refs": [
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "C/2008/page_105.pdf-1::clean",
+    "problem_id": "C/2008/page_105.pdf-1",
+    "split": "dev",
+    "difficulty": "hard",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "C/2008/page_105.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "359.6",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "212.9",
+          "claimed": "212.9",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "250.3",
+          "claimed": "250.3",
+          "evidence_refs": [
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "359.6",
+          "claimed": "359.6",
+          "evidence_refs": [
+            "t:1:4:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "C/2008/page_105.pdf-1::local",
+    "problem_id": "C/2008/page_105.pdf-1",
+    "split": "dev",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "C/2008/page_105.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "359.6",
+      "reference_equivalent": false,
+      "first_error": {
+        "step": "s1",
+        "type": "dependency",
+        "status": "incorrect",
+        "message": "步骤引用不存在或不是前序步骤",
+        "evidence": {
+          "ref": "s1"
+        }
+      },
+      "localization": "earliest_confirmed",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": null,
+          "claimed": "212.9",
+          "evidence_refs": [
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "uncertain",
+          "computed": null,
+          "claimed": "250.3",
+          "evidence_refs": [
+            "t:1:3:0"
+          ],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "uncertain",
+          "computed": null,
+          "claimed": "359.6",
+          "evidence_refs": [
+            "t:1:4:0"
+          ],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "dependency",
+          "status": "incorrect",
+          "message": "步骤引用不存在或不是前序步骤",
+          "evidence": {
+            "ref": "s1"
+          }
+        },
+        {
+          "step": "s2",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "上游步骤没有可用结果",
+          "evidence": {
+            "ref": "s1"
+          }
+        },
+        {
+          "step": "s3",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "上游步骤没有可用结果",
+          "evidence": {
+            "ref": "s2"
+          }
+        },
+        {
+          "step": "final",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "最后一步缺少有效结果",
+          "evidence": {}
+        },
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "C/2008/page_105.pdf-1::challenge",
+    "problem_id": "C/2008/page_105.pdf-1",
+    "split": "dev",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s3",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "C/2008/page_105.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "359.6",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s3",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "359.6",
+          "actual": "360.6"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "212.9",
+          "claimed": "212.9",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "250.3",
+          "claimed": "250.3",
+          "evidence_refs": [
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "incorrect",
+          "computed": "359.6",
+          "claimed": "360.6",
+          "evidence_refs": [
+            "t:1:4:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s3",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "359.6",
+            "actual": "360.6"
+          }
+        },
+        {
+          "step": "final",
+          "type": "answer_consistency",
+          "status": "incorrect",
+          "message": "最终答案数值与最后一步不一致；单位换算须显式列为步骤",
+          "evidence": {
+            "last_result": "360.6",
+            "final": "359.6"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "AMT/2015/page_58.pdf-2::clean",
+    "problem_id": "AMT/2015/page_58.pdf-2",
+    "split": "dev",
+    "difficulty": "hard",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "AMT/2015/page_58.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "8450",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "2460",
+          "claimed": "2460",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:2:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "2650",
+          "claimed": "2650",
+          "evidence_refs": [
+            "t:3:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "8450",
+          "claimed": "8450",
+          "evidence_refs": [
+            "t:4:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "AMT/2015/page_58.pdf-2::local",
+    "problem_id": "AMT/2015/page_58.pdf-2",
+    "split": "dev",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "AMT/2015/page_58.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "8451",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "evidence_value",
+        "status": "incorrect",
+        "message": "取数与引用证据中的数值不一致",
+        "evidence": {
+          "ref": "t:1:2:0",
+          "expected": "900",
+          "actual": "901",
+          "text": "900"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "2461",
+          "claimed": "2461",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:2:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "affected",
+          "computed": "2651",
+          "claimed": "2651",
+          "evidence_refs": [
+            "t:3:2:0"
+          ],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "affected",
+          "computed": "8451",
+          "claimed": "8451",
+          "evidence_refs": [
+            "t:4:2:0"
+          ],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "evidence_value",
+          "status": "incorrect",
+          "message": "取数与引用证据中的数值不一致",
+          "evidence": {
+            "ref": "t:1:2:0",
+            "expected": "900",
+            "actual": "901",
+            "text": "900"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "AMT/2015/page_58.pdf-2::challenge",
+    "problem_id": "AMT/2015/page_58.pdf-2",
+    "split": "dev",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "AMT/2015/page_58.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "5330",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "-660",
+          "claimed": "-660",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:2:2:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "-470",
+          "claimed": "-470",
+          "evidence_refs": [
+            "t:3:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "5330",
+          "claimed": "5330",
+          "evidence_refs": [
+            "t:4:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "ETR/2017/page_422.pdf-2::clean",
+    "problem_id": "ETR/2017/page_422.pdf-2",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "ETR/2017/page_422.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.853333333333333333333333333333333333",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "0.853333333333333333333333333333333333",
+          "claimed": "0.853333333333333333333333333333333333",
+          "evidence_refs": [
+            "x:7:2",
+            "x:6:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "ETR/2017/page_422.pdf-2::local",
+    "problem_id": "ETR/2017/page_422.pdf-2",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "ETR/2017/page_422.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "1.85333333333333333333333333333333333",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "0.853333333333333333333333333333333333",
+          "actual": "1.85333333333333333333333333333333333"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "0.853333333333333333333333333333333333",
+          "claimed": "1.85333333333333333333333333333333333",
+          "evidence_refs": [
+            "x:7:2",
+            "x:6:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "0.853333333333333333333333333333333333",
+            "actual": "1.85333333333333333333333333333333333"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "ETR/2017/page_422.pdf-2::challenge",
+    "problem_id": "ETR/2017/page_422.pdf-2",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "ETR/2017/page_422.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "0.853333333333333333333333333333333333",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "0.853333333333333333333333333333333333",
+          "actual": "1.85333333333333333333333333333333333"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "0.853333333333333333333333333333333333",
+          "claimed": "1.85333333333333333333333333333333333",
+          "evidence_refs": [
+            "x:7:2",
+            "x:6:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "0.853333333333333333333333333333333333",
+            "actual": "1.85333333333333333333333333333333333"
+          }
+        },
+        {
+          "step": "final",
+          "type": "answer_consistency",
+          "status": "incorrect",
+          "message": "最终答案数值与最后一步不一致；单位换算须显式列为步骤",
+          "evidence": {
+            "last_result": "1.85333333333333333333333333333333333",
+            "final": "0.853333333333333333333333333333333333"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "JPM/2009/page_183.pdf-3::clean",
+    "problem_id": "JPM/2009/page_183.pdf-3",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "JPM/2009/page_183.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "2.91379310344827586206896551724137931",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "2.91379310344827586206896551724137931",
+          "claimed": "2.91379310344827586206896551724137931",
+          "evidence_refs": [
+            "x:4:2",
+            "x:4:3"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "JPM/2009/page_183.pdf-3::local",
+    "problem_id": "JPM/2009/page_183.pdf-3",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "JPM/2009/page_183.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "2.91379310344827586206896551724137931",
+      "reference_equivalent": false,
+      "first_error": {
+        "step": "s1",
+        "type": "dependency",
+        "status": "incorrect",
+        "message": "步骤引用不存在或不是前序步骤",
+        "evidence": {
+          "ref": "s1"
+        }
+      },
+      "localization": "earliest_confirmed",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": null,
+          "claimed": "2.91379310344827586206896551724137931",
+          "evidence_refs": [
+            "x:4:3"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "dependency",
+          "status": "incorrect",
+          "message": "步骤引用不存在或不是前序步骤",
+          "evidence": {
+            "ref": "s1"
+          }
+        },
+        {
+          "step": "final",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "最后一步缺少有效结果",
+          "evidence": {}
+        },
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "JPM/2009/page_183.pdf-3::challenge",
+    "problem_id": "JPM/2009/page_183.pdf-3",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "JPM/2009/page_183.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "22.7",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "22.7",
+          "claimed": "22.7",
+          "evidence_refs": [
+            "x:4:2",
+            "x:4:3"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "MRO/2013/page_23.pdf-4::clean",
+    "problem_id": "MRO/2013/page_23.pdf-4",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "MRO/2013/page_23.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.0980735551663747810858143607705779335",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "0.0980735551663747810858143607705779335",
+          "claimed": "0.0980735551663747810858143607705779335",
+          "evidence_refs": [
+            "x:0:3",
+            "t:0:1:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "MRO/2013/page_23.pdf-4::local",
+    "problem_id": "MRO/2013/page_23.pdf-4",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "MRO/2013/page_23.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "0.0998248686514886164623467600700525394",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "evidence_value",
+        "status": "incorrect",
+        "message": "取数与引用证据中的数值不一致",
+        "evidence": {
+          "ref": "x:0:3",
+          "expected": "56",
+          "actual": "57",
+          "text": "changes in proved undeveloped reserves as of december 31 , 2013 , 627 mmboe of proved undeveloped reserves were reported , an increase of 56 mmboe from december 31 , 2012 ."
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "0.0998248686514886164623467600700525394",
+          "claimed": "0.0998248686514886164623467600700525394",
+          "evidence_refs": [
+            "x:0:3",
+            "t:0:1:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "evidence_value",
+          "status": "incorrect",
+          "message": "取数与引用证据中的数值不一致",
+          "evidence": {
+            "ref": "x:0:3",
+            "expected": "56",
+            "actual": "57",
+            "text": "changes in proved undeveloped reserves as of december 31 , 2013 , 627 mmboe of proved undeveloped reserves were reported , an increase of 56 mmboe from december 31 , 2012 ."
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "MRO/2013/page_23.pdf-4::challenge",
+    "problem_id": "MRO/2013/page_23.pdf-4",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "MRO/2013/page_23.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "0.0980735551663747810858143607705779335",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "0.0980735551663747810858143607705779335",
+          "actual": "1.09807355516637478108581436077057793"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "0.0980735551663747810858143607705779335",
+          "claimed": "1.09807355516637478108581436077057793",
+          "evidence_refs": [
+            "x:0:3",
+            "t:0:1:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "0.0980735551663747810858143607705779335",
+            "actual": "1.09807355516637478108581436077057793"
+          }
+        },
+        {
+          "step": "final",
+          "type": "answer_consistency",
+          "status": "incorrect",
+          "message": "最终答案数值与最后一步不一致；单位换算须显式列为步骤",
+          "evidence": {
+            "last_result": "1.09807355516637478108581436077057793",
+            "final": "0.0980735551663747810858143607705779335"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "PPG/2010/page_45.pdf-2::clean",
+    "problem_id": "PPG/2010/page_45.pdf-2",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "PPG/2010/page_45.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "177.716417910447761194029850746268657",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "0.94029850746268656716417910447761194",
+          "claimed": "0.94029850746268656716417910447761194",
+          "evidence_refs": [
+            "x:54:3",
+            "x:54:4"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "177.716417910447761194029850746268657",
+          "claimed": "177.716417910447761194029850746268657",
+          "evidence_refs": [
+            "x:54:3"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "PPG/2010/page_45.pdf-2::local",
+    "problem_id": "PPG/2010/page_45.pdf-2",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "PPG/2010/page_45.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "366.716417910447761194029850746268657",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "0.94029850746268656716417910447761194",
+          "actual": "1.94029850746268656716417910447761194"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "0.94029850746268656716417910447761194",
+          "claimed": "1.94029850746268656716417910447761194",
+          "evidence_refs": [
+            "x:54:3",
+            "x:54:4"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "affected",
+          "computed": "366.716417910447761194029850746268657",
+          "claimed": "366.716417910447761194029850746268657",
+          "evidence_refs": [
+            "x:54:3"
+          ],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "0.94029850746268656716417910447761194",
+            "actual": "1.94029850746268656716417910447761194"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "PPG/2010/page_45.pdf-2::challenge",
+    "problem_id": "PPG/2010/page_45.pdf-2",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "PPG/2010/page_45.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "73710",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "390",
+          "claimed": "390",
+          "evidence_refs": [
+            "x:54:3",
+            "x:54:4"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "73710",
+          "claimed": "73710",
+          "evidence_refs": [
+            "x:54:3"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "INTC/2018/page_105.pdf-2::clean",
+    "problem_id": "INTC/2018/page_105.pdf-2",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "INTC/2018/page_105.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "-1836",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "-1836",
+          "claimed": "-1836",
+          "evidence_refs": [
+            "t:13:5:0",
+            "t:6:5:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "INTC/2018/page_105.pdf-2::local",
+    "problem_id": "INTC/2018/page_105.pdf-2",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "INTC/2018/page_105.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "-1836",
+      "reference_equivalent": false,
+      "first_error": {
+        "step": "s1",
+        "type": "dependency",
+        "status": "incorrect",
+        "message": "步骤引用不存在或不是前序步骤",
+        "evidence": {
+          "ref": "s1"
+        }
+      },
+      "localization": "earliest_confirmed",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": null,
+          "claimed": "-1836",
+          "evidence_refs": [
+            "t:6:5:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "dependency",
+          "status": "incorrect",
+          "message": "步骤引用不存在或不是前序步骤",
+          "evidence": {
+            "ref": "s1"
+          }
+        },
+        {
+          "step": "final",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "最后一步缺少有效结果",
+          "evidence": {}
+        },
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "INTC/2018/page_105.pdf-2::challenge",
+    "problem_id": "INTC/2018/page_105.pdf-2",
+    "split": "test",
+    "difficulty": "easy",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "INTC/2018/page_105.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "-1836",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "-1836",
+          "actual": "-1835"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "-1836",
+          "claimed": "-1835",
+          "evidence_refs": [
+            "t:13:5:0",
+            "t:6:5:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "-1836",
+            "actual": "-1835"
+          }
+        },
+        {
+          "step": "final",
+          "type": "answer_consistency",
+          "status": "incorrect",
+          "message": "最终答案数值与最后一步不一致；单位换算须显式列为步骤",
+          "evidence": {
+            "last_result": "-1835",
+            "final": "-1836"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "UNP/2013/page_25.pdf-2::clean",
+    "problem_id": "UNP/2013/page_25.pdf-2",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "UNP/2013/page_25.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "0",
+          "claimed": "0",
+          "evidence_refs": [
+            "x:21:0",
+            "x:21:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0",
+          "claimed": "0",
+          "evidence_refs": [
+            "x:21:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "UNP/2013/page_25.pdf-2::local",
+    "problem_id": "UNP/2013/page_25.pdf-2",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "UNP/2013/page_25.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "0.384615384615384615384615384615384615",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "evidence_value",
+        "status": "incorrect",
+        "message": "取数与引用证据中的数值不一致",
+        "evidence": {
+          "ref": "x:21:0",
+          "expected": "2.6",
+          "actual": "3.6",
+          "text": "our fuel surcharge programs generated freight revenues of $ 2.6 billion , $ 2.6 billion , and $ 2.2 billion in 2013 , 2012 , and 2011 , respectively ."
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "1",
+          "claimed": "1",
+          "evidence_refs": [
+            "x:21:0",
+            "x:21:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "affected",
+          "computed": "0.384615384615384615384615384615384615",
+          "claimed": "0.384615384615384615384615384615384615",
+          "evidence_refs": [
+            "x:21:0"
+          ],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "evidence_value",
+          "status": "incorrect",
+          "message": "取数与引用证据中的数值不一致",
+          "evidence": {
+            "ref": "x:21:0",
+            "expected": "2.6",
+            "actual": "3.6",
+            "text": "our fuel surcharge programs generated freight revenues of $ 2.6 billion , $ 2.6 billion , and $ 2.2 billion in 2013 , 2012 , and 2011 , respectively ."
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "UNP/2013/page_25.pdf-2::challenge",
+    "problem_id": "UNP/2013/page_25.pdf-2",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "UNP/2013/page_25.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "2",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "5.2",
+          "claimed": "5.2",
+          "evidence_refs": [
+            "x:21:0",
+            "x:21:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "2",
+          "claimed": "2",
+          "evidence_refs": [
+            "x:21:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "UNP/2010/page_55.pdf-1::clean",
+    "problem_id": "UNP/2010/page_55.pdf-1",
+    "split": "test",
+    "difficulty": "hard",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "UNP/2010/page_55.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "2952.66666666666666666666666666666667",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "5684",
+          "claimed": "5684",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "8858",
+          "claimed": "8858",
+          "evidence_refs": [
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "2952.66666666666666666666666666666667",
+          "claimed": "2952.66666666666666666666666666666667",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "UNP/2010/page_55.pdf-1::local",
+    "problem_id": "UNP/2010/page_55.pdf-1",
+    "split": "test",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s2",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "UNP/2010/page_55.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "2953",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s2",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "8858",
+          "actual": "8859"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "5684",
+          "claimed": "5684",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "incorrect",
+          "computed": "8858",
+          "claimed": "8859",
+          "evidence_refs": [
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "affected",
+          "computed": "2953",
+          "claimed": "2953",
+          "evidence_refs": [],
+          "affected_by": [
+            "s2"
+          ],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s2",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "8858",
+            "actual": "8859"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "UNP/2010/page_55.pdf-1::challenge",
+    "problem_id": "UNP/2010/page_55.pdf-1",
+    "split": "test",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s3",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "UNP/2010/page_55.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "2952.66666666666666666666666666666667",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s3",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "2952.66666666666666666666666666666667",
+          "actual": "2953.66666666666666666666666666666667"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "5684",
+          "claimed": "5684",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "8858",
+          "claimed": "8858",
+          "evidence_refs": [
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "incorrect",
+          "computed": "2952.66666666666666666666666666666667",
+          "claimed": "2953.66666666666666666666666666666667",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s3",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "2952.66666666666666666666666666666667",
+            "actual": "2953.66666666666666666666666666666667"
+          }
+        },
+        {
+          "step": "final",
+          "type": "answer_consistency",
+          "status": "incorrect",
+          "message": "最终答案数值与最后一步不一致；单位换算须显式列为步骤",
+          "evidence": {
+            "last_result": "2953.66666666666666666666666666666667",
+            "final": "2952.66666666666666666666666666666667"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "AOS/2007/page_17.pdf-2::clean",
+    "problem_id": "AOS/2007/page_17.pdf-2",
+    "split": "test",
+    "difficulty": "hard",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "AOS/2007/page_17.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "-1.1061",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "42.72",
+          "claimed": "42.72",
+          "evidence_refs": [
+            "t:1:6:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.4272",
+          "claimed": "0.4272",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "153.33",
+          "claimed": "153.33",
+          "evidence_refs": [
+            "t:3:6:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s4",
+          "position": 4,
+          "status": "correct",
+          "computed": "1.5333",
+          "claimed": "1.5333",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s5",
+          "position": 5,
+          "status": "correct",
+          "computed": "-1.1061",
+          "claimed": "-1.1061",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "AOS/2007/page_17.pdf-2::local",
+    "problem_id": "AOS/2007/page_17.pdf-2",
+    "split": "test",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "AOS/2007/page_17.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "-1.1061",
+      "reference_equivalent": false,
+      "first_error": {
+        "step": "s1",
+        "type": "dependency",
+        "status": "incorrect",
+        "message": "步骤引用不存在或不是前序步骤",
+        "evidence": {
+          "ref": "s1"
+        }
+      },
+      "localization": "earliest_confirmed",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": null,
+          "claimed": "42.72",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "uncertain",
+          "computed": null,
+          "claimed": "0.4272",
+          "evidence_refs": [],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "153.33",
+          "claimed": "153.33",
+          "evidence_refs": [
+            "t:3:6:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s4",
+          "position": 4,
+          "status": "correct",
+          "computed": "1.5333",
+          "claimed": "1.5333",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s5",
+          "position": 5,
+          "status": "uncertain",
+          "computed": null,
+          "claimed": "-1.1061",
+          "evidence_refs": [],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "dependency",
+          "status": "incorrect",
+          "message": "步骤引用不存在或不是前序步骤",
+          "evidence": {
+            "ref": "s1"
+          }
+        },
+        {
+          "step": "s2",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "上游步骤没有可用结果",
+          "evidence": {
+            "ref": "s1"
+          }
+        },
+        {
+          "step": "s5",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "上游步骤没有可用结果",
+          "evidence": {
+            "ref": "s2"
+          }
+        },
+        {
+          "step": "final",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "最后一步缺少有效结果",
+          "evidence": {}
+        },
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "AOS/2007/page_17.pdf-2::challenge",
+    "problem_id": "AOS/2007/page_17.pdf-2",
+    "split": "test",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "AOS/2007/page_17.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "0.8939",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "242.72",
+          "claimed": "242.72",
+          "evidence_refs": [
+            "t:1:6:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "2.4272",
+          "claimed": "2.4272",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "153.33",
+          "claimed": "153.33",
+          "evidence_refs": [
+            "t:3:6:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s4",
+          "position": 4,
+          "status": "correct",
+          "computed": "1.5333",
+          "claimed": "1.5333",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s5",
+          "position": 5,
+          "status": "correct",
+          "computed": "0.8939",
+          "claimed": "0.8939",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "C/2009/page_195.pdf-2::clean",
+    "problem_id": "C/2009/page_195.pdf-2",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "C/2009/page_195.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.802796420581655480984340044742729306",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "7177",
+          "claimed": "7177",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.802796420581655480984340044742729306",
+          "claimed": "0.802796420581655480984340044742729306",
+          "evidence_refs": [
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "C/2009/page_195.pdf-2::local",
+    "problem_id": "C/2009/page_195.pdf-2",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "C/2009/page_195.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "0.802908277404921700223713646532438479",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "evidence_value",
+        "status": "incorrect",
+        "message": "取数与引用证据中的数值不一致",
+        "evidence": {
+          "ref": "t:1:2:0",
+          "expected": "16117",
+          "actual": "16118",
+          "text": "$ 16117"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "7178",
+          "claimed": "7178",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "affected",
+          "computed": "0.802908277404921700223713646532438479",
+          "claimed": "0.802908277404921700223713646532438479",
+          "evidence_refs": [
+            "t:1:3:0"
+          ],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "evidence_value",
+          "status": "incorrect",
+          "message": "取数与引用证据中的数值不一致",
+          "evidence": {
+            "ref": "t:1:2:0",
+            "expected": "16117",
+            "actual": "16118",
+            "text": "$ 16117"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "C/2009/page_195.pdf-2::challenge",
+    "problem_id": "C/2009/page_195.pdf-2",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s2",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "C/2009/page_195.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "0.802796420581655480984340044742729306",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s2",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "0.802796420581655480984340044742729306",
+          "actual": "1.80279642058165548098434004474272931"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "7177",
+          "claimed": "7177",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "incorrect",
+          "computed": "0.802796420581655480984340044742729306",
+          "claimed": "1.80279642058165548098434004474272931",
+          "evidence_refs": [
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s2",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "0.802796420581655480984340044742729306",
+            "actual": "1.80279642058165548098434004474272931"
+          }
+        },
+        {
+          "step": "final",
+          "type": "answer_consistency",
+          "status": "incorrect",
+          "message": "最终答案数值与最后一步不一致；单位换算须显式列为步骤",
+          "evidence": {
+            "last_result": "1.80279642058165548098434004474272931",
+            "final": "0.802796420581655480984340044742729306"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "AON/2015/page_62.pdf-4::clean",
+    "problem_id": "AON/2015/page_62.pdf-4",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "AON/2015/page_62.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "517",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "397",
+          "claimed": "397",
+          "evidence_refs": [
+            "x:19:0",
+            "x:19:1"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "517",
+          "claimed": "517",
+          "evidence_refs": [
+            "x:19:2"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "AON/2015/page_62.pdf-4::local",
+    "problem_id": "AON/2015/page_62.pdf-4",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "AON/2015/page_62.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "518",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "397",
+          "actual": "398"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "397",
+          "claimed": "398",
+          "evidence_refs": [
+            "x:19:0",
+            "x:19:1"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "affected",
+          "computed": "518",
+          "claimed": "518",
+          "evidence_refs": [
+            "x:19:2"
+          ],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "397",
+            "actual": "398"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "AON/2015/page_62.pdf-4::challenge",
+    "problem_id": "AON/2015/page_62.pdf-4",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "AON/2015/page_62.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "177",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "57",
+          "claimed": "57",
+          "evidence_refs": [
+            "x:19:0",
+            "x:19:1"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "177",
+          "claimed": "177",
+          "evidence_refs": [
+            "x:19:2"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "AES/2003/page_93.pdf-3::clean",
+    "problem_id": "AES/2003/page_93.pdf-3",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "AES/2003/page_93.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "14000000",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "14",
+          "claimed": "14",
+          "evidence_refs": [
+            "x:10:3",
+            "x:10:4"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "14000000",
+          "claimed": "14000000",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "AES/2003/page_93.pdf-3::local",
+    "problem_id": "AES/2003/page_93.pdf-3",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "AES/2003/page_93.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "14000000",
+      "reference_equivalent": false,
+      "first_error": {
+        "step": "s1",
+        "type": "dependency",
+        "status": "incorrect",
+        "message": "步骤引用不存在或不是前序步骤",
+        "evidence": {
+          "ref": "s1"
+        }
+      },
+      "localization": "earliest_confirmed",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": null,
+          "claimed": "14",
+          "evidence_refs": [
+            "x:10:4"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "uncertain",
+          "computed": null,
+          "claimed": "14000000",
+          "evidence_refs": [],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "dependency",
+          "status": "incorrect",
+          "message": "步骤引用不存在或不是前序步骤",
+          "evidence": {
+            "ref": "s1"
+          }
+        },
+        {
+          "step": "s2",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "上游步骤没有可用结果",
+          "evidence": {
+            "ref": "s1"
+          }
+        },
+        {
+          "step": "final",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "最后一步缺少有效结果",
+          "evidence": {}
+        },
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "AES/2003/page_93.pdf-3::challenge",
+    "problem_id": "AES/2003/page_93.pdf-3",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s2",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "AES/2003/page_93.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "14000000",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s2",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "14000000",
+          "actual": "14000001"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "14",
+          "claimed": "14",
+          "evidence_refs": [
+            "x:10:3",
+            "x:10:4"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "incorrect",
+          "computed": "14000000",
+          "claimed": "14000001",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s2",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "14000000",
+            "actual": "14000001"
+          }
+        },
+        {
+          "step": "final",
+          "type": "answer_consistency",
+          "status": "incorrect",
+          "message": "最终答案数值与最后一步不一致；单位换算须显式列为步骤",
+          "evidence": {
+            "last_result": "14000001",
+            "final": "14000000"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "UNP/2008/page_83.pdf-1::clean",
+    "problem_id": "UNP/2008/page_83.pdf-1",
+    "split": "test",
+    "difficulty": "hard",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "UNP/2008/page_83.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.108236198283591648520558473165108236",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "845",
+          "claimed": "845",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "7807",
+          "claimed": "7807",
+          "evidence_refs": [
+            "t:7:1:0",
+            "t:7:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "0.108236198283591648520558473165108236",
+          "claimed": "0.108236198283591648520558473165108236",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "UNP/2008/page_83.pdf-1::local",
+    "problem_id": "UNP/2008/page_83.pdf-1",
+    "split": "test",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "UNP/2008/page_83.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "0.108364288459075188933008838222108364",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "evidence_value",
+        "status": "incorrect",
+        "message": "取数与引用证据中的数值不一致",
+        "evidence": {
+          "ref": "t:1:1:0",
+          "expected": "657",
+          "actual": "658",
+          "text": "$ 657"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "846",
+          "claimed": "846",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "7807",
+          "claimed": "7807",
+          "evidence_refs": [
+            "t:7:1:0",
+            "t:7:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "affected",
+          "computed": "0.108364288459075188933008838222108364",
+          "claimed": "0.108364288459075188933008838222108364",
+          "evidence_refs": [],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "evidence_value",
+          "status": "incorrect",
+          "message": "取数与引用证据中的数值不一致",
+          "evidence": {
+            "ref": "t:1:1:0",
+            "expected": "657",
+            "actual": "658",
+            "text": "$ 657"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "UNP/2008/page_83.pdf-1::challenge",
+    "problem_id": "UNP/2008/page_83.pdf-1",
+    "split": "test",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "UNP/2008/page_83.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "0.0600742923017804534392212117330600743",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "469",
+          "claimed": "469",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "7807",
+          "claimed": "7807",
+          "evidence_refs": [
+            "t:7:1:0",
+            "t:7:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "0.0600742923017804534392212117330600743",
+          "claimed": "0.0600742923017804534392212117330600743",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "MSI/2008/page_73.pdf-2::clean",
+    "problem_id": "MSI/2008/page_73.pdf-2",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "MSI/2008/page_73.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "-0.1875",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "-0.6",
+          "claimed": "-0.6",
+          "evidence_refs": [
+            "x:6:0",
+            "x:6:3"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "-0.1875",
+          "claimed": "-0.1875",
+          "evidence_refs": [
+            "x:6:3"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "MSI/2008/page_73.pdf-2::local",
+    "problem_id": "MSI/2008/page_73.pdf-2",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s2",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "MSI/2008/page_73.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "0.8125",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s2",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "-0.1875",
+          "actual": "0.8125"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "-0.6",
+          "claimed": "-0.6",
+          "evidence_refs": [
+            "x:6:0",
+            "x:6:3"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "incorrect",
+          "computed": "-0.1875",
+          "claimed": "0.8125",
+          "evidence_refs": [
+            "x:6:3"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s2",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "-0.1875",
+            "actual": "0.8125"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "MSI/2008/page_73.pdf-2::challenge",
+    "problem_id": "MSI/2008/page_73.pdf-2",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s2",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "MSI/2008/page_73.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "-0.1875",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s2",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "-0.1875",
+          "actual": "0.8125"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "-0.6",
+          "claimed": "-0.6",
+          "evidence_refs": [
+            "x:6:0",
+            "x:6:3"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "incorrect",
+          "computed": "-0.1875",
+          "claimed": "0.8125",
+          "evidence_refs": [
+            "x:6:3"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s2",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "-0.1875",
+            "actual": "0.8125"
+          }
+        },
+        {
+          "step": "final",
+          "type": "answer_consistency",
+          "status": "incorrect",
+          "message": "最终答案数值与最后一步不一致；单位换算须显式列为步骤",
+          "evidence": {
+            "last_result": "0.8125",
+            "final": "-0.1875"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "BLK/2012/page_82.pdf-3::clean",
+    "problem_id": "BLK/2012/page_82.pdf-3",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "BLK/2012/page_82.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.0729613733905579399141630901287553648",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "119",
+          "claimed": "119",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.0729613733905579399141630901287553648",
+          "claimed": "0.0729613733905579399141630901287553648",
+          "evidence_refs": [
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "BLK/2012/page_82.pdf-3::local",
+    "problem_id": "BLK/2012/page_82.pdf-3",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "BLK/2012/page_82.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "0.0729613733905579399141630901287553648",
+      "reference_equivalent": false,
+      "first_error": {
+        "step": "s1",
+        "type": "dependency",
+        "status": "incorrect",
+        "message": "步骤引用不存在或不是前序步骤",
+        "evidence": {
+          "ref": "s1"
+        }
+      },
+      "localization": "earliest_confirmed",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": null,
+          "claimed": "119",
+          "evidence_refs": [
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "uncertain",
+          "computed": null,
+          "claimed": "0.0729613733905579399141630901287553648",
+          "evidence_refs": [
+            "t:1:2:0"
+          ],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "dependency",
+          "status": "incorrect",
+          "message": "步骤引用不存在或不是前序步骤",
+          "evidence": {
+            "ref": "s1"
+          }
+        },
+        {
+          "step": "s2",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "上游步骤没有可用结果",
+          "evidence": {
+            "ref": "s1"
+          }
+        },
+        {
+          "step": "final",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "最后一步缺少有效结果",
+          "evidence": {}
+        },
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "BLK/2012/page_82.pdf-3::challenge",
+    "problem_id": "BLK/2012/page_82.pdf-3",
+    "split": "test",
+    "difficulty": "medium",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "BLK/2012/page_82.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "2.07296137339055793991416309012875536",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "3381",
+          "claimed": "3381",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "2.07296137339055793991416309012875536",
+          "claimed": "2.07296137339055793991416309012875536",
+          "evidence_refs": [
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "DRE/2016/page_64.pdf-3::clean",
+    "problem_id": "DRE/2016/page_64.pdf-3",
+    "split": "test",
+    "difficulty": "hard",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "DRE/2016/page_64.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.511111111111111111111111111111111111",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "2.3",
+          "claimed": "2.3",
+          "evidence_refs": [
+            "x:9:5",
+            "x:9:4"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.511111111111111111111111111111111111",
+          "claimed": "0.511111111111111111111111111111111111",
+          "evidence_refs": [
+            "x:9:4"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "51.1111111111111111111111111111111111",
+          "claimed": "51.1111111111111111111111111111111111",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "DRE/2016/page_64.pdf-3::local",
+    "problem_id": "DRE/2016/page_64.pdf-3",
+    "split": "test",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "DRE/2016/page_64.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "0.733333333333333333333333333333333333",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s1",
+        "type": "evidence_value",
+        "status": "incorrect",
+        "message": "取数与引用证据中的数值不一致",
+        "evidence": {
+          "ref": "x:9:5",
+          "expected": "6.8",
+          "actual": "7.8",
+          "text": "for the years ended december 31 , 2016 , 2015 and 2014 we earned management fees of $ 4.5 million , $ 6.8 million and $ 8.5 million , leasing fees of $ 2.4 million , $ 3.0 million and $ 3.4 million and construction and development fees of $ 8.0 million , $ 6.1 million and $ 5.8 million , respectively , from these companies , prior to elimination of our ownership percentage ."
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": "3.3",
+          "claimed": "3.3",
+          "evidence_refs": [
+            "x:9:5",
+            "x:9:4"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "affected",
+          "computed": "0.733333333333333333333333333333333333",
+          "claimed": "0.733333333333333333333333333333333333",
+          "evidence_refs": [
+            "x:9:4"
+          ],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "affected",
+          "computed": "73.3333333333333333333333333333333333",
+          "claimed": "73.3333333333333333333333333333333333",
+          "evidence_refs": [],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "evidence_value",
+          "status": "incorrect",
+          "message": "取数与引用证据中的数值不一致",
+          "evidence": {
+            "ref": "x:9:5",
+            "expected": "6.8",
+            "actual": "7.8",
+            "text": "for the years ended december 31 , 2016 , 2015 and 2014 we earned management fees of $ 4.5 million , $ 6.8 million and $ 8.5 million , leasing fees of $ 2.4 million , $ 3.0 million and $ 3.4 million and construction and development fees of $ 8.0 million , $ 6.1 million and $ 5.8 million , respectively , from these companies , prior to elimination of our ownership percentage ."
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "DRE/2016/page_64.pdf-3::challenge",
+    "problem_id": "DRE/2016/page_64.pdf-3",
+    "split": "test",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s3",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "DRE/2016/page_64.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "0.511111111111111111111111111111111111",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s3",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "51.1111111111111111111111111111111111",
+          "actual": "52.1111111111111111111111111111111111"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "2.3",
+          "claimed": "2.3",
+          "evidence_refs": [
+            "x:9:5",
+            "x:9:4"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.511111111111111111111111111111111111",
+          "claimed": "0.511111111111111111111111111111111111",
+          "evidence_refs": [
+            "x:9:4"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "incorrect",
+          "computed": "51.1111111111111111111111111111111111",
+          "claimed": "52.1111111111111111111111111111111111",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s3",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "51.1111111111111111111111111111111111",
+            "actual": "52.1111111111111111111111111111111111"
+          }
+        },
+        {
+          "step": "final",
+          "type": "answer_consistency",
+          "status": "incorrect",
+          "message": "最终答案数值与最后一步不一致；单位换算须显式列为步骤",
+          "evidence": {
+            "last_result": "52.1111111111111111111111111111111111",
+            "final": "51.1111111111111111111111111111111111"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "CME/2017/page_99.pdf-4::clean",
+    "problem_id": "CME/2017/page_99.pdf-4",
+    "split": "test",
+    "difficulty": "hard",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "CME/2017/page_99.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "19.5666666666666666666666666666666667",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "6",
+          "claimed": "6",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "3",
+          "claimed": "3",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "19.5666666666666666666666666666666667",
+          "claimed": "19.5666666666666666666666666666666667",
+          "evidence_refs": [
+            "x:2:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "CME/2017/page_99.pdf-4::local",
+    "problem_id": "CME/2017/page_99.pdf-4",
+    "split": "test",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s2",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "CME/2017/page_99.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "14.675",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s2",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "3",
+          "actual": "4"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "6",
+          "claimed": "6",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "incorrect",
+          "computed": "3",
+          "claimed": "4",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "affected",
+          "computed": "14.675",
+          "claimed": "14.675",
+          "evidence_refs": [
+            "x:2:0"
+          ],
+          "affected_by": [
+            "s2"
+          ],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s2",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "3",
+            "actual": "4"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "CME/2017/page_99.pdf-4::challenge",
+    "problem_id": "CME/2017/page_99.pdf-4",
+    "split": "test",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "CME/2017/page_99.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "-58.7",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "-2",
+          "claimed": "-2",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "-1",
+          "claimed": "-1",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "-58.7",
+          "claimed": "-58.7",
+          "evidence_refs": [
+            "x:2:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "CE/2009/page_121.pdf-2::clean",
+    "problem_id": "CE/2009/page_121.pdf-2",
+    "split": "test",
+    "difficulty": "hard",
+    "source": "reference_derived",
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "CE/2009/page_121.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "35.7146",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "1415000",
+          "claimed": "1415000",
+          "evidence_refs": [
+            "t:5:1:0"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "35714600",
+          "claimed": "35714600",
+          "evidence_refs": [
+            "t:5:2:0"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "35.7146",
+          "claimed": "35.7146",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": []
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "CE/2009/page_121.pdf-2::local",
+    "problem_id": "CE/2009/page_121.pdf-2",
+    "split": "test",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "CE/2009/page_121.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "35.7146",
+      "reference_equivalent": false,
+      "first_error": {
+        "step": "s1",
+        "type": "dependency",
+        "status": "incorrect",
+        "message": "步骤引用不存在或不是前序步骤",
+        "evidence": {
+          "ref": "s1"
+        }
+      },
+      "localization": "earliest_confirmed",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "incorrect",
+          "computed": null,
+          "claimed": "1415000",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "uncertain",
+          "computed": null,
+          "claimed": "35714600",
+          "evidence_refs": [
+            "t:5:2:0"
+          ],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "uncertain",
+          "computed": null,
+          "claimed": "35.7146",
+          "evidence_refs": [],
+          "affected_by": [
+            "s1"
+          ],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s1",
+          "type": "dependency",
+          "status": "incorrect",
+          "message": "步骤引用不存在或不是前序步骤",
+          "evidence": {
+            "ref": "s1"
+          }
+        },
+        {
+          "step": "s2",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "上游步骤没有可用结果",
+          "evidence": {
+            "ref": "s1"
+          }
+        },
+        {
+          "step": "s3",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "上游步骤没有可用结果",
+          "evidence": {
+            "ref": "s2"
+          }
+        },
+        {
+          "step": "final",
+          "type": "upstream_unavailable",
+          "status": "uncertain",
+          "message": "最后一步缺少有效结果",
+          "evidence": {}
+        },
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "call_status": "complete"
+  },
+  {
+    "id": "CE/2009/page_121.pdf-2::challenge",
+    "problem_id": "CE/2009/page_121.pdf-2",
+    "split": "test",
+    "difficulty": "hard",
+    "source": "controlled_mutation",
+    "label": {
+      "process": "incorrect",
+      "first_error": "s3",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.2",
+      "mode": "deterministic",
+      "problem_id": "CE/2009/page_121.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "35.7146",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s3",
+        "type": "arithmetic",
+        "status": "incorrect",
+        "message": "本步计算结果与所列操作数不一致",
+        "evidence": {
+          "expected": "35.7146",
+          "actual": "36.7146"
+        }
+      },
+      "localization": "exact_in_supported_checks",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "1415000",
+          "claimed": "1415000",
+          "evidence_refs": [
+            "t:5:1:0"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "35714600",
+          "claimed": "35714600",
+          "evidence_refs": [
+            "t:5:2:0"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "计算所列两项数值的乘积。"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "incorrect",
+          "computed": "35.7146",
+          "claimed": "36.7146",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "findings": [
+        {
+          "step": "s3",
+          "type": "arithmetic",
+          "status": "incorrect",
+          "message": "本步计算结果与所列操作数不一致",
+          "evidence": {
+            "expected": "35.7146",
+            "actual": "36.7146"
+          }
+        },
+        {
+          "step": "final",
+          "type": "answer_consistency",
+          "status": "incorrect",
+          "message": "最终答案数值与最后一步不一致；单位换算须显式列为步骤",
+          "evidence": {
+            "last_result": "36.7146",
+            "final": "35.7146"
+          }
+        }
+      ]
+    },
+    "call_status": "complete"
+  }
+]

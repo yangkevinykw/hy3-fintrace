@@ -1,0 +1,80 @@
+{
+  "review_type": "independent_ai_evaluation_audit_not_human",
+  "status": "audit_complete_on_partial_batch_service_http402",
+  "constraints": [
+    "No .env read",
+    "No paid API calls",
+    "No edits to application, tests, or dataset"
+  ],
+  "baseline_tests": {
+    "passed": 32,
+    "failed": 0,
+    "configuration_mocked": true
+  },
+  "findings": [
+    {
+      "id": "EVAL-001",
+      "severity": "P1",
+      "title": "Five-decimal intermediate arithmetic tolerance hides amplified errors",
+      "evidence": [
+        "fintrace/core.py:43-45",
+        "fintrace/evaluator.py:91",
+        "probe_results.json:amplification"
+      ],
+      "reproduction": "Claim 1/1000000=0.000002, then multiply claimed result by 1000000 to get 2. Reference result is 1. Evaluator returns process=correct, answer_correct=false, reference_equivalent=true, first_error=null.",
+      "recommendation": "Separate official final-answer scoring from high-precision local arithmetic checking. Preserve uncertainty if supported rounding cannot be distinguished from an error; do not let symbolic equivalence erase numeric inconsistency. Add regression case and rescore saved traces.",
+      "status": "fixed_independently_verified"
+    },
+    {
+      "id": "EVAL-002",
+      "severity": "P2",
+      "title": "Percent normalization changes official five-decimal answer tolerance",
+      "evidence": [
+        "fintrace/evaluator.py:103-116",
+        "probe_results.json:percentage_scale"
+      ],
+      "reproduction": "RCL/2016/page_37.pdf-2 gold is 98.18 with percent unit. Candidate final=98.1801 percent is scored answer_correct=true, although official source-scale comparison round(98.1801,5)==round(98.18,5) is false.",
+      "recommendation": "Convert candidate value to the reference answer's original numeric scale before applying official comparison. Keep normalized value as a display/semantic field.",
+      "status": "fixed_independently_verified"
+    },
+    {
+      "id": "EVAL-003",
+      "severity": "P2",
+      "title": "Contradictory judge output can receive false error-type credit",
+      "evidence": [
+        "fintrace/model.py:177-187",
+        "fintrace/benchmark.py:26",
+        "probe_results.json:contradictory_judge"
+      ],
+      "reproduction": "Mocked judge returns process=correct, first_error_step=null, error_type=formula and is accepted. For a formula-error label, metrics then report detection=0/1 but error_type=1/1.",
+      "recommendation": "Validate error-type enum and require both error fields null for correct/uncertain verdicts. Also require predicted process=incorrect in the error-type numerator, independently of protocol validation.",
+      "status": "fixed_independently_verified"
+    }
+  ],
+  "batch_results_recheck": {
+    "artifact": "batch_recount.json",
+    "checks_passed": 19,
+    "checks_total": 19,
+    "all_checks_passed": true,
+    "jobs_total": 144,
+    "jobs_complete": 100,
+    "jobs_request_failed": 44,
+    "http_errors": {
+      "402": 44
+    },
+    "report_status": "partial",
+    "generation_success": 30,
+    "original_answer_match": "20/30",
+    "ai_provisional_answer_correct": "28/30",
+    "ai_provisional_answer_uncertain": "2/30",
+    "stability": "unavailable_zero_complete_three_draw_groups",
+    "numeric_hard_findings_in_generation": 0
+  },
+  "post_fix_tests": {
+    "passed": 4,
+    "failed": 0,
+    "script": "test_audit.py",
+    "evidence": "probe_results_after_fix.json"
+  },
+  "remaining_precision_caveat": "Prompt precision and local tolerance differ in theoretical cases, but all 30 generated traces have zero arithmetic or answer-consistency hard findings, so no observed rounding false positives in this batch."
+}

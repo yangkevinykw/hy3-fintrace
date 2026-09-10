@@ -1,0 +1,7361 @@
+[
+  {
+    "id": "RCL/2016/page_37.pdf-2::clean",
+    "problem_id": "RCL/2016/page_37.pdf-2",
+    "split": "dev",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:2:6:0",
+              "value": "198.18"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "98.18",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "0.9818",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "98.18",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "final": {
+        "value": "98.18",
+        "unit": "percent"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "RCL/2016/page_37.pdf-2::local",
+    "problem_id": "RCL/2016/page_37.pdf-2",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:2:6:0",
+              "value": "199.18"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "99.18",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "0.9918",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "99.18",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "final": {
+        "value": "99.18",
+        "unit": "percent"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "evidence_value",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:2:6:0",
+            "value": "198.18"
+          },
+          {
+            "kind": "constant",
+            "value": "100"
+          }
+        ],
+        "result": "98.18",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:2:6:0",
+            "value": "199.18"
+          },
+          {
+            "kind": "constant",
+            "value": "100"
+          }
+        ],
+        "result": "99.18",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "RCL/2016/page_37.pdf-2::challenge",
+    "problem_id": "RCL/2016/page_37.pdf-2",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:2:6:0",
+              "value": "198.18"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "298.18",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "2.9818",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "298.18",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "final": {
+        "value": "298.18",
+        "unit": "percent"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "formula",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:2:6:0",
+            "value": "198.18"
+          },
+          {
+            "kind": "constant",
+            "value": "100"
+          }
+        ],
+        "result": "98.18",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:2:6:0",
+            "value": "198.18"
+          },
+          {
+            "kind": "constant",
+            "value": "100"
+          }
+        ],
+        "result": "298.18",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "IQV/2018/page_106.pdf-1::clean",
+    "problem_id": "IQV/2018/page_106.pdf-1",
+    "split": "dev",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:0:0",
+              "value": "8"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:1:0",
+              "value": "14"
+            }
+          ],
+          "result": "22",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "final": {
+        "value": "22",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "IQV/2018/page_106.pdf-1::local",
+    "problem_id": "IQV/2018/page_106.pdf-1",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:0:0",
+              "value": "8"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:1:0",
+              "value": "14"
+            }
+          ],
+          "result": "23",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "final": {
+        "value": "23",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:0:0",
+            "value": "8"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:1:0",
+            "value": "14"
+          }
+        ],
+        "result": "22",
+        "explanation": "将所列两项数值相加。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:0:0",
+            "value": "8"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:1:0",
+            "value": "14"
+          }
+        ],
+        "result": "23",
+        "explanation": "将所列两项数值相加。"
+      }
+    }
+  },
+  {
+    "id": "IQV/2018/page_106.pdf-1::challenge",
+    "problem_id": "IQV/2018/page_106.pdf-1",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:0:0",
+              "value": "8"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:1:0",
+              "value": "14"
+            }
+          ],
+          "result": "23",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "final": {
+        "value": "22",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:0:0",
+            "value": "8"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:1:0",
+            "value": "14"
+          }
+        ],
+        "result": "22",
+        "explanation": "将所列两项数值相加。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:0:0",
+            "value": "8"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:1:0",
+            "value": "14"
+          }
+        ],
+        "result": "23",
+        "explanation": "将所列两项数值相加。"
+      }
+    }
+  },
+  {
+    "id": "PPG/2006/page_22.pdf-1::clean",
+    "problem_id": "PPG/2006/page_22.pdf-1",
+    "split": "dev",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "2921"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:4:0",
+              "value": "0.04"
+            }
+          ],
+          "result": "116.84",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "final": {
+        "value": "116.84",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "PPG/2006/page_22.pdf-1::local",
+    "problem_id": "PPG/2006/page_22.pdf-1",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:4:0",
+              "value": "0.04"
+            }
+          ],
+          "result": "116.84",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "final": {
+        "value": "116.84",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "dependency",
+      "before": {
+        "id": "s1",
+        "op": "multiply",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "2921"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:4:0",
+            "value": "0.04"
+          }
+        ],
+        "result": "116.84",
+        "explanation": "计算所列两项数值的乘积。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "multiply",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:4:0",
+            "value": "0.04"
+          }
+        ],
+        "result": "116.84",
+        "explanation": "计算所列两项数值的乘积。"
+      }
+    }
+  },
+  {
+    "id": "PPG/2006/page_22.pdf-1::challenge",
+    "problem_id": "PPG/2006/page_22.pdf-1",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "2921"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:4:0",
+              "value": "0.04"
+            }
+          ],
+          "result": "2921.04",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "final": {
+        "value": "2921.04",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "formula",
+      "before": {
+        "id": "s1",
+        "op": "multiply",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "2921"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:4:0",
+            "value": "0.04"
+          }
+        ],
+        "result": "116.84",
+        "explanation": "计算所列两项数值的乘积。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "2921"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:4:0",
+            "value": "0.04"
+          }
+        ],
+        "result": "2921.04",
+        "explanation": "计算所列两项数值的乘积。"
+      }
+    }
+  },
+  {
+    "id": "WRK/2018/page_39.pdf-5::clean",
+    "problem_id": "WRK/2018/page_39.pdf-5",
+    "split": "dev",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:2:1:0",
+              "value": "1685"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:2:2:0",
+              "value": "1193.5"
+            }
+          ],
+          "result": "491.5",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:2:2:0",
+              "value": "1193.5"
+            }
+          ],
+          "result": "0.411813992459153749476330121491411814",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.411813992459153749476330121491411814",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "WRK/2018/page_39.pdf-5::local",
+    "problem_id": "WRK/2018/page_39.pdf-5",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:2:1:0",
+              "value": "1686"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:2:2:0",
+              "value": "1193.5"
+            }
+          ],
+          "result": "492.5",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:2:2:0",
+              "value": "1193.5"
+            }
+          ],
+          "result": "0.412651864264767490573942186845412652",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.412651864264767490573942186845412652",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "evidence_value",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:2:1:0",
+            "value": "1685"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:2:2:0",
+            "value": "1193.5"
+          }
+        ],
+        "result": "491.5",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:2:1:0",
+            "value": "1686"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:2:2:0",
+            "value": "1193.5"
+          }
+        ],
+        "result": "492.5",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "WRK/2018/page_39.pdf-5::challenge",
+    "problem_id": "WRK/2018/page_39.pdf-5",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:2:1:0",
+              "value": "1685"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:2:2:0",
+              "value": "1193.5"
+            }
+          ],
+          "result": "491.5",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:2:2:0",
+              "value": "1193.5"
+            }
+          ],
+          "result": "1.41181399245915374947633012149141181",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.411813992459153749476330121491411814",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s2",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s2",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:2:2:0",
+            "value": "1193.5"
+          }
+        ],
+        "result": "0.411813992459153749476330121491411814",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s2",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:2:2:0",
+            "value": "1193.5"
+          }
+        ],
+        "result": "1.41181399245915374947633012149141181",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  },
+  {
+    "id": "C/2015/page_314.pdf-1::clean",
+    "problem_id": "C/2015/page_314.pdf-1",
+    "split": "dev",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:6:1:0",
+              "value": "110.14"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "10.14",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "0.1014",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.1014",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "C/2015/page_314.pdf-1::local",
+    "problem_id": "C/2015/page_314.pdf-1",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:6:1:0",
+              "value": "110.14"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "11.14",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "0.1114",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.1114",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:6:1:0",
+            "value": "110.14"
+          },
+          {
+            "kind": "constant",
+            "value": "100"
+          }
+        ],
+        "result": "10.14",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:6:1:0",
+            "value": "110.14"
+          },
+          {
+            "kind": "constant",
+            "value": "100"
+          }
+        ],
+        "result": "11.14",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "C/2015/page_314.pdf-1::challenge",
+    "problem_id": "C/2015/page_314.pdf-1",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:6:1:0",
+              "value": "110.14"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "210.14",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "2.1014",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "2.1014",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "formula",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:6:1:0",
+            "value": "110.14"
+          },
+          {
+            "kind": "constant",
+            "value": "100"
+          }
+        ],
+        "result": "10.14",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:6:1:0",
+            "value": "110.14"
+          },
+          {
+            "kind": "constant",
+            "value": "100"
+          }
+        ],
+        "result": "210.14",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "ALXN/2015/page_59.pdf-2::clean",
+    "problem_id": "ALXN/2015/page_59.pdf-2",
+    "split": "dev",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "514000"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:3:2:0",
+              "value": "81000"
+            }
+          ],
+          "result": "595000",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:4:2:0",
+              "value": "70000"
+            }
+          ],
+          "result": "665000",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:6:2:0",
+              "value": "69000"
+            }
+          ],
+          "result": "734000",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "final": {
+        "value": "734000",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "ALXN/2015/page_59.pdf-2::local",
+    "problem_id": "ALXN/2015/page_59.pdf-2",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:3:2:0",
+              "value": "81000"
+            }
+          ],
+          "result": "595000",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:4:2:0",
+              "value": "70000"
+            }
+          ],
+          "result": "665000",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:6:2:0",
+              "value": "69000"
+            }
+          ],
+          "result": "734000",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "final": {
+        "value": "734000",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "dependency",
+      "before": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "514000"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:3:2:0",
+            "value": "81000"
+          }
+        ],
+        "result": "595000",
+        "explanation": "将所列两项数值相加。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:3:2:0",
+            "value": "81000"
+          }
+        ],
+        "result": "595000",
+        "explanation": "将所列两项数值相加。"
+      }
+    }
+  },
+  {
+    "id": "ALXN/2015/page_59.pdf-2::challenge",
+    "problem_id": "ALXN/2015/page_59.pdf-2",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "514000"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:3:2:0",
+              "value": "81000"
+            }
+          ],
+          "result": "595000",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:4:2:0",
+              "value": "70000"
+            }
+          ],
+          "result": "665000",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:6:2:0",
+              "value": "69000"
+            }
+          ],
+          "result": "734001",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "final": {
+        "value": "734000",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s3",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s3",
+        "op": "add",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s2"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:6:2:0",
+            "value": "69000"
+          }
+        ],
+        "result": "734000",
+        "explanation": "将所列两项数值相加。"
+      },
+      "after": {
+        "id": "s3",
+        "op": "add",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s2"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:6:2:0",
+            "value": "69000"
+          }
+        ],
+        "result": "734001",
+        "explanation": "将所列两项数值相加。"
+      }
+    }
+  },
+  {
+    "id": "BLK/2014/page_33.pdf-4::clean",
+    "problem_id": "BLK/2014/page_33.pdf-4",
+    "split": "dev",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:2:1:0",
+              "value": "111408"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:4:1:0",
+              "value": "341214"
+            }
+          ],
+          "result": "0.326504774130018111800805359686296576",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.326504774130018111800805359686296576",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "BLK/2014/page_33.pdf-4::local",
+    "problem_id": "BLK/2014/page_33.pdf-4",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:2:1:0",
+              "value": "111409"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:4:1:0",
+              "value": "341214"
+            }
+          ],
+          "result": "0.32650770484212253893451030731447127",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.32650770484212253893451030731447127",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "evidence_value",
+      "before": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:2:1:0",
+            "value": "111408"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:4:1:0",
+            "value": "341214"
+          }
+        ],
+        "result": "0.326504774130018111800805359686296576",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:2:1:0",
+            "value": "111409"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:4:1:0",
+            "value": "341214"
+          }
+        ],
+        "result": "0.32650770484212253893451030731447127",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  },
+  {
+    "id": "BLK/2014/page_33.pdf-4::challenge",
+    "problem_id": "BLK/2014/page_33.pdf-4",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:2:1:0",
+              "value": "111408"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:4:1:0",
+              "value": "341214"
+            }
+          ],
+          "result": "452622",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "452622",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "formula",
+      "before": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:2:1:0",
+            "value": "111408"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:4:1:0",
+            "value": "341214"
+          }
+        ],
+        "result": "0.326504774130018111800805359686296576",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:2:1:0",
+            "value": "111408"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:4:1:0",
+            "value": "341214"
+          }
+        ],
+        "result": "452622",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  },
+  {
+    "id": "CB/2008/page_218.pdf-2::clean",
+    "problem_id": "CB/2008/page_218.pdf-2",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:13:1:0",
+              "value": "3883230"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:9:1:0",
+              "value": "3821707"
+            }
+          ],
+          "result": "61523",
+          "explanation": "计算所列两项数值的差。"
+        }
+      ],
+      "final": {
+        "value": "61523",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "CB/2008/page_218.pdf-2::local",
+    "problem_id": "CB/2008/page_218.pdf-2",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:13:1:0",
+              "value": "3883230"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:9:1:0",
+              "value": "3821707"
+            }
+          ],
+          "result": "61524",
+          "explanation": "计算所列两项数值的差。"
+        }
+      ],
+      "final": {
+        "value": "61524",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:13:1:0",
+            "value": "3883230"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:9:1:0",
+            "value": "3821707"
+          }
+        ],
+        "result": "61523",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:13:1:0",
+            "value": "3883230"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:9:1:0",
+            "value": "3821707"
+          }
+        ],
+        "result": "61524",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "CB/2008/page_218.pdf-2::challenge",
+    "problem_id": "CB/2008/page_218.pdf-2",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:13:1:0",
+              "value": "3883230"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:9:1:0",
+              "value": "3821707"
+            }
+          ],
+          "result": "61524",
+          "explanation": "计算所列两项数值的差。"
+        }
+      ],
+      "final": {
+        "value": "61523",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:13:1:0",
+            "value": "3883230"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:9:1:0",
+            "value": "3821707"
+          }
+        ],
+        "result": "61523",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:13:1:0",
+            "value": "3883230"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:9:1:0",
+            "value": "3821707"
+          }
+        ],
+        "result": "61524",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "GS/2012/page_177.pdf-3::clean",
+    "problem_id": "GS/2012/page_177.pdf-3",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:3:1:0",
+              "value": "345"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:7:1:0",
+              "value": "3189"
+            }
+          ],
+          "result": "0.108184383819379115710253998118532455",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.108184383819379115710253998118532455",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "GS/2012/page_177.pdf-3::local",
+    "problem_id": "GS/2012/page_177.pdf-3",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:7:1:0",
+              "value": "3189"
+            }
+          ],
+          "result": "0.108184383819379115710253998118532455",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.108184383819379115710253998118532455",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "dependency",
+      "before": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:3:1:0",
+            "value": "345"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:7:1:0",
+            "value": "3189"
+          }
+        ],
+        "result": "0.108184383819379115710253998118532455",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:7:1:0",
+            "value": "3189"
+          }
+        ],
+        "result": "0.108184383819379115710253998118532455",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  },
+  {
+    "id": "GS/2012/page_177.pdf-3::challenge",
+    "problem_id": "GS/2012/page_177.pdf-3",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:3:1:0",
+              "value": "345"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:7:1:0",
+              "value": "3189"
+            }
+          ],
+          "result": "3534",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "3534",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "formula",
+      "before": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:3:1:0",
+            "value": "345"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:7:1:0",
+            "value": "3189"
+          }
+        ],
+        "result": "0.108184383819379115710253998118532455",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:3:1:0",
+            "value": "345"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:7:1:0",
+            "value": "3189"
+          }
+        ],
+        "result": "3534",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  },
+  {
+    "id": "PNC/2013/page_205.pdf-1::clean",
+    "problem_id": "PNC/2013/page_205.pdf-1",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:25:3",
+              "value": "63"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:25:4",
+              "value": "55"
+            }
+          ],
+          "result": "118",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "final": {
+        "value": "118",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "PNC/2013/page_205.pdf-1::local",
+    "problem_id": "PNC/2013/page_205.pdf-1",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:25:3",
+              "value": "64"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:25:4",
+              "value": "55"
+            }
+          ],
+          "result": "119",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "final": {
+        "value": "119",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "evidence_value",
+      "before": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:25:3",
+            "value": "63"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:25:4",
+            "value": "55"
+          }
+        ],
+        "result": "118",
+        "explanation": "将所列两项数值相加。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:25:3",
+            "value": "64"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:25:4",
+            "value": "55"
+          }
+        ],
+        "result": "119",
+        "explanation": "将所列两项数值相加。"
+      }
+    }
+  },
+  {
+    "id": "PNC/2013/page_205.pdf-1::challenge",
+    "problem_id": "PNC/2013/page_205.pdf-1",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:25:3",
+              "value": "63"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:25:4",
+              "value": "55"
+            }
+          ],
+          "result": "119",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "final": {
+        "value": "118",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:25:3",
+            "value": "63"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:25:4",
+            "value": "55"
+          }
+        ],
+        "result": "118",
+        "explanation": "将所列两项数值相加。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:25:3",
+            "value": "63"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:25:4",
+            "value": "55"
+          }
+        ],
+        "result": "119",
+        "explanation": "将所列两项数值相加。"
+      }
+    }
+  },
+  {
+    "id": "BLK/2017/page_77.pdf-2::clean",
+    "problem_id": "BLK/2017/page_77.pdf-2",
+    "split": "dev",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "4570"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "4664"
+            }
+          ],
+          "result": "-94",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "4664"
+            }
+          ],
+          "result": "-0.0201543739279588336192109777015437393",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "-0.0201543739279588336192109777015437393",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "BLK/2017/page_77.pdf-2::local",
+    "problem_id": "BLK/2017/page_77.pdf-2",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "4570"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "4664"
+            }
+          ],
+          "result": "-93",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "4664"
+            }
+          ],
+          "result": "-0.0199399656946826758147512864493996569",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "-0.0199399656946826758147512864493996569",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "4570"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:3:0",
+            "value": "4664"
+          }
+        ],
+        "result": "-94",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "4570"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:3:0",
+            "value": "4664"
+          }
+        ],
+        "result": "-93",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "BLK/2017/page_77.pdf-2::challenge",
+    "problem_id": "BLK/2017/page_77.pdf-2",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "4570"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "4664"
+            }
+          ],
+          "result": "9234",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "4664"
+            }
+          ],
+          "result": "1.97984562607204116638078902229845626",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "1.97984562607204116638078902229845626",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "formula",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "4570"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:3:0",
+            "value": "4664"
+          }
+        ],
+        "result": "-94",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "4570"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:3:0",
+            "value": "4664"
+          }
+        ],
+        "result": "9234",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "C/2008/page_105.pdf-1::clean",
+    "problem_id": "C/2008/page_105.pdf-1",
+    "split": "dev",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:1:0",
+              "value": "192.3"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "20.6"
+            }
+          ],
+          "result": "212.9",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "37.4"
+            }
+          ],
+          "result": "250.3",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:4:0",
+              "value": "109.3"
+            },
+            {
+              "kind": "step",
+              "ref": "s2"
+            }
+          ],
+          "result": "359.6",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "final": {
+        "value": "359.6",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "C/2008/page_105.pdf-1::local",
+    "problem_id": "C/2008/page_105.pdf-1",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "20.6"
+            }
+          ],
+          "result": "212.9",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "37.4"
+            }
+          ],
+          "result": "250.3",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:4:0",
+              "value": "109.3"
+            },
+            {
+              "kind": "step",
+              "ref": "s2"
+            }
+          ],
+          "result": "359.6",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "final": {
+        "value": "359.6",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "dependency",
+      "before": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:1:0",
+            "value": "192.3"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "20.6"
+          }
+        ],
+        "result": "212.9",
+        "explanation": "将所列两项数值相加。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "20.6"
+          }
+        ],
+        "result": "212.9",
+        "explanation": "将所列两项数值相加。"
+      }
+    }
+  },
+  {
+    "id": "C/2008/page_105.pdf-1::challenge",
+    "problem_id": "C/2008/page_105.pdf-1",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:1:0",
+              "value": "192.3"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "20.6"
+            }
+          ],
+          "result": "212.9",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "37.4"
+            }
+          ],
+          "result": "250.3",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:4:0",
+              "value": "109.3"
+            },
+            {
+              "kind": "step",
+              "ref": "s2"
+            }
+          ],
+          "result": "360.6",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "final": {
+        "value": "359.6",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s3",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s3",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:4:0",
+            "value": "109.3"
+          },
+          {
+            "kind": "step",
+            "ref": "s2"
+          }
+        ],
+        "result": "359.6",
+        "explanation": "将所列两项数值相加。"
+      },
+      "after": {
+        "id": "s3",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:4:0",
+            "value": "109.3"
+          },
+          {
+            "kind": "step",
+            "ref": "s2"
+          }
+        ],
+        "result": "360.6",
+        "explanation": "将所列两项数值相加。"
+      }
+    }
+  },
+  {
+    "id": "AMT/2015/page_58.pdf-2::clean",
+    "problem_id": "AMT/2015/page_58.pdf-2",
+    "split": "dev",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "900"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:2:2:0",
+              "value": "1560"
+            }
+          ],
+          "result": "2460",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:3:2:0",
+              "value": "190"
+            }
+          ],
+          "result": "2650",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:4:2:0",
+              "value": "5800"
+            }
+          ],
+          "result": "8450",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "final": {
+        "value": "8450",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "AMT/2015/page_58.pdf-2::local",
+    "problem_id": "AMT/2015/page_58.pdf-2",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "901"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:2:2:0",
+              "value": "1560"
+            }
+          ],
+          "result": "2461",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:3:2:0",
+              "value": "190"
+            }
+          ],
+          "result": "2651",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:4:2:0",
+              "value": "5800"
+            }
+          ],
+          "result": "8451",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "final": {
+        "value": "8451",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "evidence_value",
+      "before": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "900"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:2:2:0",
+            "value": "1560"
+          }
+        ],
+        "result": "2460",
+        "explanation": "将所列两项数值相加。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "901"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:2:2:0",
+            "value": "1560"
+          }
+        ],
+        "result": "2461",
+        "explanation": "将所列两项数值相加。"
+      }
+    }
+  },
+  {
+    "id": "AMT/2015/page_58.pdf-2::challenge",
+    "problem_id": "AMT/2015/page_58.pdf-2",
+    "split": "dev",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "900"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:2:2:0",
+              "value": "1560"
+            }
+          ],
+          "result": "-660",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:3:2:0",
+              "value": "190"
+            }
+          ],
+          "result": "-470",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:4:2:0",
+              "value": "5800"
+            }
+          ],
+          "result": "5330",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "final": {
+        "value": "5330",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "formula",
+      "before": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "900"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:2:2:0",
+            "value": "1560"
+          }
+        ],
+        "result": "2460",
+        "explanation": "将所列两项数值相加。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "900"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:2:2:0",
+            "value": "1560"
+          }
+        ],
+        "result": "-660",
+        "explanation": "将所列两项数值相加。"
+      }
+    }
+  },
+  {
+    "id": "ETR/2017/page_422.pdf-2::clean",
+    "problem_id": "ETR/2017/page_422.pdf-2",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:7:2",
+              "value": "25.6"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:6:0",
+              "value": "30"
+            }
+          ],
+          "result": "0.853333333333333333333333333333333333",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.853333333333333333333333333333333333",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "ETR/2017/page_422.pdf-2::local",
+    "problem_id": "ETR/2017/page_422.pdf-2",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:7:2",
+              "value": "25.6"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:6:0",
+              "value": "30"
+            }
+          ],
+          "result": "1.85333333333333333333333333333333333",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "1.85333333333333333333333333333333333",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:7:2",
+            "value": "25.6"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:6:0",
+            "value": "30"
+          }
+        ],
+        "result": "0.853333333333333333333333333333333333",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:7:2",
+            "value": "25.6"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:6:0",
+            "value": "30"
+          }
+        ],
+        "result": "1.85333333333333333333333333333333333",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  },
+  {
+    "id": "ETR/2017/page_422.pdf-2::challenge",
+    "problem_id": "ETR/2017/page_422.pdf-2",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:7:2",
+              "value": "25.6"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:6:0",
+              "value": "30"
+            }
+          ],
+          "result": "1.85333333333333333333333333333333333",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.853333333333333333333333333333333333",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:7:2",
+            "value": "25.6"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:6:0",
+            "value": "30"
+          }
+        ],
+        "result": "0.853333333333333333333333333333333333",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:7:2",
+            "value": "25.6"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:6:0",
+            "value": "30"
+          }
+        ],
+        "result": "1.85333333333333333333333333333333333",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  },
+  {
+    "id": "JPM/2009/page_183.pdf-3::clean",
+    "problem_id": "JPM/2009/page_183.pdf-3",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:4:2",
+              "value": "16.9"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:4:3",
+              "value": "5.8"
+            }
+          ],
+          "result": "2.91379310344827586206896551724137931",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "2.91379310344827586206896551724137931",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "JPM/2009/page_183.pdf-3::local",
+    "problem_id": "JPM/2009/page_183.pdf-3",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:4:3",
+              "value": "5.8"
+            }
+          ],
+          "result": "2.91379310344827586206896551724137931",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "2.91379310344827586206896551724137931",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "dependency",
+      "before": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:4:2",
+            "value": "16.9"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:4:3",
+            "value": "5.8"
+          }
+        ],
+        "result": "2.91379310344827586206896551724137931",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:4:3",
+            "value": "5.8"
+          }
+        ],
+        "result": "2.91379310344827586206896551724137931",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  },
+  {
+    "id": "JPM/2009/page_183.pdf-3::challenge",
+    "problem_id": "JPM/2009/page_183.pdf-3",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:4:2",
+              "value": "16.9"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:4:3",
+              "value": "5.8"
+            }
+          ],
+          "result": "22.7",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "22.7",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "formula",
+      "before": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:4:2",
+            "value": "16.9"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:4:3",
+            "value": "5.8"
+          }
+        ],
+        "result": "2.91379310344827586206896551724137931",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:4:2",
+            "value": "16.9"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:4:3",
+            "value": "5.8"
+          }
+        ],
+        "result": "22.7",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  },
+  {
+    "id": "MRO/2013/page_23.pdf-4::clean",
+    "problem_id": "MRO/2013/page_23.pdf-4",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:0:3",
+              "value": "56"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:0:1:0",
+              "value": "571"
+            }
+          ],
+          "result": "0.0980735551663747810858143607705779335",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.0980735551663747810858143607705779335",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "MRO/2013/page_23.pdf-4::local",
+    "problem_id": "MRO/2013/page_23.pdf-4",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:0:3",
+              "value": "57"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:0:1:0",
+              "value": "571"
+            }
+          ],
+          "result": "0.0998248686514886164623467600700525394",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.0998248686514886164623467600700525394",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "evidence_value",
+      "before": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:0:3",
+            "value": "56"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:0:1:0",
+            "value": "571"
+          }
+        ],
+        "result": "0.0980735551663747810858143607705779335",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:0:3",
+            "value": "57"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:0:1:0",
+            "value": "571"
+          }
+        ],
+        "result": "0.0998248686514886164623467600700525394",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  },
+  {
+    "id": "MRO/2013/page_23.pdf-4::challenge",
+    "problem_id": "MRO/2013/page_23.pdf-4",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:0:3",
+              "value": "56"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:0:1:0",
+              "value": "571"
+            }
+          ],
+          "result": "1.09807355516637478108581436077057793",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.0980735551663747810858143607705779335",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:0:3",
+            "value": "56"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:0:1:0",
+            "value": "571"
+          }
+        ],
+        "result": "0.0980735551663747810858143607705779335",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:0:3",
+            "value": "56"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:0:1:0",
+            "value": "571"
+          }
+        ],
+        "result": "1.09807355516637478108581436077057793",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  },
+  {
+    "id": "PPG/2010/page_45.pdf-2::clean",
+    "problem_id": "PPG/2010/page_45.pdf-2",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:54:3",
+              "value": "189"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:54:4",
+              "value": "201"
+            }
+          ],
+          "result": "0.94029850746268656716417910447761194",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s2",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:54:3",
+              "value": "189"
+            },
+            {
+              "kind": "step",
+              "ref": "s1"
+            }
+          ],
+          "result": "177.716417910447761194029850746268657",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "final": {
+        "value": "177.716417910447761194029850746268657",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "PPG/2010/page_45.pdf-2::local",
+    "problem_id": "PPG/2010/page_45.pdf-2",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:54:3",
+              "value": "189"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:54:4",
+              "value": "201"
+            }
+          ],
+          "result": "1.94029850746268656716417910447761194",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s2",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:54:3",
+              "value": "189"
+            },
+            {
+              "kind": "step",
+              "ref": "s1"
+            }
+          ],
+          "result": "366.716417910447761194029850746268657",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "final": {
+        "value": "366.716417910447761194029850746268657",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:54:3",
+            "value": "189"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:54:4",
+            "value": "201"
+          }
+        ],
+        "result": "0.94029850746268656716417910447761194",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:54:3",
+            "value": "189"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:54:4",
+            "value": "201"
+          }
+        ],
+        "result": "1.94029850746268656716417910447761194",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  },
+  {
+    "id": "PPG/2010/page_45.pdf-2::challenge",
+    "problem_id": "PPG/2010/page_45.pdf-2",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:54:3",
+              "value": "189"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:54:4",
+              "value": "201"
+            }
+          ],
+          "result": "390",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s2",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:54:3",
+              "value": "189"
+            },
+            {
+              "kind": "step",
+              "ref": "s1"
+            }
+          ],
+          "result": "73710",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "final": {
+        "value": "73710",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "formula",
+      "before": {
+        "id": "s1",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:54:3",
+            "value": "189"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:54:4",
+            "value": "201"
+          }
+        ],
+        "result": "0.94029850746268656716417910447761194",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:54:3",
+            "value": "189"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:54:4",
+            "value": "201"
+          }
+        ],
+        "result": "390",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  },
+  {
+    "id": "INTC/2018/page_105.pdf-2::clean",
+    "problem_id": "INTC/2018/page_105.pdf-2",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:13:5:0",
+              "value": "-974"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:6:5:0",
+              "value": "862"
+            }
+          ],
+          "result": "-1836",
+          "explanation": "计算所列两项数值的差。"
+        }
+      ],
+      "final": {
+        "value": "-1836",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "INTC/2018/page_105.pdf-2::local",
+    "problem_id": "INTC/2018/page_105.pdf-2",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:6:5:0",
+              "value": "862"
+            }
+          ],
+          "result": "-1836",
+          "explanation": "计算所列两项数值的差。"
+        }
+      ],
+      "final": {
+        "value": "-1836",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "dependency",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:13:5:0",
+            "value": "-974"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:6:5:0",
+            "value": "862"
+          }
+        ],
+        "result": "-1836",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:6:5:0",
+            "value": "862"
+          }
+        ],
+        "result": "-1836",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "INTC/2018/page_105.pdf-2::challenge",
+    "problem_id": "INTC/2018/page_105.pdf-2",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:13:5:0",
+              "value": "-974"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:6:5:0",
+              "value": "862"
+            }
+          ],
+          "result": "-1835",
+          "explanation": "计算所列两项数值的差。"
+        }
+      ],
+      "final": {
+        "value": "-1836",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:13:5:0",
+            "value": "-974"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:6:5:0",
+            "value": "862"
+          }
+        ],
+        "result": "-1836",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:13:5:0",
+            "value": "-974"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:6:5:0",
+            "value": "862"
+          }
+        ],
+        "result": "-1835",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "UNP/2013/page_25.pdf-2::clean",
+    "problem_id": "UNP/2013/page_25.pdf-2",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:21:0",
+              "value": "2.6"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:21:0",
+              "value": "2.6"
+            }
+          ],
+          "result": "0",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:21:0",
+              "value": "2.6"
+            }
+          ],
+          "result": "0",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "UNP/2013/page_25.pdf-2::local",
+    "problem_id": "UNP/2013/page_25.pdf-2",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:21:0",
+              "value": "3.6"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:21:0",
+              "value": "2.6"
+            }
+          ],
+          "result": "1",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:21:0",
+              "value": "2.6"
+            }
+          ],
+          "result": "0.384615384615384615384615384615384615",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.384615384615384615384615384615384615",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "evidence_value",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:21:0",
+            "value": "2.6"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:21:0",
+            "value": "2.6"
+          }
+        ],
+        "result": "0",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:21:0",
+            "value": "3.6"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:21:0",
+            "value": "2.6"
+          }
+        ],
+        "result": "1",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "UNP/2013/page_25.pdf-2::challenge",
+    "problem_id": "UNP/2013/page_25.pdf-2",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:21:0",
+              "value": "2.6"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:21:0",
+              "value": "2.6"
+            }
+          ],
+          "result": "5.2",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:21:0",
+              "value": "2.6"
+            }
+          ],
+          "result": "2",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "2",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "formula",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:21:0",
+            "value": "2.6"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:21:0",
+            "value": "2.6"
+          }
+        ],
+        "result": "0",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:21:0",
+            "value": "2.6"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:21:0",
+            "value": "2.6"
+          }
+        ],
+        "result": "5.2",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "UNP/2010/page_55.pdf-1::clean",
+    "problem_id": "UNP/2010/page_55.pdf-1",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:1:0",
+              "value": "3018"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "2666"
+            }
+          ],
+          "result": "5684",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "3174"
+            }
+          ],
+          "result": "8858",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "3"
+            }
+          ],
+          "result": "2952.66666666666666666666666666666667",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "2952.66666666666666666666666666666667",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "UNP/2010/page_55.pdf-1::local",
+    "problem_id": "UNP/2010/page_55.pdf-1",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:1:0",
+              "value": "3018"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "2666"
+            }
+          ],
+          "result": "5684",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "3174"
+            }
+          ],
+          "result": "8859",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "3"
+            }
+          ],
+          "result": "2953",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "2953",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s2",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s2",
+        "op": "add",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:3:0",
+            "value": "3174"
+          }
+        ],
+        "result": "8858",
+        "explanation": "将所列两项数值相加。"
+      },
+      "after": {
+        "id": "s2",
+        "op": "add",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:3:0",
+            "value": "3174"
+          }
+        ],
+        "result": "8859",
+        "explanation": "将所列两项数值相加。"
+      }
+    }
+  },
+  {
+    "id": "UNP/2010/page_55.pdf-1::challenge",
+    "problem_id": "UNP/2010/page_55.pdf-1",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:1:0",
+              "value": "3018"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "2666"
+            }
+          ],
+          "result": "5684",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "3174"
+            }
+          ],
+          "result": "8858",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "3"
+            }
+          ],
+          "result": "2953.66666666666666666666666666666667",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "2952.66666666666666666666666666666667",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s3",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s3",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s2"
+          },
+          {
+            "kind": "constant",
+            "value": "3"
+          }
+        ],
+        "result": "2952.66666666666666666666666666666667",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s3",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s2"
+          },
+          {
+            "kind": "constant",
+            "value": "3"
+          }
+        ],
+        "result": "2953.66666666666666666666666666666667",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  },
+  {
+    "id": "AOS/2007/page_17.pdf-2::clean",
+    "problem_id": "AOS/2007/page_17.pdf-2",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:6:0",
+              "value": "142.72"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "42.72",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "0.4272",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:3:6:0",
+              "value": "253.33"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "153.33",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s4",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s3"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "1.5333",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s5",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "step",
+              "ref": "s4"
+            }
+          ],
+          "result": "-1.1061",
+          "explanation": "计算所列两项数值的差。"
+        }
+      ],
+      "final": {
+        "value": "-1.1061",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "AOS/2007/page_17.pdf-2::local",
+    "problem_id": "AOS/2007/page_17.pdf-2",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "42.72",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "0.4272",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:3:6:0",
+              "value": "253.33"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "153.33",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s4",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s3"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "1.5333",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s5",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "step",
+              "ref": "s4"
+            }
+          ],
+          "result": "-1.1061",
+          "explanation": "计算所列两项数值的差。"
+        }
+      ],
+      "final": {
+        "value": "-1.1061",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "dependency",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:6:0",
+            "value": "142.72"
+          },
+          {
+            "kind": "constant",
+            "value": "100"
+          }
+        ],
+        "result": "42.72",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "constant",
+            "value": "100"
+          }
+        ],
+        "result": "42.72",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "AOS/2007/page_17.pdf-2::challenge",
+    "problem_id": "AOS/2007/page_17.pdf-2",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:6:0",
+              "value": "142.72"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "242.72",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "2.4272",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:3:6:0",
+              "value": "253.33"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "153.33",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s4",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s3"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "1.5333",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s5",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "step",
+              "ref": "s4"
+            }
+          ],
+          "result": "0.8939",
+          "explanation": "计算所列两项数值的差。"
+        }
+      ],
+      "final": {
+        "value": "0.8939",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "formula",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:6:0",
+            "value": "142.72"
+          },
+          {
+            "kind": "constant",
+            "value": "100"
+          }
+        ],
+        "result": "42.72",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:6:0",
+            "value": "142.72"
+          },
+          {
+            "kind": "constant",
+            "value": "100"
+          }
+        ],
+        "result": "242.72",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "C/2009/page_195.pdf-2::clean",
+    "problem_id": "C/2009/page_195.pdf-2",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "16117"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "8940"
+            }
+          ],
+          "result": "7177",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "8940"
+            }
+          ],
+          "result": "0.802796420581655480984340044742729306",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.802796420581655480984340044742729306",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "C/2009/page_195.pdf-2::local",
+    "problem_id": "C/2009/page_195.pdf-2",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "16118"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "8940"
+            }
+          ],
+          "result": "7178",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "8940"
+            }
+          ],
+          "result": "0.802908277404921700223713646532438479",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.802908277404921700223713646532438479",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "evidence_value",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "16117"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:3:0",
+            "value": "8940"
+          }
+        ],
+        "result": "7177",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "16118"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:3:0",
+            "value": "8940"
+          }
+        ],
+        "result": "7178",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "C/2009/page_195.pdf-2::challenge",
+    "problem_id": "C/2009/page_195.pdf-2",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "16117"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "8940"
+            }
+          ],
+          "result": "7177",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "8940"
+            }
+          ],
+          "result": "1.80279642058165548098434004474272931",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.802796420581655480984340044742729306",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s2",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s2",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:3:0",
+            "value": "8940"
+          }
+        ],
+        "result": "0.802796420581655480984340044742729306",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s2",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:3:0",
+            "value": "8940"
+          }
+        ],
+        "result": "1.80279642058165548098434004474272931",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  },
+  {
+    "id": "AON/2015/page_62.pdf-4::clean",
+    "problem_id": "AON/2015/page_62.pdf-4",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:19:0",
+              "value": "227"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:19:1",
+              "value": "170"
+            }
+          ],
+          "result": "397",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:19:2",
+              "value": "120"
+            }
+          ],
+          "result": "517",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "final": {
+        "value": "517",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "AON/2015/page_62.pdf-4::local",
+    "problem_id": "AON/2015/page_62.pdf-4",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:19:0",
+              "value": "227"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:19:1",
+              "value": "170"
+            }
+          ],
+          "result": "398",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:19:2",
+              "value": "120"
+            }
+          ],
+          "result": "518",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "final": {
+        "value": "518",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:19:0",
+            "value": "227"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:19:1",
+            "value": "170"
+          }
+        ],
+        "result": "397",
+        "explanation": "将所列两项数值相加。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:19:0",
+            "value": "227"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:19:1",
+            "value": "170"
+          }
+        ],
+        "result": "398",
+        "explanation": "将所列两项数值相加。"
+      }
+    }
+  },
+  {
+    "id": "AON/2015/page_62.pdf-4::challenge",
+    "problem_id": "AON/2015/page_62.pdf-4",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:19:0",
+              "value": "227"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:19:1",
+              "value": "170"
+            }
+          ],
+          "result": "57",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:19:2",
+              "value": "120"
+            }
+          ],
+          "result": "177",
+          "explanation": "将所列两项数值相加。"
+        }
+      ],
+      "final": {
+        "value": "177",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "formula",
+      "before": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:19:0",
+            "value": "227"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:19:1",
+            "value": "170"
+          }
+        ],
+        "result": "397",
+        "explanation": "将所列两项数值相加。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:19:0",
+            "value": "227"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:19:1",
+            "value": "170"
+          }
+        ],
+        "result": "57",
+        "explanation": "将所列两项数值相加。"
+      }
+    }
+  },
+  {
+    "id": "AES/2003/page_93.pdf-3::clean",
+    "problem_id": "AES/2003/page_93.pdf-3",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:10:3",
+              "value": "29"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:10:4",
+              "value": "15"
+            }
+          ],
+          "result": "14",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "1000000"
+            }
+          ],
+          "result": "14000000",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "final": {
+        "value": "14000000",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "AES/2003/page_93.pdf-3::local",
+    "problem_id": "AES/2003/page_93.pdf-3",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:10:4",
+              "value": "15"
+            }
+          ],
+          "result": "14",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "1000000"
+            }
+          ],
+          "result": "14000000",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "final": {
+        "value": "14000000",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "dependency",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:10:3",
+            "value": "29"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:10:4",
+            "value": "15"
+          }
+        ],
+        "result": "14",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:10:4",
+            "value": "15"
+          }
+        ],
+        "result": "14",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "AES/2003/page_93.pdf-3::challenge",
+    "problem_id": "AES/2003/page_93.pdf-3",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:10:3",
+              "value": "29"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:10:4",
+              "value": "15"
+            }
+          ],
+          "result": "14",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "1000000"
+            }
+          ],
+          "result": "14000001",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "final": {
+        "value": "14000000",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s2",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s2",
+        "op": "multiply",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "constant",
+            "value": "1000000"
+          }
+        ],
+        "result": "14000000",
+        "explanation": "计算所列两项数值的乘积。"
+      },
+      "after": {
+        "id": "s2",
+        "op": "multiply",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "constant",
+            "value": "1000000"
+          }
+        ],
+        "result": "14000001",
+        "explanation": "计算所列两项数值的乘积。"
+      }
+    }
+  },
+  {
+    "id": "UNP/2008/page_83.pdf-1::clean",
+    "problem_id": "UNP/2008/page_83.pdf-1",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:1:0",
+              "value": "657"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "188"
+            }
+          ],
+          "result": "845",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:7:1:0",
+              "value": "5909"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:7:2:0",
+              "value": "1898"
+            }
+          ],
+          "result": "7807",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "step",
+              "ref": "s2"
+            }
+          ],
+          "result": "0.108236198283591648520558473165108236",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.108236198283591648520558473165108236",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "UNP/2008/page_83.pdf-1::local",
+    "problem_id": "UNP/2008/page_83.pdf-1",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:1:0",
+              "value": "658"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "188"
+            }
+          ],
+          "result": "846",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:7:1:0",
+              "value": "5909"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:7:2:0",
+              "value": "1898"
+            }
+          ],
+          "result": "7807",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "step",
+              "ref": "s2"
+            }
+          ],
+          "result": "0.108364288459075188933008838222108364",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.108364288459075188933008838222108364",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "evidence_value",
+      "before": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:1:0",
+            "value": "657"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "188"
+          }
+        ],
+        "result": "845",
+        "explanation": "将所列两项数值相加。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:1:0",
+            "value": "658"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "188"
+          }
+        ],
+        "result": "846",
+        "explanation": "将所列两项数值相加。"
+      }
+    }
+  },
+  {
+    "id": "UNP/2008/page_83.pdf-1::challenge",
+    "problem_id": "UNP/2008/page_83.pdf-1",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:1:0",
+              "value": "657"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "188"
+            }
+          ],
+          "result": "469",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:7:1:0",
+              "value": "5909"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:7:2:0",
+              "value": "1898"
+            }
+          ],
+          "result": "7807",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s3",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "step",
+              "ref": "s2"
+            }
+          ],
+          "result": "0.0600742923017804534392212117330600743",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.0600742923017804534392212117330600743",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "formula",
+      "before": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:1:0",
+            "value": "657"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "188"
+          }
+        ],
+        "result": "845",
+        "explanation": "将所列两项数值相加。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:1:0",
+            "value": "657"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "188"
+          }
+        ],
+        "result": "469",
+        "explanation": "将所列两项数值相加。"
+      }
+    }
+  },
+  {
+    "id": "MSI/2008/page_73.pdf-2::clean",
+    "problem_id": "MSI/2008/page_73.pdf-2",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:6:0",
+              "value": "2.6"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:6:3",
+              "value": "3.2"
+            }
+          ],
+          "result": "-0.6",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:6:3",
+              "value": "3.2"
+            }
+          ],
+          "result": "-0.1875",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "-0.1875",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "MSI/2008/page_73.pdf-2::local",
+    "problem_id": "MSI/2008/page_73.pdf-2",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:6:0",
+              "value": "2.6"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:6:3",
+              "value": "3.2"
+            }
+          ],
+          "result": "-0.6",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:6:3",
+              "value": "3.2"
+            }
+          ],
+          "result": "0.8125",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.8125",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s2",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s2",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:6:3",
+            "value": "3.2"
+          }
+        ],
+        "result": "-0.1875",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s2",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:6:3",
+            "value": "3.2"
+          }
+        ],
+        "result": "0.8125",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  },
+  {
+    "id": "MSI/2008/page_73.pdf-2::challenge",
+    "problem_id": "MSI/2008/page_73.pdf-2",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:6:0",
+              "value": "2.6"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:6:3",
+              "value": "3.2"
+            }
+          ],
+          "result": "-0.6",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:6:3",
+              "value": "3.2"
+            }
+          ],
+          "result": "0.8125",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "-0.1875",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s2",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s2",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:6:3",
+            "value": "3.2"
+          }
+        ],
+        "result": "-0.1875",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s2",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:6:3",
+            "value": "3.2"
+          }
+        ],
+        "result": "0.8125",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  },
+  {
+    "id": "BLK/2012/page_82.pdf-3::clean",
+    "problem_id": "BLK/2012/page_82.pdf-3",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:1:0",
+              "value": "1750"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "1631"
+            }
+          ],
+          "result": "119",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "1631"
+            }
+          ],
+          "result": "0.0729613733905579399141630901287553648",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.0729613733905579399141630901287553648",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "BLK/2012/page_82.pdf-3::local",
+    "problem_id": "BLK/2012/page_82.pdf-3",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "1631"
+            }
+          ],
+          "result": "119",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "1631"
+            }
+          ],
+          "result": "0.0729613733905579399141630901287553648",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "0.0729613733905579399141630901287553648",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "dependency",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:1:0",
+            "value": "1750"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "1631"
+          }
+        ],
+        "result": "119",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "1631"
+          }
+        ],
+        "result": "119",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "BLK/2012/page_82.pdf-3::challenge",
+    "problem_id": "BLK/2012/page_82.pdf-3",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:1:0",
+              "value": "1750"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "1631"
+            }
+          ],
+          "result": "3381",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "1631"
+            }
+          ],
+          "result": "2.07296137339055793991416309012875536",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "2.07296137339055793991416309012875536",
+        "unit": "ratio"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "formula",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:1:0",
+            "value": "1750"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "1631"
+          }
+        ],
+        "result": "119",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:1:1:0",
+            "value": "1750"
+          },
+          {
+            "kind": "evidence",
+            "ref": "t:1:2:0",
+            "value": "1631"
+          }
+        ],
+        "result": "3381",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "DRE/2016/page_64.pdf-3::clean",
+    "problem_id": "DRE/2016/page_64.pdf-3",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:9:5",
+              "value": "6.8"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:9:4",
+              "value": "4.5"
+            }
+          ],
+          "result": "2.3",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:9:4",
+              "value": "4.5"
+            }
+          ],
+          "result": "0.511111111111111111111111111111111111",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "51.1111111111111111111111111111111111",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "final": {
+        "value": "51.1111111111111111111111111111111111",
+        "unit": "percent"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "DRE/2016/page_64.pdf-3::local",
+    "problem_id": "DRE/2016/page_64.pdf-3",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:9:5",
+              "value": "7.8"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:9:4",
+              "value": "4.5"
+            }
+          ],
+          "result": "3.3",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:9:4",
+              "value": "4.5"
+            }
+          ],
+          "result": "0.733333333333333333333333333333333333",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "73.3333333333333333333333333333333333",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "final": {
+        "value": "73.3333333333333333333333333333333333",
+        "unit": "percent"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "evidence_value",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "evidence_value",
+      "before": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:9:5",
+            "value": "6.8"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:9:4",
+            "value": "4.5"
+          }
+        ],
+        "result": "2.3",
+        "explanation": "计算所列两项数值的差。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "x:9:5",
+            "value": "7.8"
+          },
+          {
+            "kind": "evidence",
+            "ref": "x:9:4",
+            "value": "4.5"
+          }
+        ],
+        "result": "3.3",
+        "explanation": "计算所列两项数值的差。"
+      }
+    }
+  },
+  {
+    "id": "DRE/2016/page_64.pdf-3::challenge",
+    "problem_id": "DRE/2016/page_64.pdf-3",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:9:5",
+              "value": "6.8"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:9:4",
+              "value": "4.5"
+            }
+          ],
+          "result": "2.3",
+          "explanation": "计算所列两项数值的差。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:9:4",
+              "value": "4.5"
+            }
+          ],
+          "result": "0.511111111111111111111111111111111111",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "52.1111111111111111111111111111111111",
+          "explanation": "计算所列两项数值的乘积。"
+        }
+      ],
+      "final": {
+        "value": "51.1111111111111111111111111111111111",
+        "unit": "percent"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s3",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s3",
+        "op": "multiply",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s2"
+          },
+          {
+            "kind": "constant",
+            "value": "100"
+          }
+        ],
+        "result": "51.1111111111111111111111111111111111",
+        "explanation": "计算所列两项数值的乘积。"
+      },
+      "after": {
+        "id": "s3",
+        "op": "multiply",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s2"
+          },
+          {
+            "kind": "constant",
+            "value": "100"
+          }
+        ],
+        "result": "52.1111111111111111111111111111111111",
+        "explanation": "计算所列两项数值的乘积。"
+      }
+    }
+  },
+  {
+    "id": "CME/2017/page_99.pdf-4::clean",
+    "problem_id": "CME/2017/page_99.pdf-4",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "constant",
+              "value": "2"
+            },
+            {
+              "kind": "constant",
+              "value": "4"
+            }
+          ],
+          "result": "6",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "2"
+            }
+          ],
+          "result": "3",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:2:0",
+              "value": "58.7"
+            },
+            {
+              "kind": "step",
+              "ref": "s2"
+            }
+          ],
+          "result": "19.5666666666666666666666666666666667",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "19.5666666666666666666666666666666667",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "CME/2017/page_99.pdf-4::local",
+    "problem_id": "CME/2017/page_99.pdf-4",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "constant",
+              "value": "2"
+            },
+            {
+              "kind": "constant",
+              "value": "4"
+            }
+          ],
+          "result": "6",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "2"
+            }
+          ],
+          "result": "4",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:2:0",
+              "value": "58.7"
+            },
+            {
+              "kind": "step",
+              "ref": "s2"
+            }
+          ],
+          "result": "14.675",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "14.675",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s2",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s2",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "constant",
+            "value": "2"
+          }
+        ],
+        "result": "3",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s2",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "constant",
+            "value": "2"
+          }
+        ],
+        "result": "4",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  },
+  {
+    "id": "CME/2017/page_99.pdf-4::challenge",
+    "problem_id": "CME/2017/page_99.pdf-4",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "constant",
+              "value": "2"
+            },
+            {
+              "kind": "constant",
+              "value": "4"
+            }
+          ],
+          "result": "-2",
+          "explanation": "将所列两项数值相加。"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "2"
+            }
+          ],
+          "result": "-1",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        },
+        {
+          "id": "s3",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:2:0",
+              "value": "58.7"
+            },
+            {
+              "kind": "step",
+              "ref": "s2"
+            }
+          ],
+          "result": "-58.7",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "-58.7",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "formula",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "formula",
+      "before": {
+        "id": "s1",
+        "op": "add",
+        "args": [
+          {
+            "kind": "constant",
+            "value": "2"
+          },
+          {
+            "kind": "constant",
+            "value": "4"
+          }
+        ],
+        "result": "6",
+        "explanation": "将所列两项数值相加。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "subtract",
+        "args": [
+          {
+            "kind": "constant",
+            "value": "2"
+          },
+          {
+            "kind": "constant",
+            "value": "4"
+          }
+        ],
+        "result": "-2",
+        "explanation": "将所列两项数值相加。"
+      }
+    }
+  },
+  {
+    "id": "CE/2009/page_121.pdf-2::clean",
+    "problem_id": "CE/2009/page_121.pdf-2",
+    "split": "test",
+    "source": "reference_derived",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:5:1:0",
+              "value": "1415"
+            },
+            {
+              "kind": "constant",
+              "value": "1000"
+            }
+          ],
+          "result": "1415000",
+          "explanation": "计算所列两项数值的乘积。"
+        },
+        {
+          "id": "s2",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:5:2:0",
+              "value": "25.24"
+            }
+          ],
+          "result": "35714600",
+          "explanation": "计算所列两项数值的乘积。"
+        },
+        {
+          "id": "s3",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "1000000"
+            }
+          ],
+          "result": "35.7146",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "35.7146",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "correct",
+      "first_error": null,
+      "type": null,
+      "method": "reference_program_conversion",
+      "human_review": "pending"
+    }
+  },
+  {
+    "id": "CE/2009/page_121.pdf-2::local",
+    "problem_id": "CE/2009/page_121.pdf-2",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "1000"
+            }
+          ],
+          "result": "1415000",
+          "explanation": "计算所列两项数值的乘积。"
+        },
+        {
+          "id": "s2",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:5:2:0",
+              "value": "25.24"
+            }
+          ],
+          "result": "35714600",
+          "explanation": "计算所列两项数值的乘积。"
+        },
+        {
+          "id": "s3",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "1000000"
+            }
+          ],
+          "result": "35.7146",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "35.7146",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s1",
+      "type": "dependency",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "dependency",
+      "before": {
+        "id": "s1",
+        "op": "multiply",
+        "args": [
+          {
+            "kind": "evidence",
+            "ref": "t:5:1:0",
+            "value": "1415"
+          },
+          {
+            "kind": "constant",
+            "value": "1000"
+          }
+        ],
+        "result": "1415000",
+        "explanation": "计算所列两项数值的乘积。"
+      },
+      "after": {
+        "id": "s1",
+        "op": "multiply",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s1"
+          },
+          {
+            "kind": "constant",
+            "value": "1000"
+          }
+        ],
+        "result": "1415000",
+        "explanation": "计算所列两项数值的乘积。"
+      }
+    }
+  },
+  {
+    "id": "CE/2009/page_121.pdf-2::challenge",
+    "problem_id": "CE/2009/page_121.pdf-2",
+    "split": "test",
+    "source": "controlled_mutation",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:5:1:0",
+              "value": "1415"
+            },
+            {
+              "kind": "constant",
+              "value": "1000"
+            }
+          ],
+          "result": "1415000",
+          "explanation": "计算所列两项数值的乘积。"
+        },
+        {
+          "id": "s2",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:5:2:0",
+              "value": "25.24"
+            }
+          ],
+          "result": "35714600",
+          "explanation": "计算所列两项数值的乘积。"
+        },
+        {
+          "id": "s3",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "1000000"
+            }
+          ],
+          "result": "36.7146",
+          "explanation": "用第一项除以第二项，求得对应比值。"
+        }
+      ],
+      "final": {
+        "value": "35.7146",
+        "unit": "number"
+      }
+    },
+    "label": {
+      "process": "incorrect",
+      "first_error": "s3",
+      "type": "arithmetic",
+      "method": "mutation_record",
+      "human_review": "pending"
+    },
+    "mutation": {
+      "kind": "arithmetic",
+      "before": {
+        "id": "s3",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s2"
+          },
+          {
+            "kind": "constant",
+            "value": "1000000"
+          }
+        ],
+        "result": "35.7146",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      },
+      "after": {
+        "id": "s3",
+        "op": "divide",
+        "args": [
+          {
+            "kind": "step",
+            "ref": "s2"
+          },
+          {
+            "kind": "constant",
+            "value": "1000000"
+          }
+        ],
+        "result": "36.7146",
+        "explanation": "用第一项除以第二项，求得对应比值。"
+      }
+    }
+  }
+]

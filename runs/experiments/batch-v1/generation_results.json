@@ -1,0 +1,5807 @@
+[
+  {
+    "problem_id": "AES/2003/page_93.pdf-3",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:4:1:0",
+              "value": "29"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:0:1:0",
+              "value": "15"
+            }
+          ],
+          "result": "14",
+          "explanation": "Asset retirement obligation balance at Dec 31 2003 minus balance at Dec 31 2002"
+        }
+      ],
+      "final": {
+        "value": "14",
+        "unit": "number"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "AES/2003/page_93.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "14",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "14",
+          "claimed": "14",
+          "evidence_refs": [
+            "t:4:1:0",
+            "t:0:1:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "Asset retirement obligation balance at Dec 31 2003 minus balance at Dec 31 2002"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "AES/2003/page_93.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": false,
+      "normalized_answer": "14",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "14",
+          "claimed": "14",
+          "evidence_refs": [
+            "t:4:1:0",
+            "t:0:1:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "Asset retirement obligation balance at Dec 31 2003 minus balance at Dec 31 2002"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate subtracts valid 2003 ARO balance (29) from 2002 balance (15) using table evidence t:4:1:0 and t:0:1:0, giving correct change of 14 (in millions). Reference uses text evidence but equivalent.",
+          "evidence_refs": [
+            "t:4:1:0",
+            "t:0:1:0"
+          ]
+        },
+        "elapsed_seconds": 14.802,
+        "usage": {
+          "prompt_tokens": 6226,
+          "completion_tokens": 1602,
+          "total_tokens": 7828,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1489
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-707a50e46abb",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "表中 2003/2002 年末义务余额为 29/15，texts[10] 说明这些金额以百万美元计。s1 新减旧得 14，直接保留原题上下文单位，没有必要强制转换成美元。候选 number 字段未显式保存百万美元，展示时应补充单位。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:0:1:0",
+        "t:4:1:0"
+      ],
+      "confidence": "medium",
+      "answer_correct": true,
+      "answer_reason": "14 应读为 14 百万美元，等价于 14000000 美元。按材料上下文单位判断正确，不能把 number=14 无条件解释成 14 美元。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "ALXN/2015/page_59.pdf-2",
+    "split": "dev",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "514000"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:3:2:0",
+              "value": "81000"
+            }
+          ],
+          "result": "595000",
+          "explanation": "Add leased sqft New Haven and Lexington from table"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:4:2:0",
+              "value": "70000"
+            }
+          ],
+          "result": "665000",
+          "explanation": "Add leased sqft Bogart from table"
+        },
+        {
+          "id": "s3",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:6:2:0",
+              "value": "69000"
+            }
+          ],
+          "result": "734000",
+          "explanation": "Add leased sqft Zurich from table"
+        },
+        {
+          "id": "s4",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s3"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:8:2",
+              "value": "254000"
+            }
+          ],
+          "result": "988000",
+          "explanation": "Add Cheshire leased sqft from text"
+        }
+      ],
+      "final": {
+        "value": "988000",
+        "unit": "number"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "ALXN/2015/page_59.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "988000",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "595000",
+          "claimed": "595000",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:3:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Add leased sqft New Haven and Lexington from table"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "665000",
+          "claimed": "665000",
+          "evidence_refs": [
+            "t:4:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Add leased sqft Bogart from table"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "734000",
+          "claimed": "734000",
+          "evidence_refs": [
+            "t:6:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Add leased sqft Zurich from table"
+        },
+        {
+          "id": "s4",
+          "position": 4,
+          "status": "correct",
+          "computed": "988000",
+          "claimed": "988000",
+          "evidence_refs": [
+            "x:8:2"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Add Cheshire leased sqft from text"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "ALXN/2015/page_59.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": false,
+      "normalized_answer": "988000",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "595000",
+          "claimed": "595000",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:3:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Add leased sqft New Haven and Lexington from table"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "665000",
+          "claimed": "665000",
+          "evidence_refs": [
+            "t:4:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Add leased sqft Bogart from table"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "734000",
+          "claimed": "734000",
+          "evidence_refs": [
+            "t:6:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Add leased sqft Zurich from table"
+        },
+        {
+          "id": "s4",
+          "position": 4,
+          "status": "correct",
+          "computed": "988000",
+          "claimed": "988000",
+          "evidence_refs": [
+            "x:8:2"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Add Cheshire leased sqft from text"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate sums leased table rows (t:1:2:0, t:3:2:0, t:4:2:0, t:6:2:0) and adds Cheshire leased sqft from text (x:8:2); evidence scope (leased sqft, 2015) and arithmetic are correct, alternative supported evidence is acceptable per reference note.",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:3:2:0",
+            "t:4:2:0",
+            "t:6:2:0",
+            "x:8:2"
+          ]
+        },
+        "elapsed_seconds": 31.967,
+        "usage": {
+          "prompt_tokens": 3448,
+          "completion_tokens": 3312,
+          "total_tokens": 6760,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3151
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-5d721fbae35f",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "uncertain",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "s1-s3 将表中四处非 owned 设施相加为 734000；s4 又加 texts[8] 截至 2015 年末仍租赁的 Cheshire 254000，得 988000。没有把自有设施计入。该数是披露量化面积的合计；texts[6:8] 还说明其他美国和境外租赁地点，题面未限定披露范围或日期，因此不能确认它等于全公司租赁总面积。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:1:2:0",
+        "t:3:2:0",
+        "t:4:2:0",
+        "t:6:2:0",
+        "x:8:2"
+      ],
+      "confidence": "medium",
+      "answer_correct": null,
+      "answer_reason": "988000 平方英尺是表内四处租赁面积与正文 Cheshire 的正确合计；若仅问表内为 734000，若问全部租赁则还有未量化面积。最终题意范围未定，保留 null。"
+    },
+    "reference_disputed": true
+  },
+  {
+    "problem_id": "AMT/2015/page_58.pdf-2",
+    "split": "dev",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "900"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:2:2:0",
+              "value": "1560"
+            }
+          ],
+          "result": "2460",
+          "explanation": "Sum U.S. and Asia new sites in 2014"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:3:2:0",
+              "value": "190"
+            }
+          ],
+          "result": "2650",
+          "explanation": "Add EMEA 2014 sites"
+        },
+        {
+          "id": "s3",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:4:2:0",
+              "value": "5800"
+            }
+          ],
+          "result": "8450",
+          "explanation": "Add Latin America 2014 sites"
+        }
+      ],
+      "final": {
+        "value": "8450",
+        "unit": "number"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "AMT/2015/page_58.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "8450",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "2460",
+          "claimed": "2460",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:2:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Sum U.S. and Asia new sites in 2014"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "2650",
+          "claimed": "2650",
+          "evidence_refs": [
+            "t:3:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Add EMEA 2014 sites"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "8450",
+          "claimed": "8450",
+          "evidence_refs": [
+            "t:4:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Add Latin America 2014 sites"
+        }
+      ],
+      "findings": []
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "AMT/2015/page_58.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "8450",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "2460",
+          "claimed": "2460",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:2:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Sum U.S. and Asia new sites in 2014"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "2650",
+          "claimed": "2650",
+          "evidence_refs": [
+            "t:3:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Add EMEA 2014 sites"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "8450",
+          "claimed": "8450",
+          "evidence_refs": [
+            "t:4:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Add Latin America 2014 sites"
+        }
+      ],
+      "findings": [],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate correctly sums 2014 new sites (acquired or constructed) from table rows U.S., Asia, EMEA, Latin America: 900+1560+190+5800=8450, matching reference and question scope.",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:2:2:0",
+            "t:3:2:0",
+            "t:4:2:0"
+          ]
+        },
+        "elapsed_seconds": 12.212,
+        "usage": {
+          "prompt_tokens": 3259,
+          "completion_tokens": 880,
+          "total_tokens": 4139,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 755
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-dd5e05dcec42",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "2014 列美国、亚洲、EMEA、拉美新增站点 900/1560/190/5800。s1-s3 顺次相加为 2460、2650、8450，选年、总量关系和依赖正确。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:1:2:0",
+        "t:2:2:0",
+        "t:3:2:0",
+        "t:4:2:0"
+      ],
+      "confidence": "high",
+      "answer_correct": true,
+      "answer_reason": "四区域新增站点共 8450，最终答案正确。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "AON/2015/page_62.pdf-4",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:19:0",
+              "value": "227"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:19:1",
+              "value": "170"
+            }
+          ],
+          "result": "397",
+          "explanation": "Add 2015 and 2014 issuance amounts for employee benefit plans"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:19:2",
+              "value": "120"
+            }
+          ],
+          "result": "517",
+          "explanation": "Add 2013 amount to get total for last three years"
+        }
+      ],
+      "final": {
+        "value": "517",
+        "unit": "number"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "AON/2015/page_62.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "517",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "397",
+          "claimed": "397",
+          "evidence_refs": [
+            "x:19:0",
+            "x:19:1"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Add 2015 and 2014 issuance amounts for employee benefit plans"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "517",
+          "claimed": "517",
+          "evidence_refs": [
+            "x:19:2"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Add 2013 amount to get total for last three years"
+        }
+      ],
+      "findings": []
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "AON/2015/page_62.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "517",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "397",
+          "claimed": "397",
+          "evidence_refs": [
+            "x:19:0",
+            "x:19:1"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Add 2015 and 2014 issuance amounts for employee benefit plans"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "517",
+          "claimed": "517",
+          "evidence_refs": [
+            "x:19:2"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Add 2013 amount to get total for last three years"
+        }
+      ],
+      "findings": [],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate sums the three evidenced issuance amounts for employee benefit plans (2015:227, 2014:170, 2013:120) from text x:19:0-2, matching reference addition and yielding correct total 517 million.",
+          "evidence_refs": [
+            "x:19:0",
+            "x:19:1",
+            "x:19:2"
+          ]
+        },
+        "elapsed_seconds": 13.688,
+        "usage": {
+          "prompt_tokens": 4791,
+          "completion_tokens": 1367,
+          "total_tokens": 6158,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1257
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-7dfa82b526be",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "texts[19] 2015/2014/2013 三年员工福利计划发股金额为 227/170/120 百万美元。s1 前两项相加 397，s2 加第三项 120 得 517，依赖和年份正确。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "x:19:0",
+        "x:19:1",
+        "x:19:2"
+      ],
+      "confidence": "high",
+      "answer_correct": true,
+      "answer_reason": "三年总额 517 百万美元，与最终答案一致。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "AOS/2007/page_17.pdf-2",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:3:6:0",
+              "value": "253.33"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:6:0",
+              "value": "142.72"
+            }
+          ],
+          "result": "110.61",
+          "explanation": "Difference in cumulative total return index at 12/31/07 between S&P 600 electrical equipment and A O Smith Corp"
+        }
+      ],
+      "final": {
+        "value": "110.61",
+        "unit": "number"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "AOS/2007/page_17.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "110.61",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "110.61",
+          "claimed": "110.61",
+          "evidence_refs": [
+            "t:3:6:0",
+            "t:1:6:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "Difference in cumulative total return index at 12/31/07 between S&P 600 electrical equipment and A O Smith Corp"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "AOS/2007/page_17.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": false,
+      "normalized_answer": "110.61",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "110.61",
+          "claimed": "110.61",
+          "evidence_refs": [
+            "t:3:6:0",
+            "t:1:6:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "Difference in cumulative total return index at 12/31/07 between S&P 600 electrical equipment and A O Smith Corp"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate subtracts ending indexed cumulative return values (253.33 - 142.72) for same period and metric, which equals difference in cumulative total return; equivalent to reference's return difference.",
+          "evidence_refs": [
+            "t:1:6:0",
+            "t:3:6:0"
+          ]
+        },
+        "elapsed_seconds": 16.79,
+        "usage": {
+          "prompt_tokens": 5335,
+          "completion_tokens": 2128,
+          "total_tokens": 7463,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2032
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-468f24fb457a",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "两指数均以 2002 年 100 为基期。候选明确用行业指数 253.33 减公司指数 142.72，得到绝对差 110.61。共同基期下终值指数差等于两净累计回报的百分点差；题目 difference between 未指定相减方向，可接受明确说明的绝对差。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:1:6:0",
+        "t:3:6:0"
+      ],
+      "confidence": "medium",
+      "answer_correct": true,
+      "answer_reason": "行业累计回报 153.33%、公司 42.72%，绝对差 110.61 个百分点。候选用 number 并说明 index difference，数值可接受；不能把它解释成相对回报率 110.61% 或强制等于公司减行业的 -1.1061 ratio。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "BLK/2012/page_82.pdf-3",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:1:0",
+              "value": "1750"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "1631"
+            }
+          ],
+          "result": "119",
+          "explanation": "2012 gaap total investments minus 2011 gaap total investments"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "1631"
+            }
+          ],
+          "result": "0.072961373390557",
+          "explanation": "change divided by 2011 base yields ratio"
+        },
+        {
+          "id": "s3",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "7.2961373390557",
+          "explanation": "ratio times 100 for percent display"
+        }
+      ],
+      "final": {
+        "value": "7.2961373390557",
+        "unit": "percent"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "BLK/2012/page_82.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.072961373390557",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "119",
+          "claimed": "119",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "2012 gaap total investments minus 2011 gaap total investments"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.0729613733905579399141630901287553648",
+          "claimed": "0.072961373390557",
+          "evidence_refs": [
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "change divided by 2011 base yields ratio"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "7.2961373390557",
+          "claimed": "7.2961373390557",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "ratio times 100 for percent display"
+        }
+      ],
+      "findings": []
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "BLK/2012/page_82.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.072961373390557",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "119",
+          "claimed": "119",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "2012 gaap total investments minus 2011 gaap total investments"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.0729613733905579399141630901287553648",
+          "claimed": "0.072961373390557",
+          "evidence_refs": [
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "change divided by 2011 base yields ratio"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "7.2961373390557",
+          "claimed": "7.2961373390557",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "ratio times 100 for percent display"
+        }
+      ],
+      "findings": [],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate correctly computes (1750-1631)/1631*100% using total investments gaap values from table rows t:1:1:0 (2012) and t:1:2:0 (2011), matching metric, years, and scope.",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0"
+          ]
+        },
+        "elapsed_seconds": 11.731,
+        "usage": {
+          "prompt_tokens": 6009,
+          "completion_tokens": 1182,
+          "total_tokens": 7191,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1071
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-b57fe9df6e96",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "题目指定 GAAP 投资总余额；s1 取 2012 的 1750 减 2011 的 1631，s2 除旧基数，s3 转百分数，没有使用 adjusted/economic investment 行。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:1:1:0",
+        "t:1:2:0"
+      ],
+      "confidence": "high",
+      "answer_correct": true,
+      "answer_reason": "119/1631×100≈7.2961373390558%，最终有限小数在正常显示精度内正确。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "BLK/2014/page_33.pdf-4",
+    "split": "dev",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:2:1:0",
+              "value": "111408"
+            },
+            {
+              "kind": "constant",
+              "value": "1"
+            }
+          ],
+          "result": "111408",
+          "explanation": "target date/risk AUM Dec 31 2013"
+        },
+        {
+          "id": "s2",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:4:1:0",
+              "value": "341214"
+            },
+            {
+              "kind": "constant",
+              "value": "1"
+            }
+          ],
+          "result": "341214",
+          "explanation": "total multi-asset AUM Dec 31 2013"
+        },
+        {
+          "id": "s3",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "step",
+              "ref": "s2"
+            }
+          ],
+          "result": "0.3265047741",
+          "explanation": "portion of multi-asset from target date/risk"
+        }
+      ],
+      "final": {
+        "value": "0.3265047741",
+        "unit": "ratio"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "BLK/2014/page_33.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.3265047741",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "111408",
+          "claimed": "111408",
+          "evidence_refs": [
+            "t:2:1:0"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "target date/risk AUM Dec 31 2013"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "341214",
+          "claimed": "341214",
+          "evidence_refs": [
+            "t:4:1:0"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "total multi-asset AUM Dec 31 2013"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "0.326504774130018111800805359686296576",
+          "claimed": "0.3265047741",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "portion of multi-asset from target date/risk"
+        }
+      ],
+      "findings": []
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "BLK/2014/page_33.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.3265047741",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "111408",
+          "claimed": "111408",
+          "evidence_refs": [
+            "t:2:1:0"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "target date/risk AUM Dec 31 2013"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "341214",
+          "claimed": "341214",
+          "evidence_refs": [
+            "t:4:1:0"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "total multi-asset AUM Dec 31 2013"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "0.326504774130018111800805359686296576",
+          "claimed": "0.3265047741",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "portion of multi-asset from target date/risk"
+        }
+      ],
+      "findings": [],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate uses correct evidence t:2:1:0 (111408) and t:4:1:0 (341214) for Dec 31 2013 target date/risk and total multi-asset AUM, then divides to obtain equivalent ratio ~0.3265, matching reference.",
+          "evidence_refs": [
+            "t:2:1:0",
+            "t:4:1:0"
+          ]
+        },
+        "elapsed_seconds": 14.91,
+        "usage": {
+          "prompt_tokens": 9041,
+          "completion_tokens": 1479,
+          "total_tokens": 10520,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1362
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-c33bcaa415eb",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "2013 年末 target date/risk 111408 与 multi-asset 总额 341214 均来自同一日期列。s1/s2 乘 1 只是保留数值，s3 比例正确，未误用 2014 列。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:2:1:0",
+        "t:4:1:0"
+      ],
+      "confidence": "high",
+      "answer_correct": true,
+      "answer_reason": "111408/341214≈0.326504774130018，最终 0.3265047741 是合理截断，即约 32.65047741%。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "BLK/2017/page_77.pdf-2",
+    "split": "dev",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "4570"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "4664"
+            }
+          ],
+          "result": "-94",
+          "explanation": "GAAP operating income 2016 minus 2015"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "4664"
+            }
+          ],
+          "result": "-0.0201543739278563",
+          "explanation": "Growth rate = change / 2015 base"
+        }
+      ],
+      "final": {
+        "value": "-0.0201543739278563",
+        "unit": "ratio"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "BLK/2017/page_77.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "-0.0201543739278563",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "-94",
+          "claimed": "-94",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "GAAP operating income 2016 minus 2015"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "-0.0201543739279588336192109777015437393",
+          "claimed": "-0.0201543739278563",
+          "evidence_refs": [
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Growth rate = change / 2015 base"
+        }
+      ],
+      "findings": []
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "BLK/2017/page_77.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": true,
+      "normalized_answer": "-0.0201543739278563",
+      "reference_equivalent": true,
+      "first_error": {
+        "step": "s2",
+        "type": "arithmetic",
+        "message": "Candidate s2 divide yields -0.0201543739278563 but -94/4664 = -0.0201543739279588...; arithmetic inaccuracy in division result.",
+        "status": "incorrect",
+        "source": "hy3_judge"
+      },
+      "localization": "judge_estimate",
+      "correct_answer_invalid_process": true,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "-94",
+          "claimed": "-94",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "GAAP operating income 2016 minus 2015"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "-0.0201543739279588336192109777015437393",
+          "claimed": "-0.0201543739278563",
+          "evidence_refs": [
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Growth rate = change / 2015 base"
+        }
+      ],
+      "findings": [],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "incorrect",
+          "first_error_step": "s2",
+          "error_type": "arithmetic",
+          "reason": "Candidate s2 divide yields -0.0201543739278563 but -94/4664 = -0.0201543739279588...; arithmetic inaccuracy in division result.",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:1:3:0"
+          ]
+        },
+        "elapsed_seconds": 19.349,
+        "usage": {
+          "prompt_tokens": 18476,
+          "completion_tokens": 3375,
+          "total_tokens": 21851,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3272
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-a8c0e11cd438",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "使用左侧 GAAP 2016/2015 营业利润 4570/4664，s1 差额 -94、s2 除以旧基数，语义和公式正确。精确商约 -0.0201543739279588，候选 -0.0201543739278563 的误差约 1.03e-13，属于极小尾数偏差；该小数不能视为所展示全部位数都精确。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:1:2:0",
+        "t:1:3:0"
+      ],
+      "confidence": "medium",
+      "answer_correct": true,
+      "answer_reason": "按实用财务显示精度答案约 -2.0154373928% 正确；本轮数值容差内接受，但保留尾数不精确记录，不能宣称严格任意精度相等。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "C/2008/page_105.pdf-1",
+    "split": "dev",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:4:0",
+              "value": "109.3"
+            },
+            {
+              "kind": "constant",
+              "value": "1"
+            }
+          ],
+          "result": "109.3",
+          "explanation": "Long-term debt for citigroup subsidiaries from table row 1 col 4"
+        }
+      ],
+      "final": {
+        "value": "109.3",
+        "unit": "number"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "C/2008/page_105.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "109.3",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "109.3",
+          "claimed": "109.3",
+          "evidence_refs": [
+            "t:1:4:0"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Long-term debt for citigroup subsidiaries from table row 1 col 4"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "C/2008/page_105.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "incorrect",
+      "answer_correct": false,
+      "normalized_answer": "109.3",
+      "reference_equivalent": false,
+      "first_error": {
+        "step": "s1",
+        "type": "evidence_missing",
+        "message": "Step s1 only uses t:1:4:0 ($109.3, other citigroup subsidiaries) and multiplies by 1, omitting t:1:1:0, t:1:2:0, t:1:3:0 needed to compute total long-term debt for citigroup and its subsidiaries per table and reference.",
+        "status": "incorrect",
+        "source": "hy3_judge"
+      },
+      "localization": "judge_estimate",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "109.3",
+          "claimed": "109.3",
+          "evidence_refs": [
+            "t:1:4:0"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Long-term debt for citigroup subsidiaries from table row 1 col 4"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "incorrect",
+          "first_error_step": "s1",
+          "error_type": "evidence_missing",
+          "reason": "Step s1 only uses t:1:4:0 ($109.3, other citigroup subsidiaries) and multiplies by 1, omitting t:1:1:0, t:1:2:0, t:1:3:0 needed to compute total long-term debt for citigroup and its subsidiaries per table and reference.",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0",
+            "t:1:3:0",
+            "t:1:4:0"
+          ]
+        },
+        "elapsed_seconds": 31.194,
+        "usage": {
+          "prompt_tokens": 5317,
+          "completion_tokens": 3629,
+          "total_tokens": 8946,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3477
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-574f0ac808dc",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "uncertain",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "s1 读取表中 other citigroup subsidiaries 的 109.3 十亿美元，再乘 1，无算术问题。但题目用了 total/subsidiaries，可能要求 CGMHI 20.6、CFI 37.4 与其他子公司 109.3 合计 167.3，也可能包含母公司成为 359.6；正文重排的列名又省略 other。109.3 仅能确定是该列金额，不能确定满足问题范围。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:1:4:0"
+      ],
+      "confidence": "medium",
+      "answer_correct": null,
+      "answer_reason": "109.3 是 other subsidiaries 列值；它不是所有列合计，也不是排除母公司后的子公司合计。由于题面/正文列名范围不清，保留 null，建议真人核定，不能按单一预置答案判对或判错。"
+    },
+    "reference_disputed": true
+  },
+  {
+    "problem_id": "C/2009/page_195.pdf-2",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:10:2:0",
+              "value": "29616"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:10:3:0",
+              "value": "16117"
+            }
+          ],
+          "result": "13499",
+          "explanation": "Allowance for loan losses at end of 2008 minus end of 2007"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:10:3:0",
+              "value": "16117"
+            }
+          ],
+          "result": "0.8375628218651113",
+          "explanation": "Change relative to 2007 end balance"
+        },
+        {
+          "id": "s3",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "83.75628218651113",
+          "explanation": "Convert ratio to percent"
+        }
+      ],
+      "final": {
+        "value": "83.75628218651113",
+        "unit": "percent"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "C/2009/page_195.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "0.8375628218651113",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "13499",
+          "claimed": "13499",
+          "evidence_refs": [
+            "t:10:2:0",
+            "t:10:3:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "Allowance for loan losses at end of 2008 minus end of 2007"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.837562821865111373084320903393931873",
+          "claimed": "0.8375628218651113",
+          "evidence_refs": [
+            "t:10:3:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Change relative to 2007 end balance"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "83.75628218651113",
+          "claimed": "83.75628218651113",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Convert ratio to percent"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "C/2009/page_195.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": false,
+      "normalized_answer": "0.8375628218651113",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "13499",
+          "claimed": "13499",
+          "evidence_refs": [
+            "t:10:2:0",
+            "t:10:3:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "Allowance for loan losses at end of 2008 minus end of 2007"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.837562821865111373084320903393931873",
+          "claimed": "0.8375628218651113",
+          "evidence_refs": [
+            "t:10:3:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Change relative to 2007 end balance"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "83.75628218651113",
+          "claimed": "83.75628218651113",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Convert ratio to percent"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate uses end-of-year allowance for loan losses for 2008 (t:10:2:0=29616) and 2007 (t:10:3:0=16117), correctly computes (29616-16117)/16117*100 = 83.756%; valid alternative to reference's beginning-of-year based ratio.",
+          "evidence_refs": [
+            "t:10:2:0",
+            "t:10:3:0"
+          ]
+        },
+        "elapsed_seconds": 23.597,
+        "usage": {
+          "prompt_tokens": 6963,
+          "completion_tokens": 2564,
+          "total_tokens": 9527,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2437
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-880d2783c668",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "候选明确说明用 2008/2007 的年末准备余额，取表中 allowance for loan losses at end of year 29616/16117；差额 13499，除以 2007 年末基数并转百分数。这是年度余额变化的自然解释，且在步骤中显式说明，未混入 unfunded commitment 准备。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:10:2:0",
+        "t:10:3:0"
+      ],
+      "confidence": "medium",
+      "answer_correct": true,
+      "answer_reason": "年末对年末口径为 (29616-16117)/16117×100≈83.7562821865%。表中也有期初余额，若任务另行指定期初则结果会不同；题面当前没有该限制，故按候选明确的合理年末口径接受，不宣称唯一金标。"
+    },
+    "reference_disputed": true
+  },
+  {
+    "problem_id": "C/2015/page_314.pdf-1",
+    "split": "dev",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:6:1:0",
+              "value": "110.14"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:1:0",
+              "value": "100"
+            }
+          ],
+          "result": "1.1014",
+          "explanation": "Citi ending value 110.14 divided by starting value 100"
+        },
+        {
+          "id": "s2",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "1"
+            }
+          ],
+          "result": "0.1014",
+          "explanation": "Subtract 1 to get cumulative return ratio"
+        },
+        {
+          "id": "s3",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "10.14",
+          "explanation": "Multiply by 100 to express as percentage"
+        }
+      ],
+      "final": {
+        "value": "10.14",
+        "unit": "percent"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "C/2015/page_314.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": true,
+      "normalized_answer": "0.1014",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "1.1014",
+          "claimed": "1.1014",
+          "evidence_refs": [
+            "t:6:1:0",
+            "t:1:1:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Citi ending value 110.14 divided by starting value 100"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.1014",
+          "claimed": "0.1014",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "Subtract 1 to get cumulative return ratio"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "10.14",
+          "claimed": "10.14",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Multiply by 100 to express as percentage"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "C/2015/page_314.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.1014",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "1.1014",
+          "claimed": "1.1014",
+          "evidence_refs": [
+            "t:6:1:0",
+            "t:1:1:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Citi ending value 110.14 divided by starting value 100"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.1014",
+          "claimed": "0.1014",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "Subtract 1 to get cumulative return ratio"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "10.14",
+          "claimed": "10.14",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Multiply by 100 to express as percentage"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate correctly computes (110.14/100 - 1)*100 = 10.14% using citi endpoints t:6:1:0 (110.14) and t:1:1:0 (100.00); formula is equivalent to reference ratio 0.1014.",
+          "evidence_refs": [
+            "t:6:1:0",
+            "t:1:1:0"
+          ]
+        },
+        "elapsed_seconds": 13.016,
+        "usage": {
+          "prompt_tokens": 4514,
+          "completion_tokens": 1234,
+          "total_tokens": 5748,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1116
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-fcaef8eed2ca",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "Citi 2010 年末指数 100 与 2015 年末 110.14，s1 终值/初值、s2 减 1、s3 转百分数，得到净累计总回报，未混入 S&P 500/financials 列。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:1:1:0",
+        "t:6:1:0"
+      ],
+      "confidence": "high",
+      "answer_correct": true,
+      "answer_reason": "(110.14/100-1)×100=10.14%，最终答案正确。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "CB/2008/page_218.pdf-2",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:13:1:0",
+              "value": "3883230"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:9:1:0",
+              "value": "3821707"
+            }
+          ],
+          "result": "61523",
+          "explanation": "Net change = ending 2008 unvested minus beginning 2008 (ending 2007)."
+        }
+      ],
+      "final": {
+        "value": "61523",
+        "unit": "number"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "CB/2008/page_218.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "61523",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "61523",
+          "claimed": "61523",
+          "evidence_refs": [
+            "t:13:1:0",
+            "t:9:1:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "Net change = ending 2008 unvested minus beginning 2008 (ending 2007)."
+        }
+      ],
+      "findings": []
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "CB/2008/page_218.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "61523",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "61523",
+          "claimed": "61523",
+          "evidence_refs": [
+            "t:13:1:0",
+            "t:9:1:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "Net change = ending 2008 unvested minus beginning 2008 (ending 2007)."
+        }
+      ],
+      "findings": [],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate correctly computes net change as ending 2008 unvested (t:13:1:0=3883230) minus beginning 2008 (t:9:1:0=3821707) = 61523, matching reference and evidence semantics for year/metric/scope.",
+          "evidence_refs": [
+            "t:13:1:0",
+            "t:9:1:0"
+          ]
+        },
+        "elapsed_seconds": 11.425,
+        "usage": {
+          "prompt_tokens": 7799,
+          "completion_tokens": 1267,
+          "total_tokens": 9066,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1148
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-f8faf34bcaf9",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "s1 用 2008 年末未归属限制股 3883230 减 2007 年末 3821707，净增 61523，未把 RSU 或年内授予额重复计入。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:13:1:0",
+        "t:9:1:0"
+      ],
+      "confidence": "high",
+      "answer_correct": true,
+      "answer_reason": "61523 股，与最终答案一致。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "CE/2009/page_121.pdf-2",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:5:1:0",
+              "value": "1415"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:5:2:0",
+              "value": "25.24"
+            }
+          ],
+          "result": "35714.6",
+          "explanation": "Multiply nonvested units in thousands by fair value per unit to get total fair value in thousands of dollars."
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "1000"
+            }
+          ],
+          "result": "35.7146",
+          "explanation": "Convert thousands of dollars to millions by dividing by 1000."
+        }
+      ],
+      "final": {
+        "value": "35.7146",
+        "unit": "number"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "CE/2009/page_121.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "35.7146",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "35714.6",
+          "claimed": "35714.6",
+          "evidence_refs": [
+            "t:5:1:0",
+            "t:5:2:0"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Multiply nonvested units in thousands by fair value per unit to get total fair value in thousands of dollars."
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "35.7146",
+          "claimed": "35.7146",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Convert thousands of dollars to millions by dividing by 1000."
+        }
+      ],
+      "findings": []
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "CE/2009/page_121.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "35.7146",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "35714.6",
+          "claimed": "35714.6",
+          "evidence_refs": [
+            "t:5:1:0",
+            "t:5:2:0"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Multiply nonvested units in thousands by fair value per unit to get total fair value in thousands of dollars."
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "35.7146",
+          "claimed": "35.7146",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Convert thousands of dollars to millions by dividing by 1000."
+        }
+      ],
+      "findings": [],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate multiplies 1415 (thousands of units) by $25.24 to get thousands of dollars (35714.6), then divides by 1000 to convert to millions (35.7146), consistent with reference final and table evidence for nonvested at Dec 31 2009.",
+          "evidence_refs": [
+            "t:5:1:0",
+            "t:5:2:0"
+          ]
+        },
+        "elapsed_seconds": 15.441,
+        "usage": {
+          "prompt_tokens": 5153,
+          "completion_tokens": 1605,
+          "total_tokens": 6758,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1485
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-5a32232563e2",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "2009 年末未归属单位数 1415 的单位是千份，每份加权公允价值 25.24 美元。s1 相乘得 35714.6 千美元，s2 除 1000 转成百万美元；这个两步写法在量纲上正确。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:5:1:0",
+        "t:5:2:0"
+      ],
+      "confidence": "high",
+      "answer_correct": true,
+      "answer_reason": "1415×25.24/1000=35.7146 百万美元，最终答案正确。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "CME/2017/page_99.pdf-4",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "constant",
+              "value": "2"
+            },
+            {
+              "kind": "constant",
+              "value": "4"
+            }
+          ],
+          "result": "6",
+          "explanation": "sum of stated vesting period bounds two and four years"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "2"
+            }
+          ],
+          "result": "3",
+          "explanation": "average vesting period in years"
+        },
+        {
+          "id": "s3",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:2:0",
+              "value": "58.7"
+            },
+            {
+              "kind": "step",
+              "ref": "s2"
+            }
+          ],
+          "result": "19.5666666666666667",
+          "explanation": "annual compensation expense millions = total fair value of 2017 restricted common stock and RSU grants divided by average vesting years"
+        }
+      ],
+      "final": {
+        "value": "19.5666666666666667",
+        "unit": "number"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "CME/2017/page_99.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "19.5666666666666667",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "6",
+          "claimed": "6",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "sum of stated vesting period bounds two and four years"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "3",
+          "claimed": "3",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "average vesting period in years"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "19.5666666666666666666666666666666667",
+          "claimed": "19.5666666666666667",
+          "evidence_refs": [
+            "x:2:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "annual compensation expense millions = total fair value of 2017 restricted common stock and RSU grants divided by average vesting years"
+        }
+      ],
+      "findings": []
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "CME/2017/page_99.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "19.5666666666666667",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "6",
+          "claimed": "6",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "sum of stated vesting period bounds two and four years"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "3",
+          "claimed": "3",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "average vesting period in years"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "19.5666666666666666666666666666666667",
+          "claimed": "19.5666666666666667",
+          "evidence_refs": [
+            "x:2:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "annual compensation expense millions = total fair value of 2017 restricted common stock and RSU grants divided by average vesting years"
+        }
+      ],
+      "findings": [],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate correctly computes average vesting period (2+4)/2=3 years from stated range and divides 2017 restricted stock/RSU fair value $58.7M (evidence x:2:0) by 3, matching reference formula and scope.",
+          "evidence_refs": [
+            "x:2:0"
+          ]
+        },
+        "elapsed_seconds": 20.919,
+        "usage": {
+          "prompt_tokens": 6551,
+          "completion_tokens": 2053,
+          "total_tokens": 8604,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1955
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-dfaf89e1b9a7",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "texts[1] two to four years 支持常量 2 与 4；s1 相加、s2 除 2 得平均期限 3 年；texts[2] 本批受限普通股及 RSU 公允价值为 58.7，s3 除平均期限。题目明确平均期限假设，因此可报告平均年度额。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "x:2:0"
+      ],
+      "confidence": "medium",
+      "answer_correct": true,
+      "answer_reason": "58.7/3≈19.5666666667 百万美元。原文 accelerated basis 不表示实际每年相等，故接受的是平均年度费用，不是实际逐年费用预测。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "DRE/2016/page_64.pdf-3",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:9:4",
+              "value": "4.5"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:9:5",
+              "value": "6.8"
+            }
+          ],
+          "result": "-2.3",
+          "explanation": "2016 mgmt fees (4.5) minus 2015 (6.8)"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:9:5",
+              "value": "6.8"
+            }
+          ],
+          "result": "-0.33823529411764705882",
+          "explanation": "difference divided by 2015 base for ratio"
+        },
+        {
+          "id": "s3",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "-33.823529411764705882",
+          "explanation": "ratio times 100 for percent change"
+        }
+      ],
+      "final": {
+        "value": "-33.823529411764705882",
+        "unit": "percent"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "DRE/2016/page_64.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "-0.33823529411764705882",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "-2.3",
+          "claimed": "-2.3",
+          "evidence_refs": [
+            "x:9:4",
+            "x:9:5"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "2016 mgmt fees (4.5) minus 2015 (6.8)"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "-0.338235294117647058823529411764705882",
+          "claimed": "-0.33823529411764705882",
+          "evidence_refs": [
+            "x:9:5"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "difference divided by 2015 base for ratio"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "-33.823529411764705882",
+          "claimed": "-33.823529411764705882",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "ratio times 100 for percent change"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "DRE/2016/page_64.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": false,
+      "normalized_answer": "-0.33823529411764705882",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "-2.3",
+          "claimed": "-2.3",
+          "evidence_refs": [
+            "x:9:4",
+            "x:9:5"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "2016 mgmt fees (4.5) minus 2015 (6.8)"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "-0.338235294117647058823529411764705882",
+          "claimed": "-0.33823529411764705882",
+          "evidence_refs": [
+            "x:9:5"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "difference divided by 2015 base for ratio"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "-33.823529411764705882",
+          "claimed": "-33.823529411764705882",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "ratio times 100 for percent change"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate correctly maps x:9:4 ($4.5M, 2016) and x:9:5 ($6.8M, 2015) from text, computes (2016-2015)/2015*100 = -33.82% percent change from 2015 to 2016, matching standard formula and evidence semantics.",
+          "evidence_refs": [
+            "x:9:4",
+            "x:9:5"
+          ]
+        },
+        "elapsed_seconds": 41.646,
+        "usage": {
+          "prompt_tokens": 10375,
+          "completion_tokens": 4559,
+          "total_tokens": 14934,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 4433
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-00f0400845ed",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "texts[9] 的 respectively 明确 2016/2015 管理费为 4.5/6.8 百万美元。s1 用新减旧为 -2.3，s2 以 2015 的 6.8 为基期，s3 乘 100，年份、方向与分母均正确。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "x:9:4",
+        "x:9:5"
+      ],
+      "confidence": "high",
+      "answer_correct": true,
+      "answer_reason": "(4.5-6.8)/6.8×100≈-33.8235294118%，与最终答案一致；这是下降而非增长。"
+    },
+    "reference_disputed": true
+  },
+  {
+    "problem_id": "ETR/2017/page_422.pdf-2",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:7:2",
+              "value": "25.6"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:6:0",
+              "value": "30"
+            }
+          ],
+          "result": "0.8533333333333333",
+          "explanation": "outstanding LC under credit facility divided by allowed LC limit"
+        },
+        {
+          "id": "s2",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "85.33333333333333",
+          "explanation": "convert utilization ratio to percent"
+        }
+      ],
+      "final": {
+        "value": "85.33333333333333",
+        "unit": "percent"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "ETR/2017/page_422.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.8533333333333333",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "0.853333333333333333333333333333333333",
+          "claimed": "0.8533333333333333",
+          "evidence_refs": [
+            "x:7:2",
+            "x:6:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "outstanding LC under credit facility divided by allowed LC limit"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "85.33333333333333",
+          "claimed": "85.33333333333333",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "convert utilization ratio to percent"
+        }
+      ],
+      "findings": []
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "ETR/2017/page_422.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.8533333333333333",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "0.853333333333333333333333333333333333",
+          "claimed": "0.8533333333333333",
+          "evidence_refs": [
+            "x:7:2",
+            "x:6:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "outstanding LC under credit facility divided by allowed LC limit"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "85.33333333333333",
+          "claimed": "85.33333333333333",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "convert utilization ratio to percent"
+        }
+      ],
+      "findings": [],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate divides $25.6M outstanding LC (x:7:2) by $30M allowed LC limit (x:6:0) and converts to percent; evidence scope/year matches and formula is valid.",
+          "evidence_refs": [
+            "x:7:2",
+            "x:6:0"
+          ]
+        },
+        "elapsed_seconds": 15.222,
+        "usage": {
+          "prompt_tokens": 7598,
+          "completion_tokens": 1762,
+          "total_tokens": 9360,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1665
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-e997ed443364",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "texts[6:8] 同一 Entergy Texas 信贷额度的信用证上限 30、2017 年末已开出 25.6 百万美元。s1 实际/额度，s2 转百分数，指标和日期匹配。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "x:6:0",
+        "x:7:2"
+      ],
+      "confidence": "high",
+      "answer_correct": true,
+      "answer_reason": "25.6/30×100≈85.3333333333%，最终答案正确。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "GS/2012/page_177.pdf-3",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:3:1:0",
+              "value": "345"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:7:1:0",
+              "value": "3189"
+            }
+          ],
+          "result": "0.10818438381937912",
+          "explanation": "2015 minimum rental payment 345M over total 3189M yields ratio"
+        },
+        {
+          "id": "s2",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "10.818438381937912",
+          "explanation": "Convert ratio to percent by multiplying by 100"
+        }
+      ],
+      "final": {
+        "value": "10.818438381937912",
+        "unit": "percent"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "GS/2012/page_177.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.10818438381937912",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "0.108184383819379115710253998118532455",
+          "claimed": "0.10818438381937912",
+          "evidence_refs": [
+            "t:3:1:0",
+            "t:7:1:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "2015 minimum rental payment 345M over total 3189M yields ratio"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "10.818438381937912",
+          "claimed": "10.818438381937912",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Convert ratio to percent by multiplying by 100"
+        }
+      ],
+      "findings": []
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "GS/2012/page_177.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.10818438381937912",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "0.108184383819379115710253998118532455",
+          "claimed": "0.10818438381937912",
+          "evidence_refs": [
+            "t:3:1:0",
+            "t:7:1:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "2015 minimum rental payment 345M over total 3189M yields ratio"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "10.818438381937912",
+          "claimed": "10.818438381937912",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Convert ratio to percent by multiplying by 100"
+        }
+      ],
+      "findings": [],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate correctly uses 2015 payment 345 (t:3:1:0) and total 3189 (t:7:1:0), divides and multiplies by 100 to compute percentage, matching question scope and arithmetic.",
+          "evidence_refs": [
+            "t:3:1:0",
+            "t:7:1:0"
+          ]
+        },
+        "elapsed_seconds": 14.901,
+        "usage": {
+          "prompt_tokens": 5815,
+          "completion_tokens": 1610,
+          "total_tokens": 7425,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1506
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-e6c3b6d8ad8f",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "2015 未来最低租金 345 与全部未来最低租金 3189 来自同表，s1 比例、s2 转百分数正确；没有使用历史租金费用作为分母。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:3:1:0",
+        "t:7:1:0"
+      ],
+      "confidence": "high",
+      "answer_correct": true,
+      "answer_reason": "345/3189×100≈10.8184383819379%，最终答案正确。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "INTC/2018/page_105.pdf-2",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:13:5:0",
+              "value": "-974"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:8:5:0",
+              "value": "-928"
+            }
+          ],
+          "result": "-46",
+          "explanation": "Net change in total AOCI = ending balance Dec 29 2018 (-974) minus opening balance Dec 31 2017 (-928) = -46 million."
+        }
+      ],
+      "final": {
+        "value": "-46",
+        "unit": "number"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "INTC/2018/page_105.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "-46",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "-46",
+          "claimed": "-46",
+          "evidence_refs": [
+            "t:13:5:0",
+            "t:8:5:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "Net change in total AOCI = ending balance Dec 29 2018 (-974) minus opening balance Dec 31 2017 (-928) = -46 million."
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "INTC/2018/page_105.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": false,
+      "normalized_answer": "-46",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "-46",
+          "claimed": "-46",
+          "evidence_refs": [
+            "t:13:5:0",
+            "t:8:5:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "Net change in total AOCI = ending balance Dec 29 2018 (-974) minus opening balance Dec 31 2017 (-928) = -46 million."
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate correctly uses ending AOCI Dec 29 2018 (t:13:5:0 = -974) and opening AOCI Dec 31 2017 (t:8:5:0 = -928) to compute net change during 2018 as -46, which matches the 2018 total OCI row. Evidence meaning, year/scope, and arithmetic are valid.",
+          "evidence_refs": [
+            "t:13:5:0",
+            "t:8:5:0"
+          ]
+        },
+        "elapsed_seconds": 29.096,
+        "usage": {
+          "prompt_tokens": 9257,
+          "completion_tokens": 3028,
+          "total_tokens": 12285,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2890
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-b82dd1c70f78",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "候选明确采用调整后 opening balance as of Dec 31 2017 的 -928，与 Dec 29 2018 的 -974 比较，净变化 -46，表中 2018 other comprehensive income 总计也为 -46。该口径回答调整后期初到期末期间变化，支持 during 2018。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:13:5:0",
+        "t:8:5:0"
+      ],
+      "confidence": "medium",
+      "answer_correct": true,
+      "answer_reason": "-46 百万美元在已说明的调整后期初口径下正确；若从未调整 2017 年末 862 比较，则含会计准则变更 -1790 的总差为 -1836。两种口径不能混同，本审接受明确且有表格交叉支持的当期口径，建议真人确认最终任务定义。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "IQV/2018/page_106.pdf-1",
+    "split": "dev",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:0:0",
+              "value": "8"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:1:0",
+              "value": "14"
+            }
+          ],
+          "result": "22",
+          "explanation": "Sum of $8 million expected decrease (federal, state, foreign exposure items) and $14 million expected decrease (foreign items payments) within next 12 months."
+        }
+      ],
+      "final": {
+        "value": "22",
+        "unit": "number"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "IQV/2018/page_106.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "22",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "22",
+          "claimed": "22",
+          "evidence_refs": [
+            "x:0:0",
+            "x:1:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Sum of $8 million expected decrease (federal, state, foreign exposure items) and $14 million expected decrease (foreign items payments) within next 12 months."
+        }
+      ],
+      "findings": []
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "IQV/2018/page_106.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "22",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "22",
+          "claimed": "22",
+          "evidence_refs": [
+            "x:0:0",
+            "x:1:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Sum of $8 million expected decrease (federal, state, foreign exposure items) and $14 million expected decrease (foreign items payments) within next 12 months."
+        }
+      ],
+      "findings": [],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate correctly adds evidence x:0:0 ($8M) and x:1:0 ($14M) for next-12-month decreases in gross unrecognized tax benefits, matching reference formula and result.",
+          "evidence_refs": [
+            "x:0:0",
+            "x:1:0"
+          ]
+        },
+        "elapsed_seconds": 12.01,
+        "usage": {
+          "prompt_tokens": 2080,
+          "completion_tokens": 1244,
+          "total_tokens": 3324,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1149
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-0f8cdc11f48d",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "texts[0] 因到期/和解最多可能下降 8 百万美元，texts[1] 因支付最多可能下降 14 百万美元，s1 相加为 22。两项原因不同，没有将同一笔重复相加。题面 expected 的合理读取是已披露的可能下降额合计。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "x:0:0",
+        "x:1:0"
+      ],
+      "confidence": "medium",
+      "answer_correct": true,
+      "answer_reason": "22 百万美元可作为两项 up to 金额的合计上限；不是概率加权期望或保证发生的实际下降额，复核按这个边界接受。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "JPM/2009/page_183.pdf-3",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:4:2",
+              "value": "16.9"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:4:3",
+              "value": "5.8"
+            }
+          ],
+          "result": "2.913793103448275862",
+          "explanation": "Ratio of additional collateral received (16.9) to delivered (5.8) at Dec 31 2009"
+        }
+      ],
+      "final": {
+        "value": "2.913793103448275862",
+        "unit": "ratio"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "JPM/2009/page_183.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "2.913793103448275862",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "2.91379310344827586206896551724137931",
+          "claimed": "2.913793103448275862",
+          "evidence_refs": [
+            "x:4:2",
+            "x:4:3"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Ratio of additional collateral received (16.9) to delivered (5.8) at Dec 31 2009"
+        }
+      ],
+      "findings": []
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "JPM/2009/page_183.pdf-3",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "2.913793103448275862",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "2.91379310344827586206896551724137931",
+          "claimed": "2.913793103448275862",
+          "evidence_refs": [
+            "x:4:2",
+            "x:4:3"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Ratio of additional collateral received (16.9) to delivered (5.8) at Dec 31 2009"
+        }
+      ],
+      "findings": [],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate divides additional collateral received (x:4:2=16.9) by delivered (x:4:3=5.8) at Dec 31 2009, matching reference valid formula and evidence semantics; truncated final precision is not a process error.",
+          "evidence_refs": [
+            "x:4:2",
+            "x:4:3"
+          ]
+        },
+        "elapsed_seconds": 21.572,
+        "usage": {
+          "prompt_tokens": 4711,
+          "completion_tokens": 2231,
+          "total_tokens": 6942,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2124
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-37a9fb5cdc78",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "texts[4] 明确收到额外抵押品 16.9、交付 5.8 十亿美元。候选说明 received-to-delivered，s1 相除符合该解释。英文题目残缺，按相邻两项的自然对比解读，未使用表格中已经净额结算的另一组抵押品。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "x:4:2",
+        "x:4:3"
+      ],
+      "confidence": "medium",
+      "answer_correct": true,
+      "answer_reason": "16.9/5.8≈2.913793103448，即收到额约为交付额 2.914 倍，最终 ratio 正确；解释前提为收到/交付。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "MRO/2013/page_23.pdf-4",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:7:1:0",
+              "value": "627"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:0:1:0",
+              "value": "571"
+            }
+          ],
+          "result": "56",
+          "explanation": "End of year proved undeveloped reserves minus beginning of year"
+        }
+      ],
+      "final": {
+        "value": "56",
+        "unit": "number"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "MRO/2013/page_23.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "56",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "56",
+          "claimed": "56",
+          "evidence_refs": [
+            "t:7:1:0",
+            "t:0:1:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "End of year proved undeveloped reserves minus beginning of year"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "MRO/2013/page_23.pdf-4",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": false,
+      "normalized_answer": "56",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "56",
+          "claimed": "56",
+          "evidence_refs": [
+            "t:7:1:0",
+            "t:0:1:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "End of year proved undeveloped reserves minus beginning of year"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate subtracts end-of-year proved undeveloped reserves (627) from beginning-of-year (571) to compute increase of 56, consistent with table and text stating increase of 56 mmboe.",
+          "evidence_refs": [
+            "t:7:1:0",
+            "t:0:1:0",
+            "x:0:3"
+          ]
+        },
+        "elapsed_seconds": 11.563,
+        "usage": {
+          "prompt_tokens": 6484,
+          "completion_tokens": 1216,
+          "total_tokens": 7700,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1110
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-78e57653f674",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "年末 627 减年初 571 为 56；正文 texts[0] 直接确认增加 56 MMboe，texts[1] 标注表的单位。题目 by how much 没有要求百分率，求绝对增量是直接回答。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:0:1:0",
+        "t:7:1:0"
+      ],
+      "confidence": "high",
+      "answer_correct": true,
+      "answer_reason": "最终 56 的单位沿用材料，为 MMboe；不是要求一定改写为 56/571 的增长率。"
+    },
+    "reference_disputed": true
+  },
+  {
+    "problem_id": "MSI/2008/page_73.pdf-2",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:6:3",
+              "value": "3.2"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:6:0",
+              "value": "2.6"
+            }
+          ],
+          "result": "0.6",
+          "explanation": "Backlog 2006 minus backlog 2007 gives reduction amount in billions."
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:6:3",
+              "value": "3.2"
+            }
+          ],
+          "result": "0.1875",
+          "explanation": "Reduction divided by 2006 backlog yields ratio."
+        },
+        {
+          "id": "s3",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "18.75",
+          "explanation": "Convert ratio to percent."
+        }
+      ],
+      "final": {
+        "value": "18.75",
+        "unit": "percent"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "MSI/2008/page_73.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "0.1875",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "0.6",
+          "claimed": "0.6",
+          "evidence_refs": [
+            "x:6:3",
+            "x:6:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "Backlog 2006 minus backlog 2007 gives reduction amount in billions."
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.1875",
+          "claimed": "0.1875",
+          "evidence_refs": [
+            "x:6:3"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Reduction divided by 2006 backlog yields ratio."
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "18.75",
+          "claimed": "18.75",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Convert ratio to percent."
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "MSI/2008/page_73.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": false,
+      "normalized_answer": "0.1875",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "0.6",
+          "claimed": "0.6",
+          "evidence_refs": [
+            "x:6:3",
+            "x:6:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "Backlog 2006 minus backlog 2007 gives reduction amount in billions."
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.1875",
+          "claimed": "0.1875",
+          "evidence_refs": [
+            "x:6:3"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Reduction divided by 2006 backlog yields ratio."
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "18.75",
+          "claimed": "18.75",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Convert ratio to percent."
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate correctly uses backlog 2006=3.2 (x:6:3) and 2007=2.6 (x:6:0), computes reduction (3.2-2.6)/3.2=0.1875 and converts to 18.75%, equivalent to reference negative ratio.",
+          "evidence_refs": [
+            "x:6:0",
+            "x:6:3"
+          ]
+        },
+        "elapsed_seconds": 11.228,
+        "usage": {
+          "prompt_tokens": 9606,
+          "completion_tokens": 1247,
+          "total_tokens": 10853,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1128
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-1a444d958a20",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "texts[6] 2006/2007 backlog 为 3.2/2.6 十亿美元。为回答 reduction，s1 旧减新得到正减少额 0.6，s2 以旧值 3.2 为基期，s3 转百分数，符号符合题目。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "x:6:0",
+        "x:6:3"
+      ],
+      "confidence": "high",
+      "answer_correct": true,
+      "answer_reason": "(3.2-2.6)/3.2×100=18.75%，表示减少 18.75%；无需强制用负的增长率。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "PNC/2013/page_205.pdf-1",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:25:3",
+              "value": "63"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:25:4",
+              "value": "55"
+            }
+          ],
+          "result": "118",
+          "explanation": "Sum of 2013 ($63M) and 2012 ($55M) total fair value vested per text_25."
+        }
+      ],
+      "final": {
+        "value": "118",
+        "unit": "number"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "PNC/2013/page_205.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "118",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "118",
+          "claimed": "118",
+          "evidence_refs": [
+            "x:25:3",
+            "x:25:4"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Sum of 2013 ($63M) and 2012 ($55M) total fair value vested per text_25."
+        }
+      ],
+      "findings": []
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "PNC/2013/page_205.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "118",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "118",
+          "claimed": "118",
+          "evidence_refs": [
+            "x:25:3",
+            "x:25:4"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Sum of 2013 ($63M) and 2012 ($55M) total fair value vested per text_25."
+        }
+      ],
+      "findings": [],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate correctly sums text_25 values for 2013 ($63M) and 2012 ($55M) total fair value vested, yielding 118 million, matching reference.",
+          "evidence_refs": [
+            "x:25:3",
+            "x:25:4"
+          ]
+        },
+        "elapsed_seconds": 10.691,
+        "usage": {
+          "prompt_tokens": 10137,
+          "completion_tokens": 1015,
+          "total_tokens": 11152,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 927
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-3eb689f42043",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "texts[25] 分别列出 2013、2012、2011 的已归属奖励公允价值 63、55、52 百万美元。s1 只相加题目指定的前两年，没有使用未归属表内授予日均值替代已归属公允价值。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "x:25:3",
+        "x:25:4"
+      ],
+      "confidence": "high",
+      "answer_correct": true,
+      "answer_reason": "63+55=118 百万美元，最终答案正确。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "PPG/2006/page_22.pdf-1",
+    "split": "dev",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:4:0",
+              "value": "0.04"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "2921"
+            }
+          ],
+          "result": "116.84",
+          "explanation": "Industrial coatings volume impact: 4% (0.04) of 2005 net sales 2921 million = 116.84 million."
+        }
+      ],
+      "final": {
+        "value": "116.84",
+        "unit": "number"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "PPG/2006/page_22.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "116.84",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "116.84",
+          "claimed": "116.84",
+          "evidence_refs": [
+            "x:4:0",
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Industrial coatings volume impact: 4% (0.04) of 2005 net sales 2921 million = 116.84 million."
+        }
+      ],
+      "findings": []
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "PPG/2006/page_22.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "116.84",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "116.84",
+          "claimed": "116.84",
+          "evidence_refs": [
+            "x:4:0",
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Industrial coatings volume impact: 4% (0.04) of 2005 net sales 2921 million = 116.84 million."
+        }
+      ],
+      "findings": [],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate multiplies 2005 industrial coatings net sales (2921, t:1:2:0) by 4% (0.04, x:4:0) to get 116.84 million, matching reference. The percentage value 0.04 corresponds to the volume contribution (second 4% in text_4) and equals the referenced first 4% value; scope, year, and metric are consistent with the question.",
+          "evidence_refs": [
+            "t:1:2:0",
+            "x:4:0"
+          ]
+        },
+        "elapsed_seconds": 29.963,
+        "usage": {
+          "prompt_tokens": 9202,
+          "completion_tokens": 3418,
+          "total_tokens": 12620,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3272
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-037c5c35a3a5",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "uncertain",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "候选明确取 2005 工业涂料销售 2921 百万美元，乘正文说明的 volume 贡献 4%，题意关系和数值正确。但 x:4:0 的 span 指向同一句 acquisitions 的第一个 4%，而 volume 的第二个 4% 没有独立 ref。整句证据支持该数值，精确指标定位仍有歧义，不能把 acquisition 引用直接等同于 volume 引用。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:1:2:0",
+        "x:4:0"
+      ],
+      "confidence": "medium",
+      "answer_correct": true,
+      "answer_reason": "正文明确销量增加贡献 4%，2005 基数 2921×0.04=116.84 百万美元，最终数值正确。"
+    },
+    "reference_disputed": true
+  },
+  {
+    "problem_id": "PPG/2010/page_45.pdf-2",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:54:3",
+              "value": "189"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:54:4",
+              "value": "201"
+            }
+          ],
+          "result": "-12",
+          "explanation": "Absolute change in interest payments from 2009 to 2010 (2010 minus 2009)"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:54:4",
+              "value": "201"
+            }
+          ],
+          "result": "-0.05970149253731343",
+          "explanation": "Rate of change = change / 2009 interest payments"
+        },
+        {
+          "id": "s3",
+          "op": "add",
+          "args": [
+            {
+              "kind": "constant",
+              "value": "1"
+            },
+            {
+              "kind": "step",
+              "ref": "s2"
+            }
+          ],
+          "result": "0.9402985074626866",
+          "explanation": "Growth factor = 1 + rate of change"
+        },
+        {
+          "id": "s4",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:54:3",
+              "value": "189"
+            },
+            {
+              "kind": "step",
+              "ref": "s3"
+            }
+          ],
+          "result": "177.71641791044776",
+          "explanation": "Estimated 2011 interest payments = 2010 amount times growth factor"
+        }
+      ],
+      "final": {
+        "value": "177.71641791044776",
+        "unit": "number"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "PPG/2010/page_45.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "177.71641791044776",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "-12",
+          "claimed": "-12",
+          "evidence_refs": [
+            "x:54:3",
+            "x:54:4"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "Absolute change in interest payments from 2009 to 2010 (2010 minus 2009)"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "-0.0597014925373134328358208955223880597",
+          "claimed": "-0.05970149253731343",
+          "evidence_refs": [
+            "x:54:4"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Rate of change = change / 2009 interest payments"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "0.94029850746268657",
+          "claimed": "0.9402985074626866",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Growth factor = 1 + rate of change"
+        },
+        {
+          "id": "s4",
+          "position": 4,
+          "status": "correct",
+          "computed": "177.7164179104477674",
+          "claimed": "177.71641791044776",
+          "evidence_refs": [
+            "x:54:3"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Estimated 2011 interest payments = 2010 amount times growth factor"
+        }
+      ],
+      "findings": []
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "PPG/2010/page_45.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "177.71641791044776",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "-12",
+          "claimed": "-12",
+          "evidence_refs": [
+            "x:54:3",
+            "x:54:4"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "Absolute change in interest payments from 2009 to 2010 (2010 minus 2009)"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "-0.0597014925373134328358208955223880597",
+          "claimed": "-0.05970149253731343",
+          "evidence_refs": [
+            "x:54:4"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Rate of change = change / 2009 interest payments"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "0.94029850746268657",
+          "claimed": "0.9402985074626866",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Growth factor = 1 + rate of change"
+        },
+        {
+          "id": "s4",
+          "position": 4,
+          "status": "correct",
+          "computed": "177.7164179104477674",
+          "claimed": "177.71641791044776",
+          "evidence_refs": [
+            "x:54:3"
+          ],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Estimated 2011 interest payments = 2010 amount times growth factor"
+        }
+      ],
+      "findings": [],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate uses 2010 and 2009 interest payments (189, 201 from x:54:3, x:54:4) to compute rate of change and growth factor, then applies to 2010; mathematically equivalent to reference's direct ratio method, final value matches within precision.",
+          "evidence_refs": [
+            "x:54:3",
+            "x:54:4"
+          ]
+        },
+        "elapsed_seconds": 8.726,
+        "usage": {
+          "prompt_tokens": 19018,
+          "completion_tokens": 1317,
+          "total_tokens": 20335,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1205
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-c45b88788165",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "texts[54] 2010/2009 利息支付 189/201。s1 得变动 -12，s2 得同比 -12/201，s3 加 1 得增长因子，s4 乘 2010 金额 189，符合延续同一变化率的预测。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "x:54:3",
+        "x:54:4"
+      ],
+      "confidence": "high",
+      "answer_correct": true,
+      "answer_reason": "189×(189/201)=177.716417910448 百万美元，最终数值在有限小数舍入范围内一致；多步代数写法合理。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "RCL/2016/page_37.pdf-2",
+    "split": "dev",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:2:6:0",
+              "value": "198.18"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:2:1:0",
+              "value": "100"
+            }
+          ],
+          "result": "98.18",
+          "explanation": "S&P 500 2016 value minus 2011 base value"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:2:1:0",
+              "value": "100"
+            }
+          ],
+          "result": "0.9818",
+          "explanation": "Increase relative to 2011 base"
+        },
+        {
+          "id": "s3",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "98.18",
+          "explanation": "Convert ratio to percent display"
+        }
+      ],
+      "final": {
+        "value": "98.18",
+        "unit": "percent"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "RCL/2016/page_37.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": true,
+      "normalized_answer": "0.9818",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "98.18",
+          "claimed": "98.18",
+          "evidence_refs": [
+            "t:2:6:0",
+            "t:2:1:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "S&P 500 2016 value minus 2011 base value"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.9818",
+          "claimed": "0.9818",
+          "evidence_refs": [
+            "t:2:1:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Increase relative to 2011 base"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "98.18",
+          "claimed": "98.18",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Convert ratio to percent display"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "RCL/2016/page_37.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.9818",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "98.18",
+          "claimed": "98.18",
+          "evidence_refs": [
+            "t:2:6:0",
+            "t:2:1:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "S&P 500 2016 value minus 2011 base value"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0.9818",
+          "claimed": "0.9818",
+          "evidence_refs": [
+            "t:2:1:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Increase relative to 2011 base"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "98.18",
+          "claimed": "98.18",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Convert ratio to percent display"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate correctly uses S&P 500 2016 value (t:2:6:0=198.18) and 2011 base (t:2:1:0=100) to compute increase (98.18), divide by base, multiply by 100, yielding 98.18% matching valid percentage-increase formula.",
+          "evidence_refs": [
+            "t:2:6:0",
+            "t:2:1:0"
+          ]
+        },
+        "elapsed_seconds": 12.106,
+        "usage": {
+          "prompt_tokens": 3861,
+          "completion_tokens": 1322,
+          "total_tokens": 5183,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1197
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-af8acca131b7",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "S&P 500 行 2011 基数 100、2016 为 198.18。s1 减去基数，s2 除原基数，s3 转百分数，表格取数没有混入公司或旅行休闲指数。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:2:1:0",
+        "t:2:6:0"
+      ],
+      "confidence": "high",
+      "answer_correct": true,
+      "answer_reason": "(198.18-100)/100×100=98.18%，最终答案正确。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "UNP/2008/page_83.pdf-1",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:1:0",
+              "value": "657"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "188"
+            }
+          ],
+          "result": "845",
+          "explanation": "2009 operating + capital lease payments"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:7:1:0",
+              "value": "5909"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:7:2:0",
+              "value": "1898"
+            }
+          ],
+          "result": "7807",
+          "explanation": "Total minimum lease payments operating + capital"
+        },
+        {
+          "id": "s3",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "step",
+              "ref": "s2"
+            }
+          ],
+          "result": "0.10823619828359165",
+          "explanation": "Ratio of 2009 payments to total"
+        },
+        {
+          "id": "s4",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s3"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "10.823619828359165",
+          "explanation": "Convert ratio to percent"
+        }
+      ],
+      "final": {
+        "value": "10.823619828359165",
+        "unit": "percent"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "UNP/2008/page_83.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.10823619828359165",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "845",
+          "claimed": "845",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "2009 operating + capital lease payments"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "7807",
+          "claimed": "7807",
+          "evidence_refs": [
+            "t:7:1:0",
+            "t:7:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Total minimum lease payments operating + capital"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "0.108236198283591648520558473165108236",
+          "claimed": "0.10823619828359165",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Ratio of 2009 payments to total"
+        },
+        {
+          "id": "s4",
+          "position": 4,
+          "status": "correct",
+          "computed": "10.823619828359165",
+          "claimed": "10.823619828359165",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Convert ratio to percent"
+        }
+      ],
+      "findings": []
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "UNP/2008/page_83.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0.10823619828359165",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "845",
+          "claimed": "845",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "2009 operating + capital lease payments"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "7807",
+          "claimed": "7807",
+          "evidence_refs": [
+            "t:7:1:0",
+            "t:7:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Total minimum lease payments operating + capital"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "0.108236198283591648520558473165108236",
+          "claimed": "0.10823619828359165",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Ratio of 2009 payments to total"
+        },
+        {
+          "id": "s4",
+          "position": 4,
+          "status": "correct",
+          "computed": "10.823619828359165",
+          "claimed": "10.823619828359165",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Convert ratio to percent"
+        }
+      ],
+      "findings": [],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate sums 2009 operating (657) and capital (188) lease payments from table rows, sums total operating (5909) and capital (1898) from total row, divides to get ratio, and converts to percent; evidence matches scope (as of Dec 31 2008 future minimum lease payments) and aligns with reference equivalently.",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0",
+            "t:7:1:0",
+            "t:7:2:0"
+          ]
+        },
+        "elapsed_seconds": 12.047,
+        "usage": {
+          "prompt_tokens": 5449,
+          "completion_tokens": 1601,
+          "total_tokens": 7050,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1457
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-c55cc34746e7",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "2009 经营与资本租赁最低付款相加 657+188=845，全部最低付款 5909+1898=7807，s3 比例、s4 百分换算正确。分母没有混用扣除利息后的资本租赁现值。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:1:1:0",
+        "t:1:2:0",
+        "t:7:1:0",
+        "t:7:2:0"
+      ],
+      "confidence": "high",
+      "answer_correct": true,
+      "answer_reason": "845/7807×100≈10.8236198283592%，最终答案正确。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "UNP/2010/page_55.pdf-1",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "add",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:1:1:0",
+              "value": "3018"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:2:0",
+              "value": "2666"
+            }
+          ],
+          "result": "5684",
+          "explanation": "Sum 2010 and 2009 agricultural revenues"
+        },
+        {
+          "id": "s2",
+          "op": "add",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:1:3:0",
+              "value": "3174"
+            }
+          ],
+          "result": "8858",
+          "explanation": "Add 2008 agricultural revenue to get total"
+        },
+        {
+          "id": "s3",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "3"
+            }
+          ],
+          "result": "2952.66666666666666666667",
+          "explanation": "Divide total by 3 years for average"
+        }
+      ],
+      "final": {
+        "value": "2952.66666666666666666667",
+        "unit": "number"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "UNP/2010/page_55.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "2952.66666666666666666667",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "5684",
+          "claimed": "5684",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Sum 2010 and 2009 agricultural revenues"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "8858",
+          "claimed": "8858",
+          "evidence_refs": [
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Add 2008 agricultural revenue to get total"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "2952.66666666666666666666666666666667",
+          "claimed": "2952.66666666666666666667",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Divide total by 3 years for average"
+        }
+      ],
+      "findings": []
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "UNP/2010/page_55.pdf-1",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "2952.66666666666666666667",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "5684",
+          "claimed": "5684",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Sum 2010 and 2009 agricultural revenues"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "8858",
+          "claimed": "8858",
+          "evidence_refs": [
+            "t:1:3:0"
+          ],
+          "affected_by": [],
+          "op": "add",
+          "explanation": "Add 2008 agricultural revenue to get total"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "2952.66666666666666666666666666666667",
+          "claimed": "2952.66666666666666666667",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Divide total by 3 years for average"
+        }
+      ],
+      "findings": [],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate steps s1-s3 correctly sum agricultural revenues for 2010, 2009, 2008 from table evidence t:1:1:0, t:1:2:0, t:1:3:0 and divide by 3 to compute the average, matching reference logic and values.",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0",
+            "t:1:3:0"
+          ]
+        },
+        "elapsed_seconds": 11.938,
+        "usage": {
+          "prompt_tokens": 5030,
+          "completion_tokens": 1606,
+          "total_tokens": 6636,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1475
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-b6aaef73d21f",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "农业一行对应 2010/2009/2008 收入 3018/2666/3174 百万美元。s1=5684，s2=8858，s3 除三年数，步骤和依赖均正确。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:1:1:0",
+        "t:1:2:0",
+        "t:1:3:0"
+      ],
+      "confidence": "high",
+      "answer_correct": true,
+      "answer_reason": "8858/3≈2952.6666666667 百万美元，与最终答案的循环小数显示一致。"
+    },
+    "reference_disputed": false
+  },
+  {
+    "problem_id": "UNP/2013/page_25.pdf-2",
+    "split": "test",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "x:21:0",
+              "value": "2.6"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:21:0",
+              "value": "2.6"
+            }
+          ],
+          "result": "0",
+          "explanation": "Fuel surcharge revenues 2013 (2.6) minus 2012 (2.6) from text listing $2.6B for both years respectively."
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "x:21:0",
+              "value": "2.6"
+            }
+          ],
+          "result": "0",
+          "explanation": "Change divided by 2012 base 2.6 yields ratio 0."
+        },
+        {
+          "id": "s3",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "0",
+          "explanation": "Multiply ratio by 100 to get percent display 0."
+        }
+      ],
+      "final": {
+        "value": "0",
+        "unit": "percent"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "UNP/2013/page_25.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "0",
+          "claimed": "0",
+          "evidence_refs": [
+            "x:21:0",
+            "x:21:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "Fuel surcharge revenues 2013 (2.6) minus 2012 (2.6) from text listing $2.6B for both years respectively."
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0",
+          "claimed": "0",
+          "evidence_refs": [
+            "x:21:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Change divided by 2012 base 2.6 yields ratio 0."
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "0",
+          "claimed": "0",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Multiply ratio by 100 to get percent display 0."
+        }
+      ],
+      "findings": []
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "UNP/2013/page_25.pdf-2",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": true,
+      "normalized_answer": "0",
+      "reference_equivalent": true,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "0",
+          "claimed": "0",
+          "evidence_refs": [
+            "x:21:0",
+            "x:21:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "Fuel surcharge revenues 2013 (2.6) minus 2012 (2.6) from text listing $2.6B for both years respectively."
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "0",
+          "claimed": "0",
+          "evidence_refs": [
+            "x:21:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "Change divided by 2012 base 2.6 yields ratio 0."
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "0",
+          "claimed": "0",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "Multiply ratio by 100 to get percent display 0."
+        }
+      ],
+      "findings": [],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate computes (2.6-2.6)/2.6*100=0% using fuel surcharge revenues of $2.6B for both 2013 and 2012 from text evidence x:21:0 (mirrors reference). Text states amounts respectively, supporting zero percentage change.",
+          "evidence_refs": [
+            "x:21:0",
+            "x:21:2",
+            "x:21:3"
+          ]
+        },
+        "elapsed_seconds": 24.499,
+        "usage": {
+          "prompt_tokens": 6327,
+          "completion_tokens": 2945,
+          "total_tokens": 9272,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2822
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-62ed04899d92",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "uncertain",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "texts[21] 以 respectively 明确 2013 与 2012 都为 2.6 十亿美元。候选解释明确两年，s1 相减为 0、s2/s3 换算均正确。但 packet 的 x:21:0 span 只指向第一个 2.6，两个年份重复数值被合并，不能在 ref 层面独立确认第二个取数位置。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "x:21:0"
+      ],
+      "confidence": "medium",
+      "answer_correct": true,
+      "answer_reason": "(2.6-2.6)/2.6×100=0%，整句充分支持最终答案；过程不确定仅针对精确引用粒度。"
+    },
+    "reference_disputed": true
+  },
+  {
+    "problem_id": "WRK/2018/page_39.pdf-5",
+    "split": "dev",
+    "status": "complete",
+    "trace": {
+      "steps": [
+        {
+          "id": "s1",
+          "op": "subtract",
+          "args": [
+            {
+              "kind": "evidence",
+              "ref": "t:2:2:0",
+              "value": "1193.5"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:2:3:0",
+              "value": "1226.2"
+            }
+          ],
+          "result": "-32.7",
+          "explanation": "2017 segment income minus 2016 segment income"
+        },
+        {
+          "id": "s2",
+          "op": "divide",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s1"
+            },
+            {
+              "kind": "evidence",
+              "ref": "t:2:3:0",
+              "value": "1226.2"
+            }
+          ],
+          "result": "-0.0266677540368618",
+          "explanation": "difference divided by 2016 base"
+        },
+        {
+          "id": "s3",
+          "op": "multiply",
+          "args": [
+            {
+              "kind": "step",
+              "ref": "s2"
+            },
+            {
+              "kind": "constant",
+              "value": "100"
+            }
+          ],
+          "result": "-2.66677540368618",
+          "explanation": "multiply by 100 for percent"
+        }
+      ],
+      "final": {
+        "value": "-2.66677540368618",
+        "unit": "percent"
+      }
+    },
+    "rules": {
+      "version": "fintrace-rules-0.3",
+      "mode": "deterministic",
+      "problem_id": "WRK/2018/page_39.pdf-5",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "uncertain",
+      "answer_correct": false,
+      "normalized_answer": "-0.0266677540368618",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "-32.7",
+          "claimed": "-32.7",
+          "evidence_refs": [
+            "t:2:2:0",
+            "t:2:3:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "2017 segment income minus 2016 segment income"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "-0.0266677540368618496167020061980101125",
+          "claimed": "-0.0266677540368618",
+          "evidence_refs": [
+            "t:2:3:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "difference divided by 2016 base"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "-2.66677540368618",
+          "claimed": "-2.66677540368618",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "multiply by 100 for percent"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ]
+    },
+    "evaluation": {
+      "version": "fintrace-rules-0.3",
+      "mode": "hybrid",
+      "problem_id": "WRK/2018/page_39.pdf-5",
+      "scope": "结构化证据与计算；自然语言解释未由规则证明",
+      "process": "correct",
+      "answer_correct": false,
+      "normalized_answer": "-0.0266677540368618",
+      "reference_equivalent": false,
+      "first_error": null,
+      "localization": "none",
+      "correct_answer_invalid_process": false,
+      "steps": [
+        {
+          "id": "s1",
+          "position": 1,
+          "status": "correct",
+          "computed": "-32.7",
+          "claimed": "-32.7",
+          "evidence_refs": [
+            "t:2:2:0",
+            "t:2:3:0"
+          ],
+          "affected_by": [],
+          "op": "subtract",
+          "explanation": "2017 segment income minus 2016 segment income"
+        },
+        {
+          "id": "s2",
+          "position": 2,
+          "status": "correct",
+          "computed": "-0.0266677540368618496167020061980101125",
+          "claimed": "-0.0266677540368618",
+          "evidence_refs": [
+            "t:2:3:0"
+          ],
+          "affected_by": [],
+          "op": "divide",
+          "explanation": "difference divided by 2016 base"
+        },
+        {
+          "id": "s3",
+          "position": 3,
+          "status": "correct",
+          "computed": "-2.66677540368618",
+          "claimed": "-2.66677540368618",
+          "evidence_refs": [],
+          "affected_by": [],
+          "op": "multiply",
+          "explanation": "multiply by 100 for percent"
+        }
+      ],
+      "findings": [
+        {
+          "step": null,
+          "type": "semantic_unverified",
+          "status": "uncertain",
+          "message": "尚未证明候选公式与标准证据计算等价；差异本身不作为错误结论",
+          "evidence": {}
+        }
+      ],
+      "semantic": {
+        "status": "complete",
+        "output": {
+          "process": "correct",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "Candidate correctly selected segment income for 2017 (t:2:2:0=1193.5) and 2016 (t:2:3:0=1226.2), computed difference (-32.7), divided by 2016 base, and multiplied by 100, yielding valid percentage change from 2016 to 2017.",
+          "evidence_refs": [
+            "t:2:2:0",
+            "t:2:3:0"
+          ]
+        },
+        "elapsed_seconds": 12.097,
+        "usage": {
+          "prompt_tokens": 7130,
+          "completion_tokens": 1528,
+          "total_tokens": 8658,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1397
+          }
+        },
+        "attempts": 1
+      }
+    },
+    "ai_review": {
+      "review_id": "live-13c19ca260f0",
+      "reviewer_type": "ai",
+      "review_phase": "phase_2_live",
+      "prior_exposure": "same reviewer previously reviewed controlled candidates for these questions",
+      "process": "correct",
+      "first_error_step": null,
+      "error_type": null,
+      "reason": "表头将 1193.5 对应 2017、1226.2 对应 2016；s1 差额 -32.7，s2 除 2016 基数，s3 转百分数。没有误用 2018 年的 1685。题目称 increase 并不要求强行输出正值。 已独立逐步核对引用值、四则计算、先后依赖及最后值一致性；有限小数按报告所列实用显示容差判断。",
+      "evidence_refs": [
+        "t:2:2:0",
+        "t:2:3:0"
+      ],
+      "confidence": "high",
+      "answer_correct": true,
+      "answer_reason": "(1193.5-1226.2)/1226.2×100≈-2.666775403686%，等价于下降约 2.67%，最终答案正确。"
+    },
+    "reference_disputed": true
+  }
+]

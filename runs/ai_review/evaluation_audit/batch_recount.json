@@ -1,0 +1,1117 @@
+{
+  "review_type": "independent_ai_recount_not_human",
+  "batch": "D:\\Users\\Desktop\\犀牛鸟\\hy3-fintrace\\runs\\live\\batch-v1",
+  "checks": {
+    "manifest_fingerprint": true,
+    "row_count_144": true,
+    "unique_kind_ids": true,
+    "base_cases_present": true,
+    "source_hashes_match": true,
+    "frozen_labels_preserved": true,
+    "ai_review_exact_coverage": true,
+    "generation_ai_review_exact_coverage": true,
+    "repeats_twelve_groups_of_three": true,
+    "balanced_repeat_variants": true,
+    "published_controlled": true,
+    "published_reference_screened_controlled": true,
+    "published_ai_provisional_controlled": true,
+    "published_generation": true,
+    "published_generation_ai_review": true,
+    "published_stability": true,
+    "published_status": true,
+    "published_errors": true,
+    "published_response_count": true
+  },
+  "kinds": {
+    "controlled": 90,
+    "generation": 30,
+    "repeat1": 12,
+    "repeat2": 12
+  },
+  "statuses": {
+    "request_failed": 44,
+    "complete": 100
+  },
+  "controlled": {
+    "rules": {
+      "all": {
+        "count": 90,
+        "detection": {
+          "numerator": 45,
+          "denominator": 60,
+          "rate": 0.75
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 30,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 45,
+          "denominator": 60,
+          "rate": 0.75
+        },
+        "error_type": {
+          "numerator": 45,
+          "denominator": 60,
+          "rate": 0.75
+        },
+        "cair_recall": {
+          "numerator": 25,
+          "denominator": 25,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 15,
+          "denominator": 90,
+          "rate": 0.166667
+        }
+      },
+      "dev": {
+        "count": 30,
+        "detection": {
+          "numerator": 14,
+          "denominator": 20,
+          "rate": 0.7
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 10,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 14,
+          "denominator": 20,
+          "rate": 0.7
+        },
+        "error_type": {
+          "numerator": 14,
+          "denominator": 20,
+          "rate": 0.7
+        },
+        "cair_recall": {
+          "numerator": 7,
+          "denominator": 7,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 6,
+          "denominator": 30,
+          "rate": 0.2
+        }
+      },
+      "test": {
+        "count": 60,
+        "detection": {
+          "numerator": 31,
+          "denominator": 40,
+          "rate": 0.775
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 20,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 31,
+          "denominator": 40,
+          "rate": 0.775
+        },
+        "error_type": {
+          "numerator": 31,
+          "denominator": 40,
+          "rate": 0.775
+        },
+        "cair_recall": {
+          "numerator": 18,
+          "denominator": 18,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 9,
+          "denominator": 60,
+          "rate": 0.15
+        }
+      }
+    },
+    "judge": {
+      "all": {
+        "count": 90,
+        "detection": {
+          "numerator": 45,
+          "denominator": 60,
+          "rate": 0.75
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 30,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 45,
+          "denominator": 60,
+          "rate": 0.75
+        },
+        "error_type": {
+          "numerator": 45,
+          "denominator": 60,
+          "rate": 0.75
+        },
+        "cair_recall": {
+          "numerator": 18,
+          "denominator": 25,
+          "rate": 0.72
+        },
+        "uncertain": {
+          "numerator": 21,
+          "denominator": 90,
+          "rate": 0.233333
+        }
+      },
+      "dev": {
+        "count": 30,
+        "detection": {
+          "numerator": 20,
+          "denominator": 20,
+          "rate": 1.0
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 10,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 20,
+          "denominator": 20,
+          "rate": 1.0
+        },
+        "error_type": {
+          "numerator": 20,
+          "denominator": 20,
+          "rate": 1.0
+        },
+        "cair_recall": {
+          "numerator": 7,
+          "denominator": 7,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 0,
+          "denominator": 30,
+          "rate": 0.0
+        }
+      },
+      "test": {
+        "count": 60,
+        "detection": {
+          "numerator": 25,
+          "denominator": 40,
+          "rate": 0.625
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 20,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 25,
+          "denominator": 40,
+          "rate": 0.625
+        },
+        "error_type": {
+          "numerator": 25,
+          "denominator": 40,
+          "rate": 0.625
+        },
+        "cair_recall": {
+          "numerator": 11,
+          "denominator": 18,
+          "rate": 0.611111
+        },
+        "uncertain": {
+          "numerator": 21,
+          "denominator": 60,
+          "rate": 0.35
+        }
+      }
+    },
+    "hybrid": {
+      "all": {
+        "count": 90,
+        "detection": {
+          "numerator": 57,
+          "denominator": 60,
+          "rate": 0.95
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 30,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 57,
+          "denominator": 60,
+          "rate": 0.95
+        },
+        "error_type": {
+          "numerator": 57,
+          "denominator": 60,
+          "rate": 0.95
+        },
+        "cair_recall": {
+          "numerator": 25,
+          "denominator": 25,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 9,
+          "denominator": 90,
+          "rate": 0.1
+        }
+      },
+      "dev": {
+        "count": 30,
+        "detection": {
+          "numerator": 20,
+          "denominator": 20,
+          "rate": 1.0
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 10,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 20,
+          "denominator": 20,
+          "rate": 1.0
+        },
+        "error_type": {
+          "numerator": 20,
+          "denominator": 20,
+          "rate": 1.0
+        },
+        "cair_recall": {
+          "numerator": 7,
+          "denominator": 7,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 0,
+          "denominator": 30,
+          "rate": 0.0
+        }
+      },
+      "test": {
+        "count": 60,
+        "detection": {
+          "numerator": 37,
+          "denominator": 40,
+          "rate": 0.925
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 20,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 37,
+          "denominator": 40,
+          "rate": 0.925
+        },
+        "error_type": {
+          "numerator": 37,
+          "denominator": 40,
+          "rate": 0.925
+        },
+        "cair_recall": {
+          "numerator": 18,
+          "denominator": 18,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 9,
+          "denominator": 60,
+          "rate": 0.15
+        }
+      }
+    }
+  },
+  "generation": {
+    "all": {
+      "total": 30,
+      "statuses": {
+        "complete": 30
+      },
+      "generation_success": {
+        "numerator": 30,
+        "denominator": 30,
+        "rate": 1.0
+      },
+      "answer_accuracy": {
+        "numerator": 20,
+        "denominator": 30,
+        "rate": 0.666667
+      },
+      "rules_process_pass": {
+        "numerator": 18,
+        "denominator": 30,
+        "rate": 0.6
+      },
+      "hybrid_process_pass": {
+        "numerator": 28,
+        "denominator": 30,
+        "rate": 0.933333
+      },
+      "judge_success": {
+        "numerator": 30,
+        "denominator": 30,
+        "rate": 1.0
+      }
+    },
+    "dev": {
+      "total": 10,
+      "statuses": {
+        "complete": 10
+      },
+      "generation_success": {
+        "numerator": 10,
+        "denominator": 10,
+        "rate": 1.0
+      },
+      "answer_accuracy": {
+        "numerator": 7,
+        "denominator": 10,
+        "rate": 0.7
+      },
+      "rules_process_pass": {
+        "numerator": 5,
+        "denominator": 10,
+        "rate": 0.5
+      },
+      "hybrid_process_pass": {
+        "numerator": 8,
+        "denominator": 10,
+        "rate": 0.8
+      },
+      "judge_success": {
+        "numerator": 10,
+        "denominator": 10,
+        "rate": 1.0
+      }
+    },
+    "test": {
+      "total": 20,
+      "statuses": {
+        "complete": 20
+      },
+      "generation_success": {
+        "numerator": 20,
+        "denominator": 20,
+        "rate": 1.0
+      },
+      "answer_accuracy": {
+        "numerator": 13,
+        "denominator": 20,
+        "rate": 0.65
+      },
+      "rules_process_pass": {
+        "numerator": 13,
+        "denominator": 20,
+        "rate": 0.65
+      },
+      "hybrid_process_pass": {
+        "numerator": 20,
+        "denominator": 20,
+        "rate": 1.0
+      },
+      "judge_success": {
+        "numerator": 20,
+        "denominator": 20,
+        "rate": 1.0
+      }
+    }
+  },
+  "repeat_stability": {
+    "groups_total": 12,
+    "groups_all_calls_complete": 0,
+    "same_process": {
+      "numerator": 0,
+      "denominator": 12,
+      "rate": 0.0
+    },
+    "same_process_first": {
+      "numerator": 0,
+      "denominator": 12,
+      "rate": 0.0
+    },
+    "same_process_type": {
+      "numerator": 0,
+      "denominator": 12,
+      "rate": 0.0
+    },
+    "same_process_first_type": {
+      "numerator": 0,
+      "denominator": 12,
+      "rate": 0.0
+    },
+    "unstable_groups": []
+  },
+  "generation_ai_review": {
+    "total": 30,
+    "answer_correct": {
+      "numerator": 28,
+      "denominator": 30,
+      "rate": 0.933333
+    },
+    "answer_incorrect": {
+      "numerator": 0,
+      "denominator": 30,
+      "rate": 0.0
+    },
+    "answer_uncertain": {
+      "numerator": 2,
+      "denominator": 30,
+      "rate": 0.066667
+    },
+    "process_counts": {
+      "correct": 26,
+      "uncertain": 4
+    },
+    "original_answer_vs_ai_answer": {
+      "False / True": 8,
+      "False / None": 2,
+      "True / True": 20
+    }
+  },
+  "http_errors": {
+    "402": 44
+  },
+  "transport_responses": 130,
+  "stability_interpretation": "No conclusion about stability when zero groups have three successful calls. Zero full-denominator confirmed-agreement counts measure missing evidence, not observed disagreement.",
+  "reference_screened_controlled": {
+    "rules": {
+      "all": {
+        "count": 66,
+        "detection": {
+          "numerator": 31,
+          "denominator": 44,
+          "rate": 0.704545
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 22,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 31,
+          "denominator": 44,
+          "rate": 0.704545
+        },
+        "error_type": {
+          "numerator": 31,
+          "denominator": 44,
+          "rate": 0.704545
+        },
+        "cair_recall": {
+          "numerator": 16,
+          "denominator": 16,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 13,
+          "denominator": 66,
+          "rate": 0.19697
+        }
+      },
+      "dev": {
+        "count": 18,
+        "detection": {
+          "numerator": 7,
+          "denominator": 12,
+          "rate": 0.583333
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 6,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 7,
+          "denominator": 12,
+          "rate": 0.583333
+        },
+        "error_type": {
+          "numerator": 7,
+          "denominator": 12,
+          "rate": 0.583333
+        },
+        "cair_recall": {
+          "numerator": 1,
+          "denominator": 1,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 5,
+          "denominator": 18,
+          "rate": 0.277778
+        }
+      },
+      "test": {
+        "count": 48,
+        "detection": {
+          "numerator": 24,
+          "denominator": 32,
+          "rate": 0.75
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 16,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 24,
+          "denominator": 32,
+          "rate": 0.75
+        },
+        "error_type": {
+          "numerator": 24,
+          "denominator": 32,
+          "rate": 0.75
+        },
+        "cair_recall": {
+          "numerator": 15,
+          "denominator": 15,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 8,
+          "denominator": 48,
+          "rate": 0.166667
+        }
+      }
+    },
+    "judge": {
+      "all": {
+        "count": 66,
+        "detection": {
+          "numerator": 32,
+          "denominator": 44,
+          "rate": 0.727273
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 22,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 32,
+          "denominator": 44,
+          "rate": 0.727273
+        },
+        "error_type": {
+          "numerator": 32,
+          "denominator": 44,
+          "rate": 0.727273
+        },
+        "cair_recall": {
+          "numerator": 11,
+          "denominator": 16,
+          "rate": 0.6875
+        },
+        "uncertain": {
+          "numerator": 17,
+          "denominator": 66,
+          "rate": 0.257576
+        }
+      },
+      "dev": {
+        "count": 18,
+        "detection": {
+          "numerator": 12,
+          "denominator": 12,
+          "rate": 1.0
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 6,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 12,
+          "denominator": 12,
+          "rate": 1.0
+        },
+        "error_type": {
+          "numerator": 12,
+          "denominator": 12,
+          "rate": 1.0
+        },
+        "cair_recall": {
+          "numerator": 1,
+          "denominator": 1,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 0,
+          "denominator": 18,
+          "rate": 0.0
+        }
+      },
+      "test": {
+        "count": 48,
+        "detection": {
+          "numerator": 20,
+          "denominator": 32,
+          "rate": 0.625
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 16,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 20,
+          "denominator": 32,
+          "rate": 0.625
+        },
+        "error_type": {
+          "numerator": 20,
+          "denominator": 32,
+          "rate": 0.625
+        },
+        "cair_recall": {
+          "numerator": 10,
+          "denominator": 15,
+          "rate": 0.666667
+        },
+        "uncertain": {
+          "numerator": 17,
+          "denominator": 48,
+          "rate": 0.354167
+        }
+      }
+    },
+    "hybrid": {
+      "all": {
+        "count": 66,
+        "detection": {
+          "numerator": 41,
+          "denominator": 44,
+          "rate": 0.931818
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 22,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 41,
+          "denominator": 44,
+          "rate": 0.931818
+        },
+        "error_type": {
+          "numerator": 41,
+          "denominator": 44,
+          "rate": 0.931818
+        },
+        "cair_recall": {
+          "numerator": 16,
+          "denominator": 16,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 8,
+          "denominator": 66,
+          "rate": 0.121212
+        }
+      },
+      "dev": {
+        "count": 18,
+        "detection": {
+          "numerator": 12,
+          "denominator": 12,
+          "rate": 1.0
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 6,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 12,
+          "denominator": 12,
+          "rate": 1.0
+        },
+        "error_type": {
+          "numerator": 12,
+          "denominator": 12,
+          "rate": 1.0
+        },
+        "cair_recall": {
+          "numerator": 1,
+          "denominator": 1,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 0,
+          "denominator": 18,
+          "rate": 0.0
+        }
+      },
+      "test": {
+        "count": 48,
+        "detection": {
+          "numerator": 29,
+          "denominator": 32,
+          "rate": 0.90625
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 16,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 29,
+          "denominator": 32,
+          "rate": 0.90625
+        },
+        "error_type": {
+          "numerator": 29,
+          "denominator": 32,
+          "rate": 0.90625
+        },
+        "cair_recall": {
+          "numerator": 15,
+          "denominator": 15,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 8,
+          "denominator": 48,
+          "rate": 0.166667
+        }
+      }
+    }
+  },
+  "ai_provisional_controlled": {
+    "rules": {
+      "all": {
+        "count": 84,
+        "detection": {
+          "numerator": 45,
+          "denominator": 62,
+          "rate": 0.725806
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 22,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 43,
+          "denominator": 62,
+          "rate": 0.693548
+        },
+        "error_type": {
+          "numerator": 42,
+          "denominator": 62,
+          "rate": 0.677419
+        },
+        "cair_recall": {
+          "numerator": 25,
+          "denominator": 27,
+          "rate": 0.925926
+        },
+        "uncertain": {
+          "numerator": 15,
+          "denominator": 84,
+          "rate": 0.178571
+        }
+      },
+      "dev": {
+        "count": 27,
+        "detection": {
+          "numerator": 14,
+          "denominator": 21,
+          "rate": 0.666667
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 6,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 13,
+          "denominator": 21,
+          "rate": 0.619048
+        },
+        "error_type": {
+          "numerator": 12,
+          "denominator": 21,
+          "rate": 0.571429
+        },
+        "cair_recall": {
+          "numerator": 7,
+          "denominator": 8,
+          "rate": 0.875
+        },
+        "uncertain": {
+          "numerator": 6,
+          "denominator": 27,
+          "rate": 0.222222
+        }
+      },
+      "test": {
+        "count": 57,
+        "detection": {
+          "numerator": 31,
+          "denominator": 41,
+          "rate": 0.756098
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 16,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 30,
+          "denominator": 41,
+          "rate": 0.731707
+        },
+        "error_type": {
+          "numerator": 30,
+          "denominator": 41,
+          "rate": 0.731707
+        },
+        "cair_recall": {
+          "numerator": 18,
+          "denominator": 19,
+          "rate": 0.947368
+        },
+        "uncertain": {
+          "numerator": 9,
+          "denominator": 57,
+          "rate": 0.157895
+        }
+      }
+    },
+    "judge": {
+      "all": {
+        "count": 84,
+        "detection": {
+          "numerator": 45,
+          "denominator": 62,
+          "rate": 0.725806
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 22,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 44,
+          "denominator": 62,
+          "rate": 0.709677
+        },
+        "error_type": {
+          "numerator": 43,
+          "denominator": 62,
+          "rate": 0.693548
+        },
+        "cair_recall": {
+          "numerator": 18,
+          "denominator": 27,
+          "rate": 0.666667
+        },
+        "uncertain": {
+          "numerator": 20,
+          "denominator": 84,
+          "rate": 0.238095
+        }
+      },
+      "dev": {
+        "count": 27,
+        "detection": {
+          "numerator": 20,
+          "denominator": 21,
+          "rate": 0.952381
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 6,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 19,
+          "denominator": 21,
+          "rate": 0.904762
+        },
+        "error_type": {
+          "numerator": 18,
+          "denominator": 21,
+          "rate": 0.857143
+        },
+        "cair_recall": {
+          "numerator": 7,
+          "denominator": 8,
+          "rate": 0.875
+        },
+        "uncertain": {
+          "numerator": 0,
+          "denominator": 27,
+          "rate": 0.0
+        }
+      },
+      "test": {
+        "count": 57,
+        "detection": {
+          "numerator": 25,
+          "denominator": 41,
+          "rate": 0.609756
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 16,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 25,
+          "denominator": 41,
+          "rate": 0.609756
+        },
+        "error_type": {
+          "numerator": 25,
+          "denominator": 41,
+          "rate": 0.609756
+        },
+        "cair_recall": {
+          "numerator": 11,
+          "denominator": 19,
+          "rate": 0.578947
+        },
+        "uncertain": {
+          "numerator": 20,
+          "denominator": 57,
+          "rate": 0.350877
+        }
+      }
+    },
+    "hybrid": {
+      "all": {
+        "count": 84,
+        "detection": {
+          "numerator": 57,
+          "denominator": 62,
+          "rate": 0.919355
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 22,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 55,
+          "denominator": 62,
+          "rate": 0.887097
+        },
+        "error_type": {
+          "numerator": 54,
+          "denominator": 62,
+          "rate": 0.870968
+        },
+        "cair_recall": {
+          "numerator": 25,
+          "denominator": 27,
+          "rate": 0.925926
+        },
+        "uncertain": {
+          "numerator": 8,
+          "denominator": 84,
+          "rate": 0.095238
+        }
+      },
+      "dev": {
+        "count": 27,
+        "detection": {
+          "numerator": 20,
+          "denominator": 21,
+          "rate": 0.952381
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 6,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 19,
+          "denominator": 21,
+          "rate": 0.904762
+        },
+        "error_type": {
+          "numerator": 18,
+          "denominator": 21,
+          "rate": 0.857143
+        },
+        "cair_recall": {
+          "numerator": 7,
+          "denominator": 8,
+          "rate": 0.875
+        },
+        "uncertain": {
+          "numerator": 0,
+          "denominator": 27,
+          "rate": 0.0
+        }
+      },
+      "test": {
+        "count": 57,
+        "detection": {
+          "numerator": 37,
+          "denominator": 41,
+          "rate": 0.902439
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 16,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 36,
+          "denominator": 41,
+          "rate": 0.878049
+        },
+        "error_type": {
+          "numerator": 36,
+          "denominator": 41,
+          "rate": 0.878049
+        },
+        "cair_recall": {
+          "numerator": 18,
+          "denominator": 19,
+          "rate": 0.947368
+        },
+        "uncertain": {
+          "numerator": 8,
+          "denominator": 57,
+          "rate": 0.140351
+        }
+      }
+    }
+  },
+  "review_groups": {
+    "excluded_problem_ids": [
+      "ALXN/2015/page_59.pdf-2",
+      "C/2008/page_105.pdf-1",
+      "C/2009/page_195.pdf-2",
+      "DRE/2016/page_64.pdf-3",
+      "MRO/2013/page_23.pdf-4",
+      "PPG/2006/page_22.pdf-1",
+      "UNP/2013/page_25.pdf-2",
+      "WRK/2018/page_39.pdf-5"
+    ],
+    "screened_count": 66,
+    "ai_decisive_count": 84
+  },
+  "note": "Original constructed labels, reference-screened sensitivity, and decisive AI-label exploration are separate. Failed/uncertain predictions remain in each defined group denominator; uncertain AI labels are excluded only from AI-label exploration. Repeat agreement keeps failed groups in denominator."
+}

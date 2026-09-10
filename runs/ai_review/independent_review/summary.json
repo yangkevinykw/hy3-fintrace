@@ -1,0 +1,25 @@
+{
+  "reviewer_type": "ai",
+  "human_review_status": "pending",
+  "cases": 90,
+  "questions": 30,
+  "packet_sha256": "13275448643cd878ba4f2ebae49a087b10d0ebdd14469c2444ec4c03ba60c65d",
+  "process": {
+    "uncertain": 6,
+    "incorrect": 62,
+    "correct": 22
+  },
+  "first_error_type": {
+    "arithmetic": 23,
+    "dependency": 10,
+    "formula": 17,
+    "evidence_value": 9,
+    "evidence_semantics": 3
+  },
+  "answer_correct": {
+    "none": 12,
+    "false": 37,
+    "true": 41
+  },
+  "blindness": "Read only packet/cases.json; did not read mapping, original data, evaluators, benchmark outputs, model responses, or credentials."
+}

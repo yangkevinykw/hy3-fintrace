@@ -1,0 +1,18 @@
+{
+  "reviewer_type": "ai",
+  "phase": "phase_2_live",
+  "human_review_status": "pending",
+  "prior_exposure": "Same AI reviewer previously read controlled candidates for the same questions; this is not a fresh blind review.",
+  "packet_sha256": "fe5df1c5f956e1db12b4bfa173675dba3df91d22e68d3c6c493dbffdbdeb7924",
+  "cases": 30,
+  "process": {
+    "correct": 26,
+    "uncertain": 4
+  },
+  "answer_correct": {
+    "true": 28,
+    "null": 2
+  },
+  "arithmetic_tolerance": "abs(claimed-computed) <= 1e-9 * max(1, abs(computed)); all citation numeric values exact",
+  "access_boundary": "Only live_packet/cases.json read in this phase; no mapping, original data, project evaluators, live run outputs, other review results, or credentials read."
+}
