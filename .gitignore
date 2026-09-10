@@ -11,3 +11,5 @@ runs/live/
 runs/reviews/
 runs/ci/
 dist/
+.demo-tools/
+demo/.work/
