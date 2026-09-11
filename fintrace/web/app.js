@@ -5,6 +5,7 @@ const words = {correct:'成立',incorrect:'错误',uncertain:'无法确定',affe
 const types = {evidence_value:'取数不一致',evidence_missing:'证据不存在',arithmetic:'计算错误',dependency:'依赖错误',formula:'公式错误',semantic_unverified:'语义待验证',answer_consistency:'答案与过程不一致',execution:'无法执行',format:'格式错误',upstream_unavailable:'上游结果不可用',unproven_constant:'常量来源待确认'};
 const opSymbols = {add:'+',subtract:'−',multiply:'×',divide:'÷'};
 let boot, current, summary, experiment, currentReview, toastTimer;
+let experimentVersion='batch-v2';
 async function api(path, body){
   const options = body === undefined ? {} : {method:'POST',headers:{'Content-Type':'application/json','X-FinTrace-Token':boot.token},body:JSON.stringify(body)};
   const response = await fetch(path, options);
@@ -80,7 +81,7 @@ function metricText(x){return x?.rate==null?'—':(x.rate*100).toFixed(1)+'%';}
 function fraction(x){return `${x?.numerator??0} / ${x?.denominator??0}`;}
 async function renderSummary(){
   await renderExperiment();
-  summary=await api('/api/summary');if(summary.pending===true){$('metrics').textContent='尚未生成评测报告。';return;}
+  summary=await api('/api/summary?version='+experimentVersion);if(summary.pending===true){$('metrics').textContent='尚未生成评测报告。';return;}
   const m=summary.by_split.test;
   $('metrics').innerHTML=[['detection','错误检出率'],['localization','首错定位准确率'],['false_positive','正确过程误报率'],['uncertain','无法确定比例']].map(([k,label])=>`<div class="metric"><small>${label}</small><strong>${metricText(m[k])}</strong><p>评测集 · ${fraction(m[k])}</p></div>`).join('');
   $('split-table').innerHTML='<table><thead><tr><th>数据划分</th><th>样本数</th><th>错误检出</th><th>首错定位</th><th>误报</th></tr></thead><tbody>'+Object.entries(summary.by_split).map(([k,x])=>`<tr><td>${k==='dev'?'开发集':'评测集'}</td><td>${x.count}</td><td>${fraction(x.detection)}</td><td>${fraction(x.localization)}</td><td>${fraction(x.false_positive)}</td></tr>`).join('')+'</tbody></table>';
@@ -91,7 +92,7 @@ async function renderSummary(){
 async function renderExperiment(){
   const host=$('experiment-results');
   try{
-    const x=await api('/api/experiment');
+    const x=await api('/api/experiment?version='+experimentVersion);
     experiment=x;
     if(x.pending){host.innerHTML='<div class="source-notice">批量实验正在生成结果，完成后可在此查看。</div>';return;}
     const g=x.generation, labels={rules:'确定性规则',judge:'Hy3 Judge',hybrid:'规则 + Hy3'};
@@ -99,12 +100,20 @@ async function renderExperiment(){
     const table=(source)=>'<div class="table-wrap"><table><thead><tr><th>指标</th>'+Object.values(labels).map(n=>'<th>'+n+'</th>').join('')+'</tr></thead><tbody>'+[['detection','错误检出'],['localization','首错定位'],['false_positive','误报'],['uncertain','无法确定']].map(([k,n])=>tr(k,n,source)).join('')+'</tbody></table></div>';
     host.innerHTML=`<div class="source-notice">30 道题 / 90 个受控过程 · 三组评估对照</div><div class="metrics">${[['generation_success','有效解答'],['answer_accuracy','符合原始参考答案'],['hybrid_process_pass','混合过程通过'],['judge_success','语义评审成功']].map(([k,n])=>`<div class="metric"><small>${n}</small><strong>${metricText(g[k])}</strong><p>${fraction(g[k])}</p></div>`).join('')}</div><article class="panel next-panel"><h3>三组对照 · 全部构造标签</h3><p>同一份 Hy3 判断用于评审与混合组。失败、漏检及弃权保留在分母中。</p>${table(x.controlled)}</article><article class="panel next-panel"><h3>参考争议分析</h3><p>${x.ai_review.total} 条过程核验记录，${x.ai_review.process_counts.correct||0} 条正确、${x.ai_review.process_counts.incorrect||0} 条错误、${x.ai_review.process_counts.uncertain||0} 条无法确定。${x.ai_review.reference_disputed_problems.length} 道题存在参考口径争议。</p><details><summary>查看逐题争议依据</summary>${x.ai_review.reference_issues.map(i=>`<div class="finding"><strong>${esc(i.problem_id)}</strong>${esc(i.review.reason)}</div>`).join('')}</details><details><summary>排除参考争议题的敏感性分析</summary><p>仅作辅助分析，不替代全量主结果。</p>${table(x.reference_screened_controlled)}</details><details><summary>语义标签下的探索性评估</summary><p>仅 ${x.ai_review.decisive_count} 条明确的自动语义判断进入此分母；原始构造标签结果单独报告。</p>${table(x.ai_provisional_controlled)}</details></article><article class="panel next-panel"><h3>重复评审稳定性</h3><p>同一案例三次过程判断一致：${fraction(x.stability.process_stable)}；首错一致：${fraction(x.stability.location_stable)}；类型一致：${fraction(x.stability.type_stable)}。重复一致不等于正确。</p><p>服务响应 ${x.transport_responses} 份 · 服务报告 ${Number(x.usage.total_tokens||0).toLocaleString()} tokens。</p></article><article class="panel next-panel"><h3>真实解答回放</h3><p>直接载入本次保存的结果，不会再次调用接口。</p><div class="toolbar"><select id="batch-case-select" aria-label="选择批量解答">${boot.cases.filter(c=>c.id.endsWith('::clean')).map(c=>`<option value="${esc(c.problem_id)}">${esc(c.problem_id)}</option>`).join('')}</select><button id="batch-case-open" class="secondary">查看解答与证据</button></div></article>`;
     host.insertAdjacentHTML('beforeend',`<details class="source-notice"><summary>调用记录</summary><p>作业 ${x.total_jobs ?? 144} 项；异常响应 ${x.failed_jobs} 项。失败与弃权保留在指标分母中，详细状态随统计结果导出。</p></details>`);
+    host.insertAdjacentHTML('afterbegin','<div class="toolbar"><label>结果版本<select id="experiment-version"><option value="batch-v2">v0.4 · 改进版同输出重评</option><option value="batch-v1">v0.3 · 原始批次</option></select></label></div>');
+    $('experiment-version').value=experimentVersion;
+    $('experiment-version').addEventListener('change',async()=>{experimentVersion=$('experiment-version').value;await renderSummary();});
+    if(x.improvement){
+      const prior=x.improvement.before;
+      const compare=(label,a,b)=>`<tr><td>${label}</td><td>${fraction(a)}</td><td>${fraction(b)}</td></tr>`;
+      host.querySelector('.metrics').insertAdjacentHTML('beforebegin',`<article class="panel next-panel"><h3>改进效果 · 同题、同输出、同标签</h3><p>复用保存的解答和语义评审，仅重算规则与融合结论。</p><div class="table-wrap"><table><thead><tr><th>指标</th><th>v0.3</th><th>v0.4</th></tr></thead><tbody>${compare('规则检出',prior.controlled.rules.overall.detection,x.controlled.rules.overall.detection)}${compare('混合检出',prior.controlled.hybrid.overall.detection,x.controlled.hybrid.overall.detection)}${compare('真实解答过程通过',prior.generation.hybrid_process_pass,x.generation.hybrid_process_pass)}</tbody></table></div><p>新增 15 个检出来自说明与运算矛盾检查；移除或同步修改说明后，规则检出仍为 45 / 60。这项提升不代表一般公式语义已全部覆盖。</p></article>`);
+    }
     boot.reference_disputes=x.ai_review.reference_disputed_problems;
     host.querySelector('.source-notice').textContent='30 道题 / 90 个受控过程 · 规则、Hy3 Judge、混合评估';
     host.querySelector('.metrics').insertAdjacentHTML('afterend','<div class="source-notice">对原始参考答案的符合率与自动语义核验分开统计。后者判定 '+fraction(x.generation_ai_review.answer_correct)+' 份真实答案有题面支持，另 '+fraction(x.generation_ai_review.answer_uncertain)+' 份范围未定；详细口径见参考争议分析。</div>');
     if(x.stability.complete_cases<x.stability.cases){for(const h of host.querySelectorAll('h3'))if(h.textContent==='重复评审稳定性')h.nextElementSibling.textContent='完整三次成功评审 '+x.stability.complete_cases+' / '+x.stability.cases+' 组；此覆盖范围不用于估计稳定性。';}
     $('batch-case-open').addEventListener('click',async()=>{
-      try{const id=$('batch-case-select').value;const saved=await api('/api/experiment/case?id='+encodeURIComponent(id));if(!saved.trace||!saved.evaluation){toast('此题调用未形成有效解答，请查看实验失败记录。');return;}await loadCase(id+'::clean');current.sample.trace=saved.trace;current.evaluation=saved.evaluation;current.live=true;current.referenceDisputed=saved.reference_disputed;renderCurrent();document.querySelector('[data-tab="workbench"]').click();$('case-select').value=id+'::clean';if(saved.reference_disputed)toast('这道题的参考过程存在参考争议，请结合原始证据判断。');}catch(e){toast(e.message);}
+      try{const id=$('batch-case-select').value;const saved=await api('/api/experiment/case?version='+experimentVersion+'&id='+encodeURIComponent(id));if(!saved.trace||!saved.evaluation){toast('此题调用未形成有效解答，请查看实验失败记录。');return;}await loadCase(id+'::clean');current.sample.trace=saved.trace;current.evaluation=saved.evaluation;current.live=true;current.referenceDisputed=saved.reference_disputed;renderCurrent();document.querySelector('[data-tab="workbench"]').click();$('case-select').value=id+'::clean';if(saved.reference_disputed)toast('这道题的参考过程存在参考争议，请结合原始证据判断。');}catch(e){toast(e.message);}
     });
   }catch(e){host.innerHTML='<div class="source-notice">真实实验结果尚未发布到工作台。</div>';}
 }

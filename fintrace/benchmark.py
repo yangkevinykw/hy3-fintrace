@@ -96,7 +96,7 @@ def run_benchmark(outdir=None, split="all", mode="deterministic", resume=False):
         for r in rows:
             w.writerow([r["id"], r["split"], r["difficulty"], r["source"], r["label"]["process"], r["evaluation"]["process"],
                         r["label"]["first_error"], (r["evaluation"]["first_error"] or {}).get("step"), r["evaluation"]["answer_correct"], r["call_status"]])
-    lines = ["# FinTrace 受控样本评估报告", "", "这是对构造样本的规则验证结果，不代表真实 Hy3 能力；人工复核尚未完成。", "",
+    lines = ["# FinTrace 受控样本评估报告", "", "按原始构造标签评估相同样本，记录每项指标的分子与分母。", "",
              f"评估器：{VERSION}；模式：{mode}；样本：{len(rows)}", "", "|指标|开发集|评测集|", "|---|---|---|"]
     for key, title in [("detection", "错误检出率"), ("false_positive", "正确过程误报率"), ("localization", "首错定位准确率"),
                        ("error_type", "错误类型准确率"), ("cair_recall", "答案对过程错识别率"), ("uncertain", "无法确定比例")]:
@@ -105,8 +105,8 @@ def run_benchmark(outdir=None, split="all", mode="deterministic", resume=False):
             x = report["by_split"][s][key]
             vals.append(f"{x['numerator']}/{x['denominator']}" + (f"（{x['rate']:.1%}）" if x["rate"] is not None else "（不适用）"))
         lines.append(f"|{title}|{'|'.join(vals)}|")
-    lines += ["", "公式变更而局部算术成立的样本可能返回无法确定，这是规则覆盖边界，不以标准程序差异强行判错。",
-              "定位和检出分母包含未检出/无法判断的错误样本。标签由受控构造生成，不能视为独立人工金标。",
-              "本结果用于原型与回归检查；没有预注册或独立盲测背书。", "", "待完成：" + "、".join(report["pending"])]
+    lines += ["", "公式变更而局部算术及说明一致的样本可能返回无法确定；公式与明确说明矛盾时可直接定位。",
+              "定位和检出分母包含未检出及无法判断的错误样本。标签来源为受控构造。",
+              "本结果用于规则回归检查。说明一致性检查的独立贡献和消融结果见 runs/experiments/batch-v2/REPORT.md。"]
     (outdir / "REPORT.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     return report

@@ -1,0 +1,263 @@
+{
+  "version": "fintrace-rules-0.4",
+  "overall": {
+    "count": 90,
+    "detection": {
+      "numerator": 60,
+      "denominator": 60,
+      "rate": 1.0
+    },
+    "false_positive": {
+      "numerator": 0,
+      "denominator": 30,
+      "rate": 0.0
+    },
+    "localization": {
+      "numerator": 60,
+      "denominator": 60,
+      "rate": 1.0
+    },
+    "error_type": {
+      "numerator": 60,
+      "denominator": 60,
+      "rate": 1.0
+    },
+    "cair_recall": {
+      "numerator": 25,
+      "denominator": 25,
+      "rate": 1.0
+    },
+    "uncertain": {
+      "numerator": 0,
+      "denominator": 90,
+      "rate": 0.0
+    },
+    "statuses": {
+      "incorrect": 60,
+      "correct": 30
+    }
+  },
+  "by_split": {
+    "dev": {
+      "count": 30,
+      "detection": {
+        "numerator": 20,
+        "denominator": 20,
+        "rate": 1.0
+      },
+      "false_positive": {
+        "numerator": 0,
+        "denominator": 10,
+        "rate": 0.0
+      },
+      "localization": {
+        "numerator": 20,
+        "denominator": 20,
+        "rate": 1.0
+      },
+      "error_type": {
+        "numerator": 20,
+        "denominator": 20,
+        "rate": 1.0
+      },
+      "cair_recall": {
+        "numerator": 7,
+        "denominator": 7,
+        "rate": 1.0
+      },
+      "uncertain": {
+        "numerator": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "statuses": {
+        "incorrect": 20,
+        "correct": 10
+      }
+    },
+    "test": {
+      "count": 60,
+      "detection": {
+        "numerator": 40,
+        "denominator": 40,
+        "rate": 1.0
+      },
+      "false_positive": {
+        "numerator": 0,
+        "denominator": 20,
+        "rate": 0.0
+      },
+      "localization": {
+        "numerator": 40,
+        "denominator": 40,
+        "rate": 1.0
+      },
+      "error_type": {
+        "numerator": 40,
+        "denominator": 40,
+        "rate": 1.0
+      },
+      "cair_recall": {
+        "numerator": 18,
+        "denominator": 18,
+        "rate": 1.0
+      },
+      "uncertain": {
+        "numerator": 0,
+        "denominator": 60,
+        "rate": 0.0
+      },
+      "statuses": {
+        "incorrect": 40,
+        "correct": 20
+      }
+    }
+  },
+  "by_error": {
+    "arithmetic": {
+      "count": 25,
+      "detection": {
+        "numerator": 25,
+        "denominator": 25,
+        "rate": 1.0
+      },
+      "false_positive": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "localization": {
+        "numerator": 25,
+        "denominator": 25,
+        "rate": 1.0
+      },
+      "error_type": {
+        "numerator": 25,
+        "denominator": 25,
+        "rate": 1.0
+      },
+      "cair_recall": {
+        "numerator": 15,
+        "denominator": 15,
+        "rate": 1.0
+      },
+      "uncertain": {
+        "numerator": 0,
+        "denominator": 25,
+        "rate": 0.0
+      },
+      "statuses": {
+        "incorrect": 25
+      }
+    },
+    "dependency": {
+      "count": 10,
+      "detection": {
+        "numerator": 10,
+        "denominator": 10,
+        "rate": 1.0
+      },
+      "false_positive": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "localization": {
+        "numerator": 10,
+        "denominator": 10,
+        "rate": 1.0
+      },
+      "error_type": {
+        "numerator": 10,
+        "denominator": 10,
+        "rate": 1.0
+      },
+      "cair_recall": {
+        "numerator": 10,
+        "denominator": 10,
+        "rate": 1.0
+      },
+      "uncertain": {
+        "numerator": 0,
+        "denominator": 10,
+        "rate": 0.0
+      },
+      "statuses": {
+        "incorrect": 10
+      }
+    },
+    "evidence_value": {
+      "count": 10,
+      "detection": {
+        "numerator": 10,
+        "denominator": 10,
+        "rate": 1.0
+      },
+      "false_positive": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "localization": {
+        "numerator": 10,
+        "denominator": 10,
+        "rate": 1.0
+      },
+      "error_type": {
+        "numerator": 10,
+        "denominator": 10,
+        "rate": 1.0
+      },
+      "cair_recall": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "uncertain": {
+        "numerator": 0,
+        "denominator": 10,
+        "rate": 0.0
+      },
+      "statuses": {
+        "incorrect": 10
+      }
+    },
+    "formula": {
+      "count": 15,
+      "detection": {
+        "numerator": 15,
+        "denominator": 15,
+        "rate": 1.0
+      },
+      "false_positive": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "localization": {
+        "numerator": 15,
+        "denominator": 15,
+        "rate": 1.0
+      },
+      "error_type": {
+        "numerator": 15,
+        "denominator": 15,
+        "rate": 1.0
+      },
+      "cair_recall": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "uncertain": {
+        "numerator": 0,
+        "denominator": 15,
+        "rate": 0.0
+      },
+      "statuses": {
+        "incorrect": 15
+      }
+    }
+  },
+  "pending": []
+}

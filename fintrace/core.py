@@ -46,6 +46,10 @@ def close(a, b):
 
 
 def calculation_close(a, b):
+    # Exact integers have no decimal rounding error. A relative tolerance would
+    # otherwise hide e.g. a one-unit mistake in a billion-unit total.
+    if a.denominator == 1 and b.denominator == 1:
+        return a == b
     # Solver protocol asks for >=8 decimal digits. Keep tiny intermediate values
     # meaningful; FinQA's five-place final-answer rounding is not appropriate here.
     return abs(a-b) <= max(abs(a), abs(b)) * Fraction(1, 10**8) + Fraction(1, 10**12)

@@ -195,12 +195,35 @@ def combine(rules, semantic):
     from copy import deepcopy
     out = deepcopy(rules)
     out["mode"] = "hybrid"
+    out["combination_version"] = "fintrace-combine-0.2"
     out["semantic"] = semantic
     if semantic.get("status") != "complete":
         if rules["process"] != "incorrect":
             out["process"] = "uncertain"
         return out
     verdict = semantic["output"]
+    # The deterministic checker owns the documented arithmetic tolerance. A
+    # semantic judge cannot replace it with an unstated exact-decimal criterion.
+    # Keep both verdicts and only resolve an accusation about a verified step.
+    if (rules["process"] == "correct" and rules.get("answer_correct") is True
+            and verdict.get("process") == "incorrect"
+            and verdict.get("error_type") == "arithmetic"):
+        from .core import calculation_close, number
+        row = next((s for s in rules.get("steps", [])
+                    if s["id"] == verdict.get("first_error_step")), None)
+        try:
+            verified = (row is not None and row["status"] == "correct"
+                        and not row.get("affected_by")
+                        and calculation_close(number(row["computed"]), number(row["claimed"])))
+        except (ValueError, TypeError, KeyError):
+            verified = False
+        if verified:
+            out["judge_conflict"] = True
+            out["conflict_resolution"] = {
+                "policy": "verified_arithmetic_tolerance", "step": row["id"],
+                "computed": row["computed"], "claimed": row["claimed"],
+                "reason": "该步骤已通过既定算术容差核验，保留规则结论与原始评审分歧。"}
+            return out
     if rules["process"] == "incorrect":
         out["judge_conflict"] = verdict["process"] == "correct"
         def position(s):

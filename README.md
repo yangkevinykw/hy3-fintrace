@@ -4,7 +4,7 @@
 
 个人项目，面向腾讯犀牛鸟开源实战任务「可验证场景：过程评估与错误定位」。
 
-[演示视频](demo/fintrace-demo.mp4) · [项目说明](docs/SUBMISSION.md) · [实验报告](runs/experiments/batch-v1/REPORT.md) · [方法与指标](docs/METHOD.md)
+[演示视频](demo/fintrace-demo.mp4) · [项目说明](docs/SUBMISSION.md) · [改进版实验报告](runs/experiments/batch-v2/REPORT.md) · [方法与指标](docs/METHOD.md)
 
 [![FinTrace 工作台预览](demo/poster.png)](demo/fintrace-demo.mp4)
 
@@ -49,15 +49,18 @@ Windows 用户也可以双击仓库根目录中的 `启动工作台.cmd`。
 
 | 验证内容 | 结果 |
 | --- | --- |
-| 项目测试 | 36 项通过 |
+| 项目测试 | 48 项通过 |
 | 官方执行器交叉核验 | 30 / 30 一致 |
 | Hy3 真实解答与语义评审 | 30 / 30 成功 |
 | 真实答案与原始 FinQA 程序符合 | 20 / 30 |
-| 规则组错误检出 | 45 / 60 |
-| 混合组错误检出 | 57 / 60 |
+| 真实解答混合过程通过 | 28 / 30 → 29 / 30 |
+| 规则组错误检出 | 45 / 60 → 60 / 60 |
+| 混合组错误检出 | 57 / 60 → 60 / 60 |
 | 规则组、混合组对参考过程的误报 | 均为 0 / 30 |
 
-受控实验按原始构造标签统计，失败与弃权保留在分母中；它衡量评估器对这组样本的表现。真实解答另以原始 FinQA 程序结果为参照。逐题依据、参考争议、调用记录和敏感性分析见[完整实验报告](runs/experiments/batch-v1/REPORT.md)。
+v0.4 在同题、同输出、同标签下重评。新增的 15 个规则检出来自明确的说明与运算矛盾；移除说明或将说明同步改为当前运算后，规则检出为 45 / 60。这说明该改进覆盖的是说明一致性。原始数据与模型输出保持不变。
+
+受控实验按原始构造标签统计，失败与弃权保留在分母中；它衡量评估器对这组样本的表现。真实解答另以原始 FinQA 程序结果为参照。逐题依据、参考争议、调用记录和敏感性分析见[版本对照与消融报告](runs/experiments/batch-v2/REPORT.md)。
 
 ## 评估流程
 
@@ -103,8 +106,11 @@ python -m fintrace live --limit 1 --judge --out runs/live/example
 # 运行项目测试
 python -X utf8 -m unittest discover -s tests -v
 
+# 复现改进版对照和消融结果
+python -X utf8 scripts/compare_versions.py
+
 # 重算 90 个受控样本
-python -X utf8 -m fintrace benchmark
+python -X utf8 -m fintrace benchmark --out runs/experiments/rules-current
 
 # 单独评估测试划分
 python -X utf8 -m fintrace benchmark --split test --out runs/test
@@ -134,7 +140,7 @@ docs/              项目说明、方法、实验协议和验证记录
 | --- | --- |
 | [项目说明](docs/SUBMISSION.md) | 项目目标、主要功能、演示入口 |
 | [方法与指标](docs/METHOD.md) | 证据映射、计算核验、首错定义与指标分母 |
-| [实验报告](runs/experiments/batch-v1/REPORT.md) | 三组对照、逐题争议与运行记录 |
+| [改进版实验报告](runs/experiments/batch-v2/REPORT.md) | 三组对照、逐题争议与运行记录 |
 | [验证记录](docs/VALIDATION.md) | 测试、交叉核验与浏览器检查 |
 | [功能清单](docs/IMPLEMENTATION_STATUS.md) | 数据、评估、接口与工作台能力 |
 | [演示说明](docs/DEMO.md) | 视频入口与操作顺序 |

@@ -3,7 +3,7 @@ from __future__ import annotations
 from .core import (OPS, number, calculate, render, close, calculation_close, symbol, constant,
                    expression, equivalent)
 
-VERSION = "fintrace-rules-0.3"
+VERSION = "fintrace-rules-0.4"
 CONSTANTS = {"-1", "0", "1", "2", "3", "4", "12", "100", "1000", "1000000"}
 
 
@@ -94,6 +94,12 @@ def evaluate(problem, trace):
                         exprs[sid] = expression(op, *syms)
                 except (ValueError, TypeError, OverflowError):
                     finding(sid, "execution", "除零、无效结果或计算预算超限")
+        from .explanation import explicit_operation
+        described = explicit_operation(step.get("explanation"))
+        if row["computed"] is not None and described is not None and described != op:
+            finding(sid, "formula", "本步说明中的运算与结构化公式不一致",
+                    {"subtype": "explanation_operator_conflict", "described_op": described,
+                     "actual_op": op, "explanation": step["explanation"]})
         current = findings[start:]
         row["status"] = "incorrect" if any(x["status"] == "incorrect" for x in current) else ("uncertain" if current else "correct")
         rows.append(row)

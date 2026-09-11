@@ -14,7 +14,16 @@ def create_batch_server(port=8765):
             if not self.valid_host():
                 return self.send({'error':'Host not allowed'},403)
             url=urlparse(self.path)
-            report=ROOT/'runs/experiments/batch-v1'
+            version=parse_qs(url.query).get('version',['batch-v2'])[0]
+            if version not in ('batch-v1','batch-v2'):
+                return self.send({'error':'Unknown experiment version'},400)
+            report=ROOT/'runs/experiments'/version
+            if version=='batch-v2' and not report.exists():
+                report=ROOT/'runs/experiments/batch-v1'
+            if url.path=='/api/summary':
+                p=report/'rules_summary.json'
+                if p.exists():
+                    return self.send(read_json(p))
             if url.path=='/api/experiment':
                 p=report/'summary.json'
                 return self.send(read_json(p) if p.exists() else {'pending':True})

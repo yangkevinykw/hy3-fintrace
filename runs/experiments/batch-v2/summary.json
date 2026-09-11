@@ -1,0 +1,2225 @@
+{
+  "created_at": "2026-09-06T16:19:12.886320+00:00",
+  "manifest": {
+    "fingerprint": "eb3c46c9ac6caec6c6071d0153970d8713df76e53586d0e48393d598bb234687",
+    "created_at": "2026-09-06T15:59:27.242828+00:00",
+    "model": "hy3",
+    "counts": {
+      "generation": 30,
+      "controlled_judge": 90,
+      "repeat_judge": 24
+    },
+    "human_review": "pending",
+    "evaluation_protocol": "fixed before batch; not preregistered blind evaluation"
+  },
+  "status": "partial",
+  "human_review": "pending",
+  "failed_jobs": 44,
+  "http_errors": {
+    "402": 44
+  },
+  "jobs_by_kind": {
+    "controlled": {
+      "request_failed": 21,
+      "complete": 69
+    },
+    "generation": {
+      "complete": 30
+    },
+    "repeat1": {
+      "request_failed": 12
+    },
+    "repeat2": {
+      "request_failed": 11,
+      "complete": 1
+    }
+  },
+  "generation": {
+    "total": 30,
+    "generation_success": {
+      "numerator": 30,
+      "denominator": 30,
+      "rate": 1.0
+    },
+    "answer_accuracy": {
+      "numerator": 20,
+      "denominator": 30,
+      "rate": 0.666667
+    },
+    "rules_process_pass": {
+      "numerator": 18,
+      "denominator": 30,
+      "rate": 0.6
+    },
+    "hybrid_process_pass": {
+      "numerator": 29,
+      "denominator": 30,
+      "rate": 0.966667
+    },
+    "judge_success": {
+      "numerator": 30,
+      "denominator": 30,
+      "rate": 1.0
+    },
+    "hybrid_uncertain": {
+      "numerator": 0,
+      "denominator": 30,
+      "rate": 0.0
+    }
+  },
+  "generation_by_split": {
+    "dev": {
+      "total": 10,
+      "generation_success": {
+        "numerator": 10,
+        "denominator": 10,
+        "rate": 1.0
+      },
+      "answer_accuracy": {
+        "numerator": 7,
+        "denominator": 10,
+        "rate": 0.7
+      },
+      "rules_process_pass": {
+        "numerator": 5,
+        "denominator": 10,
+        "rate": 0.5
+      },
+      "hybrid_process_pass": {
+        "numerator": 9,
+        "denominator": 10,
+        "rate": 0.9
+      },
+      "judge_success": {
+        "numerator": 10,
+        "denominator": 10,
+        "rate": 1.0
+      },
+      "hybrid_uncertain": {
+        "numerator": 0,
+        "denominator": 10,
+        "rate": 0.0
+      }
+    },
+    "test": {
+      "total": 20,
+      "generation_success": {
+        "numerator": 20,
+        "denominator": 20,
+        "rate": 1.0
+      },
+      "answer_accuracy": {
+        "numerator": 13,
+        "denominator": 20,
+        "rate": 0.65
+      },
+      "rules_process_pass": {
+        "numerator": 13,
+        "denominator": 20,
+        "rate": 0.65
+      },
+      "hybrid_process_pass": {
+        "numerator": 20,
+        "denominator": 20,
+        "rate": 1.0
+      },
+      "judge_success": {
+        "numerator": 20,
+        "denominator": 20,
+        "rate": 1.0
+      },
+      "hybrid_uncertain": {
+        "numerator": 0,
+        "denominator": 20,
+        "rate": 0.0
+      }
+    }
+  },
+  "generation_without_reference_disputes": {
+    "total": 22,
+    "generation_success": {
+      "numerator": 22,
+      "denominator": 22,
+      "rate": 1.0
+    },
+    "answer_accuracy": {
+      "numerator": 18,
+      "denominator": 22,
+      "rate": 0.818182
+    },
+    "rules_process_pass": {
+      "numerator": 16,
+      "denominator": 22,
+      "rate": 0.727273
+    },
+    "hybrid_process_pass": {
+      "numerator": 22,
+      "denominator": 22,
+      "rate": 1.0
+    },
+    "judge_success": {
+      "numerator": 22,
+      "denominator": 22,
+      "rate": 1.0
+    },
+    "hybrid_uncertain": {
+      "numerator": 0,
+      "denominator": 22,
+      "rate": 0.0
+    }
+  },
+  "generation_ai_review": {
+    "reviewer_type": "ai",
+    "total": 30,
+    "answer_correct": {
+      "numerator": 28,
+      "denominator": 30,
+      "rate": 0.933333
+    },
+    "answer_incorrect": {
+      "numerator": 0,
+      "denominator": 30,
+      "rate": 0.0
+    },
+    "answer_uncertain": {
+      "numerator": 2,
+      "denominator": 30,
+      "rate": 0.066667
+    },
+    "process_counts": {
+      "correct": 26,
+      "uncertain": 4
+    },
+    "note": "Same AI reviewer saw controlled solutions earlier; second-stage label-hidden review, not new human blind evaluation."
+  },
+  "controlled": {
+    "rules": {
+      "overall": {
+        "count": 90,
+        "detection": {
+          "numerator": 60,
+          "denominator": 60,
+          "rate": 1.0
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 30,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 60,
+          "denominator": 60,
+          "rate": 1.0
+        },
+        "error_type": {
+          "numerator": 60,
+          "denominator": 60,
+          "rate": 1.0
+        },
+        "cair_recall": {
+          "numerator": 25,
+          "denominator": 25,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 0,
+          "denominator": 90,
+          "rate": 0.0
+        },
+        "statuses": {
+          "incorrect": 60,
+          "correct": 30
+        }
+      },
+      "by_split": {
+        "dev": {
+          "count": 30,
+          "detection": {
+            "numerator": 20,
+            "denominator": 20,
+            "rate": 1.0
+          },
+          "false_positive": {
+            "numerator": 0,
+            "denominator": 10,
+            "rate": 0.0
+          },
+          "localization": {
+            "numerator": 20,
+            "denominator": 20,
+            "rate": 1.0
+          },
+          "error_type": {
+            "numerator": 20,
+            "denominator": 20,
+            "rate": 1.0
+          },
+          "cair_recall": {
+            "numerator": 7,
+            "denominator": 7,
+            "rate": 1.0
+          },
+          "uncertain": {
+            "numerator": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "statuses": {
+            "incorrect": 20,
+            "correct": 10
+          }
+        },
+        "test": {
+          "count": 60,
+          "detection": {
+            "numerator": 40,
+            "denominator": 40,
+            "rate": 1.0
+          },
+          "false_positive": {
+            "numerator": 0,
+            "denominator": 20,
+            "rate": 0.0
+          },
+          "localization": {
+            "numerator": 40,
+            "denominator": 40,
+            "rate": 1.0
+          },
+          "error_type": {
+            "numerator": 40,
+            "denominator": 40,
+            "rate": 1.0
+          },
+          "cair_recall": {
+            "numerator": 18,
+            "denominator": 18,
+            "rate": 1.0
+          },
+          "uncertain": {
+            "numerator": 0,
+            "denominator": 60,
+            "rate": 0.0
+          },
+          "statuses": {
+            "incorrect": 40,
+            "correct": 20
+          }
+        }
+      }
+    },
+    "judge": {
+      "overall": {
+        "count": 90,
+        "detection": {
+          "numerator": 45,
+          "denominator": 60,
+          "rate": 0.75
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 30,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 45,
+          "denominator": 60,
+          "rate": 0.75
+        },
+        "error_type": {
+          "numerator": 45,
+          "denominator": 60,
+          "rate": 0.75
+        },
+        "cair_recall": {
+          "numerator": 18,
+          "denominator": 25,
+          "rate": 0.72
+        },
+        "uncertain": {
+          "numerator": 21,
+          "denominator": 90,
+          "rate": 0.233333
+        },
+        "statuses": {
+          "uncertain": 21,
+          "correct": 24,
+          "incorrect": 45
+        }
+      },
+      "by_split": {
+        "dev": {
+          "count": 30,
+          "detection": {
+            "numerator": 20,
+            "denominator": 20,
+            "rate": 1.0
+          },
+          "false_positive": {
+            "numerator": 0,
+            "denominator": 10,
+            "rate": 0.0
+          },
+          "localization": {
+            "numerator": 20,
+            "denominator": 20,
+            "rate": 1.0
+          },
+          "error_type": {
+            "numerator": 20,
+            "denominator": 20,
+            "rate": 1.0
+          },
+          "cair_recall": {
+            "numerator": 7,
+            "denominator": 7,
+            "rate": 1.0
+          },
+          "uncertain": {
+            "numerator": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "statuses": {
+            "incorrect": 20,
+            "correct": 10
+          }
+        },
+        "test": {
+          "count": 60,
+          "detection": {
+            "numerator": 25,
+            "denominator": 40,
+            "rate": 0.625
+          },
+          "false_positive": {
+            "numerator": 0,
+            "denominator": 20,
+            "rate": 0.0
+          },
+          "localization": {
+            "numerator": 25,
+            "denominator": 40,
+            "rate": 0.625
+          },
+          "error_type": {
+            "numerator": 25,
+            "denominator": 40,
+            "rate": 0.625
+          },
+          "cair_recall": {
+            "numerator": 11,
+            "denominator": 18,
+            "rate": 0.611111
+          },
+          "uncertain": {
+            "numerator": 21,
+            "denominator": 60,
+            "rate": 0.35
+          },
+          "statuses": {
+            "uncertain": 21,
+            "correct": 14,
+            "incorrect": 25
+          }
+        }
+      }
+    },
+    "hybrid": {
+      "overall": {
+        "count": 90,
+        "detection": {
+          "numerator": 60,
+          "denominator": 60,
+          "rate": 1.0
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 30,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 60,
+          "denominator": 60,
+          "rate": 1.0
+        },
+        "error_type": {
+          "numerator": 60,
+          "denominator": 60,
+          "rate": 1.0
+        },
+        "cair_recall": {
+          "numerator": 25,
+          "denominator": 25,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 6,
+          "denominator": 90,
+          "rate": 0.066667
+        },
+        "statuses": {
+          "incorrect": 60,
+          "correct": 24,
+          "uncertain": 6
+        }
+      },
+      "by_split": {
+        "dev": {
+          "count": 30,
+          "detection": {
+            "numerator": 20,
+            "denominator": 20,
+            "rate": 1.0
+          },
+          "false_positive": {
+            "numerator": 0,
+            "denominator": 10,
+            "rate": 0.0
+          },
+          "localization": {
+            "numerator": 20,
+            "denominator": 20,
+            "rate": 1.0
+          },
+          "error_type": {
+            "numerator": 20,
+            "denominator": 20,
+            "rate": 1.0
+          },
+          "cair_recall": {
+            "numerator": 7,
+            "denominator": 7,
+            "rate": 1.0
+          },
+          "uncertain": {
+            "numerator": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "statuses": {
+            "incorrect": 20,
+            "correct": 10
+          }
+        },
+        "test": {
+          "count": 60,
+          "detection": {
+            "numerator": 40,
+            "denominator": 40,
+            "rate": 1.0
+          },
+          "false_positive": {
+            "numerator": 0,
+            "denominator": 20,
+            "rate": 0.0
+          },
+          "localization": {
+            "numerator": 40,
+            "denominator": 40,
+            "rate": 1.0
+          },
+          "error_type": {
+            "numerator": 40,
+            "denominator": 40,
+            "rate": 1.0
+          },
+          "cair_recall": {
+            "numerator": 18,
+            "denominator": 18,
+            "rate": 1.0
+          },
+          "uncertain": {
+            "numerator": 6,
+            "denominator": 60,
+            "rate": 0.1
+          },
+          "statuses": {
+            "incorrect": 40,
+            "correct": 14,
+            "uncertain": 6
+          }
+        }
+      }
+    }
+  },
+  "reference_screened_controlled": {
+    "rules": {
+      "overall": {
+        "count": 66,
+        "detection": {
+          "numerator": 44,
+          "denominator": 44,
+          "rate": 1.0
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 22,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 44,
+          "denominator": 44,
+          "rate": 1.0
+        },
+        "error_type": {
+          "numerator": 44,
+          "denominator": 44,
+          "rate": 1.0
+        },
+        "cair_recall": {
+          "numerator": 16,
+          "denominator": 16,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 0,
+          "denominator": 66,
+          "rate": 0.0
+        },
+        "statuses": {
+          "incorrect": 44,
+          "correct": 22
+        }
+      },
+      "by_split": {
+        "dev": {
+          "count": 18,
+          "detection": {
+            "numerator": 12,
+            "denominator": 12,
+            "rate": 1.0
+          },
+          "false_positive": {
+            "numerator": 0,
+            "denominator": 6,
+            "rate": 0.0
+          },
+          "localization": {
+            "numerator": 12,
+            "denominator": 12,
+            "rate": 1.0
+          },
+          "error_type": {
+            "numerator": 12,
+            "denominator": 12,
+            "rate": 1.0
+          },
+          "cair_recall": {
+            "numerator": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "uncertain": {
+            "numerator": 0,
+            "denominator": 18,
+            "rate": 0.0
+          },
+          "statuses": {
+            "incorrect": 12,
+            "correct": 6
+          }
+        },
+        "test": {
+          "count": 48,
+          "detection": {
+            "numerator": 32,
+            "denominator": 32,
+            "rate": 1.0
+          },
+          "false_positive": {
+            "numerator": 0,
+            "denominator": 16,
+            "rate": 0.0
+          },
+          "localization": {
+            "numerator": 32,
+            "denominator": 32,
+            "rate": 1.0
+          },
+          "error_type": {
+            "numerator": 32,
+            "denominator": 32,
+            "rate": 1.0
+          },
+          "cair_recall": {
+            "numerator": 15,
+            "denominator": 15,
+            "rate": 1.0
+          },
+          "uncertain": {
+            "numerator": 0,
+            "denominator": 48,
+            "rate": 0.0
+          },
+          "statuses": {
+            "incorrect": 32,
+            "correct": 16
+          }
+        }
+      }
+    },
+    "judge": {
+      "overall": {
+        "count": 66,
+        "detection": {
+          "numerator": 32,
+          "denominator": 44,
+          "rate": 0.727273
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 22,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 32,
+          "denominator": 44,
+          "rate": 0.727273
+        },
+        "error_type": {
+          "numerator": 32,
+          "denominator": 44,
+          "rate": 0.727273
+        },
+        "cair_recall": {
+          "numerator": 11,
+          "denominator": 16,
+          "rate": 0.6875
+        },
+        "uncertain": {
+          "numerator": 17,
+          "denominator": 66,
+          "rate": 0.257576
+        },
+        "statuses": {
+          "uncertain": 17,
+          "correct": 17,
+          "incorrect": 32
+        }
+      },
+      "by_split": {
+        "dev": {
+          "count": 18,
+          "detection": {
+            "numerator": 12,
+            "denominator": 12,
+            "rate": 1.0
+          },
+          "false_positive": {
+            "numerator": 0,
+            "denominator": 6,
+            "rate": 0.0
+          },
+          "localization": {
+            "numerator": 12,
+            "denominator": 12,
+            "rate": 1.0
+          },
+          "error_type": {
+            "numerator": 12,
+            "denominator": 12,
+            "rate": 1.0
+          },
+          "cair_recall": {
+            "numerator": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "uncertain": {
+            "numerator": 0,
+            "denominator": 18,
+            "rate": 0.0
+          },
+          "statuses": {
+            "incorrect": 12,
+            "correct": 6
+          }
+        },
+        "test": {
+          "count": 48,
+          "detection": {
+            "numerator": 20,
+            "denominator": 32,
+            "rate": 0.625
+          },
+          "false_positive": {
+            "numerator": 0,
+            "denominator": 16,
+            "rate": 0.0
+          },
+          "localization": {
+            "numerator": 20,
+            "denominator": 32,
+            "rate": 0.625
+          },
+          "error_type": {
+            "numerator": 20,
+            "denominator": 32,
+            "rate": 0.625
+          },
+          "cair_recall": {
+            "numerator": 10,
+            "denominator": 15,
+            "rate": 0.666667
+          },
+          "uncertain": {
+            "numerator": 17,
+            "denominator": 48,
+            "rate": 0.354167
+          },
+          "statuses": {
+            "uncertain": 17,
+            "correct": 11,
+            "incorrect": 20
+          }
+        }
+      }
+    },
+    "hybrid": {
+      "overall": {
+        "count": 66,
+        "detection": {
+          "numerator": 44,
+          "denominator": 44,
+          "rate": 1.0
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 22,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 44,
+          "denominator": 44,
+          "rate": 1.0
+        },
+        "error_type": {
+          "numerator": 44,
+          "denominator": 44,
+          "rate": 1.0
+        },
+        "cair_recall": {
+          "numerator": 16,
+          "denominator": 16,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 5,
+          "denominator": 66,
+          "rate": 0.075758
+        },
+        "statuses": {
+          "incorrect": 44,
+          "correct": 17,
+          "uncertain": 5
+        }
+      },
+      "by_split": {
+        "dev": {
+          "count": 18,
+          "detection": {
+            "numerator": 12,
+            "denominator": 12,
+            "rate": 1.0
+          },
+          "false_positive": {
+            "numerator": 0,
+            "denominator": 6,
+            "rate": 0.0
+          },
+          "localization": {
+            "numerator": 12,
+            "denominator": 12,
+            "rate": 1.0
+          },
+          "error_type": {
+            "numerator": 12,
+            "denominator": 12,
+            "rate": 1.0
+          },
+          "cair_recall": {
+            "numerator": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "uncertain": {
+            "numerator": 0,
+            "denominator": 18,
+            "rate": 0.0
+          },
+          "statuses": {
+            "incorrect": 12,
+            "correct": 6
+          }
+        },
+        "test": {
+          "count": 48,
+          "detection": {
+            "numerator": 32,
+            "denominator": 32,
+            "rate": 1.0
+          },
+          "false_positive": {
+            "numerator": 0,
+            "denominator": 16,
+            "rate": 0.0
+          },
+          "localization": {
+            "numerator": 32,
+            "denominator": 32,
+            "rate": 1.0
+          },
+          "error_type": {
+            "numerator": 32,
+            "denominator": 32,
+            "rate": 1.0
+          },
+          "cair_recall": {
+            "numerator": 15,
+            "denominator": 15,
+            "rate": 1.0
+          },
+          "uncertain": {
+            "numerator": 5,
+            "denominator": 48,
+            "rate": 0.104167
+          },
+          "statuses": {
+            "incorrect": 32,
+            "correct": 11,
+            "uncertain": 5
+          }
+        }
+      }
+    }
+  },
+  "ai_provisional_controlled": {
+    "rules": {
+      "overall": {
+        "count": 84,
+        "detection": {
+          "numerator": 60,
+          "denominator": 62,
+          "rate": 0.967742
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 22,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 58,
+          "denominator": 62,
+          "rate": 0.935484
+        },
+        "error_type": {
+          "numerator": 57,
+          "denominator": 62,
+          "rate": 0.919355
+        },
+        "cair_recall": {
+          "numerator": 25,
+          "denominator": 27,
+          "rate": 0.925926
+        },
+        "uncertain": {
+          "numerator": 0,
+          "denominator": 84,
+          "rate": 0.0
+        },
+        "statuses": {
+          "incorrect": 60,
+          "correct": 24
+        }
+      },
+      "by_split": {
+        "dev": {
+          "count": 27,
+          "detection": {
+            "numerator": 20,
+            "denominator": 21,
+            "rate": 0.952381
+          },
+          "false_positive": {
+            "numerator": 0,
+            "denominator": 6,
+            "rate": 0.0
+          },
+          "localization": {
+            "numerator": 19,
+            "denominator": 21,
+            "rate": 0.904762
+          },
+          "error_type": {
+            "numerator": 18,
+            "denominator": 21,
+            "rate": 0.857143
+          },
+          "cair_recall": {
+            "numerator": 7,
+            "denominator": 8,
+            "rate": 0.875
+          },
+          "uncertain": {
+            "numerator": 0,
+            "denominator": 27,
+            "rate": 0.0
+          },
+          "statuses": {
+            "incorrect": 20,
+            "correct": 7
+          }
+        },
+        "test": {
+          "count": 57,
+          "detection": {
+            "numerator": 40,
+            "denominator": 41,
+            "rate": 0.97561
+          },
+          "false_positive": {
+            "numerator": 0,
+            "denominator": 16,
+            "rate": 0.0
+          },
+          "localization": {
+            "numerator": 39,
+            "denominator": 41,
+            "rate": 0.95122
+          },
+          "error_type": {
+            "numerator": 39,
+            "denominator": 41,
+            "rate": 0.95122
+          },
+          "cair_recall": {
+            "numerator": 18,
+            "denominator": 19,
+            "rate": 0.947368
+          },
+          "uncertain": {
+            "numerator": 0,
+            "denominator": 57,
+            "rate": 0.0
+          },
+          "statuses": {
+            "incorrect": 40,
+            "correct": 17
+          }
+        }
+      }
+    },
+    "judge": {
+      "overall": {
+        "count": 84,
+        "detection": {
+          "numerator": 45,
+          "denominator": 62,
+          "rate": 0.725806
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 22,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 44,
+          "denominator": 62,
+          "rate": 0.709677
+        },
+        "error_type": {
+          "numerator": 43,
+          "denominator": 62,
+          "rate": 0.693548
+        },
+        "cair_recall": {
+          "numerator": 18,
+          "denominator": 27,
+          "rate": 0.666667
+        },
+        "uncertain": {
+          "numerator": 20,
+          "denominator": 84,
+          "rate": 0.238095
+        },
+        "statuses": {
+          "uncertain": 20,
+          "correct": 19,
+          "incorrect": 45
+        }
+      },
+      "by_split": {
+        "dev": {
+          "count": 27,
+          "detection": {
+            "numerator": 20,
+            "denominator": 21,
+            "rate": 0.952381
+          },
+          "false_positive": {
+            "numerator": 0,
+            "denominator": 6,
+            "rate": 0.0
+          },
+          "localization": {
+            "numerator": 19,
+            "denominator": 21,
+            "rate": 0.904762
+          },
+          "error_type": {
+            "numerator": 18,
+            "denominator": 21,
+            "rate": 0.857143
+          },
+          "cair_recall": {
+            "numerator": 7,
+            "denominator": 8,
+            "rate": 0.875
+          },
+          "uncertain": {
+            "numerator": 0,
+            "denominator": 27,
+            "rate": 0.0
+          },
+          "statuses": {
+            "incorrect": 20,
+            "correct": 7
+          }
+        },
+        "test": {
+          "count": 57,
+          "detection": {
+            "numerator": 25,
+            "denominator": 41,
+            "rate": 0.609756
+          },
+          "false_positive": {
+            "numerator": 0,
+            "denominator": 16,
+            "rate": 0.0
+          },
+          "localization": {
+            "numerator": 25,
+            "denominator": 41,
+            "rate": 0.609756
+          },
+          "error_type": {
+            "numerator": 25,
+            "denominator": 41,
+            "rate": 0.609756
+          },
+          "cair_recall": {
+            "numerator": 11,
+            "denominator": 19,
+            "rate": 0.578947
+          },
+          "uncertain": {
+            "numerator": 20,
+            "denominator": 57,
+            "rate": 0.350877
+          },
+          "statuses": {
+            "uncertain": 20,
+            "correct": 12,
+            "incorrect": 25
+          }
+        }
+      }
+    },
+    "hybrid": {
+      "overall": {
+        "count": 84,
+        "detection": {
+          "numerator": 60,
+          "denominator": 62,
+          "rate": 0.967742
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 22,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 58,
+          "denominator": 62,
+          "rate": 0.935484
+        },
+        "error_type": {
+          "numerator": 57,
+          "denominator": 62,
+          "rate": 0.919355
+        },
+        "cair_recall": {
+          "numerator": 25,
+          "denominator": 27,
+          "rate": 0.925926
+        },
+        "uncertain": {
+          "numerator": 5,
+          "denominator": 84,
+          "rate": 0.059524
+        },
+        "statuses": {
+          "incorrect": 60,
+          "correct": 19,
+          "uncertain": 5
+        }
+      },
+      "by_split": {
+        "dev": {
+          "count": 27,
+          "detection": {
+            "numerator": 20,
+            "denominator": 21,
+            "rate": 0.952381
+          },
+          "false_positive": {
+            "numerator": 0,
+            "denominator": 6,
+            "rate": 0.0
+          },
+          "localization": {
+            "numerator": 19,
+            "denominator": 21,
+            "rate": 0.904762
+          },
+          "error_type": {
+            "numerator": 18,
+            "denominator": 21,
+            "rate": 0.857143
+          },
+          "cair_recall": {
+            "numerator": 7,
+            "denominator": 8,
+            "rate": 0.875
+          },
+          "uncertain": {
+            "numerator": 0,
+            "denominator": 27,
+            "rate": 0.0
+          },
+          "statuses": {
+            "incorrect": 20,
+            "correct": 7
+          }
+        },
+        "test": {
+          "count": 57,
+          "detection": {
+            "numerator": 40,
+            "denominator": 41,
+            "rate": 0.97561
+          },
+          "false_positive": {
+            "numerator": 0,
+            "denominator": 16,
+            "rate": 0.0
+          },
+          "localization": {
+            "numerator": 39,
+            "denominator": 41,
+            "rate": 0.95122
+          },
+          "error_type": {
+            "numerator": 39,
+            "denominator": 41,
+            "rate": 0.95122
+          },
+          "cair_recall": {
+            "numerator": 18,
+            "denominator": 19,
+            "rate": 0.947368
+          },
+          "uncertain": {
+            "numerator": 5,
+            "denominator": 57,
+            "rate": 0.087719
+          },
+          "statuses": {
+            "incorrect": 40,
+            "correct": 12,
+            "uncertain": 5
+          }
+        }
+      }
+    }
+  },
+  "ai_provisional_answer_basis": "Original FinQA answer matching is retained for answer_correct and CAIR subset; only process/location/type labels are replaced by AI provisional labels.",
+  "ai_review": {
+    "reviewer_type": "ai",
+    "total": 90,
+    "process_counts": {
+      "uncertain": 6,
+      "incorrect": 62,
+      "correct": 22
+    },
+    "decisive_count": 84,
+    "disagreement_count": 10,
+    "process_disagreement_count": 8,
+    "reference_disputed_problems": [
+      "ALXN/2015/page_59.pdf-2",
+      "C/2008/page_105.pdf-1",
+      "C/2009/page_195.pdf-2",
+      "DRE/2016/page_64.pdf-3",
+      "MRO/2013/page_23.pdf-4",
+      "PPG/2006/page_22.pdf-1",
+      "UNP/2013/page_25.pdf-2",
+      "WRK/2018/page_39.pdf-5"
+    ],
+    "reference_issues": [
+      {
+        "problem_id": "ALXN/2015/page_59.pdf-2",
+        "question": "how many square feet are leased by alexion pharmaceuticals , inc?",
+        "review": {
+          "review_id": "case-02c97c7b605a",
+          "reviewer_type": "ai",
+          "process": "uncertain",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "表内非 owned 设施为 New Haven 514000、Lexington 81000、Bogart 70000、Zurich 69000，合计 734000 平方英尺；但正文 texts[8] 另列 Cheshire 租赁 254000，texts[6:8] 还提到未量化租赁场地。题面未限定仅表内主要设施，734000 只能作为表内小计；全公司租赁总量无法唯一确定。",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:3:2:0",
+            "t:4:2:0",
+            "t:6:2:0"
+          ],
+          "confidence": "medium",
+          "answer_correct": null,
+          "localization_scope": "not_applicable"
+        }
+      },
+      {
+        "problem_id": "C/2008/page_105.pdf-1",
+        "question": "what was the total long-term debt for citigroup subsidiaries long-term debt at december 312008",
+        "review": {
+          "review_id": "case-0a1e9ebc1842",
+          "reviewer_type": "ai",
+          "process": "uncertain",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "债务行四列为母公司 192.3、CGMHI 20.6、CFI 37.4、其他子公司 109.3 十亿美元，四者合计 359.6；若 subsidiaries 严格排除母公司则是 167.3。题目措辞重复且主语不清，须确认是否包含 parent company。",
+          "evidence_refs": [
+            "t:1:1:0",
+            "t:1:2:0",
+            "t:1:3:0",
+            "t:1:4:0"
+          ],
+          "confidence": "medium",
+          "answer_correct": null,
+          "localization_scope": "not_applicable"
+        }
+      },
+      {
+        "problem_id": "C/2009/page_195.pdf-2",
+        "question": "what was the percentage change in the allowance for loan losses from 2007 to 2008?",
+        "review": {
+          "review_id": "case-810490b2ea5e",
+          "reviewer_type": "ai",
+          "process": "uncertain",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "候选取 2008/2007 的期初准备 16117、8940，期初变化率为 7177/8940≈80.279642%；但题面只问两年 allowance for loan losses，期末同名余额分别为 29616、16117，对应≈83.756282%。题面未指定期初，需确认口径；不能仅凭候选引用的行判为完全正确。",
+          "evidence_refs": [
+            "t:1:2:0",
+            "t:1:3:0"
+          ],
+          "confidence": "medium",
+          "answer_correct": null,
+          "localization_scope": "not_applicable"
+        }
+      },
+      {
+        "problem_id": "DRE/2016/page_64.pdf-3",
+        "question": "what is the percent change in management fees earned from 2015 to 2016?",
+        "review": {
+          "review_id": "case-28823a2687e9",
+          "reviewer_type": "ai",
+          "process": "incorrect",
+          "first_error_step": "s1",
+          "error_type": "formula",
+          "reason": "texts[9] 用 respectively 将 2016、2015、2014 管理费对应 4.5、6.8、8.5 百万美元。题目 2015→2016 应 (4.5-6.8)/6.8≈-33.823529%，候选反向用 (6.8-4.5)/4.5，从 s1 即把变化方向倒置，并在 s2 使用错误基期。 首个公式错误在 s1，候选使用 subtract，与上述题意所需关系不符；局部算术成立也不能消除此错误。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+          "evidence_refs": [
+            "x:9:4",
+            "x:9:5"
+          ],
+          "confidence": "high",
+          "answer_correct": false,
+          "localization_scope": "first_error_under_stated_interpretation"
+        }
+      },
+      {
+        "problem_id": "MRO/2013/page_23.pdf-4",
+        "question": "by how much did total proved undeveloped reserves increase during 2013?",
+        "review": {
+          "review_id": "case-cb43ae6e25fa",
+          "reviewer_type": "ai",
+          "process": "uncertain",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "年初 571、年末 627 MMboe，绝对增加 56 MMboe，texts[0] 已明说；若问相对幅度则是 56/571≈9.807356%。题面 by how much 未要求 percentage，候选仅输出 ratio，因此所答量纲/范围待确认，不能直接判整题正确。",
+          "evidence_refs": [
+            "t:0:1:0",
+            "x:0:3"
+          ],
+          "confidence": "medium",
+          "answer_correct": null,
+          "localization_scope": "not_applicable"
+        }
+      },
+      {
+        "problem_id": "PPG/2006/page_22.pdf-1",
+        "question": "what was the volume impact on sales in the industrial coatings segment ( millions ) ?",
+        "review": {
+          "review_id": "case-86caa3c5dd1d",
+          "reviewer_type": "ai",
+          "process": "uncertain",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "2005 工业涂料销售为 2921 百万美元；texts[4] 明确 volume 增长贡献为 4%，影响额 2921×0.04=116.84 百万美元。但 x:4:0 的 span 指向同句第一个 acquisition 的 4%，第二个 volume 的 4% 未独立编号；整句可支持数值，精确引用仍有歧义。",
+          "evidence_refs": [
+            "t:1:2:0",
+            "x:4:0"
+          ],
+          "confidence": "medium",
+          "answer_correct": true,
+          "localization_scope": "not_applicable"
+        }
+      },
+      {
+        "problem_id": "UNP/2013/page_25.pdf-2",
+        "question": "what was the percentage change in fuel surcharge revenues from 2012 to 2013?",
+        "review": {
+          "review_id": "case-71380f5f5969",
+          "reviewer_type": "ai",
+          "process": "uncertain",
+          "first_error_step": null,
+          "error_type": null,
+          "reason": "正文 texts[21:23] 明确 2013 与 2012 的燃油附加费收入同为 2.6 十亿美元，变化率为 0。packet 将两次 2.6 合并为 x:21:0，span 只指向第一个即 2013 数字，候选因此无法用不同 ref 明确标出 2012；整句支持答案，但精确证据对齐仍待修复/确认。",
+          "evidence_refs": [
+            "x:21:0"
+          ],
+          "confidence": "medium",
+          "answer_correct": true,
+          "localization_scope": "not_applicable"
+        }
+      },
+      {
+        "problem_id": "WRK/2018/page_39.pdf-5",
+        "question": "what was the percentage increase in the segment income from 2016 to 2017",
+        "review": {
+          "review_id": "case-702b452a1388",
+          "reviewer_type": "ai",
+          "process": "incorrect",
+          "first_error_step": "s1",
+          "error_type": "evidence_semantics",
+          "reason": "题目要求 2016→2017，表格 segment income 对应 1226.2→1193.5，增长率应为 (1193.5-1226.2)/1226.2≈-2.666775%。候选的 1685 是 2018 而非 2017，1193.5 是 2017 而非 2016，从 s1 即错配年份；41.181399% 是另一年度区间。 后续若沿用错误结果，即使局部计算一致也只是错误传播，不会使过程变正确。",
+          "evidence_refs": [
+            "t:2:1:0",
+            "t:2:2:0",
+            "t:2:3:0"
+          ],
+          "confidence": "high",
+          "answer_correct": false,
+          "localization_scope": "first_error_under_stated_interpretation"
+        }
+      }
+    ],
+    "human_review": "pending"
+  },
+  "stability": {
+    "cases": 12,
+    "draws_per_case": 3,
+    "complete_cases": 0,
+    "process_stable": {
+      "numerator": 0,
+      "denominator": 12,
+      "rate": 0.0
+    },
+    "location_stable": {
+      "numerator": 0,
+      "denominator": 12,
+      "rate": 0.0
+    },
+    "type_stable": {
+      "numerator": 0,
+      "denominator": 12,
+      "rate": 0.0
+    }
+  },
+  "call_statuses": {
+    "request_failed": 44,
+    "complete": 100
+  },
+  "transport_responses": 130,
+  "usage": {
+    "prompt_tokens": 927941,
+    "completion_tokens": 248625,
+    "total_tokens": 1176566
+  },
+  "hybrid_judge_conflicts": [],
+  "limitations": [
+    "AI 复核不是独立人工金标；原始标签保留，不覆盖争议。",
+    "同一 Hy3 解题与评审存在相关偏差；三组共用同一次评审。",
+    "按 AI 对参考过程的意见筛除题目仅为敏感性分析，不是重新挑选的主实验。",
+    "开发/评测按报告隔离，但没有预注册或外部盲测。"
+  ],
+  "evaluator_version": "fintrace-rules-0.4",
+  "scoring_version": "batch-v2",
+  "evaluation_kind": "same_trace_rescore",
+  "parent": "batch-v1",
+  "new_model_calls": 0,
+  "improvement": {
+    "before": {
+      "controlled": {
+        "rules": {
+          "overall": {
+            "count": 90,
+            "detection": {
+              "numerator": 45,
+              "denominator": 60,
+              "rate": 0.75
+            },
+            "false_positive": {
+              "numerator": 0,
+              "denominator": 30,
+              "rate": 0.0
+            },
+            "localization": {
+              "numerator": 45,
+              "denominator": 60,
+              "rate": 0.75
+            },
+            "error_type": {
+              "numerator": 45,
+              "denominator": 60,
+              "rate": 0.75
+            },
+            "cair_recall": {
+              "numerator": 25,
+              "denominator": 25,
+              "rate": 1.0
+            },
+            "uncertain": {
+              "numerator": 15,
+              "denominator": 90,
+              "rate": 0.166667
+            },
+            "statuses": {
+              "incorrect": 45,
+              "correct": 30,
+              "uncertain": 15
+            }
+          },
+          "by_split": {
+            "dev": {
+              "count": 30,
+              "detection": {
+                "numerator": 14,
+                "denominator": 20,
+                "rate": 0.7
+              },
+              "false_positive": {
+                "numerator": 0,
+                "denominator": 10,
+                "rate": 0.0
+              },
+              "localization": {
+                "numerator": 14,
+                "denominator": 20,
+                "rate": 0.7
+              },
+              "error_type": {
+                "numerator": 14,
+                "denominator": 20,
+                "rate": 0.7
+              },
+              "cair_recall": {
+                "numerator": 7,
+                "denominator": 7,
+                "rate": 1.0
+              },
+              "uncertain": {
+                "numerator": 6,
+                "denominator": 30,
+                "rate": 0.2
+              },
+              "statuses": {
+                "incorrect": 14,
+                "correct": 10,
+                "uncertain": 6
+              }
+            },
+            "test": {
+              "count": 60,
+              "detection": {
+                "numerator": 31,
+                "denominator": 40,
+                "rate": 0.775
+              },
+              "false_positive": {
+                "numerator": 0,
+                "denominator": 20,
+                "rate": 0.0
+              },
+              "localization": {
+                "numerator": 31,
+                "denominator": 40,
+                "rate": 0.775
+              },
+              "error_type": {
+                "numerator": 31,
+                "denominator": 40,
+                "rate": 0.775
+              },
+              "cair_recall": {
+                "numerator": 18,
+                "denominator": 18,
+                "rate": 1.0
+              },
+              "uncertain": {
+                "numerator": 9,
+                "denominator": 60,
+                "rate": 0.15
+              },
+              "statuses": {
+                "incorrect": 31,
+                "correct": 20,
+                "uncertain": 9
+              }
+            }
+          }
+        },
+        "judge": {
+          "overall": {
+            "count": 90,
+            "detection": {
+              "numerator": 45,
+              "denominator": 60,
+              "rate": 0.75
+            },
+            "false_positive": {
+              "numerator": 0,
+              "denominator": 30,
+              "rate": 0.0
+            },
+            "localization": {
+              "numerator": 45,
+              "denominator": 60,
+              "rate": 0.75
+            },
+            "error_type": {
+              "numerator": 45,
+              "denominator": 60,
+              "rate": 0.75
+            },
+            "cair_recall": {
+              "numerator": 18,
+              "denominator": 25,
+              "rate": 0.72
+            },
+            "uncertain": {
+              "numerator": 21,
+              "denominator": 90,
+              "rate": 0.233333
+            },
+            "statuses": {
+              "uncertain": 21,
+              "correct": 24,
+              "incorrect": 45
+            }
+          },
+          "by_split": {
+            "dev": {
+              "count": 30,
+              "detection": {
+                "numerator": 20,
+                "denominator": 20,
+                "rate": 1.0
+              },
+              "false_positive": {
+                "numerator": 0,
+                "denominator": 10,
+                "rate": 0.0
+              },
+              "localization": {
+                "numerator": 20,
+                "denominator": 20,
+                "rate": 1.0
+              },
+              "error_type": {
+                "numerator": 20,
+                "denominator": 20,
+                "rate": 1.0
+              },
+              "cair_recall": {
+                "numerator": 7,
+                "denominator": 7,
+                "rate": 1.0
+              },
+              "uncertain": {
+                "numerator": 0,
+                "denominator": 30,
+                "rate": 0.0
+              },
+              "statuses": {
+                "incorrect": 20,
+                "correct": 10
+              }
+            },
+            "test": {
+              "count": 60,
+              "detection": {
+                "numerator": 25,
+                "denominator": 40,
+                "rate": 0.625
+              },
+              "false_positive": {
+                "numerator": 0,
+                "denominator": 20,
+                "rate": 0.0
+              },
+              "localization": {
+                "numerator": 25,
+                "denominator": 40,
+                "rate": 0.625
+              },
+              "error_type": {
+                "numerator": 25,
+                "denominator": 40,
+                "rate": 0.625
+              },
+              "cair_recall": {
+                "numerator": 11,
+                "denominator": 18,
+                "rate": 0.611111
+              },
+              "uncertain": {
+                "numerator": 21,
+                "denominator": 60,
+                "rate": 0.35
+              },
+              "statuses": {
+                "uncertain": 21,
+                "correct": 14,
+                "incorrect": 25
+              }
+            }
+          }
+        },
+        "hybrid": {
+          "overall": {
+            "count": 90,
+            "detection": {
+              "numerator": 57,
+              "denominator": 60,
+              "rate": 0.95
+            },
+            "false_positive": {
+              "numerator": 0,
+              "denominator": 30,
+              "rate": 0.0
+            },
+            "localization": {
+              "numerator": 57,
+              "denominator": 60,
+              "rate": 0.95
+            },
+            "error_type": {
+              "numerator": 57,
+              "denominator": 60,
+              "rate": 0.95
+            },
+            "cair_recall": {
+              "numerator": 25,
+              "denominator": 25,
+              "rate": 1.0
+            },
+            "uncertain": {
+              "numerator": 9,
+              "denominator": 90,
+              "rate": 0.1
+            },
+            "statuses": {
+              "incorrect": 57,
+              "correct": 24,
+              "uncertain": 9
+            }
+          },
+          "by_split": {
+            "dev": {
+              "count": 30,
+              "detection": {
+                "numerator": 20,
+                "denominator": 20,
+                "rate": 1.0
+              },
+              "false_positive": {
+                "numerator": 0,
+                "denominator": 10,
+                "rate": 0.0
+              },
+              "localization": {
+                "numerator": 20,
+                "denominator": 20,
+                "rate": 1.0
+              },
+              "error_type": {
+                "numerator": 20,
+                "denominator": 20,
+                "rate": 1.0
+              },
+              "cair_recall": {
+                "numerator": 7,
+                "denominator": 7,
+                "rate": 1.0
+              },
+              "uncertain": {
+                "numerator": 0,
+                "denominator": 30,
+                "rate": 0.0
+              },
+              "statuses": {
+                "incorrect": 20,
+                "correct": 10
+              }
+            },
+            "test": {
+              "count": 60,
+              "detection": {
+                "numerator": 37,
+                "denominator": 40,
+                "rate": 0.925
+              },
+              "false_positive": {
+                "numerator": 0,
+                "denominator": 20,
+                "rate": 0.0
+              },
+              "localization": {
+                "numerator": 37,
+                "denominator": 40,
+                "rate": 0.925
+              },
+              "error_type": {
+                "numerator": 37,
+                "denominator": 40,
+                "rate": 0.925
+              },
+              "cair_recall": {
+                "numerator": 18,
+                "denominator": 18,
+                "rate": 1.0
+              },
+              "uncertain": {
+                "numerator": 9,
+                "denominator": 60,
+                "rate": 0.15
+              },
+              "statuses": {
+                "incorrect": 37,
+                "correct": 14,
+                "uncertain": 9
+              }
+            }
+          }
+        }
+      },
+      "generation": {
+        "total": 30,
+        "generation_success": {
+          "numerator": 30,
+          "denominator": 30,
+          "rate": 1.0
+        },
+        "answer_accuracy": {
+          "numerator": 20,
+          "denominator": 30,
+          "rate": 0.666667
+        },
+        "rules_process_pass": {
+          "numerator": 18,
+          "denominator": 30,
+          "rate": 0.6
+        },
+        "hybrid_process_pass": {
+          "numerator": 28,
+          "denominator": 30,
+          "rate": 0.933333
+        },
+        "judge_success": {
+          "numerator": 30,
+          "denominator": 30,
+          "rate": 1.0
+        },
+        "hybrid_uncertain": {
+          "numerator": 0,
+          "denominator": 30,
+          "rate": 0.0
+        }
+      }
+    },
+    "controlled_changes": [
+      {
+        "id": "AMT/2015/page_58.pdf-2::challenge",
+        "before": "uncertain",
+        "after": "incorrect",
+        "first_error": {
+          "step": "s1",
+          "type": "formula",
+          "status": "incorrect",
+          "message": "本步说明中的运算与结构化公式不一致",
+          "evidence": {
+            "subtype": "explanation_operator_conflict",
+            "described_op": "add",
+            "actual_op": "subtract",
+            "explanation": "将所列两项数值相加。"
+          }
+        }
+      },
+      {
+        "id": "AON/2015/page_62.pdf-4::challenge",
+        "before": "uncertain",
+        "after": "incorrect",
+        "first_error": {
+          "step": "s1",
+          "type": "formula",
+          "status": "incorrect",
+          "message": "本步说明中的运算与结构化公式不一致",
+          "evidence": {
+            "subtype": "explanation_operator_conflict",
+            "described_op": "add",
+            "actual_op": "subtract",
+            "explanation": "将所列两项数值相加。"
+          }
+        }
+      },
+      {
+        "id": "AOS/2007/page_17.pdf-2::challenge",
+        "before": "uncertain",
+        "after": "incorrect",
+        "first_error": {
+          "step": "s1",
+          "type": "formula",
+          "status": "incorrect",
+          "message": "本步说明中的运算与结构化公式不一致",
+          "evidence": {
+            "subtype": "explanation_operator_conflict",
+            "described_op": "subtract",
+            "actual_op": "add",
+            "explanation": "计算所列两项数值的差。"
+          }
+        }
+      },
+      {
+        "id": "BLK/2012/page_82.pdf-3::challenge",
+        "before": "uncertain",
+        "after": "incorrect",
+        "first_error": {
+          "step": "s1",
+          "type": "formula",
+          "status": "incorrect",
+          "message": "本步说明中的运算与结构化公式不一致",
+          "evidence": {
+            "subtype": "explanation_operator_conflict",
+            "described_op": "subtract",
+            "actual_op": "add",
+            "explanation": "计算所列两项数值的差。"
+          }
+        }
+      },
+      {
+        "id": "BLK/2014/page_33.pdf-4::challenge",
+        "before": "uncertain",
+        "after": "incorrect",
+        "first_error": {
+          "step": "s1",
+          "type": "formula",
+          "status": "incorrect",
+          "message": "本步说明中的运算与结构化公式不一致",
+          "evidence": {
+            "subtype": "explanation_operator_conflict",
+            "described_op": "divide",
+            "actual_op": "add",
+            "explanation": "用第一项除以第二项，求得对应比值。"
+          }
+        }
+      },
+      {
+        "id": "BLK/2017/page_77.pdf-2::challenge",
+        "before": "uncertain",
+        "after": "incorrect",
+        "first_error": {
+          "step": "s1",
+          "type": "formula",
+          "status": "incorrect",
+          "message": "本步说明中的运算与结构化公式不一致",
+          "evidence": {
+            "subtype": "explanation_operator_conflict",
+            "described_op": "subtract",
+            "actual_op": "add",
+            "explanation": "计算所列两项数值的差。"
+          }
+        }
+      },
+      {
+        "id": "C/2015/page_314.pdf-1::challenge",
+        "before": "uncertain",
+        "after": "incorrect",
+        "first_error": {
+          "step": "s1",
+          "type": "formula",
+          "status": "incorrect",
+          "message": "本步说明中的运算与结构化公式不一致",
+          "evidence": {
+            "subtype": "explanation_operator_conflict",
+            "described_op": "subtract",
+            "actual_op": "add",
+            "explanation": "计算所列两项数值的差。"
+          }
+        }
+      },
+      {
+        "id": "CME/2017/page_99.pdf-4::challenge",
+        "before": "uncertain",
+        "after": "incorrect",
+        "first_error": {
+          "step": "s1",
+          "type": "formula",
+          "status": "incorrect",
+          "message": "本步说明中的运算与结构化公式不一致",
+          "evidence": {
+            "subtype": "explanation_operator_conflict",
+            "described_op": "add",
+            "actual_op": "subtract",
+            "explanation": "将所列两项数值相加。"
+          }
+        }
+      },
+      {
+        "id": "GS/2012/page_177.pdf-3::challenge",
+        "before": "uncertain",
+        "after": "incorrect",
+        "first_error": {
+          "step": "s1",
+          "type": "formula",
+          "status": "incorrect",
+          "message": "本步说明中的运算与结构化公式不一致",
+          "evidence": {
+            "subtype": "explanation_operator_conflict",
+            "described_op": "divide",
+            "actual_op": "add",
+            "explanation": "用第一项除以第二项，求得对应比值。"
+          }
+        }
+      },
+      {
+        "id": "JPM/2009/page_183.pdf-3::challenge",
+        "before": "uncertain",
+        "after": "incorrect",
+        "first_error": {
+          "step": "s1",
+          "type": "formula",
+          "status": "incorrect",
+          "message": "本步说明中的运算与结构化公式不一致",
+          "evidence": {
+            "subtype": "explanation_operator_conflict",
+            "described_op": "divide",
+            "actual_op": "add",
+            "explanation": "用第一项除以第二项，求得对应比值。"
+          }
+        }
+      },
+      {
+        "id": "PPG/2006/page_22.pdf-1::challenge",
+        "before": "uncertain",
+        "after": "incorrect",
+        "first_error": {
+          "step": "s1",
+          "type": "formula",
+          "status": "incorrect",
+          "message": "本步说明中的运算与结构化公式不一致",
+          "evidence": {
+            "subtype": "explanation_operator_conflict",
+            "described_op": "multiply",
+            "actual_op": "add",
+            "explanation": "计算所列两项数值的乘积。"
+          }
+        }
+      },
+      {
+        "id": "PPG/2010/page_45.pdf-2::challenge",
+        "before": "uncertain",
+        "after": "incorrect",
+        "first_error": {
+          "step": "s1",
+          "type": "formula",
+          "status": "incorrect",
+          "message": "本步说明中的运算与结构化公式不一致",
+          "evidence": {
+            "subtype": "explanation_operator_conflict",
+            "described_op": "divide",
+            "actual_op": "add",
+            "explanation": "用第一项除以第二项，求得对应比值。"
+          }
+        }
+      },
+      {
+        "id": "RCL/2016/page_37.pdf-2::challenge",
+        "before": "uncertain",
+        "after": "incorrect",
+        "first_error": {
+          "step": "s1",
+          "type": "formula",
+          "status": "incorrect",
+          "message": "本步说明中的运算与结构化公式不一致",
+          "evidence": {
+            "subtype": "explanation_operator_conflict",
+            "described_op": "subtract",
+            "actual_op": "add",
+            "explanation": "计算所列两项数值的差。"
+          }
+        }
+      },
+      {
+        "id": "UNP/2008/page_83.pdf-1::challenge",
+        "before": "uncertain",
+        "after": "incorrect",
+        "first_error": {
+          "step": "s1",
+          "type": "formula",
+          "status": "incorrect",
+          "message": "本步说明中的运算与结构化公式不一致",
+          "evidence": {
+            "subtype": "explanation_operator_conflict",
+            "described_op": "add",
+            "actual_op": "subtract",
+            "explanation": "将所列两项数值相加。"
+          }
+        }
+      },
+      {
+        "id": "UNP/2013/page_25.pdf-2::challenge",
+        "before": "uncertain",
+        "after": "incorrect",
+        "first_error": {
+          "step": "s1",
+          "type": "formula",
+          "status": "incorrect",
+          "message": "本步说明中的运算与结构化公式不一致",
+          "evidence": {
+            "subtype": "explanation_operator_conflict",
+            "described_op": "subtract",
+            "actual_op": "add",
+            "explanation": "计算所列两项数值的差。"
+          }
+        }
+      }
+    ],
+    "generation_changes": [
+      {
+        "problem_id": "BLK/2017/page_77.pdf-2",
+        "before": "incorrect",
+        "after": "correct",
+        "resolution": {
+          "policy": "verified_arithmetic_tolerance",
+          "step": "s2",
+          "computed": "-0.0201543739279588336192109777015437393",
+          "claimed": "-0.0201543739278563",
+          "reason": "该步骤已通过既定算术容差核验，保留规则结论与原始评审分歧。"
+        }
+      }
+    ],
+    "ablation": {
+      "without_explanations": {
+        "count": 90,
+        "detection": {
+          "numerator": 45,
+          "denominator": 60,
+          "rate": 0.75
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 30,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 45,
+          "denominator": 60,
+          "rate": 0.75
+        },
+        "error_type": {
+          "numerator": 45,
+          "denominator": 60,
+          "rate": 0.75
+        },
+        "cair_recall": {
+          "numerator": 25,
+          "denominator": 25,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 15,
+          "denominator": 90,
+          "rate": 0.166667
+        },
+        "statuses": {
+          "correct": 30,
+          "incorrect": 45,
+          "uncertain": 15
+        }
+      },
+      "aligned_explanations": {
+        "count": 90,
+        "detection": {
+          "numerator": 45,
+          "denominator": 60,
+          "rate": 0.75
+        },
+        "false_positive": {
+          "numerator": 0,
+          "denominator": 30,
+          "rate": 0.0
+        },
+        "localization": {
+          "numerator": 45,
+          "denominator": 60,
+          "rate": 0.75
+        },
+        "error_type": {
+          "numerator": 45,
+          "denominator": 60,
+          "rate": 0.75
+        },
+        "cair_recall": {
+          "numerator": 25,
+          "denominator": 25,
+          "rate": 1.0
+        },
+        "uncertain": {
+          "numerator": 15,
+          "denominator": 90,
+          "rate": 0.166667
+        },
+        "statuses": {
+          "correct": 30,
+          "incorrect": 45,
+          "uncertain": 15
+        }
+      }
+    },
+    "scope": "Retrospective regression on unchanged data, not a new blind test; explanation-template-sensitive improvement."
+  },
+  "generation_judge_conflicts": [
+    {
+      "id": "BLK/2017/page_77.pdf-2",
+      "resolution": {
+        "policy": "verified_arithmetic_tolerance",
+        "step": "s2",
+        "computed": "-0.0201543739279588336192109777015437393",
+        "claimed": "-0.0201543739278563",
+        "reason": "该步骤已通过既定算术容差核验，保留规则结论与原始评审分歧。"
+      }
+    }
+  ]
+}

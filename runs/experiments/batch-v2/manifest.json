@@ -1,0 +1,26 @@
+{
+  "evaluator_version": "fintrace-rules-0.4",
+  "parent": "batch-v1",
+  "new_model_calls": 0,
+  "input_sha256": {
+    "data\\finqa30.json": "8aacb36de6d692534ba19bc4310dbce1955c5ef31ff0a920faedfb2a0ed068b5",
+    "data\\controlled90.json": "258a96165fed2120c1651e4cbd2c416e95ebd446386a96b1e8503d8932cf0150",
+    "runs\\experiments\\batch-v1\\controlled_results.json": "64068568c844fe65196773d7df5ced331d25dd8e23484bc158b1da351839c609",
+    "runs\\experiments\\batch-v1\\generation_results.json": "305523ccd89a4bb41ebb5ec8db02971acbbb1fc75126d177aa47afb92afb9658"
+  },
+  "code_sha256": {
+    "fintrace\\__init__.py": "49931dfddf4f5dea165eb3a48962c0f28fd048b4b5ad86b75f52d2b67f78a0fe",
+    "fintrace\\__main__.py": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
+    "fintrace\\benchmark.py": "c41d68d61999efc08a1266d1afb433134fe27cde14860e5b8862615bb5112a51",
+    "fintrace\\cli.py": "4dd188aff0201545a121999a9ec03622146d218e1beb4f9241b852e5e3ff1b6b",
+    "fintrace\\core.py": "579634f4563a53733678d47f63c39192eca1c0cb6b3d0fbf0c93e50b890897be",
+    "fintrace\\dataset.py": "ebfa4f26ec4ad0983d1f81f6e56b6be6ba889dd4ff4fb28c17203790239b2b51",
+    "fintrace\\evaluator.py": "2540458efd0f04a3e842ba22dc34fe27f0c822727de0554f62ea54b20300e983",
+    "fintrace\\explanation.py": "74fae9160b544a4dcf18333a6307c47197835b087ed285bd725be901e6881559",
+    "fintrace\\model.py": "6e774d244ae4925d50b402e3d77c02c110ec0de262a5ffce948e16fd299c3316",
+    "fintrace\\schema.py": "c2200b27b6a6d12184bc98ac4002cc7af6b77525cd4494339e53ba9a59123e29",
+    "fintrace\\server.py": "cefdaf14e55f713d9a720ed11b76851d012f50e74ec213793082bee26edfae03",
+    "fintrace\\storage.py": "d4ebf388b105724286efa2d5f5d51e17f896afb1e783a77d832b52fb6c4173c8",
+    "scripts\\compare_versions.py": "2b38595454b5e791273fa5106eed5db37f4c07ffb5a07a2ca3ff145ad6fcbbbe"
+  }
+}
